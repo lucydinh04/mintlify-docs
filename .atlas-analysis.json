@@ -1,0 +1,143 @@
+{
+  "projectType": "saas",
+  "projectName": "Ahamove Employee Portal",
+  "projectDescription": "Cổng thông tin nội bộ dành cho nhân viên Ahamove — hội nhập, sổ tay nhân sự, chính sách, phúc lợi, hướng dẫn AI và hỗ trợ.",
+  "theme": "almond",
+  "primaryColor": "#1be39b",
+  "lightColor": "#0c8c5c",
+  "darkColor": "#040404",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Trang chủ",
+        "groups": [
+          {
+            "group": "Tổng quan",
+            "pages": ["index"]
+          }
+        ]
+      },
+      {
+        "tab": "Ahamazing Guide",
+        "groups": [
+          {
+            "group": "Hành trình hội nhập",
+            "pages": [
+              "ahamazing-guide/overview",
+              "ahamazing-guide/welcome",
+              "ahamazing-guide/company-overview",
+              "ahamazing-guide/culture",
+              "ahamazing-guide/before-day-1",
+              "ahamazing-guide/day-1",
+              "ahamazing-guide/week-1",
+              "ahamazing-guide/first-month"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Sổ tay & Chính sách",
+        "groups": [
+          {
+            "group": "Sổ tay nhân sự",
+            "pages": [
+              "handbook/overview",
+              "handbook/working-tools",
+              "handbook/internal-systems",
+              "handbook/org-structure",
+              "handbook/glossary",
+              "handbook/company-calendar",
+              "handbook/hr-processes",
+              "handbook/payroll",
+              "handbook/offboarding",
+              "handbook/it-support"
+            ]
+          },
+          {
+            "group": "Chính sách",
+            "pages": [
+              "policies/overview",
+              "policies/leave-policy",
+              "policies/attendance-policy",
+              "policies/expense-policy",
+              "policies/code-of-conduct"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Phúc lợi & Văn phòng",
+        "groups": [
+          {
+            "group": "Phúc lợi",
+            "pages": [
+              "benefits/overview",
+              "benefits/health-check",
+              "benefits/insurance",
+              "benefits/uniform-program",
+              "benefits/learning-support",
+              "benefits/recognition-programs"
+            ]
+          },
+          {
+            "group": "Văn phòng",
+            "pages": [
+              "office-guide/overview",
+              "office-guide/office-locations",
+              "office-guide/parking",
+              "office-guide/pantry",
+              "office-guide/meeting-rooms",
+              "office-guide/emergency-contacts"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "AI Hub",
+        "groups": [
+          {
+            "group": "AI Hub",
+            "pages": [
+              "ai-hub/overview",
+              "ai-hub/chatgpt-guide",
+              "ai-hub/claude-guide",
+              "ai-hub/prompt-library",
+              "ai-hub/ai-use-cases",
+              "ai-hub/internal-ai-tools"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Hỗ trợ",
+        "groups": [
+          {
+            "group": "Trung tâm hỗ trợ",
+            "pages": [
+              "help-center/overview",
+              "help-center/faq",
+              "help-center/contact-hr",
+              "help-center/ask-ahamove-ai"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Ahamazing Guide — Hành trình hội nhập nhân viên mới (trước ngày đầu → tuần đầu → tháng đầu)",
+    "Sổ tay nhân sự — Tra cứu công cụ, hệ thống, quy trình, lương và IT",
+    "Chính sách nhân sự — Nghỉ phép, chấm công, chi phí, quy tắc ứng xử",
+    "Phúc lợi — Bảo hiểm Generali, khám sức khỏe, đồng phục, học tập, vinh danh",
+    "Hướng dẫn văn phòng — Địa điểm, gửi xe, phòng họp, pantry, khẩn cấp",
+    "AI Hub — Hướng dẫn ChatGPT, Claude, thư viện prompt và công cụ AI nội bộ",
+    "Trung tâm hỗ trợ — FAQ, liên hệ HR và trợ lý Ahamove AI 24/7"
+  ],
+  "publicApiSurface": [
+    "1Office (ahamove.1office.vn) — chấm công, nghỉ phép, phiếu lương",
+    "Ahamove AI — trợ lý AI trả lời câu hỏi nội bộ 24/7",
+    "VssID — bảo hiểm xã hội / y tế điện tử",
+    "AhaLearn — nền tảng đào tạo & e-learning nội bộ",
+    "Email nhansu@ahamove.com — liên hệ HR"
+  ]
+}

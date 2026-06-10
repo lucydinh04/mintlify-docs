@@ -1,0 +1,142 @@
+---
+title: "Hướng dẫn sử dụng ChatGPT an toàn và hiệu quả tại Ahamove"
+sidebarTitle: "ChatGPT"
+description: "Hướng dẫn bắt đầu với ChatGPT tại Ahamove — đăng ký tài khoản, chọn model phù hợp, cách viết prompt và ví dụ thực tế cho từng tác vụ công việc."
+icon: "comments"
+---
+
+ChatGPT (OpenAI) là một trong những trợ lý AI phổ biến và đa năng nhất hiện nay — phù hợp cho hàng loạt tác vụ từ soạn thảo văn bản, brainstorm ý tưởng, tóm tắt tài liệu đến hỗ trợ dịch thuật và viết code. Với Ahamover, ChatGPT có thể giúp bạn tiết kiệm đáng kể thời gian xử lý các công việc lặp đi lặp lại, để tập trung vào phần việc đòi hỏi tư duy và sáng tạo nhiều hơn.
+
+## Bắt đầu với ChatGPT
+
+<Steps>
+  <Step title="Truy cập và đăng nhập">
+    Vào **[chatgpt.com](https://chatgpt.com)** trên trình duyệt. Bạn có thể đăng ký tài khoản miễn phí bằng email cá nhân hoặc tài khoản Google/Microsoft. Nếu Ahamove có tài khoản ChatGPT doanh nghiệp (ChatGPT Team/Enterprise), hãy ưu tiên sử dụng tài khoản đó vì dữ liệu của bạn sẽ không được dùng để huấn luyện mô hình AI.
+  </Step>
+  <Step title="Chọn model phù hợp">
+    ChatGPT cung cấp nhiều phiên bản model. Phiên bản **GPT-4o** (hiện là mặc định với gói trả phí) cho kết quả tốt hơn với văn bản phức tạp, phân tích và lập trình. Phiên bản miễn phí vẫn đủ dùng cho các tác vụ thông thường như soạn email hay tóm tắt ngắn.
+  </Step>
+  <Step title="Đặt câu hỏi và viết prompt rõ ràng">
+    Kết quả bạn nhận được phụ thuộc rất nhiều vào cách bạn đặt câu hỏi (prompt). Hãy nêu rõ: bối cảnh của tác vụ, vai trò bạn muốn AI đóng, định dạng đầu ra mong muốn, và độ dài hoặc giọng văn cần thiết. Xem thêm tại [Prompt Library](/ai-hub/prompt-library).
+  </Step>
+  <Step title="Rà soát và kiểm chứng kết quả">
+    Luôn đọc kỹ và xác minh lại thông tin, số liệu hoặc dữ kiện mà ChatGPT cung cấp trước khi đưa vào tài liệu chính thức. ChatGPT đôi khi có thể "bịa" thông tin nghe có vẻ thuyết phục nhưng không chính xác — hiện tượng này được gọi là "hallucination".
+  </Step>
+</Steps>
+
+## ChatGPT dùng tốt cho những việc gì?
+
+<CardGroup cols={2}>
+  <Card title="Soạn thảo văn bản" icon="pen">
+    Email, tin nhắn nội bộ, thông báo, mô tả công việc, thư mời nhận việc và các tài liệu giao tiếp khác.
+  </Card>
+  <Card title="Tóm tắt & rút trích" icon="file-lines">
+    Tóm tắt tài liệu dài, biên bản họp, báo cáo và trích xuất các điểm hành động quan trọng.
+  </Card>
+  <Card title="Brainstorm & lên ý tưởng" icon="lightbulb">
+    Đặt tên chương trình, lên dàn ý bài thuyết trình, brainstorm ý tưởng campaign hoặc tên sản phẩm.
+  </Card>
+  <Card title="Dịch thuật" icon="language">
+    Dịch Việt–Anh, Anh–Việt cho email, tài liệu và tin nhắn — nhanh hơn nhiều so với dịch thủ công.
+  </Card>
+  <Card title="Hỗ trợ lập trình" icon="code">
+    Viết, giải thích, chuyển đổi hoặc debug code; tạo công thức Excel/Google Sheets; hỗ trợ SQL cơ bản.
+  </Card>
+  <Card title="Chuẩn bị nội dung" icon="presentation-screen">
+    Lên dàn ý slide thuyết trình, tạo câu hỏi phỏng vấn, soạn agenda họp và checklist công việc.
+  </Card>
+</CardGroup>
+
+## Ví dụ prompt thực tế
+
+Dưới đây là các ví dụ prompt bạn có thể dùng ngay cho công việc tại Ahamove. Thay phần trong `[ngoặc vuông]` bằng nội dung cụ thể của bạn.
+
+### Soạn email
+
+```text
+Bạn là trợ lý viết email chuyên nghiệp. Hãy viết một email tiếng Việt
+gửi cho [đối tác/khách hàng/đồng nghiệp] về việc [chủ đề cụ thể].
+Mục tiêu của email: [mục tiêu — ví dụ: xác nhận lịch họp, cảm ơn hợp tác, yêu cầu cung cấp thông tin].
+Giọng văn: chuyên nghiệp, lịch sự và ngắn gọn. Độ dài: không quá 150 từ.
+```
+
+### Tóm tắt biên bản họp
+
+```text
+Dưới đây là ghi chú buổi họp [tên/chủ đề buổi họp] ngày [ngày].
+Hãy tóm tắt thành biên bản gồm 3 phần:
+1. Các quyết định đã thống nhất
+2. Danh sách việc cần làm (ai làm gì, hạn khi nào)
+3. Các vấn đề còn mở cần theo dõi thêm
+
+Ghi chú họp: [dán nội dung ghi chú vào đây]
+```
+
+### Brainstorm tên chương trình
+
+```text
+Tôi cần brainstorm tên cho [chương trình/sự kiện/chiến dịch] tại Ahamove.
+Mô tả ngắn: [mô tả về mục tiêu và đối tượng].
+Đề xuất 10 tên theo các phong cách: vui tươi, chuyên nghiệp và sáng tạo.
+Với mỗi tên, giải thích ngắn gọn ý nghĩa và lý do chọn.
+```
+
+### Dịch thuật email
+
+```text
+Dịch email sau từ tiếng Anh sang tiếng Việt, giữ nguyên giọng văn
+chuyên nghiệp và các thuật ngữ kỹ thuật (nếu có):
+
+[Dán nội dung email tiếng Anh vào đây]
+```
+
+### Tạo công thức Excel
+
+```text
+Tôi cần tạo một công thức trong Google Sheets để [mô tả bài toán —
+ví dụ: tính tổng doanh thu của cột B nếu giá trị cột A là "Hà Nội",
+sau đó so sánh với mục tiêu ở ô C1 và hiển thị % hoàn thành].
+Giải thích từng phần của công thức để tôi hiểu cách hoạt động.
+```
+
+### Chuẩn bị câu hỏi phỏng vấn
+
+```text
+Tôi đang phỏng vấn ứng viên cho vị trí [tên vị trí] tại Ahamove —
+một công ty logistics công nghệ.
+Yêu cầu chính của vị trí: [liệt kê 3–5 yêu cầu].
+Hãy đề xuất 8–10 câu hỏi phỏng vấn, bao gồm cả câu hỏi hành vi
+(STAR method), kỹ thuật và tình huống thực tế.
+```
+
+## Mẹo nâng cao
+
+<Accordion title="Dùng System Prompt để cá nhân hóa phong cách">
+  Trong giao diện ChatGPT, bạn có thể vào phần **Settings → Personalization → Custom Instructions** để khai báo bối cảnh cố định — ví dụ: "Tôi là nhân viên HR tại Ahamove, một công ty logistics tại Việt Nam. Tôi thường làm việc bằng tiếng Việt và cần giọng văn chuyên nghiệp nhưng thân thiện." Điều này giúp bạn không phải giải thích lại bối cảnh mỗi lần.
+</Accordion>
+
+<Accordion title="Yêu cầu chỉnh sửa theo vòng lặp">
+  Thay vì chờ kết quả hoàn hảo ngay lần đầu, hãy yêu cầu ChatGPT chỉnh sửa từng phần: "Đoạn mở đầu quá cứng nhắc — hãy viết lại thân thiện hơn" hoặc "Rút ngắn phần 2 còn tối đa 3 dòng". Làm việc theo vòng lặp giúp bạn kiểm soát kết quả tốt hơn.
+</Accordion>
+
+<Accordion title="Tạo nhiều phiên bản để so sánh">
+  Nếu cần chọn giữa các phương án (ví dụ tiêu đề email hay tên chương trình), hãy yêu cầu ChatGPT tạo 3–5 phiên bản theo các phong cách khác nhau rồi chọn hoặc kết hợp. Cách này hiệu quả hơn nhiều so với chỉnh sửa một phiên bản.
+</Accordion>
+
+<Accordion title="Dùng ChatGPT để học và tự trau dồi">
+  Bạn có thể nhờ ChatGPT giải thích một khái niệm chuyên ngành, tóm tắt một chủ đề bạn muốn tìm hiểu, hoặc tạo quiz để tự kiểm tra. Đây là cách dùng AI rất hiệu quả cho việc học không chính thức (informal learning).
+</Accordion>
+
+## Giới hạn cần biết
+
+<Warning>
+  **Không dán dữ liệu nhạy cảm** vào ChatGPT phiên bản công cộng (miễn phí). Dữ liệu nhạy cảm bao gồm thông tin cá nhân của khách hàng/tài xế, thông tin lương thưởng, nội dung hợp đồng, và chiến lược kinh doanh nội bộ. Đọc đầy đủ [nguyên tắc dùng AI có trách nhiệm](/ai-hub/overview#nguyên-tắc-dùng-ai-có-trách-nhiệm) trước khi bắt đầu.
+</Warning>
+
+- ChatGPT có **ngày cắt dữ liệu huấn luyện** (knowledge cutoff) — nó không biết về các sự kiện xảy ra gần đây. Với thông tin cần cập nhật, hãy xác minh bằng nguồn khác.
+- Kết quả AI **không phải luôn đúng** — đặc biệt với số liệu, tên người, ngày tháng và thông tin pháp lý. Luôn kiểm chứng lại.
+- ChatGPT có thể bị **quá tải hoặc chậm** vào giờ cao điểm — hãy thử lại sau vài phút nếu gặp lỗi.
+
+<Tip>
+  Muốn dùng AI hiệu quả hơn? Xem thêm [Prompt Library](/ai-hub/prompt-library) để lấy ngay các mẫu prompt theo từng loại công việc, hoặc khám phá [Ứng dụng AI theo phòng ban](/ai-hub/ai-use-cases) để xem cách đồng nghiệp ở các đội khác đang dùng AI.
+</Tip>

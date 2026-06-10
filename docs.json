@@ -1,0 +1,184 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Ahamove Employee Portal",
+  "description": "Cổng thông tin nội bộ dành cho nhân viên Ahamove — hội nhập, sổ tay nhân sự, chính sách, phúc lợi, hướng dẫn AI và hỗ trợ.",
+  "colors": {
+    "primary": "#1be39b",
+    "light": "#0c8c5c",
+    "dark": "#040404"
+  },
+  "favicon": "https://media.brand.dev/26d46f3d-dd05-44da-865d-61a4f9c59cdb.jpg",
+  "logo": {
+    "light": "https://media.brand.dev/c2ac8bb2-e752-4dff-ae87-539ff23415e2.svg",
+    "dark": "https://media.brand.dev/c2ac8bb2-e752-4dff-ae87-539ff23415e2.svg",
+    "href": "/"
+  },
+  "appearance": {
+    "default": "light"
+  },
+  "search": {
+    "prompt": "Bạn cần tìm gì? (nghỉ phép, bảo hiểm, 1Office…)"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Trang chủ",
+        "groups": [
+          {
+            "group": "Tổng quan",
+            "pages": ["index"]
+          }
+        ]
+      },
+      {
+        "tab": "Ahamazing Guide",
+        "groups": [
+          {
+            "group": "Hành trình hội nhập",
+            "pages": [
+              "ahamazing-guide/overview",
+              "ahamazing-guide/welcome",
+              "ahamazing-guide/company-overview",
+              "ahamazing-guide/culture",
+              "ahamazing-guide/before-day-1",
+              "ahamazing-guide/day-1",
+              "ahamazing-guide/week-1",
+              "ahamazing-guide/first-month"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Sổ tay & Chính sách",
+        "groups": [
+          {
+            "group": "Sổ tay nhân sự",
+            "pages": [
+              "handbook/overview",
+              "handbook/working-tools",
+              "handbook/internal-systems",
+              "handbook/org-structure",
+              "handbook/glossary",
+              "handbook/company-calendar",
+              "handbook/hr-processes",
+              "handbook/payroll",
+              "handbook/offboarding",
+              "handbook/it-support"
+            ]
+          },
+          {
+            "group": "Chính sách",
+            "pages": [
+              "policies/overview",
+              "policies/leave-policy",
+              "policies/attendance-policy",
+              "policies/expense-policy",
+              "policies/code-of-conduct"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Phúc lợi & Văn phòng",
+        "groups": [
+          {
+            "group": "Phúc lợi",
+            "pages": [
+              "benefits/overview",
+              "benefits/health-check",
+              "benefits/insurance",
+              "benefits/uniform-program",
+              "benefits/learning-support",
+              "benefits/recognition-programs"
+            ]
+          },
+          {
+            "group": "Văn phòng",
+            "pages": [
+              "office-guide/overview",
+              "office-guide/office-locations",
+              "office-guide/parking",
+              "office-guide/pantry",
+              "office-guide/meeting-rooms",
+              "office-guide/emergency-contacts"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "AI Hub",
+        "groups": [
+          {
+            "group": "AI Hub",
+            "pages": [
+              "ai-hub/overview",
+              "ai-hub/chatgpt-guide",
+              "ai-hub/claude-guide",
+              "ai-hub/prompt-library",
+              "ai-hub/ai-use-cases",
+              "ai-hub/internal-ai-tools"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Hỗ trợ",
+        "groups": [
+          {
+            "group": "Trung tâm hỗ trợ",
+            "pages": [
+              "help-center/overview",
+              "help-center/faq",
+              "help-center/contact-hr",
+              "help-center/ask-ahamove-ai"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Hỏi Ahamove AI",
+          "icon": "robot",
+          "href": "/help-center/ask-ahamove-ai"
+        },
+        {
+          "anchor": "Liên hệ HR",
+          "icon": "envelope",
+          "href": "/help-center/contact-hr"
+        },
+        {
+          "anchor": "1Office",
+          "icon": "arrow-up-right-from-square",
+          "href": "https://ahamove.1office.vn"
+        }
+      ]
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Hỗ trợ IT",
+        "href": "/handbook/it-support"
+      },
+      {
+        "label": "Liên hệ HR",
+        "href": "/help-center/contact-hr"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Hỏi Ahamove AI",
+      "href": "/help-center/ask-ahamove-ai"
+    }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://ahamove.com",
+      "facebook": "https://www.facebook.com/ahamovevn",
+      "linkedin": "https://www.linkedin.com/company/ahamove"
+    }
+  }
+}
