@@ -1,60 +1,51 @@
 ---
 title: "Hành trình hội nhập"
 sidebarTitle: "Hành trình hội nhập"
-description: "Hành trình hội nhập của Ahamover — từ trước ngày đầu đến hết tháng đầu tiên."
+description: "Chào mừng Ahamover mới — hiểu công ty, hoàn tất ngày đầu và bắt nhịp trong 30 ngày."
 icon: "compass"
 ---
 
 export const J = {
   navy: "#0E4174", orange: "#FF7A21", cream: "#FFF4EC", line: "#E7EAF0", grey: "#667089",
   phase: { fontSize: "12px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", color: "#FF7A21", margin: "22px 0 12px" },
-  row: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "12px" },
-  row3: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "12px" },
+  row: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: "12px" },
   stop: { position: "relative", textDecoration: "none", background: "#fff", border: "1px solid #E7EAF0", borderRadius: "14px", padding: "16px 14px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
   num: { width: "30px", height: "30px", borderRadius: "50%", background: "linear-gradient(135deg,#FF7A21,#FF9A52)", color: "#fff", fontWeight: 800, fontSize: "14px", display: "grid", placeItems: "center", marginBottom: "10px" },
   st: { color: "#0E4174", fontWeight: 700, fontSize: "14.5px", margin: "0 0 3px" },
   sd: { color: "#667089", fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
 };
 
-Chào mừng bạn đến với **Hành trình hội nhập** — người bạn đồng hành trong những ngày đầu tại Ahamove. Cứ đi theo hành trình bên dưới là bạn sẽ bắt nhịp thật nhanh.
+Chào bạn — và chúc mừng bạn đã chính thức trở thành một **Ahamover**! Đây là **trang chủ hội nhập**, người bạn đồng hành trong những ngày đầu. Bạn **không hề một mình**: luôn có quản lý trực tiếp, HRBP và đội People đồng hành. *Always Moving.*
 
-## Bạn là ai?
+## Cách dùng sổ tay nhân sự
 
 <CardGroup cols={3}>
-  <Card title="Nhân viên mới" icon="user-plus" href="/ahamazing-guide/welcome">
-    Bắt đầu từ đây: hiểu công ty → chuẩn bị → 30 ngày đầu.
+  <Card title="Đi theo hành trình" icon="route">
+    Nếu bạn là người mới, cứ đi lần lượt các bước bên dưới để bắt nhịp nhanh.
   </Card>
-  <Card title="Chuyển phòng / vị trí" icon="arrows-turn-right" href="/handbook/overview">
-    Cần công cụ, hệ thống & quy trình? Vào Sổ tay nhân sự.
+  <Card title="Tra cứu nhanh" icon="magnifying-glass">
+    Cần tìm công cụ, chính sách, phúc lợi? Dùng thanh tìm kiếm phía trên hoặc vào [Sổ tay nhân sự](/handbook/overview).
   </Card>
-  <Card title="Quản lý" icon="users-gear" href="/handbook/hr-processes">
-    Quy trình nhân sự, đánh giá thử việc & đầu mối liên hệ.
+  <Card title="Hỏi Ahamove AI" icon="robot">
+    Không biết hỏi ai? Nhấn nút trợ lý AI ở góc màn hình để được trả lời & chỉ đúng người.
   </Card>
 </CardGroup>
 
 <p style={J.phase}>① Hiểu về Ahamove</p>
 
-<div style={J.row3} className="aha-j3">
-  <a style={J.stop} href="/ahamazing-guide/welcome"><div style={J.num}>1</div><p style={J.st}>Chào mừng</p><p style={J.sd}>Lời chào & cách dùng cuốn cẩm nang này.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/company-overview"><div style={J.num}>2</div><p style={J.st}>Tổng quan công ty</p><p style={J.sd}>Ahamove là ai, dịch vụ & hệ sinh thái Scommerce.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/culture"><div style={J.num}>3</div><p style={J.st}>Văn hóa & Giá trị</p><p style={J.sd}>Bộ 4 giá trị văn hóa và cách làm việc tại đây.</p></a>
+<div style={J.row} className="aha-row">
+  <a style={J.stop} href="/ahamazing-guide/company-overview"><div style={J.num}>1</div><p style={J.st}>Tổng quan công ty</p><p style={J.sd}>Ahamove là ai, dịch vụ, hành trình & hệ sinh thái Scommerce.</p></a>
+  <a style={J.stop} href="/ahamazing-guide/culture"><div style={J.num}>2</div><p style={J.st}>Văn hóa & Giá trị</p><p style={J.sd}>Bộ 4 giá trị, tinh thần One Ahamove & Áo Aha thứ Hai.</p></a>
 </div>
 
 <p style={J.phase}>② Hành trình 30 ngày đầu</p>
 
-<div style={J.row} className="aha-j4">
-  <a style={J.stop} href="/ahamazing-guide/before-day-1"><div style={J.num}>4</div><p style={J.st}>Trước ngày đầu</p><p style={J.sd}>Chuẩn bị giấy tờ & biết địa chỉ văn phòng.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/day-1"><div style={J.num}>5</div><p style={J.st}>Ngày đầu tiên</p><p style={J.sd}>Lịch trình ngày đầu & gặp gỡ team.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/week-1"><div style={J.num}>6</div><p style={J.st}>Tuần đầu tiên</p><p style={J.sd}>Kích hoạt tài khoản & ký số hợp đồng.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/first-month"><div style={J.num}>7</div><p style={J.st}>Tháng đầu tiên</p><p style={J.sd}>Lộ trình 30-60-90 & tạo "first-win".</p></a>
+<div style={J.row} className="aha-row">
+  <a style={J.stop} href="/ahamazing-guide/day-1"><div style={J.num}>3</div><p style={J.st}>Ngày đầu tiên</p><p style={J.sd}>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự.</p></a>
+  <a style={J.stop} href="/ahamazing-guide/week-1"><div style={J.num}>4</div><p style={J.st}>Tuần đầu tiên</p><p style={J.sd}>Kích hoạt tài khoản, ký số hợp đồng & làm quen quy trình.</p></a>
+  <a style={J.stop} href="/ahamazing-guide/first-month"><div style={J.num}>5</div><p style={J.st}>Tháng đầu tiên</p><p style={J.sd}>Lộ trình 30-60-90 & tạo "first-win" đầu tiên.</p></a>
 </div>
 
 <Tip>
-  Gặp từ viết tắt lạ? Tra [Bảng thuật ngữ](/handbook/glossary). Muốn biết các phòng ban? Xem [Cơ cấu tổ chức](/handbook/org-structure).
+  Gặp từ viết tắt lạ? Tra [Bảng thuật ngữ](/handbook/glossary). Cần liên hệ ai? Xem [Liên hệ HR & Hỗ trợ IT](/help-center/contact-hr).
 </Tip>
-
-<style>{`
-  @media (max-width: 760px) {
-    .aha-j3, .aha-j4 { grid-template-columns: 1fr 1fr !important; }
-  }
-`}</style>

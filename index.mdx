@@ -36,7 +36,7 @@ export const S = {
   qicon: { flex: "0 0 42px", height: "42px", borderRadius: "12px", background: C.cream, display: "grid", placeItems: "center" },
   qtitle: { color: C.navy, fontWeight: 700, fontSize: "14.5px", margin: "0 0 3px" },
   qdesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
-  journey: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "12px", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "22px 16px" },
+  journey: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "12px", margin: "4px 0" },
   jstep: { textAlign: "center", textDecoration: "none" },
   jdot: { width: "46px", height: "46px", borderRadius: "50%", margin: "0 auto 10px", display: "grid", placeItems: "center", background: C.cream, border: `2px solid ${C.orange2}` },
   jname: { color: C.navy, fontWeight: 700, fontSize: "13.5px", margin: "0 0 3px" },
@@ -58,7 +58,6 @@ export const S = {
 
       {/* HERO — AI-Driven */}
       <div style={S.hero}>
-        <img src="/images/poster.png" alt="Ahamove" style={S.heroImg} />
         <p style={S.heroEyebrow}>Ahamove · 2026 · AI-Driven Company</p>
         <h1 style={S.heroTitle}>Ahamove Handbook</h1>
         <p style={S.heroSub2}>Mọi thông tin Ahamover cần, trong một nơi duy nhất.</p>
@@ -66,7 +65,7 @@ export const S = {
         <div style={S.ctaRow}>
           <a style={S.cta} href="/ahamazing-guide/overview">
             <span style={S.ctaIcon}><Icon icon="compass" size={19} color="#FF7A21" /></span>
-            <span><p style={S.ctaTitle}>Bắt đầu hành trình</p><p style={S.ctaDesc}>Hành trình hội nhập cho nhân viên mới: từ trước ngày đầu đến 30 ngày đầu.</p></span>
+            <span><p style={S.ctaTitle}>Bắt đầu hành trình</p><p style={S.ctaDesc}>Hành trình hội nhập cho nhân viên mới: từ ngày đầu tiên đến hết 30 ngày đầu.</p></span>
           </a>
           <a style={S.cta} href="/ai-hub/overview">
             <span style={S.ctaIcon}><Icon icon="robot" size={19} color="#FF7A21" /></span>
@@ -83,45 +82,34 @@ export const S = {
         <div style={S.stat}><p style={S.statN}>2015</p><p style={S.statL}>Năm thành lập</p></div>
       </div>
 
-      {/* SEARCH-FIRST */}
-      <div style={S.search}>
-        <Icon icon="magnifying-glass" size={20} color="#FF7A21" />
-        <div>
-          <p style={{ color: C.navy, fontWeight: 700, fontSize: "14px", margin: "0 0 3px" }}>Tìm nhanh mọi thứ bằng thanh tìm kiếm phía trên hoặc nhấn phím <kbd>/</kbd>.</p>
-          <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Gõ tiếng Việt thoải mái: "Nghỉ phép", "Bảo hiểm", "Khám sức khỏe", "1Office", "Day 1", "Hỗ trợ IT"…</p>
-        </div>
-      </div>
-
       {/* TRUY CẬP NHANH */}
       <h2 style={S.h2}>Truy cập nhanh</h2>
       <div style={S.qgrid}>
         <a style={S.qcard} href="/ahamazing-guide/overview"><span style={S.qicon}><Icon icon="compass" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hành trình hội nhập</p><p style={S.qdesc}>Lộ trình dành cho nhân viên mới.</p></span></a>
         <a style={S.qcard} href="/handbook/overview"><span style={S.qicon}><Icon icon="book-open" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Sổ tay nhân sự</p><p style={S.qdesc}>Công cụ, hệ thống, quy trình và thông tin cần biết.</p></span></a>
         <a style={S.qcard} href="/policies/overview"><span style={S.qicon}><Icon icon="scale-balanced" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Chính sách</p><p style={S.qdesc}>Các chính sách và quy định dành cho Ahamovers.</p></span></a>
-        <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}><Icon icon="gift" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Phúc lợi</p><p style={S.qdesc}>Khám sức khỏe, bảo hiểm, đồng phục và nhiều hơn nữa.</p></span></a>
+        <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}><Icon icon="gift" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Life at Ahamove</p><p style={S.qdesc}>Phúc lợi, bảo hiểm, văn phòng & đời sống.</p></span></a>
         <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}><Icon icon="building" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Thông tin văn phòng và tiện ích.</p></span></a>
         <a style={S.qcard} href="/ai-hub/overview"><span style={S.qicon}><Icon icon="wand-magic-sparkles" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>AI Academy</p><p style={S.qdesc}>Claude Pro, AI Playbook và chương trình AI.</p></span></a>
       </div>
 
-      {/* HÀNH TRÌNH NHÂN VIÊN MỚI */}
-      <h2 style={S.h2}>Hành trình Ahamover mới</h2>
+      {/* HÀNH TRÌNH HỘI NHẬP */}
+      <h2 style={S.h2}>Hành trình hội nhập</h2>
       <div style={S.journey}>
-        <a style={S.jstep} href="/ahamazing-guide/welcome"><div style={S.jdot}><Icon icon="door-open" size={20} color="#FF7A21" /></div><p style={S.jname}>Welcome</p><p style={S.jdesc}>Làm quen Ahamove và cách dùng cổng thông tin.</p></a>
-        <a style={S.jstep} href="/ahamazing-guide/before-day-1"><div style={S.jdot}><Icon icon="calendar-check" size={20} color="#FF7A21" /></div><p style={S.jname}>Before Day 1</p><p style={S.jdesc}>Chuẩn bị giấy tờ, tài khoản và thông tin cần thiết.</p></a>
-        <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}><Icon icon="sun" size={20} color="#FF7A21" /></div><p style={S.jname}>Day 1</p><p style={S.jdesc}>Lịch trình ngày đầu tiên và gặp team.</p></a>
-        <a style={S.jstep} href="/ahamazing-guide/week-1"><div style={S.jdot}><Icon icon="list-check" size={20} color="#FF7A21" /></div><p style={S.jname}>Week 1</p><p style={S.jdesc}>Kích hoạt công cụ làm việc và làm quen quy trình.</p></a>
-        <a style={S.jstep} href="/ahamazing-guide/first-month"><div style={S.jdot}><Icon icon="chart-line" size={20} color="#FF7A21" /></div><p style={S.jname}>First Month</p><p style={S.jdesc}>Thiết lập mục tiêu và tạo first-win đầu tiên.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}><Icon icon="sun" size={20} color="#FF7A21" /></div><p style={S.jname}>Ngày đầu tiên</p><p style={S.jdesc}>Lịch trình ngày đầu, giờ làm việc & thủ tục.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/week-1"><div style={S.jdot}><Icon icon="list-check" size={20} color="#FF7A21" /></div><p style={S.jname}>Tuần đầu tiên</p><p style={S.jdesc}>Kích hoạt công cụ & làm quen quy trình.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/first-month"><div style={S.jdot}><Icon icon="chart-line" size={20} color="#FF7A21" /></div><p style={S.jname}>Tháng đầu tiên</p><p style={S.jdesc}>Lộ trình 30-60-90 & tạo first-win.</p></a>
       </div>
     </div>
 
     {/* ============ CỘT PHẢI ============ */}
     <div style={S.rail}>
 
-      {/* HỎI AHAMOVE AI */}
+      {/* AI ACADEMY */}
       <div style={S.aiCard}>
-        <img src="/images/ai-bot.svg" alt="Ahamove AI" style={{ width: "78px", height: "78px" }} />
-        <p style={{ color: C.navy, fontWeight: 800, fontSize: "15px", margin: "8px 0 4px" }}>Hỏi Ahamove AI</p>
-        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Nhấn nút <b>Hỏi Ahamove AI</b> ở góc màn hình (luôn hiển thị ở mọi trang) để đặt câu hỏi và nhận trả lời ngay — không rời khỏi trang đang xem.</p>
+        <p style={{ color: "#FF9A52", letterSpacing: "1.5px", fontSize: "11px", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>AI-Driven · 2026</p>
+        <p style={{ color: C.navy, fontWeight: 800, fontSize: "16px", margin: "6px 0 4px" }}>AI Academy</p>
+        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Claude Pro cho 100% nhân sự. Học cách dùng AI, ứng dụng theo phòng ban và toả sáng tại AI Showcase.</p>
         <a style={S.aiBtn} href="/ai-hub/overview">Tìm hiểu AI tại Ahamove</a>
       </div>
 

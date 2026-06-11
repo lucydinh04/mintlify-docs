@@ -49,10 +49,8 @@
             "group": "Hành trình hội nhập",
             "root": "ahamazing-guide/overview",
             "pages": [
-              "ahamazing-guide/welcome",
               "ahamazing-guide/company-overview",
               "ahamazing-guide/culture",
-              "ahamazing-guide/before-day-1",
               "ahamazing-guide/day-1",
               "ahamazing-guide/week-1",
               "ahamazing-guide/first-month"
@@ -103,7 +101,6 @@
             "pages": [
               "benefits/health-check",
               "benefits/insurance",
-              "benefits/uniform-program",
               "benefits/learning-support",
               "benefits/recognition-programs"
             ]
@@ -130,7 +127,7 @@
             "root": "ai-hub/overview",
             "pages": [
               { "group": "Học & Công cụ", "icon": "graduation-cap", "expanded": false, "pages": ["ai-hub/claude-guide", "ai-hub/prompt-library", "ai-hub/ai-playbook"] },
-              { "group": "Chương trình", "icon": "trophy", "expanded": false, "pages": ["ai-hub/yes-ai-do", "ai-hub/study-tour-china", "ai-hub/ai-showcase-2026", "ai-hub/showcase-gallery"] }
+              { "group": "Chương trình", "icon": "trophy", "expanded": false, "pages": ["ai-hub/yes-ai-do", "ai-hub/ai-showcase-2026", "ai-hub/study-tour-china"] }
             ]
           }
         ]
@@ -153,9 +150,7 @@
   },
   "navbar": {
     "links": [
-      { "label": "Mới cập nhật", "href": "/whats-new" },
-      { "label": "Thông tin liên lạc nhân sự", "href": "/help-center/overview" },
-      { "label": "Hỗ trợ IT", "href": "/handbook/it-support" }
+      { "label": "Mới cập nhật", "href": "/whats-new" }
     ]
   },
   "footer": {
@@ -168,24 +163,24 @@
       {
         "header": "Bắt đầu",
         "items": [
-          { "label": "Chào mừng", "href": "/ahamazing-guide/welcome" },
-          { "label": "Trước ngày đầu", "href": "/ahamazing-guide/before-day-1" },
-          { "label": "Ngày đầu tiên", "href": "/ahamazing-guide/day-1" }
+          { "label": "Hành trình hội nhập", "href": "/ahamazing-guide/overview" },
+          { "label": "Ngày đầu tiên", "href": "/ahamazing-guide/day-1" },
+          { "label": "Tháng đầu tiên", "href": "/ahamazing-guide/first-month" }
         ]
       },
       {
         "header": "Phổ biến",
         "items": [
           { "label": "Nghỉ phép", "href": "/policies/leave-policy" },
-          { "label": "1Office", "href": "/handbook/internal-systems" },
+          { "label": "Hệ thống 1Office", "href": "/handbook/internal-systems" },
           { "label": "Bảo hiểm", "href": "/benefits/insurance" }
         ]
       },
       {
-        "header": "Liên hệ",
+        "header": "Liên hệ & Hỗ trợ",
         "items": [
-          { "label": "Thông tin liên lạc nhân sự", "href": "/help-center/overview" },
-          { "label": "Hỗ trợ IT", "href": "/handbook/it-support" }
+          { "label": "Liên hệ HR & Hỗ trợ IT", "href": "/help-center/contact-hr" },
+          { "label": "Câu hỏi thường gặp", "href": "/help-center/faq" }
         ]
       }
     ]
