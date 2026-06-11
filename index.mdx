@@ -1,5 +1,5 @@
 ---
-title: "Ahamove Employee Portal"
+title: "Ahamove Handbook"
 description: "Mọi thông tin Ahamover cần, trong một nơi duy nhất."
 mode: "custom"
 ---
@@ -38,10 +38,6 @@ export const S = {
   panelHead: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px" },
   panelTitle: { fontSize: "15px", fontWeight: 800, color: C.navy, margin: 0 },
   seeAll: { fontSize: "12px", fontWeight: 600, color: C.orange, textDecoration: "none" },
-  upd: { display: "block", textDecoration: "none", padding: "10px 0", borderTop: `1px solid ${C.line}` },
-  updLabel: { fontSize: "10px", letterSpacing: ".5px", textTransform: "uppercase", color: C.orange, fontWeight: 700 },
-  updTitle: { color: C.navy, fontWeight: 700, fontSize: "13.5px", margin: "3px 0" },
-  updDesc: { color: C.grey, fontSize: "12px", margin: 0, lineHeight: 1.45 },
   aiCard: { background: "linear-gradient(135deg,#EAF1FB,#F6F8FC)", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px", textAlign: "center" },
   aiBtn: { display: "inline-block", marginTop: "12px", background: C.orange, color: "#fff", fontWeight: 700, fontSize: "13.5px", padding: "10px 18px", borderRadius: "11px", textDecoration: "none" },
   res: { display: "flex", alignItems: "center", gap: "11px", textDecoration: "none", padding: "10px 0", borderTop: `1px solid ${C.line}`, color: C.navy, fontWeight: 600, fontSize: "13.5px" },
@@ -56,17 +52,17 @@ export const S = {
       {/* HERO */}
       <div style={S.hero}>
         <img src="/images/hero.svg" alt="Ahamove" style={S.heroImg} />
-        <h1 style={S.heroTitle}>Ahamove Employee Portal</h1>
+        <h1 style={S.heroTitle}>Ahamove Handbook</h1>
         <p style={S.heroSub2}>Mọi thông tin Ahamover cần, trong một nơi duy nhất.</p>
-        <p style={S.heroText}>Tìm chính sách, công cụ, quy trình, phúc lợi và tài nguyên AI chỉ trong vài giây. <b style={{ color: C.navy }}>Always Moving.</b> 🧡</p>
+        <p style={S.heroText}>Tìm chính sách, công cụ, quy trình, phúc lợi và tài nguyên AI chỉ trong vài giây. <b style={{ color: C.navy }}>Always Moving.</b></p>
         <div style={S.ctaRow}>
           <a style={S.cta} href="/ahamazing-guide/overview">
             <p style={S.ctaTitle}>🧭 Bắt đầu hành trình</p>
             <p style={S.ctaDesc}>Khám phá Ahamazing Guide dành cho nhân viên mới: từ trước ngày đầu đến 30 ngày đầu.</p>
           </a>
-          <a style={S.cta} href="/help-center/ask-ahamove-ai">
-            <p style={S.ctaTitle}>🤖 Hỏi Ahamove AI</p>
-            <p style={S.ctaDesc}>Tra cứu chính sách, phúc lợi, quy trình và FAQ bất cứ lúc nào với trợ lý AI nội bộ.</p>
+          <a style={S.cta} href="/ai-hub/overview">
+            <p style={S.ctaTitle}>🤖 Khám phá AI Hub</p>
+            <p style={S.ctaDesc}>Claude Pro cho 100% nhân sự, AI Playbook và các chương trình AI nội bộ.</p>
           </a>
         </div>
       </div>
@@ -76,7 +72,7 @@ export const S = {
         <span style={{ fontSize: "20px" }}>🔎</span>
         <div>
           <p style={{ color: C.navy, fontWeight: 700, fontSize: "14px", margin: "0 0 3px" }}>Tìm nhanh mọi thứ bằng thanh tìm kiếm phía trên hoặc nhấn phím <kbd>/</kbd>.</p>
-          <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Gõ tiếng Việt thoải mái: "Nghỉ phép", "Bảo hiểm", "Khám sức khỏe", "1Office", "Day 1", "IT Support"…</p>
+          <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Gõ tiếng Việt thoải mái: "Nghỉ phép", "Bảo hiểm", "Khám sức khỏe", "1Office", "Day 1", "Hỗ trợ IT"…</p>
         </div>
       </div>
 
@@ -87,15 +83,14 @@ export const S = {
         <a style={S.qcard} href="/handbook/overview"><span style={S.qicon}>📖</span><span><p style={S.qtitle}>Sổ tay nhân sự</p><p style={S.qdesc}>Công cụ, hệ thống, quy trình và thông tin cần biết.</p></span></a>
         <a style={S.qcard} href="/policies/overview"><span style={S.qicon}>⚖️</span><span><p style={S.qtitle}>Chính sách</p><p style={S.qdesc}>Các chính sách và quy định dành cho Ahamovers.</p></span></a>
         <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}>🎁</span><span><p style={S.qtitle}>Phúc lợi</p><p style={S.qdesc}>Khám sức khỏe, bảo hiểm, đồng phục và nhiều hơn nữa.</p></span></a>
-        <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}>🏢</span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Thông tin văn phòng, tiện ích và liên hệ khẩn cấp.</p></span></a>
-        <a style={S.qcard} href="/ai-hub/overview"><span style={S.qicon}>✨</span><span><p style={S.qtitle}>AI Hub</p><p style={S.qdesc}>Tài nguyên AI, Prompt Library và ứng dụng AI trong công việc.</p></span></a>
-        <a style={{ ...S.qcard, gridColumn: "span 3" }} href="/help-center/overview"><span style={S.qicon}>🆘</span><span><p style={S.qtitle}>Trung tâm hỗ trợ</p><p style={S.qdesc}>FAQ, liên hệ HR, hỗ trợ IT và Hỏi Ahamove AI.</p></span></a>
+        <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}>🏢</span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Thông tin văn phòng và tiện ích.</p></span></a>
+        <a style={S.qcard} href="/ai-hub/overview"><span style={S.qicon}>✨</span><span><p style={S.qtitle}>AI Hub</p><p style={S.qdesc}>Claude Pro, AI Playbook và chương trình AI.</p></span></a>
       </div>
 
       {/* HÀNH TRÌNH NHÂN VIÊN MỚI */}
       <h2 style={S.h2}>Hành trình Ahamover mới</h2>
       <div style={S.journey} className="aha-journey">
-        <a style={S.jstep} href="/ahamazing-guide/welcome"><div style={S.jdot}>😊</div><p style={S.jname}>Welcome</p><p style={S.jdesc}>Làm quen Ahamove và cách dùng portal.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/welcome"><div style={S.jdot}>😊</div><p style={S.jname}>Welcome</p><p style={S.jdesc}>Làm quen Ahamove và cách dùng cổng thông tin.</p></a>
         <a style={S.jstep} href="/ahamazing-guide/before-day-1"><div style={S.jdot}>📅</div><p style={S.jname}>Before Day 1</p><p style={S.jdesc}>Chuẩn bị giấy tờ, tài khoản và thông tin cần thiết.</p></a>
         <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}>☀️</div><p style={S.jname}>Day 1</p><p style={S.jdesc}>Lịch trình ngày đầu tiên và gặp team.</p></a>
         <a style={S.jstep} href="/ahamazing-guide/week-1"><div style={S.jdot}>✅</div><p style={S.jname}>Week 1</p><p style={S.jdesc}>Kích hoạt công cụ làm việc và làm quen quy trình.</p></a>
@@ -106,35 +101,12 @@ export const S = {
     {/* ============ CỘT PHẢI ============ */}
     <div style={S.rail} className="aha-rail">
 
-      {/* CẬP NHẬT MỚI NHẤT */}
-      <div style={S.panel}>
-        <div style={S.panelHead}>
-          <p style={S.panelTitle}>Cập nhật mới nhất</p>
-          <a style={S.seeAll} href="/ahamazing-guide/company-overview#message-2026">Xem tất cả</a>
-        </div>
-        <a style={{ ...S.upd, borderTop: "none" }} href="/ahamazing-guide/company-overview#message-2026">
-          <span style={S.updLabel}>Định hướng · 01.01.2026</span>
-          <p style={S.updTitle}>Ahamove 2026 — AI-Driven, Human-Centric</p>
-          <p style={S.updDesc}>Công nghệ dẫn lối, con người là trung tâm. Cùng nhau bứt phá!</p>
-        </a>
-        <a style={S.upd} href="/benefits/health-check">
-          <span style={S.updLabel}>Phúc lợi · 28.12.2025</span>
-          <p style={S.updTitle}>Chương trình Khám sức khỏe 2026</p>
-          <p style={S.updDesc}>Theo dõi lịch đăng ký, địa điểm khám và các cập nhật mới nhất.</p>
-        </a>
-        <a style={S.upd} href="/benefits/uniform-program">
-          <span style={S.updLabel}>Phúc lợi · 20.12.2025</span>
-          <p style={S.updTitle}>Đồng phục Ahamove 2026</p>
-          <p style={S.updDesc}>Chương trình đăng ký size và cập nhật tiến độ sản xuất.</p>
-        </a>
-      </div>
-
       {/* HỎI AHAMOVE AI */}
       <div style={S.aiCard}>
         <img src="/images/ai-bot.svg" alt="Ahamove AI" style={{ width: "84px", height: "84px" }} />
         <p style={{ color: C.navy, fontWeight: 800, fontSize: "15px", margin: "8px 0 4px" }}>Hỏi Ahamove AI</p>
-        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Hỏi bất cứ điều gì về chính sách, phúc lợi, quy trình, công cụ…</p>
-        <a style={S.aiBtn} href="/help-center/ask-ahamove-ai">Đặt câu hỏi ngay</a>
+        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Nhấn nút <b>Hỏi Ahamove AI</b> ở góc màn hình (luôn hiển thị ở mọi trang) để đặt câu hỏi và nhận trả lời ngay — không rời khỏi trang đang xem.</p>
+        <a style={S.aiBtn} href="/ai-hub/overview">Tìm hiểu AI tại Ahamove</a>
       </div>
 
       {/* TÀI NGUYÊN PHỔ BIẾN */}
