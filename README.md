@@ -1,55 +1,49 @@
-# Mintlify Starter Kit
+# Ahamove Employee Portal — Hướng dẫn cho HR
 
-Use the starter kit to get your docs deployed and ready to customize.
+Đây là cổng thông tin nội bộ Ahamove, xây trên [Mintlify](https://mintlify.com). Trang web tương lai: **docs.ahamove.com**.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Cấu trúc / Structure
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+- `docs.json` — cấu hình toàn bộ portal: màu sắc, logo, navigation (tabs/groups). **Sửa file này để thêm/đổi/xóa trang trong menu.**
+- `*.mdx` — mỗi file là một trang. Viết bằng Markdown + vài component (Card, Steps, Accordion…).
+- `index.mdx` — trang chủ (dashboard). Khu vực "Latest Updates" để đăng tin mới.
+- `logo/`, `favicon.svg` — thay bằng logo Ahamove chính thức.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+## HR cần làm gì để sửa nội dung / How to edit
 
-## AI-assisted writing
+1. **Sửa chữ trên một trang:** mở file `.mdx` tương ứng, sửa như văn bản thường, lưu lại.
+2. **Thêm một trang mới:**
+   - Tạo file mới, ví dụ `policies/new-policy.mdx` (có phần `---` frontmatter ở đầu: `title`, `description`, `icon`).
+   - Mở `docs.json`, thêm `"policies/new-policy"` vào mảng `pages` của nhóm tương ứng.
+3. **Đăng tin mới ở trang chủ:** mở `index.mdx`, thêm một khối `<Update label="..." description="...">...</Update>` ở đầu phần "Latest Updates".
+4. **Đổi màu/logo:** sửa `colors` và `logo` trong `docs.json`.
 
-Set up your AI coding tool to work with Mintlify:
+> Mẹo: dùng [Mintlify web editor](https://mintlify.com/docs/editor) để sửa trực quan, không cần code.
+
+## Chạy thử trên máy / Preview locally (tùy chọn)
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+## Đăng lên web / Deploy
 
-## Publishing changes
+Kết nối repo GitHub này với Mintlify dashboard → mỗi lần push là tự cập nhật. Trỏ domain **docs.ahamove.com** trong phần Custom Domain.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## Phông chữ / Font
 
-## Need help?
+Portal dùng font **Lexend** (heading + body), cấu hình trong `docs.json` → `fonts`. Lexend là Google Font (có hỗ trợ tiếng Việt) nên Mintlify tự tải, không cần thao tác thêm.
 
-### Troubleshooting
+Thư mục `fonts/` chứa sẵn file Lexend (.ttf, đủ các độ đậm) nếu cần **tự host offline**: chuyển .ttf sang .woff2, đặt vào repo, rồi trỏ trong `docs.json`:
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+```json
+"fonts": {
+  "heading": { "family": "Lexend", "weight": 700, "source": "/fonts/Lexend-Bold.woff2", "format": "woff2" },
+  "body":    { "family": "Lexend", "weight": 400, "source": "/fonts/Lexend-Regular.woff2", "format": "woff2" }
+}
+```
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+## Placeholder cần thay / To fill in
+
+Các trang có khối `<Note>` ghi *"Cần HR/Admin/Tech hoàn thiện"* hoặc `[…]` là chỗ cần điền dữ liệu thật (số liệu công ty, quy định chi tiết, lịch khám, định mức chi phí…).

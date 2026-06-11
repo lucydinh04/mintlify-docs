@@ -1,43 +1,59 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Ahamove Employee Portal",
-  "description": "Cổng thông tin nội bộ dành cho nhân viên Ahamove — hội nhập, sổ tay nhân sự, chính sách, phúc lợi, hướng dẫn AI và hỗ trợ.",
+  "theme": "mint",
+  "name": "Cổng thông tin nhân viên Ahamove",
+  "description": "Cổng thông tin nội bộ Ahamove — hội nhập, sổ tay nhân sự, chính sách, phúc lợi & hỗ trợ. Ngôi nhà chung của mọi Ahamover.",
   "colors": {
-    "primary": "#1be39b",
-    "light": "#0c8c5c",
-    "dark": "#040404"
+    "primary": "#FF7A21",
+    "light": "#FF9A52",
+    "dark": "#0E4174"
   },
-  "favicon": "https://media.brand.dev/26d46f3d-dd05-44da-865d-61a4f9c59cdb.jpg",
+  "favicon": "/favicon.svg",
   "logo": {
-    "light": "https://media.brand.dev/c2ac8bb2-e752-4dff-ae87-539ff23415e2.svg",
-    "dark": "https://media.brand.dev/c2ac8bb2-e752-4dff-ae87-539ff23415e2.svg",
+    "light": "/logo/ahamove-light.svg",
+    "dark": "/logo/ahamove-dark.svg",
     "href": "/"
   },
   "appearance": {
     "default": "light"
   },
+  "fonts": {
+    "heading": {
+      "family": "Lexend",
+      "weight": 700
+    },
+    "body": {
+      "family": "Lexend",
+      "weight": 400
+    }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "interaction": {
+    "drilldown": true
+  },
   "search": {
-    "prompt": "Bạn cần tìm gì? (nghỉ phép, bảo hiểm, 1Office…)"
+    "prompt": "Bạn cần tìm gì? (nghỉ phép, 1Office, bảo hiểm…)"
   },
   "navigation": {
     "tabs": [
       {
         "tab": "Trang chủ",
-        "groups": [
-          {
-            "group": "Tổng quan",
-            "pages": ["index"]
-          }
+        "icon": "house",
+        "pages": [
+          "index"
         ]
       },
       {
         "tab": "Ahamazing Guide",
+        "icon": "compass",
         "groups": [
           {
-            "group": "Hành trình hội nhập",
+            "group": "Ahamazing Guide — Hành trình hội nhập",
+            "root": "ahamazing-guide/overview",
+            "directory": "card",
             "pages": [
-              "ahamazing-guide/overview",
               "ahamazing-guide/welcome",
               "ahamazing-guide/company-overview",
               "ahamazing-guide/culture",
@@ -50,27 +66,64 @@
         ]
       },
       {
-        "tab": "Sổ tay & Chính sách",
+        "tab": "Sổ tay nhân sự",
+        "icon": "book-open",
         "groups": [
           {
             "group": "Sổ tay nhân sự",
+            "root": "handbook/overview",
+            "directory": "card",
             "pages": [
-              "handbook/overview",
-              "handbook/working-tools",
-              "handbook/internal-systems",
-              "handbook/org-structure",
-              "handbook/glossary",
-              "handbook/company-calendar",
-              "handbook/hr-processes",
-              "handbook/payroll",
-              "handbook/offboarding",
-              "handbook/it-support"
+              {
+                "group": "Công cụ & Hệ thống",
+                "icon": "screwdriver-wrench",
+                "expanded": false,
+                "pages": [
+                  "handbook/working-tools",
+                  "handbook/internal-systems"
+                ]
+              },
+              {
+                "group": "Con người & Tổ chức",
+                "icon": "users",
+                "expanded": false,
+                "pages": [
+                  "handbook/org-structure",
+                  "handbook/glossary",
+                  "handbook/company-calendar"
+                ]
+              },
+              {
+                "group": "Quy trình & Lương",
+                "icon": "clipboard-list",
+                "expanded": false,
+                "pages": [
+                  "handbook/hr-processes",
+                  "handbook/payroll",
+                  "handbook/offboarding"
+                ]
+              },
+              {
+                "group": "Hỗ trợ",
+                "icon": "laptop",
+                "expanded": false,
+                "pages": [
+                  "handbook/it-support"
+                ]
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Chính sách",
+        "icon": "scale-balanced",
+        "groups": [
           {
-            "group": "Chính sách",
+            "group": "Chính sách & Quy định",
+            "root": "policies/overview",
+            "directory": "card",
             "pages": [
-              "policies/overview",
               "policies/leave-policy",
               "policies/attendance-policy",
               "policies/expense-policy",
@@ -80,23 +133,32 @@
         ]
       },
       {
-        "tab": "Phúc lợi & Văn phòng",
+        "tab": "Phúc lợi",
+        "icon": "gift",
         "groups": [
           {
             "group": "Phúc lợi",
+            "root": "benefits/overview",
+            "directory": "card",
             "pages": [
-              "benefits/overview",
               "benefits/health-check",
               "benefits/insurance",
               "benefits/uniform-program",
               "benefits/learning-support",
               "benefits/recognition-programs"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Văn phòng",
+        "icon": "building",
+        "groups": [
           {
-            "group": "Văn phòng",
+            "group": "Văn phòng & Tiện ích",
+            "root": "office-guide/overview",
+            "directory": "card",
             "pages": [
-              "office-guide/overview",
               "office-guide/office-locations",
               "office-guide/parking",
               "office-guide/pantry",
@@ -108,11 +170,13 @@
       },
       {
         "tab": "AI Hub",
+        "icon": "wand-magic-sparkles",
         "groups": [
           {
-            "group": "AI Hub",
+            "group": "AI Hub — Ahamove AI-Driven",
+            "root": "ai-hub/overview",
+            "directory": "card",
             "pages": [
-              "ai-hub/overview",
               "ai-hub/chatgpt-guide",
               "ai-hub/claude-guide",
               "ai-hub/prompt-library",
@@ -123,12 +187,14 @@
         ]
       },
       {
-        "tab": "Hỗ trợ",
+        "tab": "Trung tâm hỗ trợ",
+        "icon": "life-ring",
         "groups": [
           {
             "group": "Trung tâm hỗ trợ",
+            "root": "help-center/overview",
+            "directory": "card",
             "pages": [
-              "help-center/overview",
               "help-center/faq",
               "help-center/contact-hr",
               "help-center/ask-ahamove-ai"
@@ -145,14 +211,19 @@
           "href": "/help-center/ask-ahamove-ai"
         },
         {
-          "anchor": "Liên hệ HR",
-          "icon": "envelope",
-          "href": "/help-center/contact-hr"
+          "anchor": "Hỗ trợ IT",
+          "icon": "laptop",
+          "href": "/handbook/it-support"
         },
         {
           "anchor": "1Office",
           "icon": "arrow-up-right-from-square",
           "href": "https://ahamove.1office.vn"
+        },
+        {
+          "anchor": "Liên hệ HR",
+          "icon": "envelope",
+          "href": "/help-center/contact-hr"
         }
       ]
     }
@@ -160,12 +231,12 @@
   "navbar": {
     "links": [
       {
-        "label": "Hỗ trợ IT",
-        "href": "/handbook/it-support"
+        "label": "Trung tâm hỗ trợ",
+        "href": "/help-center/overview"
       },
       {
-        "label": "Liên hệ HR",
-        "href": "/help-center/contact-hr"
+        "label": "Hỗ trợ IT",
+        "href": "/handbook/it-support"
       }
     ],
     "primary": {
@@ -179,6 +250,38 @@
       "website": "https://ahamove.com",
       "facebook": "https://www.facebook.com/ahamovevn",
       "linkedin": "https://www.linkedin.com/company/ahamove"
-    }
+    },
+    "links": [
+      {
+        "header": "Bắt đầu",
+        "items": [
+          { "label": "Chào mừng", "href": "/ahamazing-guide/welcome" },
+          { "label": "Trước ngày đầu", "href": "/ahamazing-guide/before-day-1" },
+          { "label": "Ngày đầu tiên", "href": "/ahamazing-guide/day-1" }
+        ]
+      },
+      {
+        "header": "Phổ biến",
+        "items": [
+          { "label": "Nghỉ phép", "href": "/policies/leave-policy" },
+          { "label": "1Office", "href": "/handbook/internal-systems" },
+          { "label": "Bảo hiểm", "href": "/benefits/insurance" }
+        ]
+      },
+      {
+        "header": "Hỗ trợ",
+        "items": [
+          { "label": "Câu hỏi thường gặp", "href": "/help-center/faq" },
+          { "label": "Liên hệ HR", "href": "/help-center/contact-hr" },
+          { "label": "Hỗ trợ IT", "href": "/handbook/it-support" }
+        ]
+      }
+    ]
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view"
+    ]
   }
 }
