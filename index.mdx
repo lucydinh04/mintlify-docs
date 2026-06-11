@@ -10,31 +10,31 @@ export const C = {
 };
 
 export const S = {
-  page: { maxWidth: "1180px", margin: "0 auto", padding: "24px 20px 64px" },
-  grid: { display: "grid", gridTemplateColumns: "minmax(0,1fr) 320px", gap: "24px", alignItems: "start" },
-  hero: { position: "relative", overflow: "hidden", borderRadius: "20px", background: "linear-gradient(135deg,#FFF4EC 0%,#FFE7D6 100%)", padding: "36px 32px" },
-  heroTitle: { fontSize: "34px", fontWeight: 800, color: C.navy, lineHeight: 1.1, margin: 0 },
-  heroSub2: { fontSize: "19px", fontWeight: 700, color: C.orange, margin: "8px 0 14px" },
+  page: { maxWidth: "1180px", margin: "0 auto", padding: "24px 16px 64px" },
+  wrap: { display: "flex", flexWrap: "wrap", gap: "24px", alignItems: "flex-start" },
+  main: { flex: "999 1 440px", minWidth: 0 },
+  rail: { flex: "1 1 300px", minWidth: 0, display: "flex", flexDirection: "column", gap: "20px" },
+  hero: { position: "relative", overflow: "hidden", borderRadius: "20px", background: "linear-gradient(135deg,#FFF4EC 0%,#FFE7D6 100%)", padding: "32px 28px" },
+  heroTitle: { fontSize: "30px", fontWeight: 800, color: C.navy, lineHeight: 1.12, margin: 0 },
+  heroSub2: { fontSize: "18px", fontWeight: 700, color: C.orange, margin: "8px 0 14px" },
   heroText: { color: C.grey, fontSize: "15px", maxWidth: "440px", margin: 0 },
-  heroImg: { position: "absolute", right: "18px", top: "24px", width: "300px", maxWidth: "42%", height: "auto" },
-  ctaRow: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginTop: "22px", maxWidth: "560px" },
+  ctaRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "14px", marginTop: "22px" },
   cta: { display: "flex", gap: "12px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "15px 16px", boxShadow: "0 4px 14px rgba(20,34,70,.06)" },
   ctaIcon: { flex: "0 0 38px", height: "38px", borderRadius: "10px", background: C.cream, display: "grid", placeItems: "center" },
   ctaTitle: { color: C.navy, fontWeight: 700, fontSize: "15px", margin: "0 0 3px" },
   ctaDesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.5 },
   search: { display: "flex", gap: "12px", alignItems: "flex-start", background: C.soft, border: `1px solid ${C.line}`, borderRadius: "14px", padding: "15px 18px", margin: "22px 0 8px" },
   h2: { fontSize: "20px", fontWeight: 800, color: C.navy, margin: "28px 0 14px" },
-  qgrid: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" },
+  qgrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "14px" },
   qcard: { display: "flex", gap: "13px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "16px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
   qicon: { flex: "0 0 42px", height: "42px", borderRadius: "12px", background: C.cream, display: "grid", placeItems: "center" },
   qtitle: { color: C.navy, fontWeight: 700, fontSize: "14.5px", margin: "0 0 3px" },
   qdesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
-  journey: { display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: "10px", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "22px 16px" },
+  journey: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "12px", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "22px 16px" },
   jstep: { textAlign: "center", textDecoration: "none" },
   jdot: { width: "46px", height: "46px", borderRadius: "50%", margin: "0 auto 10px", display: "grid", placeItems: "center", background: C.cream, border: `2px solid ${C.orange2}` },
   jname: { color: C.navy, fontWeight: 700, fontSize: "13.5px", margin: "0 0 3px" },
   jdesc: { color: C.grey, fontSize: "11.5px", margin: 0, lineHeight: 1.4 },
-  rail: { display: "flex", flexDirection: "column", gap: "20px" },
   panel: { background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px" },
   panelHead: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px" },
   panelTitle: { fontSize: "15px", fontWeight: 800, color: C.navy, margin: 0 },
@@ -45,14 +45,13 @@ export const S = {
 };
 
 <div style={S.page}>
-  <div style={S.grid} className="aha-grid">
+  <div style={S.wrap}>
 
     {/* ============ CỘT CHÍNH ============ */}
-    <div>
+    <div style={S.main}>
 
       {/* HERO */}
       <div style={S.hero}>
-        <img src="/images/hero.svg" alt="Ahamove" style={S.heroImg} />
         <h1 style={S.heroTitle}>Ahamove Handbook</h1>
         <p style={S.heroSub2}>Mọi thông tin Ahamover cần, trong một nơi duy nhất.</p>
         <p style={S.heroText}>Tìm chính sách, công cụ, quy trình, phúc lợi và tài nguyên AI chỉ trong vài giây. <b style={{ color: C.navy }}>Always Moving.</b></p>
@@ -79,7 +78,7 @@ export const S = {
 
       {/* TRUY CẬP NHANH */}
       <h2 style={S.h2}>Truy cập nhanh</h2>
-      <div style={S.qgrid} className="aha-qgrid">
+      <div style={S.qgrid}>
         <a style={S.qcard} href="/ahamazing-guide/overview"><span style={S.qicon}><Icon icon="compass" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Ahamazing Guide</p><p style={S.qdesc}>Hành trình dành cho nhân viên mới.</p></span></a>
         <a style={S.qcard} href="/handbook/overview"><span style={S.qicon}><Icon icon="book-open" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Sổ tay nhân sự</p><p style={S.qdesc}>Công cụ, hệ thống, quy trình và thông tin cần biết.</p></span></a>
         <a style={S.qcard} href="/policies/overview"><span style={S.qicon}><Icon icon="scale-balanced" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Chính sách</p><p style={S.qdesc}>Các chính sách và quy định dành cho Ahamovers.</p></span></a>
@@ -90,7 +89,7 @@ export const S = {
 
       {/* HÀNH TRÌNH NHÂN VIÊN MỚI */}
       <h2 style={S.h2}>Hành trình Ahamover mới</h2>
-      <div style={S.journey} className="aha-journey">
+      <div style={S.journey}>
         <a style={S.jstep} href="/ahamazing-guide/welcome"><div style={S.jdot}><Icon icon="door-open" size={20} color="#FF7A21" /></div><p style={S.jname}>Welcome</p><p style={S.jdesc}>Làm quen Ahamove và cách dùng cổng thông tin.</p></a>
         <a style={S.jstep} href="/ahamazing-guide/before-day-1"><div style={S.jdot}><Icon icon="calendar-check" size={20} color="#FF7A21" /></div><p style={S.jname}>Before Day 1</p><p style={S.jdesc}>Chuẩn bị giấy tờ, tài khoản và thông tin cần thiết.</p></a>
         <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}><Icon icon="sun" size={20} color="#FF7A21" /></div><p style={S.jname}>Day 1</p><p style={S.jdesc}>Lịch trình ngày đầu tiên và gặp team.</p></a>
@@ -100,7 +99,7 @@ export const S = {
     </div>
 
     {/* ============ CỘT PHẢI ============ */}
-    <div style={S.rail} className="aha-rail">
+    <div style={S.rail}>
 
       {/* HỎI AHAMOVE AI */}
       <div style={S.aiCard}>
@@ -126,14 +125,3 @@ export const S = {
     </div>
   </div>
 </div>
-
-<style>{`
-  @media (max-width: 1000px) {
-    .aha-grid { grid-template-columns: 1fr !important; }
-    .aha-qgrid { grid-template-columns: 1fr 1fr !important; }
-  }
-  @media (max-width: 640px) {
-    .aha-qgrid { grid-template-columns: 1fr !important; }
-    .aha-journey { grid-template-columns: 1fr 1fr !important; row-gap: 18px; }
-  }
-`}</style>

@@ -1,0 +1,23 @@
+/* =====================================================================
+   Ahamove Handbook — Custom global CSS
+   Mintlify tự nạp mọi file .css đặt ở thư mục gốc của dự án.
+   ===================================================================== */
+
+/* Bo góc cho mọi hình ảnh chèn vào nội dung (Markdown, <img>, <Frame>) */
+img {
+  border-radius: 14px;
+}
+
+/* Component <Frame> của Mintlify: bo góc & ẩn phần tràn để ảnh bên trong cũng bo theo */
+[class*="frame"],
+figure[class*="Frame"] {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Không bo góc logo trên thanh điều hướng (giữ logo hiển thị đúng) */
+img[src*="/logo/"],
+nav img,
+header img {
+  border-radius: 0;
+}
