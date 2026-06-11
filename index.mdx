@@ -1,61 +1,166 @@
 ---
-title: "Xin chào Ahamover 👋"
-description: "Cần gì làm nấy — tìm nhanh hoặc hỏi Ahamove AI. Always Moving."
-mode: "wide"
+title: "Ahamove Employee Portal"
+description: "Mọi thông tin Ahamover cần, trong một nơi duy nhất."
+mode: "custom"
 ---
 
-{/* ============ 1 · TÌM KIẾM TRƯỚC TIÊN ============ */}
+export const C = {
+  orange: "#FF7A21", orange2: "#FF9A52", navy: "#0E4174",
+  cream: "#FFF4EC", line: "#E7EAF0", grey: "#667089", soft: "#F6F8FC",
+};
 
-<Note>
-  🔎 **Gõ phím `/` để tìm bất cứ thứ gì** — *"nghỉ phép", "đăng nhập 1Office", "bảo hiểm"…* Hoặc hỏi thẳng [**Ahamove AI**](/help-center/ask-ahamove-ai), trả lời ngay 24/7.
-</Note>
+export const S = {
+  page: { maxWidth: "1180px", margin: "0 auto", padding: "24px 20px 64px" },
+  grid: { display: "grid", gridTemplateColumns: "minmax(0,1fr) 320px", gap: "24px", alignItems: "start" },
+  hero: { position: "relative", overflow: "hidden", borderRadius: "20px", background: "linear-gradient(135deg,#FFF4EC 0%,#FFE7D6 100%)", padding: "34px 32px" },
+  heroTitle: { fontSize: "34px", fontWeight: 800, color: C.navy, lineHeight: 1.1, margin: 0 },
+  heroSub2: { fontSize: "20px", fontWeight: 700, color: C.orange, margin: "6px 0 14px" },
+  heroText: { color: C.grey, fontSize: "15px", maxWidth: "440px", margin: 0 },
+  heroImg: { position: "absolute", right: "18px", top: "24px", width: "300px", maxWidth: "42%", height: "auto" },
+  ctaRow: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginTop: "20px", maxWidth: "560px" },
+  cta: { display: "block", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "14px 16px", boxShadow: "0 4px 14px rgba(20,34,70,.06)" },
+  ctaTitle: { color: C.navy, fontWeight: 700, fontSize: "15px", margin: "0 0 4px" },
+  ctaDesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.5 },
+  search: { display: "flex", gap: "12px", alignItems: "flex-start", background: C.soft, border: `1px solid ${C.line}`, borderRadius: "14px", padding: "14px 18px", margin: "22px 0 8px" },
+  h2: { fontSize: "20px", fontWeight: 800, color: C.navy, margin: "26px 0 14px" },
+  qgrid: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px" },
+  qcard: { display: "flex", gap: "13px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "16px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
+  qicon: { flex: "0 0 42px", height: "42px", borderRadius: "12px", background: C.cream, display: "grid", placeItems: "center", fontSize: "20px" },
+  qtitle: { color: C.navy, fontWeight: 700, fontSize: "14.5px", margin: "0 0 3px" },
+  qdesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
+  journey: { display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: "10px", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "20px 16px" },
+  jstep: { textAlign: "center", textDecoration: "none" },
+  jdot: { width: "44px", height: "44px", borderRadius: "50%", margin: "0 auto 10px", display: "grid", placeItems: "center", fontSize: "20px", background: C.cream, border: `2px solid ${C.orange2}` },
+  jname: { color: C.navy, fontWeight: 700, fontSize: "13.5px", margin: "0 0 3px" },
+  jdesc: { color: C.grey, fontSize: "11.5px", margin: 0, lineHeight: 1.4 },
+  rail: { display: "flex", flexDirection: "column", gap: "20px" },
+  panel: { background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px" },
+  panelHead: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px" },
+  panelTitle: { fontSize: "15px", fontWeight: 800, color: C.navy, margin: 0 },
+  seeAll: { fontSize: "12px", fontWeight: 600, color: C.orange, textDecoration: "none" },
+  upd: { display: "block", textDecoration: "none", padding: "10px 0", borderTop: `1px solid ${C.line}` },
+  updLabel: { fontSize: "10px", letterSpacing: ".5px", textTransform: "uppercase", color: C.orange, fontWeight: 700 },
+  updTitle: { color: C.navy, fontWeight: 700, fontSize: "13.5px", margin: "3px 0" },
+  updDesc: { color: C.grey, fontSize: "12px", margin: 0, lineHeight: 1.45 },
+  aiCard: { background: "linear-gradient(135deg,#EAF1FB,#F6F8FC)", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px", textAlign: "center" },
+  aiBtn: { display: "inline-block", marginTop: "12px", background: C.orange, color: "#fff", fontWeight: 700, fontSize: "13.5px", padding: "10px 18px", borderRadius: "11px", textDecoration: "none" },
+  res: { display: "flex", alignItems: "center", gap: "11px", textDecoration: "none", padding: "10px 0", borderTop: `1px solid ${C.line}`, color: C.navy, fontWeight: 600, fontSize: "13.5px" },
+};
 
-{/* ============ 2 · HÀNH ĐỘNG NHANH (tối đa 4) ============ */}
+<div style={S.page}>
+  <div style={S.grid} className="aha-grid">
 
-## ⚡ Làm ngay
+    {/* ============ CỘT CHÍNH ============ */}
+    <div>
 
-<CardGroup cols={4}>
-  <Card title="1Office" icon="building-user" href="https://ahamove.1office.vn">
-    Chấm công, nghỉ phép, phiếu lương.
-  </Card>
-  <Card title="Hỏi Ahamove AI" icon="robot" href="/help-center/ask-ahamove-ai">
-    Trợ lý AI trả lời 24/7.
-  </Card>
-  <Card title="Hỗ trợ IT" icon="laptop" href="/handbook/it-support">
-    Tài khoản, máy móc, hệ thống.
-  </Card>
-  <Card title="Khám sức khỏe" icon="stethoscope" href="/benefits/health-check">
-    Lịch & quyền lợi khám.
-  </Card>
-</CardGroup>
+      {/* HERO */}
+      <div style={S.hero}>
+        <img src="/images/hero.svg" alt="Ahamove" style={S.heroImg} />
+        <h1 style={S.heroTitle}>Ahamove Employee Portal</h1>
+        <p style={S.heroSub2}>Mọi thông tin Ahamover cần, trong một nơi duy nhất.</p>
+        <p style={S.heroText}>Tìm chính sách, công cụ, quy trình, phúc lợi và tài nguyên AI chỉ trong vài giây. <b style={{ color: C.navy }}>Always Moving.</b> 🧡</p>
+        <div style={S.ctaRow}>
+          <a style={S.cta} href="/ahamazing-guide/overview">
+            <p style={S.ctaTitle}>🧭 Bắt đầu hành trình</p>
+            <p style={S.ctaDesc}>Khám phá Ahamazing Guide dành cho nhân viên mới: từ trước ngày đầu đến 30 ngày đầu.</p>
+          </a>
+          <a style={S.cta} href="/help-center/ask-ahamove-ai">
+            <p style={S.ctaTitle}>🤖 Hỏi Ahamove AI</p>
+            <p style={S.ctaDesc}>Tra cứu chính sách, phúc lợi, quy trình và FAQ bất cứ lúc nào với trợ lý AI nội bộ.</p>
+          </a>
+        </div>
+      </div>
 
-{/* ============ 3 · XEM NHIỀU NHẤT ============ */}
+      {/* SEARCH-FIRST */}
+      <div style={S.search}>
+        <span style={{ fontSize: "20px" }}>🔎</span>
+        <div>
+          <p style={{ color: C.navy, fontWeight: 700, fontSize: "14px", margin: "0 0 3px" }}>Tìm nhanh mọi thứ bằng thanh tìm kiếm phía trên hoặc nhấn phím <kbd>/</kbd>.</p>
+          <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Gõ tiếng Việt thoải mái: "Nghỉ phép", "Bảo hiểm", "Khám sức khỏe", "1Office", "Day 1", "IT Support"…</p>
+        </div>
+      </div>
 
-## ⭐ Mọi người hay xem
+      {/* TRUY CẬP NHANH */}
+      <h2 style={S.h2}>Truy cập nhanh</h2>
+      <div style={S.qgrid} className="aha-qgrid">
+        <a style={S.qcard} href="/ahamazing-guide/overview"><span style={S.qicon}>🧭</span><span><p style={S.qtitle}>Ahamazing Guide</p><p style={S.qdesc}>Hành trình dành cho nhân viên mới.</p></span></a>
+        <a style={S.qcard} href="/handbook/overview"><span style={S.qicon}>📖</span><span><p style={S.qtitle}>Sổ tay nhân sự</p><p style={S.qdesc}>Công cụ, hệ thống, quy trình và thông tin cần biết.</p></span></a>
+        <a style={S.qcard} href="/policies/overview"><span style={S.qicon}>⚖️</span><span><p style={S.qtitle}>Chính sách</p><p style={S.qdesc}>Các chính sách và quy định dành cho Ahamovers.</p></span></a>
+        <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}>🎁</span><span><p style={S.qtitle}>Phúc lợi</p><p style={S.qdesc}>Khám sức khỏe, bảo hiểm, đồng phục và nhiều hơn nữa.</p></span></a>
+        <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}>🏢</span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Thông tin văn phòng, tiện ích và liên hệ khẩn cấp.</p></span></a>
+        <a style={S.qcard} href="/ai-hub/overview"><span style={S.qicon}>✨</span><span><p style={S.qtitle}>AI Hub</p><p style={S.qdesc}>Tài nguyên AI, Prompt Library và ứng dụng AI trong công việc.</p></span></a>
+        <a style={{ ...S.qcard, gridColumn: "span 3" }} href="/help-center/overview"><span style={S.qicon}>🆘</span><span><p style={S.qtitle}>Trung tâm hỗ trợ</p><p style={S.qdesc}>FAQ, liên hệ HR, hỗ trợ IT và Hỏi Ahamove AI.</p></span></a>
+      </div>
 
-<Columns cols={2}>
-  <Card title="Nghỉ phép" icon="umbrella-beach" href="/policies/leave-policy" horizontal />
-  <Card title="Bảo hiểm" icon="heart-pulse" href="/benefits/insurance" horizontal />
-  <Card title="Lương & phiếu lương" icon="money-bill-wave" href="/handbook/payroll" horizontal />
-  <Card title="Gửi xe" icon="square-parking" href="/office-guide/parking" horizontal />
-</Columns>
+      {/* HÀNH TRÌNH NHÂN VIÊN MỚI */}
+      <h2 style={S.h2}>Hành trình Ahamover mới</h2>
+      <div style={S.journey} className="aha-journey">
+        <a style={S.jstep} href="/ahamazing-guide/welcome"><div style={S.jdot}>😊</div><p style={S.jname}>Welcome</p><p style={S.jdesc}>Làm quen Ahamove và cách dùng portal.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/before-day-1"><div style={S.jdot}>📅</div><p style={S.jname}>Before Day 1</p><p style={S.jdesc}>Chuẩn bị giấy tờ, tài khoản và thông tin cần thiết.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}>☀️</div><p style={S.jname}>Day 1</p><p style={S.jdesc}>Lịch trình ngày đầu tiên và gặp team.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/week-1"><div style={S.jdot}>✅</div><p style={S.jname}>Week 1</p><p style={S.jdesc}>Kích hoạt công cụ làm việc và làm quen quy trình.</p></a>
+        <a style={S.jstep} href="/ahamazing-guide/first-month"><div style={S.jdot}>📈</div><p style={S.jname}>First Month</p><p style={S.jdesc}>Thiết lập mục tiêu và tạo first-win đầu tiên.</p></a>
+      </div>
+    </div>
 
-{/* ============ 4 · CẬP NHẬT MỚI (gọn) ============ */}
+    {/* ============ CỘT PHẢI ============ */}
+    <div style={S.rail} className="aha-rail">
 
-## 📣 Mới cập nhật
+      {/* CẬP NHẬT MỚI NHẤT */}
+      <div style={S.panel}>
+        <div style={S.panelHead}>
+          <p style={S.panelTitle}>Cập nhật mới nhất</p>
+          <a style={S.seeAll} href="/ahamazing-guide/company-overview#message-2026">Xem tất cả</a>
+        </div>
+        <a style={{ ...S.upd, borderTop: "none" }} href="/ahamazing-guide/company-overview#message-2026">
+          <span style={S.updLabel}>Định hướng · 01.01.2026</span>
+          <p style={S.updTitle}>Ahamove 2026 — AI-Driven, Human-Centric</p>
+          <p style={S.updDesc}>Công nghệ dẫn lối, con người là trung tâm. Cùng nhau bứt phá!</p>
+        </a>
+        <a style={S.upd} href="/benefits/health-check">
+          <span style={S.updLabel}>Phúc lợi · 28.12.2025</span>
+          <p style={S.updTitle}>Chương trình Khám sức khỏe 2026</p>
+          <p style={S.updDesc}>Theo dõi lịch đăng ký, địa điểm khám và các cập nhật mới nhất.</p>
+        </a>
+        <a style={S.upd} href="/benefits/uniform-program">
+          <span style={S.updLabel}>Phúc lợi · 20.12.2025</span>
+          <p style={S.updTitle}>Đồng phục Ahamove 2026</p>
+          <p style={S.updDesc}>Chương trình đăng ký size và cập nhật tiến độ sản xuất.</p>
+        </a>
+      </div>
 
-<Update label="2026" description="Định hướng năm">
-  **Ahamove 2026 — AI-Driven, Human-Centric.** → [Đọc thông điệp 2026](/ahamazing-guide/company-overview#message-2026)
-</Update>
+      {/* HỎI AHAMOVE AI */}
+      <div style={S.aiCard}>
+        <img src="/images/ai-bot.svg" alt="Ahamove AI" style={{ width: "84px", height: "84px" }} />
+        <p style={{ color: C.navy, fontWeight: 800, fontSize: "15px", margin: "8px 0 4px" }}>Hỏi Ahamove AI</p>
+        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Hỏi bất cứ điều gì về chính sách, phúc lợi, quy trình, công cụ…</p>
+        <a style={S.aiBtn} href="/help-center/ask-ahamove-ai">Đặt câu hỏi ngay</a>
+      </div>
 
-<Update label="01.05.2025" description="Phúc lợi">
-  **Bảo hiểm Generali 2025** có hiệu lực — bồi thường online đến 50 triệu/hồ sơ. → [Chi tiết](/benefits/insurance)
-</Update>
+      {/* TÀI NGUYÊN PHỔ BIẾN */}
+      <div style={S.panel}>
+        <div style={S.panelHead}>
+          <p style={S.panelTitle}>Tài nguyên phổ biến</p>
+          <a style={S.seeAll} href="/handbook/overview">Xem tất cả</a>
+        </div>
+        <a style={{ ...S.res, borderTop: "none" }} href="/policies/leave-policy">📅&nbsp; Chính sách nghỉ phép</a>
+        <a style={S.res} href="/benefits/health-check">🩺&nbsp; Khám sức khỏe</a>
+        <a style={S.res} href="/benefits/insurance">❤️&nbsp; Bảo hiểm</a>
+        <a style={S.res} href="/handbook/working-tools">🧰&nbsp; Công cụ làm việc</a>
+        <a style={S.res} href="/handbook/it-support">💻&nbsp; Hỗ trợ IT</a>
+        <a style={S.res} href="/office-guide/parking">🛵&nbsp; Gửi xe</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-{/* ============ 5 · NHÂN VIÊN MỚI (1 CTA) ============ */}
-
-## 🌟 Nhân viên mới?
-
-<Card title="Bắt đầu hành trình hội nhập" icon="compass" href="/ahamazing-guide/overview" horizontal>
-  Tất cả những gì cần cho ngày đầu, tuần đầu và tháng đầu — gói gọn trong Ahamazing Guide.
-</Card>
+<style>{`
+  @media (max-width: 1000px) {
+    .aha-grid { grid-template-columns: 1fr !important; }
+    .aha-qgrid { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 640px) {
+    .aha-qgrid { grid-template-columns: 1fr !important; }
+    .aha-journey { grid-template-columns: 1fr 1fr !important; row-gap: 18px; }
+  }
+`}</style>
