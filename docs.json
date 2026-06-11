@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Cổng thông tin nhân viên Ahamove",
+  "name": "Ahamove Handbook",
   "description": "Cổng thông tin nội bộ Ahamove — hội nhập, sổ tay nhân sự, chính sách, phúc lợi & hỗ trợ. Ngôi nhà chung của mọi Ahamover.",
   "colors": {
     "primary": "#FF7A21",
@@ -52,7 +52,6 @@
           {
             "group": "Ahamazing Guide — Hành trình hội nhập",
             "root": "ahamazing-guide/overview",
-            "directory": "card",
             "pages": [
               "ahamazing-guide/welcome",
               "ahamazing-guide/company-overview",
@@ -72,7 +71,6 @@
           {
             "group": "Sổ tay nhân sự",
             "root": "handbook/overview",
-            "directory": "card",
             "pages": [
               {
                 "group": "Công cụ & Hệ thống",
@@ -122,7 +120,6 @@
           {
             "group": "Chính sách & Quy định",
             "root": "policies/overview",
-            "directory": "card",
             "pages": [
               "policies/leave-policy",
               "policies/attendance-policy",
@@ -139,7 +136,6 @@
           {
             "group": "Phúc lợi",
             "root": "benefits/overview",
-            "directory": "card",
             "pages": [
               "benefits/health-check",
               "benefits/insurance",
@@ -157,13 +153,11 @@
           {
             "group": "Văn phòng & Tiện ích",
             "root": "office-guide/overview",
-            "directory": "card",
             "pages": [
               "office-guide/office-locations",
               "office-guide/parking",
               "office-guide/pantry",
-              "office-guide/meeting-rooms",
-              "office-guide/emergency-contacts"
+              "office-guide/meeting-rooms"
             ]
           }
         ]
@@ -175,77 +169,44 @@
           {
             "group": "AI Hub — Ahamove AI-Driven",
             "root": "ai-hub/overview",
-            "directory": "card",
             "pages": [
-              "ai-hub/overview",
-              "ai-hub/yes-ai-do",
               "ai-hub/claude-guide",
               "ai-hub/prompt-library",
               "ai-hub/ai-playbook",
-              "ai-hub/ai-showcase-2026",
-              "ai-hub/study-tour-china"
+              "ai-hub/yes-ai-do",
+              "ai-hub/study-tour-china",
+              "ai-hub/ai-showcase-2026"
             ]
           }
         ]
       },
       {
-        "tab": "Trung tâm hỗ trợ",
-        "icon": "life-ring",
+        "tab": "Thông tin liên lạc nhân sự",
+        "icon": "address-book",
         "groups": [
           {
-            "group": "Trung tâm hỗ trợ",
+            "group": "Thông tin liên lạc nhân sự",
             "root": "help-center/overview",
-            "directory": "card",
             "pages": [
-              "help-center/faq",
               "help-center/contact-hr",
-              "help-center/ask-ahamove-ai"
+              "help-center/faq"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Hỏi Ahamove AI",
-          "icon": "robot",
-          "href": "/help-center/ask-ahamove-ai"
-        },
-        {
-          "anchor": "Hỗ trợ IT",
-          "icon": "laptop",
-          "href": "/handbook/it-support"
-        },
-        {
-          "anchor": "1Office",
-          "icon": "arrow-up-right-from-square",
-          "href": "https://ahamove.1office.vn"
-        },
-        {
-          "anchor": "Liên hệ HR",
-          "icon": "envelope",
-          "href": "/help-center/contact-hr"
-        }
-      ]
-    }
+    ]
   },
   "navbar": {
     "links": [
       {
-        "label": "Trung tâm hỗ trợ",
+        "label": "Thông tin liên lạc nhân sự",
         "href": "/help-center/overview"
       },
       {
         "label": "Hỗ trợ IT",
         "href": "/handbook/it-support"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Hỏi Ahamove AI",
-      "href": "/help-center/ask-ahamove-ai"
-    }
+    ]
   },
   "footer": {
     "socials": {
@@ -257,52 +218,24 @@
       {
         "header": "Bắt đầu",
         "items": [
-          {
-            "label": "Chào mừng",
-            "href": "/ahamazing-guide/welcome"
-          },
-          {
-            "label": "Trước ngày đầu",
-            "href": "/ahamazing-guide/before-day-1"
-          },
-          {
-            "label": "Ngày đầu tiên",
-            "href": "/ahamazing-guide/day-1"
-          }
+          { "label": "Chào mừng", "href": "/ahamazing-guide/welcome" },
+          { "label": "Trước ngày đầu", "href": "/ahamazing-guide/before-day-1" },
+          { "label": "Ngày đầu tiên", "href": "/ahamazing-guide/day-1" }
         ]
       },
       {
         "header": "Phổ biến",
         "items": [
-          {
-            "label": "Nghỉ phép",
-            "href": "/policies/leave-policy"
-          },
-          {
-            "label": "1Office",
-            "href": "/handbook/internal-systems"
-          },
-          {
-            "label": "Bảo hiểm",
-            "href": "/benefits/insurance"
-          }
+          { "label": "Nghỉ phép", "href": "/policies/leave-policy" },
+          { "label": "1Office", "href": "/handbook/internal-systems" },
+          { "label": "Bảo hiểm", "href": "/benefits/insurance" }
         ]
       },
       {
-        "header": "Hỗ trợ",
+        "header": "Liên hệ",
         "items": [
-          {
-            "label": "Câu hỏi thường gặp",
-            "href": "/help-center/faq"
-          },
-          {
-            "label": "Liên hệ HR",
-            "href": "/help-center/contact-hr"
-          },
-          {
-            "label": "Hỗ trợ IT",
-            "href": "/handbook/it-support"
-          }
+          { "label": "Thông tin liên lạc nhân sự", "href": "/help-center/overview" },
+          { "label": "Hỗ trợ IT", "href": "/handbook/it-support" }
         ]
       }
     ]
