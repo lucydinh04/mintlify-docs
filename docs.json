@@ -172,5 +172,8 @@
   },
   "contextual": {
     "options": ["copy", "view"]
-  }
+  },
+  "scripts": [
+    "/aha-custom.js"
+  ]
 }
