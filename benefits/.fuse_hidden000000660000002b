@@ -1,0 +1,61 @@
+---
+title: "Bảo hiểm"
+sidebarTitle: "Bảo hiểm"
+description: "Bảo hiểm sức khỏe Generali & Bảo hiểm xã hội (VssID) cho nhân viên Ahamove."
+icon: "heart-pulse"
+---
+
+## Generali 2025 — nhìn nhanh
+
+<CardGroup cols={3}>
+  <Card title="01.05.2025" icon="calendar-check">
+    Ngày bắt đầu hiệu lực.
+  </Card>
+  <Card title="50 triệu/hồ sơ" icon="hand-holding-dollar">
+    Bồi thường hồ sơ online tối đa.
+  </Card>
+  <Card title="Tăng ngoại trú" icon="stethoscope">
+    Tăng chi phí điều trị ngoại trú.
+  </Card>
+</CardGroup>
+
+## Bảo hiểm sức khỏe Generali
+
+- Đăng ký người thân tự nguyện theo form HR.
+- Thắc mắc hồ sơ/quyền lợi: kiểm tra email **nhansu@ahamove.com**.
+
+<CardGroup cols={2}>
+  <Card title="Chính sách Generali" icon="file-shield" href="https://drive.google.com/file/d/1EWEdhR6LdF2EHwg7GLWBbjyNOYT5HOjE/view">
+    Tài liệu chính sách chi tiết.
+  </Card>
+  <Card title="Form hỗ trợ thắc mắc" icon="clipboard-question" href="https://docs.google.com/forms/d/e/1FAIpQLSc3MHga1E95ttWYhfZNnFMEceA4jDA5RUZKzuEQdZe1Fgk3pw/viewform">
+    Gửi thắc mắc về bảo hiểm cho HR.
+  </Card>
+</CardGroup>
+
+## Bảo hiểm xã hội — VssID
+
+<CardGroup cols={2}>
+  <Card title="Thay thẻ BHYT giấy" icon="id-card">
+    Dùng app khi khám–chữa bệnh.
+  </Card>
+  <Card title="Tra cứu mọi lúc" icon="magnifying-glass">
+    Tra cứu BHXH/BHYT trên app.
+  </Card>
+</CardGroup>
+
+<Card title="Hướng dẫn cài đặt VssID" icon="mobile-screen" href="https://docs.google.com/presentation/d/1ZgktD4SMArRpE6wd51s_CAKUtkakx3xWnEWNnsRBGZc/edit">
+  Slide hướng dẫn cài đặt & sử dụng VssID.
+</Card>
+
+<Warning>
+  Thắc mắc lương/bảo hiểm cá nhân → email **nhansu@ahamove.com**. Ahamove AI không tra cứu được hồ sơ bảo hiểm riêng.
+</Warning>
+
+## Xem tiếp
+
+<CardGroup cols={3}>
+  <Card title="Khám sức khỏe" icon="stethoscope" href="/benefits/health-check">Lịch & quyền lợi khám định kỳ.</Card>
+  <Card title="Phúc lợi khác" icon="gift" href="/benefits/overview">Đồng phục, học tập, ghi nhận.</Card>
+  <Card title="Liên hệ HR" icon="headset" href="/help-center/contact-hr">C&B phụ trách bảo hiểm.</Card>
+</CardGroup>

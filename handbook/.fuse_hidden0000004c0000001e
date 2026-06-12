@@ -1,0 +1,58 @@
+---
+title: "Cơ cấu tổ chức"
+sidebarTitle: "Cơ cấu tổ chức"
+description: "Các phòng ban Ahamove & cách tổ chức — biết mình thuộc đâu và phối hợp với ai."
+icon: "sitemap"
+---
+
+Hiểu nhanh Ahamove được tổ chức thế nào để bạn biết mình thuộc đâu và cần phối hợp với phòng ban nào.
+
+## Lãnh đạo
+
+<CardGroup cols={2}>
+  <Card title="Phạm Hữu Ngôn" icon="user-tie">
+    CEO Ahamove.
+  </Card>
+  <Card title="Lương Duy Hoài" icon="building-flag">
+    CEO Tập đoàn Scommerce (Ahamove + GHN). Xem [Tổng quan công ty](/ahamazing-guide/company-overview).
+  </Card>
+</CardGroup>
+
+## Các phòng ban
+
+<CardGroup cols={2}>
+  <Card title="Human Resources" icon="users">
+    Nhân sự, tuyển dụng, chính sách, phúc lợi.
+  </Card>
+  <Card title="Finance & Accounting" icon="calculator">
+    Tài chính, kế toán, thanh toán.
+  </Card>
+  <Card title="Application" icon="mobile-screen-button">
+    Phát triển ứng dụng (app).
+  </Card>
+  <Card title="Platform" icon="server">
+    Nền tảng công nghệ & hạ tầng.
+  </Card>
+  <Card title="Supply Operations" icon="motorcycle">
+    Vận hành nguồn cung tài xế.
+  </Card>
+  <Card title="Central Operations" icon="gears">
+    Vận hành trung tâm.
+  </Card>
+  <Card title="AhaFood.AI" icon="utensils">
+    Mảng food & AI.
+  </Card>
+  <Card title="Business Development" icon="handshake">
+    Phát triển kinh doanh & đối tác.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Cần HR/EX hoàn thiện:** sơ đồ tổ chức (org chart) trực quan, tên trưởng bộ phận & cách phòng ban phối hợp.
+  *[HR đính kèm org chart cập nhật tại đây — có thể nhúng ảnh hoặc dùng component Frame.]*
+</Note>
+
+<Tip>
+  Chưa thuộc tên gọi nội bộ? Xem [Bảng thuật ngữ](/handbook/glossary). Cần biết hỏi ai? Xem
+  [Liên hệ HR](/help-center/contact-hr).
+</Tip>

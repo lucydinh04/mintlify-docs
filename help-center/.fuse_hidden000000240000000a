@@ -1,0 +1,34 @@
+---
+title: "Hỏi Ahamove AI"
+sidebarTitle: "Ahamove AI"
+description: "Trợ lý AI nội bộ (AhaGuide) — trả lời câu hỏi về cổng thông tin 24/7."
+icon: "robot"
+---
+
+**Ahamove AI** (AhaGuide) trả lời câu hỏi của bạn dựa trên nội dung cổng thông tin này — và chỉ bạn đến đúng người khi cần xác nhận chính thức.
+
+## Hỏi được gì
+
+- *"Cách xin nghỉ phép?"* → [Nghỉ phép](/policies/leave-policy)
+- *"Đăng nhập 1Office thế nào?"* → [Hệ thống 1Office](/handbook/internal-systems)
+- *"Gửi xe đến mấy giờ?"* → [Gửi xe](/office-guide/parking)
+- *"Bảo hiểm Generali chi trả gì?"* → [Bảo hiểm](/benefits/insurance)
+- *"Ngày đầu tiên của tôi diễn ra thế nào?"* → [Ngày đầu tiên](/ahamazing-guide/day-1)
+
+<Warning>
+  Ahamove AI **không** tra cứu dữ liệu cá nhân (quỹ phép, lương, hợp đồng) và **không** tự tạo đơn. Việc đó dùng
+  [Chatbot 1Office](https://ahamove.1office.vn/chat/-1000). Xác nhận chính thức → HRBP · **nhansu@ahamove.com**.
+</Warning>
+
+## Bật trợ lý AI
+
+Mintlify cung cấp **Trợ lý AI (Ask AI)** tích hợp sẵn, tự học từ toàn bộ nội dung cổng thông tin — bật trong dashboard Mintlify, không cần code.
+
+<Note>
+  **Cần EX/Tech cấu hình:** bật tính năng *Assistant* trong Mintlify dashboard (và/hoặc nhúng AhaGuide hiện có). Đây là
+  việc cấu hình một lần. *[Cập nhật trạng thái triển khai tại đây.]*
+</Note>
+
+<Card title="Không tìm thấy câu trả lời?" icon="headset" href="/help-center/contact-hr">
+  Liên hệ trực tiếp HR / Admin / IT theo ma trận liên hệ.
+</Card>

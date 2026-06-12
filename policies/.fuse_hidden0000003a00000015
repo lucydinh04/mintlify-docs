@@ -1,0 +1,35 @@
+---
+title: "Quy tắc ứng xử"
+sidebarTitle: "Quy tắc ứng xử"
+description: "Quy tắc ứng xử & chuẩn mực One Ahamove — cách chúng ta đối xử với nhau và làm việc."
+icon: "handshake"
+---
+
+Quy tắc ứng xử của Ahamove bắt nguồn từ bộ **4 giá trị văn hóa** và tinh thần **One Ahamove**: con người là trọng tâm, môi trường minh bạch, công bằng, tôn trọng giá trị cá nhân.
+
+## Nguyên tắc nền tảng
+
+<CardGroup cols={2}>
+  <Card title="Công bằng & Tôn trọng" icon="scale-balanced">
+    Đối xử công bằng, tôn trọng mọi cá nhân — không phân biệt.
+  </Card>
+  <Card title="Gắn kết & Phát triển" icon="seedling">
+    Hỗ trợ nhau cùng lớn lên; phản hồi thẳng thắn và thiện chí.
+  </Card>
+  <Card title="Cảm hứng & Chia sẻ" icon="lightbulb">
+    Lan tỏa năng lượng tích cực, sẵn lòng chia sẻ kiến thức.
+  </Card>
+  <Card title="AI Driven & Chính trực" icon="robot">
+    Dùng AI & dữ liệu có trách nhiệm; trung thực và minh bạch.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Cần HR hoàn thiện:** bộ quy tắc ứng xử chính thức (xung đột lợi ích, bảo mật thông tin, chống quấy rối, an toàn lao
+  động, kênh báo cáo vi phạm…). *[HR đính kèm tài liệu Quy tắc ứng xử chính thức tại đây.]*
+</Note>
+
+<Tip>
+  Có vấn đề cần báo cáo hoặc thắc mắc về ứng xử nơi làm việc? Liên hệ **HRBP** · nhansu@ahamove.com.
+  → [Liên hệ HR](/help-center/contact-hr)
+</Tip>

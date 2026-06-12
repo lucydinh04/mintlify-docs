@@ -1,0 +1,30 @@
+---
+title: "Tháng đầu tiên"
+sidebarTitle: "Tháng đầu tiên"
+description: "Lộ trình tháng đầu (30-60-90) — biết cần làm tốt điều gì và sớm tạo first-win."
+icon: "chart-line"
+---
+
+Tháng đầu tiên đi theo lộ trình **30-60-90 ngày**. Mục tiêu: hiểu việc → bắt nhịp → tạo kết quả đầu tiên.
+
+## Lộ trình 30-60-90
+
+<CardGroup cols={3}>
+  <Card title="30 — Hiểu & Hòa nhập" icon="lightbulb">
+    Nắm bối cảnh, quy trình, công cụ; hiểu rõ vai trò & kỳ vọng.
+  </Card>
+  <Card title="60 — Bắt nhịp & Đóng góp" icon="gears">
+    Tự xử lý đầu việc cơ bản; phối hợp trơn tru với các bên.
+  </Card>
+  <Card title="90 — Tạo kết quả" icon="trophy">
+    Hoàn thành mục tiêu thử việc & có "first-win" rõ ràng.
+  </Card>
+</CardGroup>
+
+<Tip>
+  **First-win** là kết quả cụ thể đầu tiên bạn tạo ra — dù nhỏ. Chia sẻ với quản lý trực tiếp để được ghi nhận!
+</Tip>
+
+<Note>
+  Cuối thử việc bạn sẽ qua quy trình **đánh giá thử việc**. Xem chi tiết tại [Quy trình nhân sự](/handbook/hr-processes#probation-review).
+</Note>

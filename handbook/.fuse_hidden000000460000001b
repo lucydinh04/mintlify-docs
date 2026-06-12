@@ -1,0 +1,41 @@
+---
+title: "Lương & Phiếu lương"
+sidebarTitle: "Lương & Phiếu lương"
+description: "Ngày trả lương, cách xem phiếu lương & hỏi đáp về lương tại Ahamove."
+icon: "money-bill-wave"
+---
+
+Mọi thứ về lương: xem phiếu lương ở đâu, trả lương khi nào, thắc mắc hỏi ai.
+
+## Xem phiếu lương
+
+Phiếu lương xem trên **1Office**. Hỏi Chatbot 1Office: *"Tôi muốn xem phiếu lương tháng gần nhất."*
+
+<Card title="Mở Chatbot 1Office" icon="robot" href="https://ahamove.1office.vn/chat/-1000">
+  Xem phiếu lương & bảng công.
+</Card>
+
+## Ngày trả lương
+
+<Note>
+  **Cần HR hoàn thiện:** ngày trả lương hằng tháng, kỳ lương, hình thức chi trả (chuyển khoản), cập nhật số tài khoản.
+  *[HR điền ngày trả lương chính thức tại đây.]*
+</Note>
+
+## Thưởng
+
+<CardGroup cols={2}>
+  <Card title="Thưởng Tháng 13" icon="gift">
+    Khoản thưởng cuối năm cho nhân viên đủ điều kiện.
+  </Card>
+  <Card title="Thưởng hiệu quả" icon="chart-line">
+    Theo kết quả công việc, gắn với KPI/OKR của vị trí.
+  </Card>
+</CardGroup>
+
+Xem thêm phúc lợi tại [Phúc lợi](/benefits/overview).
+
+<Warning>
+  Phiếu lương & số liệu lương là **thông tin cá nhân** — Ahamove AI không tra cứu được. Thắc mắc về lương:
+  email **nhansu@ahamove.com** hoặc hỏi HRBP. → [Liên hệ HR](/help-center/contact-hr)
+</Warning>

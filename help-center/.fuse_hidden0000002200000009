@@ -1,0 +1,49 @@
+---
+title: "Câu hỏi thường gặp"
+sidebarTitle: "Câu hỏi thường gặp"
+description: "Câu hỏi thường gặp cho Ahamover — lương & phúc lợi, công cụ, quy trình, văn hóa."
+icon: "circle-question"
+---
+
+Tự tra cứu nhanh để giảm tải HR. Không thấy câu trả lời? [Hỏi Ahamove AI](/help-center/ask-ahamove-ai) hoặc [liên hệ HR](/help-center/contact-hr).
+
+## Lương & phúc lợi
+
+<AccordionGroup>
+  <Accordion title="Quyền lợi của tôi gồm những gì?" icon="gift">
+    Generali, BHXH (VssID), phép năm, thưởng Tháng 13… Xem [Phúc lợi](/benefits/overview).
+  </Accordion>
+  <Accordion title="Tôi có thắc mắc về lương/bảo hiểm thì hỏi ai?" icon="envelope">
+    Email **nhansu@ahamove.com** hoặc hỏi HRBP. Đây là thông tin cá nhân nên không tra qua AI công cộng.
+  </Accordion>
+</AccordionGroup>
+
+## Công cụ & tài khoản
+
+<AccordionGroup>
+  <Accordion title="Đăng nhập 1Office thế nào?" icon="right-to-bracket">
+    Vào **ahamove.1office.vn**, tên đăng nhập = **domain** (không kèm @ahamove.com). Xem [Hệ thống 1Office](/handbook/internal-systems).
+  </Accordion>
+  <Accordion title="Quên mật khẩu / lỗi tài khoản?" icon="key">
+    Liên hệ **IT** · Telegram **@tuanhn_hcm**. Xem [Hỗ trợ IT](/handbook/it-support).
+  </Accordion>
+</AccordionGroup>
+
+## Quy trình & văn hóa
+
+<AccordionGroup>
+  <Accordion title="Đăng ký nghỉ phép ở đâu?" icon="umbrella-beach">
+    Trên **1Office**. Xem [Nghỉ phép](/policies/leave-policy).
+  </Accordion>
+  <Accordion title="Mất thẻ xe / thẻ định danh?" icon="id-card">
+    Liên hệ **Admin** · Telegram **@thucthuc1**. Xem [Gửi xe](/office-guide/parking).
+  </Accordion>
+  <Accordion title="Nên hỏi ai khi gặp khó?" icon="headset">
+    Xem ma trận liên hệ tại [Liên hệ HR](/help-center/contact-hr) — hoặc hỏi [Ahamove AI](/help-center/ask-ahamove-ai).
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  **Đây là trang HR cập nhật thường xuyên.** Mỗi câu hỏi lặp lại nhiều lần nên được thêm vào đây dưới dạng một
+  `<Accordion>`.
+</Note>

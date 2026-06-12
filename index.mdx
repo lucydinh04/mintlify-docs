@@ -1,6 +1,6 @@
 ---
-title: "Ahamove Handbook"
-description: "Mọi thông tin Ahamover cần, trong một nơi duy nhất."
+title: "Ahamove Employee Portal"
+description: "Một nơi duy nhất để Ahamovers tra cứu thông tin nội bộ."
 mode: "custom"
 ---
 
@@ -14,22 +14,16 @@ export const S = {
   wrap: { display: "flex", flexWrap: "wrap", gap: "24px", alignItems: "flex-start" },
   main: { flex: "999 1 440px", minWidth: 0 },
   rail: { flex: "1 1 300px", minWidth: 0, display: "flex", flexDirection: "column", gap: "20px" },
-  hero: { position: "relative", overflow: "hidden", borderRadius: "22px", color: "#fff", padding: "40px 32px", background: "radial-gradient(820px 320px at 88% -12%, rgba(255,122,33,.38), transparent 60%), linear-gradient(135deg,#0B1530 0%,#0E4174 100%)" },
+  hero: { position: "relative", overflow: "hidden", borderRadius: "22px", color: "#fff", padding: "40px 32px", background: "linear-gradient(135deg,#0E4174 0%,#142246 100%)" },
   heroEyebrow: { color: "#FF9A52", letterSpacing: "2.5px", fontSize: "12px", fontWeight: 700, margin: 0, textTransform: "uppercase" },
   heroTitle: { fontSize: "32px", fontWeight: 800, color: "#fff", lineHeight: 1.12, margin: "10px 0 0" },
   heroSub2: { fontSize: "17px", fontWeight: 700, color: "#FF9A52", margin: "6px 0 12px" },
-  heroText: { color: "rgba(255,255,255,.82)", fontSize: "15px", maxWidth: "460px", margin: 0 },
-  heroImg: { position: "absolute", right: "20px", bottom: "0", width: "180px", maxWidth: "32%", opacity: 0.96 },
-  statRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "12px", margin: "8px 0 4px" },
-  stat: { background: "#FFF4EC", border: "1px solid #F6DCC8", borderRadius: "14px", padding: "16px" },
-  statN: { fontSize: "24px", fontWeight: 800, color: "#D65A12", lineHeight: 1, margin: 0 },
-  statL: { fontSize: "12.5px", color: C.grey, margin: "5px 0 0" },
+  heroText: { color: "rgba(255,255,255,.82)", fontSize: "15px", maxWidth: "480px", margin: 0 },
   ctaRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "14px", marginTop: "22px" },
   cta: { display: "flex", gap: "12px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "15px 16px", boxShadow: "0 4px 14px rgba(20,34,70,.06)" },
   ctaIcon: { flex: "0 0 38px", height: "38px", borderRadius: "10px", background: C.cream, display: "grid", placeItems: "center" },
   ctaTitle: { color: C.navy, fontWeight: 700, fontSize: "15px", margin: "0 0 3px" },
   ctaDesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.5 },
-  search: { display: "flex", gap: "12px", alignItems: "flex-start", background: C.soft, border: `1px solid ${C.line}`, borderRadius: "14px", padding: "15px 18px", margin: "22px 0 8px" },
   h2: { fontSize: "20px", fontWeight: 800, color: C.navy, margin: "28px 0 14px" },
   qgrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "14px" },
   qcard: { display: "flex", gap: "13px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "16px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
@@ -41,11 +35,15 @@ export const S = {
   jdot: { width: "46px", height: "46px", borderRadius: "50%", margin: "0 auto 10px", display: "grid", placeItems: "center", background: C.cream, border: `2px solid ${C.orange2}` },
   jname: { color: C.navy, fontWeight: 700, fontSize: "13.5px", margin: "0 0 3px" },
   jdesc: { color: C.grey, fontSize: "11.5px", margin: 0, lineHeight: 1.4 },
+  statRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "12px", margin: "4px 0" },
+  stat: { background: "#FFF4EC", border: "1px solid #F6DCC8", borderRadius: "14px", padding: "16px" },
+  statN: { fontSize: "24px", fontWeight: 800, color: "#D65A12", lineHeight: 1, margin: 0 },
+  statL: { fontSize: "12.5px", color: C.grey, margin: "5px 0 0" },
   panel: { background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px" },
   panelHead: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px" },
   panelTitle: { fontSize: "15px", fontWeight: 800, color: C.navy, margin: 0 },
   seeAll: { fontSize: "12px", fontWeight: 600, color: C.orange, textDecoration: "none" },
-  aiCard: { background: "linear-gradient(135deg,#EAF1FB,#F6F8FC)", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "20px 18px", textAlign: "center" },
+  aiCard: { background: "#FFF4EC", border: `1px solid #F6DCC8`, borderRadius: "16px", padding: "20px 18px" },
   aiBtn: { display: "inline-block", marginTop: "12px", background: C.orange, color: "#fff", fontWeight: 700, fontSize: "13.5px", padding: "10px 18px", borderRadius: "11px", textDecoration: "none" },
   res: { display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", padding: "11px 0", borderTop: `1px solid ${C.line}`, color: C.navy, fontWeight: 600, fontSize: "13.5px" },
 };
@@ -56,73 +54,73 @@ export const S = {
     {/* ============ CỘT CHÍNH ============ */}
     <div style={S.main}>
 
-      {/* HERO — AI-Driven */}
+      {/* 1 · HERO — Cổng thông tin nội bộ */}
       <div style={S.hero}>
-        <p style={S.heroEyebrow}>Ahamove · 2026 · AI-Driven Company</p>
-        <h1 style={S.heroTitle}>Ahamove Handbook</h1>
-        <p style={S.heroSub2}>Mọi thông tin Ahamover cần, trong một nơi duy nhất.</p>
-        <p style={S.heroText}>Tìm chính sách, công cụ, quy trình, phúc lợi và tài nguyên AI chỉ trong vài giây. <b style={{ color: "#fff" }}>Always Moving.</b></p>
+        <p style={S.heroEyebrow}>Ahamove · Cổng thông tin nội bộ</p>
+        <h1 style={S.heroTitle}>Ahamove Employee Portal</h1>
+        <p style={S.heroSub2}>Một nơi duy nhất để Ahamovers tra cứu thông tin nội bộ.</p>
+        <p style={S.heroText}>Hệ thống 1Office, nghỉ phép & chấm công, lương, bảo hiểm, phúc lợi, văn phòng và hỗ trợ — tất cả trong vài giây. <b style={{ color: "#fff" }}>Always Moving.</b></p>
         <div style={S.ctaRow}>
           <a style={S.cta} href="/ahamazing-guide/overview">
             <span style={S.ctaIcon}><Icon icon="compass" size={19} color="#FF7A21" /></span>
-            <span><p style={S.ctaTitle}>Bắt đầu hành trình</p><p style={S.ctaDesc}>Hành trình hội nhập cho nhân viên mới: từ ngày đầu tiên đến hết 30 ngày đầu.</p></span>
+            <span><p style={S.ctaTitle}>Nhân viên mới? Bắt đầu tại đây</p><p style={S.ctaDesc}>Hành trình hội nhập: ngày đầu, tuần đầu, tháng đầu.</p></span>
           </a>
-          <a style={S.cta} href="/ai-hub/overview">
-            <span style={S.ctaIcon}><Icon icon="robot" size={19} color="#FF7A21" /></span>
-            <span><p style={S.ctaTitle}>Khám phá AI Academy</p><p style={S.ctaDesc}>Claude Pro cho 100% nhân sự, AI Playbook và các chương trình AI.</p></span>
+          <a style={S.cta} href="/handbook/overview">
+            <span style={S.ctaIcon}><Icon icon="book-open" size={19} color="#FF7A21" /></span>
+            <span><p style={S.ctaTitle}>Tra cứu nhanh</p><p style={S.ctaDesc}>Sổ tay nhân sự: công cụ, hệ thống, quy trình, lương.</p></span>
           </a>
         </div>
       </div>
 
-      {/* SỐ LIỆU NỔI BẬT */}
-      <div style={S.statRow}>
-        <div style={S.stat}><p style={S.statN}>45 triệu+</p><p style={S.statL}>Đơn hàng / năm</p></div>
-        <div style={S.stat}><p style={S.statN}>100%</p><p style={S.statL}>Nhân sự được cấp Claude Pro</p></div>
-        <div style={S.stat}><p style={S.statN}>20+</p><p style={S.statL}>Tỉnh thành phủ sóng</p></div>
-        <div style={S.stat}><p style={S.statN}>2015</p><p style={S.statL}>Năm thành lập</p></div>
-      </div>
-
-      {/* TRUY CẬP NHANH */}
-      <h2 style={S.h2}>Truy cập nhanh</h2>
-      <div style={S.qgrid}>
-        <a style={S.qcard} href="/ahamazing-guide/overview"><span style={S.qicon}><Icon icon="compass" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hành trình hội nhập</p><p style={S.qdesc}>Lộ trình dành cho nhân viên mới.</p></span></a>
-        <a style={S.qcard} href="/handbook/overview"><span style={S.qicon}><Icon icon="book-open" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Sổ tay nhân sự</p><p style={S.qdesc}>Công cụ, hệ thống, quy trình và thông tin cần biết.</p></span></a>
-        <a style={S.qcard} href="/policies/overview"><span style={S.qicon}><Icon icon="scale-balanced" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Chính sách</p><p style={S.qdesc}>Các chính sách và quy định dành cho Ahamovers.</p></span></a>
-        <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}><Icon icon="gift" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Life at Ahamove</p><p style={S.qdesc}>Phúc lợi, bảo hiểm, văn phòng & đời sống.</p></span></a>
-        <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}><Icon icon="building" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Thông tin văn phòng và tiện ích.</p></span></a>
-        <a style={S.qcard} href="/ai-hub/overview"><span style={S.qicon}><Icon icon="wand-magic-sparkles" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>AI Academy</p><p style={S.qdesc}>Claude Pro, AI Playbook và chương trình AI.</p></span></a>
-      </div>
-
-      {/* HÀNH TRÌNH HỘI NHẬP */}
+      {/* 2 · HÀNH TRÌNH HỘI NHẬP */}
       <h2 style={S.h2}>Hành trình hội nhập</h2>
       <div style={S.journey}>
         <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}><Icon icon="sun" size={20} color="#FF7A21" /></div><p style={S.jname}>Ngày đầu tiên</p><p style={S.jdesc}>Lịch trình ngày đầu, giờ làm việc & thủ tục.</p></a>
         <a style={S.jstep} href="/ahamazing-guide/week-1"><div style={S.jdot}><Icon icon="list-check" size={20} color="#FF7A21" /></div><p style={S.jname}>Tuần đầu tiên</p><p style={S.jdesc}>Kích hoạt công cụ & làm quen quy trình.</p></a>
         <a style={S.jstep} href="/ahamazing-guide/first-month"><div style={S.jdot}><Icon icon="chart-line" size={20} color="#FF7A21" /></div><p style={S.jname}>Tháng đầu tiên</p><p style={S.jdesc}>Lộ trình 30-60-90 & tạo first-win.</p></a>
       </div>
-    </div>
 
-    {/* ============ CỘT PHẢI ============ */}
-    <div style={S.rail}>
-
-      {/* AI ACADEMY */}
-      <div style={S.aiCard}>
-        <p style={{ color: "#FF9A52", letterSpacing: "1.5px", fontSize: "11px", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>AI-Driven · 2026</p>
-        <p style={{ color: C.navy, fontWeight: 800, fontSize: "16px", margin: "6px 0 4px" }}>AI Academy</p>
-        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Claude Pro cho 100% nhân sự. Học cách dùng AI, ứng dụng theo phòng ban và toả sáng tại AI Showcase.</p>
-        <a style={S.aiBtn} href="/ai-hub/overview">Tìm hiểu AI tại Ahamove</a>
+      {/* 3 · TRUY CẬP NHANH */}
+      <h2 style={S.h2}>Truy cập nhanh</h2>
+      <div style={S.qgrid}>
+        <a style={S.qcard} href="/handbook/internal-systems"><span style={S.qicon}><Icon icon="building-user" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hệ thống 1Office</p><p style={S.qdesc}>Đăng nhập, chấm công, nghỉ phép, ký số & trợ lý AI.</p></span></a>
+        <a style={S.qcard} href="/policies/leave-policy"><span style={S.qicon}><Icon icon="umbrella-beach" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Nghỉ phép & Chấm công</p><p style={S.qdesc}>Tạo đơn nghỉ phép, chấm công, làm thêm giờ.</p></span></a>
+        <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}><Icon icon="heart-pulse" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Lương & Phúc lợi</p><p style={S.qdesc}>Phiếu lương, bảo hiểm, khám sức khỏe.</p></span></a>
+        <a style={S.qcard} href="/handbook/it-support"><span style={S.qicon}><Icon icon="laptop" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hỗ trợ IT</p><p style={S.qdesc}>Tài khoản, máy móc, truy cập hệ thống.</p></span></a>
+        <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}><Icon icon="building" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Địa điểm, gửi xe, pantry, phòng họp.</p></span></a>
+        <a style={S.qcard} href="/help-center/contact-hr"><span style={S.qicon}><Icon icon="headset" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Liên hệ HR</p><p style={S.qdesc}>Hỏi HR & đầu mối các phòng ban.</p></span></a>
       </div>
 
-      {/* TÀI NGUYÊN PHỔ BIẾN */}
+      {/* 4 · CỘT MỐC NỔI BẬT */}
+      <h2 style={S.h2}>Ahamove qua những con số</h2>
+      <div style={S.statRow}>
+        <div style={S.stat}><p style={S.statN}>2015</p><p style={S.statL}>Năm thành lập</p></div>
+        <div style={S.stat}><p style={S.statN}>45 triệu+</p><p style={S.statL}>Đơn hàng mỗi năm</p></div>
+        <div style={S.stat}><p style={S.statN}>150.000+</p><p style={S.statL}>Đối tác tài xế</p></div>
+      </div>
+    </div>
+
+    {/* ============ CỘT PHẢI — Spotlight & tài nguyên ============ */}
+    <div style={S.rail}>
+
+      {/* AI Academy — spotlight phụ */}
+      <div style={S.aiCard}>
+        <p style={{ color: "#D65A12", letterSpacing: "1.5px", fontSize: "11px", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>Spotlight</p>
+        <p style={{ color: C.navy, fontWeight: 800, fontSize: "16px", margin: "6px 0 4px" }}>AI Academy</p>
+        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Claude Pro cho 100% nhân sự, AI Playbook & các chương trình học AI nội bộ.</p>
+        <a style={S.aiBtn} href="/ai-hub/overview">Khám phá AI Academy</a>
+      </div>
+
+      {/* Tài nguyên phổ biến */}
       <div style={S.panel}>
         <div style={S.panelHead}>
           <p style={S.panelTitle}>Tài nguyên phổ biến</p>
           <a style={S.seeAll} href="/handbook/overview">Xem tất cả</a>
         </div>
         <a style={{ ...S.res, borderTop: "none" }} href="/policies/leave-policy"><Icon icon="umbrella-beach" size={17} color="#FF7A21" /> Chính sách nghỉ phép</a>
-        <a style={S.res} href="/benefits/health-check"><Icon icon="stethoscope" size={17} color="#FF7A21" /> Khám sức khỏe</a>
+        <a style={S.res} href="/handbook/internal-systems"><Icon icon="building-user" size={17} color="#FF7A21" /> Hệ thống 1Office</a>
         <a style={S.res} href="/benefits/insurance"><Icon icon="heart-pulse" size={17} color="#FF7A21" /> Bảo hiểm</a>
-        <a style={S.res} href="/handbook/working-tools"><Icon icon="screwdriver-wrench" size={17} color="#FF7A21" /> Công cụ làm việc</a>
+        <a style={S.res} href="/handbook/payroll"><Icon icon="money-bill-wave" size={17} color="#FF7A21" /> Lương & phiếu lương</a>
         <a style={S.res} href="/handbook/it-support"><Icon icon="laptop" size={17} color="#FF7A21" /> Hỗ trợ IT</a>
         <a style={S.res} href="/office-guide/parking"><Icon icon="motorcycle" size={17} color="#FF7A21" /> Gửi xe</a>
       </div>

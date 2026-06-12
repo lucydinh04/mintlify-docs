@@ -66,10 +66,10 @@
             "group": "Sổ tay nhân sự",
             "root": "handbook/overview",
             "pages": [
-              { "group": "Công cụ & Hệ thống", "icon": "screwdriver-wrench", "expanded": false, "pages": ["handbook/working-tools", "handbook/internal-systems"] },
+              { "group": "Hệ thống 1Office", "icon": "building-user", "expanded": false, "pages": ["handbook/internal-systems"] },
               { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary", "handbook/company-calendar"] },
               { "group": "Quy trình & Lương", "icon": "clipboard-list", "expanded": false, "pages": ["handbook/hr-processes", "handbook/payroll", "handbook/offboarding"] },
-              { "group": "Hỗ trợ", "icon": "laptop", "expanded": false, "pages": ["handbook/it-support"] }
+              { "group": "Hỗ trợ IT", "icon": "laptop", "expanded": false, "pages": ["handbook/it-support"] }
             ]
           }
         ]
@@ -84,8 +84,7 @@
             "pages": [
               "policies/leave-policy",
               "policies/attendance-policy",
-              "policies/expense-policy",
-              "policies/code-of-conduct"
+              "policies/expense-policy"
             ]
           }
         ]
@@ -100,9 +99,7 @@
             "expanded": false,
             "pages": [
               "benefits/health-check",
-              "benefits/insurance",
-              "benefits/learning-support",
-              "benefits/recognition-programs"
+              "benefits/insurance"
             ]
           },
           {
@@ -126,7 +123,7 @@
             "group": "AI Academy",
             "root": "ai-hub/overview",
             "pages": [
-              { "group": "Học & Công cụ", "icon": "graduation-cap", "expanded": false, "pages": ["ai-hub/claude-guide", "ai-hub/prompt-library", "ai-hub/ai-playbook"] },
+              { "group": "Học & Công cụ", "icon": "graduation-cap", "expanded": false, "pages": ["ai-hub/claude-guide", "ai-hub/ai-playbook"] },
               { "group": "Chương trình", "icon": "trophy", "expanded": false, "pages": ["ai-hub/yes-ai-do", "ai-hub/ai-showcase-2026", "ai-hub/study-tour-china"] }
             ]
           }
