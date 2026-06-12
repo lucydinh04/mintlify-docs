@@ -245,3 +245,110 @@ article h2::before {
 .aha-aispot h3{ color:#fff !important; font-size:18px; font-weight:800; margin:6px 0 4px; }
 .aha-aispot h3::before{ display:none !important; content:none !important; }
 .aha-aispot p{ color:rgba(255,255,255,.82); font-size:13px; margin:0; }
+
+/* =====================================================================
+   VISUAL PLACEHOLDER SYSTEM  (Atlassian-inspired product platform)
+   Khung hình "có chủ đích" dùng khi CHƯA có asset thật. Nhìn premium,
+   không giống lỗi thiếu ảnh. Mỗi slot kèm asset-brief để designer/AI
+   image generator bổ sung sau. Thay nội dung slot bằng <img>/<Frame>
+   khi đã có ảnh thật.
+   ===================================================================== */
+.aha-visual-slot{
+  position:relative; border-radius:24px; border:1px solid #DCE6F2;
+  background-color:#F4F8FD;
+  background-image:radial-gradient(circle at 1px 1px, rgba(14,65,116,.07) 1px, transparent 0);
+  background-size:18px 18px;
+  box-shadow:0 12px 34px rgba(20,34,70,.07);
+  padding:30px 26px; margin:16px 0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+  overflow:hidden; min-height:200px;
+}
+/* khung gạch nét đứt rất nhẹ bên trong — cảm giác "slot" chủ đích */
+.aha-visual-slot::before{
+  content:""; position:absolute; inset:14px; border:1.5px dashed #C7D6EA;
+  border-radius:18px; pointer-events:none; opacity:.7;
+}
+.aha-visual-slot > *{ position:relative; z-index:1; }
+.aha-visual-slot .vbadge{
+  position:absolute; top:14px; right:14px; z-index:2;
+  font-size:10.5px; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
+  background:#fff; color:#4B6CB7; border:1px solid #D6E0EE;
+  padding:4px 10px; border-radius:999px;
+}
+.aha-visual-slot .vicon{
+  width:54px; height:54px; border-radius:16px; display:grid; place-items:center;
+  background:#fff; border:1px solid #DCE6F2; box-shadow:0 6px 16px rgba(20,34,70,.08);
+  margin-bottom:14px;
+}
+.aha-visual-slot .vtitle{ color:var(--aha-navy); font-size:16px; font-weight:800; margin:0; }
+.aha-visual-slot .vratio{
+  display:inline-block; margin:8px 0 0; font-size:11.5px; font-weight:700; letter-spacing:.3px;
+  color:#D65A12; background:var(--aha-cream); border:1px solid #F6DCC8;
+  padding:3px 10px; border-radius:999px;
+}
+.aha-visual-slot .vdesc{ color:var(--aha-grey); font-size:13px; line-height:1.55; margin:12px auto 0; max-width:520px; }
+.aha-visual-slot .vfile{
+  margin-top:12px; font-size:11.5px; color:#7A8499;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background:#fff; border:1px dashed #C7D6EA; border-radius:8px; padding:4px 10px; display:inline-block;
+}
+
+/* DARK — AI / hero */
+.aha-visual-slot.dark{
+  border-color:#21345C; background-color:#0E1F3D;
+  background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0),
+    radial-gradient(520px 220px at 85% -25%, rgba(255,122,33,.30), transparent 60%);
+  background-size:18px 18px, auto;
+}
+.aha-visual-slot.dark::before{ border-color:rgba(255,255,255,.18); }
+.aha-visual-slot.dark .vbadge{ background:rgba(255,255,255,.10); color:#FFB57E; border-color:rgba(255,255,255,.22); }
+.aha-visual-slot.dark .vicon{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.18); }
+.aha-visual-slot.dark .vtitle{ color:#fff; }
+.aha-visual-slot.dark .vdesc{ color:rgba(255,255,255,.74); }
+.aha-visual-slot.dark .vfile{ background:rgba(255,255,255,.06); color:#9FB0CC; border-color:rgba(255,255,255,.20); }
+
+/* WARM — benefits / life at Ahamove */
+.aha-visual-slot.warm{
+  border-color:#F6DCC8; background-color:#FFF7F0;
+  background-image:radial-gradient(circle at 1px 1px, rgba(214,90,18,.07) 1px, transparent 0);
+}
+.aha-visual-slot.warm::before{ border-color:#F1CBAE; }
+.aha-visual-slot.warm .vbadge{ color:#D65A12; border-color:#F6DCC8; }
+
+/* COMPACT — card nhỏ / inline */
+.aha-visual-slot.compact{ min-height:130px; padding:20px 18px; border-radius:18px; }
+.aha-visual-slot.compact .vicon{ width:42px; height:42px; border-radius:12px; margin-bottom:10px; }
+.aha-visual-slot.compact .vtitle{ font-size:14px; }
+.aha-visual-slot.compact::before{ inset:10px; border-radius:13px; }
+
+/* Aliases ngữ nghĩa — cùng look, đặt tên theo vai trò để code dễ đọc */
+.aha-product-mockup,
+.aha-hero-visual,
+.aha-workflow-visual,
+.aha-illustration-slot{ /* kế thừa .aha-visual-slot khi dùng kèm */ }
+
+/* Image brief caption (đặt dưới ảnh/slot) — dòng ghi chú cho designer */
+.aha-image-brief{
+  font-size:11.5px; color:#7A8499; line-height:1.5; margin:8px 2px 18px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.aha-image-brief b{ color:#4B6CB7; }
+
+/* =====================================================================
+   CSS-BUILT MOCKUPS (dùng khi muốn nhìn "xịn" ngay, không cần ảnh thật)
+   Tái dùng trên trang nội dung; homepage hero dùng inline-style riêng.
+   ===================================================================== */
+.aha-mock{
+  border-radius:18px; border:1px solid var(--aha-line); background:#fff;
+  box-shadow:0 18px 44px rgba(20,34,70,.12); padding:14px; overflow:hidden;
+}
+.aha-mock .bar{ display:flex; align-items:center; gap:6px; margin-bottom:12px; }
+.aha-mock .dot{ width:9px; height:9px; border-radius:50%; background:#E2E8F2; }
+.aha-mock .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.aha-mock .mc{ border:1px solid var(--aha-line); border-radius:12px; padding:12px; background:#FCFDFF; }
+.aha-mock .mc .lbl{ font-size:11px; color:var(--aha-grey); font-weight:600; margin:0 0 8px; }
+.aha-mock .mc .val{ font-size:15px; color:var(--aha-navy); font-weight:800; margin:0; }
+.aha-mock .prog{ height:7px; border-radius:6px; background:#EEF2F8; overflow:hidden; margin-top:8px; }
+.aha-mock .prog i{ display:block; height:100%; border-radius:6px; background:linear-gradient(90deg,#FF7A21,#FF9A52); }
+.aha-mock .pill{ display:inline-block; font-size:10.5px; font-weight:700; color:#D65A12;
+  background:var(--aha-cream); border:1px solid #F6DCC8; border-radius:999px; padding:2px 8px; }
