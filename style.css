@@ -903,115 +903,110 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 /* ---------- 17 · STAT PANEL (homepage) ---------- */
 .aha-home-stat-editorial {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 32px;
-  align-items: center;
-  background: #F8F9FB;
-  border: 1px solid #E5E9F2;
+  align-items: stretch;
+  background: #FCFDFE;
+  border: 1px solid #E8EDF5;
   border-radius: 20px;
-  padding: 42px 42px;
+  padding: 48px 42px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(14, 30, 60, .03);
 }
 
-.aha-home-stat-editorial::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: var(--aha-orange);
-}
-
-.aha-stat-left {
-  flex: 1 1 300px;
+.aha-stat-primary {
+  flex: 1 1 340px;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.aha-stat-left .eyebrow {
+.aha-stat-content .eyebrow {
   color: var(--aha-orange-dk);
   letter-spacing: 2px;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 16px;
 }
 
-.aha-stat-left h2 {
+.aha-stat-content h2 {
   color: var(--aha-navy);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
-  line-height: 1.2;
-  margin: 12px 0 0;
+  line-height: 1.25;
+  margin: 0 0 12px;
 }
 
-.aha-stat-left .sp-sub {
+.aha-stat-content .sp-sub {
   color: var(--aha-grey);
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.6;
-  margin: 10px 0 0;
+  margin: 0 0 32px;
   max-width: 90%;
-}
-
-.aha-stat-middle {
-  flex: 0 1 auto;
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
 }
 
 .aha-stat-main b {
   display: block;
-  font-size: 44px;
+  font-size: 64px;
   font-weight: 800;
   color: var(--aha-orange-dk);
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
+
 .aha-stat-main span {
   display: block;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--aha-grey);
-  margin-top: 8px;
-  font-weight: 500;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 .aha-stat-secondary {
+  flex: 0 0 auto;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  gap: 32px;
+  padding-left: 36px;
+  border-left: 1px solid var(--aha-line);
 }
 
 .aha-stat-secondary .s b {
   display: block;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   color: var(--aha-navy);
   line-height: 1;
+  letter-spacing: -.5px;
 }
 
 .aha-stat-secondary .s span {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--aha-grey);
   margin-top: 6px;
 }
 
-.aha-stat-right {
-  flex: 1 1 260px;
+.aha-stat-visual {
+  flex: 1 1 280px;
   min-width: 0;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 
 .aha-stat-image-placeholder {
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: var(--aha-white);
-  border: 2px dashed #D4DEEC;
+  background: var(--aha-soft);
+  border: 1px dashed var(--aha-line);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1021,32 +1016,41 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   position: relative;
 }
 
-.aha-stat-image-placeholder::after {
+.aha-stat-image-placeholder .motif {
+  position: absolute;
+  inset: 15%;
+  border: 1.5px solid rgba(14, 65, 116, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.aha-stat-image-placeholder .motif::after {
   content: "";
   position: absolute;
-  top: -10px;
-  right: -10px;
-  width: 40px;
-  height: 40px;
+  top: 10%;
+  right: 15%;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--aha-orange);
-  opacity: 0.15;
+  box-shadow: 0 0 0 4px #FCFDFE;
 }
 
 .aha-stat-image-placeholder p {
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--aha-grey-lt);
   margin: 4px 0;
   font-family: monospace;
-  line-height: 1.4;
+  position: relative;
+  z-index: 1;
 }
 
 .aha-stat-image-placeholder p.title {
   color: var(--aha-navy);
   font-weight: 700;
-  font-size: 11.5px;
+  font-size: 12px;
   font-family: inherit;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 /* ---------- 19 · SOFT GRID BACKGROUND ---------- */
@@ -1552,9 +1556,20 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 /* ---------- 27 · RESPONSIVE ---------- */
 @media (max-width: 760px) {
   .aha-hero.promo { padding: 32px 20px 62px; }
-  .aha-home-stat-editorial { padding: 32px 24px; gap: 24px; }
-  .aha-stat-middle { flex-direction: column; gap: 24px; width: 100%; }
-  .aha-stat-right { justify-content: flex-start; width: 100%; }
+  .aha-home-stat-editorial { 
+    flex-direction: column;
+    padding: 32px 24px; 
+    gap: 32px; 
+  }
+  .aha-stat-content .sp-sub { margin-bottom: 24px; }
+  .aha-stat-secondary { 
+    padding-left: 0; 
+    border-left: none; 
+    border-top: 1px solid var(--aha-line); 
+    padding-top: 32px;
+    width: 100%;
+  }
+  .aha-stat-visual { justify-content: center; width: 100%; }
   .aha-network { width: 210px; }
   .aha-help-spotlight { grid-template-columns: 1fr; }
   .aha-workshop-head { flex-direction: column; gap: 10px; }
