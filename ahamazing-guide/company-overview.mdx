@@ -17,9 +17,34 @@ export const T = {
   year: { fontFamily: "Lexend, sans-serif", fontWeight: 800, color: "#FF7A21", fontSize: "15px", margin: 0 },
   ttl: { fontWeight: 700, color: "#0E4174", fontSize: "14.5px", margin: "2px 0 4px" },
   desc: { color: "#667089", fontSize: "13px", margin: 0, lineHeight: 1.5 },
+  eco: { display: "flex", flexWrap: "wrap", alignItems: "stretch", justifyContent: "center", gap: "12px", margin: "8px 0", padding: "20px", borderRadius: "16px", background: "#F4F8FD", border: "1px solid #DCE6F2" },
+  ecoTop: { width: "100%", textAlign: "center", marginBottom: "4px" },
+  ecoBadge: { display: "inline-block", fontWeight: 800, color: "#0E4174", fontSize: "15px", background: "#fff", border: "1px solid #DCE6F2", borderRadius: "12px", padding: "10px 22px" },
+  ecoNode: { flex: "1 1 200px", background: "#fff", border: "1px solid #E7EAF0", borderRadius: "14px", padding: "16px", textAlign: "center" },
+  ecoName: { fontWeight: 800, color: "#FF7A21", fontSize: "16px", margin: "0 0 4px" },
+  ecoDesc: { color: "#667089", fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
+  frame: { position: "relative", overflow: "hidden", borderRadius: "20px", padding: "26px", margin: "10px 0", background: "radial-gradient(600px 240px at 90% -25%, rgba(255,122,33,.30), transparent 60%), linear-gradient(135deg,#0B1530,#0E4174)", border: "1px solid #21345C" },
+  frameEyebrow: { color: "#FF9A52", letterSpacing: "1.5px", fontSize: "11px", fontWeight: 700, margin: 0, textTransform: "uppercase" },
+  frameTitle: { color: "#fff", fontSize: "20px", fontWeight: 800, margin: "8px 0 10px" },
+  frameText: { color: "rgba(255,255,255,.84)", fontSize: "14px", lineHeight: 1.6, margin: 0 },
 };
 
-**Ahamove** là thương hiệu giao hàng theo nhu cầu chuyên nghiệp, trên nền tảng công nghệ hiện đại. Thành lập từ **2015**, Ahamove phục vụ tại TP.HCM, Hà Nội và nhiều thành phố khác với tốc độ nhanh, chi phí hợp lý và đội ngũ đối tác tài xế hùng hậu — đơn giản hóa việc giao hàng cho cả người tiêu dùng lẫn chủ doanh nghiệp.
+<div className="aha-strip">
+  <p className="eyebrow">Về Ahamove</p>
+  <h2>Giao hàng theo nhu cầu, dẫn lối bằng công nghệ</h2>
+  <p>Thành lập 2015, Ahamove là thương hiệu giao hàng theo nhu cầu chuyên nghiệp trên nền tảng công nghệ hiện đại — nhanh, chi phí hợp lý, phục vụ cả người tiêu dùng lẫn doanh nghiệp.</p>
+</div>
+
+**Ahamove** đơn giản hóa việc giao hàng tại TP.HCM, Hà Nội, Đà Nẵng và nhiều tỉnh thành khác, với tốc độ nhanh, chi phí hợp lý và đội ngũ đối tác tài xế hùng hậu.
+
+## Ahamove qua những con số
+
+<div className="aha-statband">
+  <div className="aha-sb"><b>2015</b><span>Năm thành lập</span></div>
+  <div className="aha-sb"><b>20+</b><span>Tỉnh thành phủ sóng</span></div>
+  <div className="aha-sb"><b>45 triệu+</b><span>Đơn hàng mỗi năm</span></div>
+  <div className="aha-sb"><b>3</b><span>Văn phòng: HCM · HN · ĐN</span></div>
+</div>
 
 ## Sứ mệnh & Tầm nhìn
 
@@ -59,23 +84,15 @@ export const T = {
   <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2022</p><p style={T.ttl}>Thay đổi để tiến xa hơn</p><p style={T.desc}>Từ "AhaMove" thành "Ahamove" — diện mạo trẻ trung, năng động, khẳng định khát vọng chiếm lĩnh thị trường.</p></div></div>
 </div>
 
-## Số liệu nhanh
-
-<Note>
-  **Cần COMM/EX cập nhật số liệu thật.** Các ô `[…]` là chỗ điền tạm — thay bằng dữ liệu chính thức mới nhất.
-</Note>
-
-| Chỉ số | Giá trị |
-| --- | --- |
-| Năm thành lập | 2015 |
-| Phạm vi phủ sóng | 20+ tỉnh thành |
-| Đối tác tài xế | `[N]+` |
-| Đơn mỗi năm | `45 triệu+` |
-| Văn phòng | 3 (HCM · Hà Nội · Đà Nẵng) |
-
 ## Trong hệ sinh thái Scommerce
 
-Ahamove cùng **GHN** thuộc Tập đoàn **Scommerce** (CEO: Lương Duy Hoài), hậu thuẫn bởi quỹ Seedcom. CEO Ahamove là **Phạm Hữu Ngôn**. GHN mạnh ở giao hàng TMĐT (Hub & Spoke), Ahamove mạnh ở giao tức thì theo nhu cầu (On-demand) — cùng tạo nên mô hình **Hybrid Synergy** (case study của Harvard Business School).
+<div style={T.eco}>
+  <div style={T.ecoTop}><span style={T.ecoBadge}>Tập đoàn Scommerce</span></div>
+  <div style={T.ecoNode}><p style={T.ecoName}>Ahamove</p><p style={T.ecoDesc}>Giao tức thì theo nhu cầu (On-demand). CEO: Phạm Hữu Ngôn.</p></div>
+  <div style={T.ecoNode}><p style={T.ecoName}>GHN</p><p style={T.ecoDesc}>Giao hàng TMĐT theo mô hình Hub & Spoke.</p></div>
+</div>
+
+Scommerce (CEO: Lương Duy Hoài) được hậu thuẫn bởi quỹ Seedcom. GHN mạnh ở giao TMĐT, Ahamove mạnh ở giao tức thì — cùng tạo nên mô hình **Hybrid Synergy** (case study của Harvard Business School).
 
 ## Đối tác chiến lược
 
@@ -85,11 +102,25 @@ Ahamove đồng hành cùng nhiều thương hiệu lớn: **Lazada · The Coffe
 
 ## Thông điệp 2026
 
-<Info>
-  **Tầm nhìn 2026 — "AI-Driven Company".** Năm 2025 khép lại với mức **tăng trưởng 20%**. Bước sang 2026, Ahamove
-  không chỉ *ứng dụng* công nghệ mà để **công nghệ dẫn lối**: cấu trúc quản trị phẳng hơn, trao quyền nhiều hơn cho
-  người trẻ. *Ahamove 2026 — AI-Driven, Human-Centric, Always Moving.*
-</Info>
+<div style={T.frame}>
+  <p style={T.frameEyebrow}>Tầm nhìn 2026</p>
+  <p style={T.frameTitle}>Ahamove — AI-Driven Company</p>
+  <p style={T.frameText}>Năm 2025 khép lại với mức tăng trưởng 20%. Bước sang 2026, Ahamove không chỉ ứng dụng công nghệ mà để công nghệ dẫn lối: cấu trúc quản trị phẳng hơn, trao quyền nhiều hơn cho người trẻ.</p>
+</div>
+
+<div className="aha-visual-slot dark">
+  <span className="vbadge">Visual placeholder</span>
+  <span className="vicon"><Icon icon="image" size={24} color="#FF9A52" /></span>
+  <p className="vtitle">Hình ảnh thông điệp 2026</p>
+  <span className="vratio">16:9 · suggested</span>
+  <p className="vdesc">Key visual thông điệp 2026 trong khung theo brand guideline: nền navy gradient, accent cam, logo Ahamove. Có thể là ảnh CEO/town hall hoặc key visual chiến lược.</p>
+  <span className="vfile">images/message-2026.png</span>
+</div>
+
+<div style={T.quote}>
+  <p style={T.quoteText}>"Ahamove 2026 — AI-Driven, Human-Centric, Always Moving."</p>
+  <p style={T.quoteName}>Thông điệp định hướng 2026</p>
+</div>
 
 <Tip>
   Tìm hiểu văn hóa & bộ giá trị tại [Văn hóa & Giá trị](/ahamazing-guide/culture), và cách Ahamove ứng dụng AI tại [AI Academy](/ai-hub/overview).

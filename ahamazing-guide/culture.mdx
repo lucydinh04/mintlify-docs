@@ -1,13 +1,24 @@
 ---
-title: "Văn hóa & Giá trị"
-sidebarTitle: "Văn hóa & Giá trị"
-description: "Văn hóa & giá trị làm việc tại Ahamove — biết cách hành xử và nhanh thấy mình thuộc về."
+title: "Giá trị & Văn hóa"
+sidebarTitle: "Giá trị & Văn hóa"
+description: "Giá trị cốt lõi & văn hóa tại Ahamove — biết cách hành xử và nhanh thấy mình thuộc về."
 icon: "heart"
 ---
 
+export const V = {
+  row: { display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "stretch", margin: "8px 0" },
+  left: { flex: "1 1 300px", minWidth: 0 },
+  right: { flex: "1 1 320px", minWidth: 0 },
+  scrollHead: { fontSize: "12.5px", fontWeight: 700, color: "#667089", margin: "0 0 8px" },
+  scroll: { display: "flex", gap: "12px", overflowX: "auto", paddingBottom: "8px" },
+  item: { flex: "0 0 200px", minWidth: "200px" },
+};
+
 **Con người là trọng tâm.** Môi trường minh bạch, công bằng, tôn trọng giá trị cá nhân — mỗi nhân viên là một mắt xích quan trọng, cùng nhau gắn kết và đồng lòng.
 
-## Bộ 4 giá trị văn hóa
+## Giá trị cốt lõi
+
+Bộ 4 giá trị định hình cách chúng ta làm việc và hành xử mỗi ngày.
 
 <CardGroup cols={2}>
   <Card title="Công bằng & Tôn trọng" icon="scale-balanced">
@@ -24,9 +35,56 @@ icon: "heart"
   </Card>
 </CardGroup>
 
-## Thứ Hai Chill cùng Áo Aha
+## Văn hóa tại Ahamove
 
-Mặc **áo đồng phục cam** mỗi sáng **thứ Hai** để đồng bộ, chuyên nghiệp và gắn kết tinh thần đồng đội. Chiếc áo cam là biểu tượng nhận diện thương hiệu Ahamove.
+Văn hóa Ahamove sống động qua những thói quen hằng ngày — tiêu biểu là **Thứ Hai Chill cùng Áo Aha**: mặc áo đồng phục cam mỗi sáng thứ Hai để đồng bộ, chuyên nghiệp và gắn kết tinh thần đồng đội. Chiếc áo cam là biểu tượng nhận diện thương hiệu Ahamove.
+
+<div style={V.row}>
+  <div style={V.left}>
+    <div className="aha-visual-slot warm" style={{ height: "100%" }}>
+      <span className="vbadge">Visual placeholder</span>
+      <span className="vicon"><Icon icon="people-group" size={24} color="#FF7A21" /></span>
+      <p className="vtitle">Nhân viên mặc áo đồng phục Ahamove</p>
+      <span className="vratio">4:5 hoặc 1:1 · suggested</span>
+      <p className="vdesc">Ảnh thật nhân viên Ahamove mặc áo cam trong "Thứ Hai Chill". Style: ảnh đời thường, tươi, đúng tông thương hiệu.</p>
+      <span className="vfile">images/uniform-team.png</span>
+    </div>
+  </div>
+  <div style={V.right}>
+    <p style={V.scrollHead}>Bộ sưu tập ấn phẩm áo Ahamove (cuộn ngang →)</p>
+    <div style={V.scroll}>
+      <div style={V.item}>
+        <div className="aha-visual-slot warm compact">
+          <span className="vicon"><Icon icon="shirt" size={20} color="#FF7A21" /></span>
+          <p className="vtitle">Áo thun cam cổ điển</p>
+          <span className="vfile">images/shirt-classic.png</span>
+        </div>
+      </div>
+      <div style={V.item}>
+        <div className="aha-visual-slot warm compact">
+          <span className="vicon"><Icon icon="shirt" size={20} color="#FF7A21" /></span>
+          <p className="vtitle">Áo polo công sở</p>
+          <span className="vfile">images/shirt-polo.png</span>
+        </div>
+      </div>
+      <div style={V.item}>
+        <div className="aha-visual-slot warm compact">
+          <span className="vicon"><Icon icon="shirt" size={20} color="#FF7A21" /></span>
+          <p className="vtitle">Áo khoác Ahamove</p>
+          <span className="vfile">images/shirt-jacket.png</span>
+        </div>
+      </div>
+      <div style={V.item}>
+        <div className="aha-visual-slot warm compact">
+          <span className="vicon"><Icon icon="shirt" size={20} color="#FF7A21" /></span>
+          <p className="vtitle">Áo phiên bản sự kiện</p>
+          <span className="vfile">images/shirt-event.png</span>
+        </div>
+      </div>
+    </div>
+    <p className="aha-image-brief">Cuộn ngang · mỗi item ~1:1 · ảnh ấn phẩm áo Ahamove (thun, polo, khoác, bản sự kiện) trên nền sạch, tông cam/navy.</p>
+  </div>
+</div>
 
 ### Cấp áo đồng phục
 

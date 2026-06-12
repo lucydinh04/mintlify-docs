@@ -24,6 +24,11 @@ Mỗi vị trí hiện đang dùng **placeholder có chủ đích** (class `.aha
 | `benefits-care-illustration.png` | `benefits/overview.mdx` | Sau benefit tiles | 16:9 | Medium | Minh họa employee care: khám sức khỏe, bảo hiểm, chăm sóc nhân viên | Warm corporate illustration, nền cream, accent cam/navy, hiện đại, không quá cute |
 | `office-guide-map.png` | `office-guide/overview.mdx` | Sau facility tiles | 16:9 | Low | Sơ đồ/card văn phòng: địa điểm, phòng họp, pantry, gửi xe, hỗ trợ | Modern workplace map, facility icons sạch, nền sáng, accent thương hiệu |
 | `ai-academy-learning-path.png` | `ai-hub/overview.mdx` | Trước "Learning Journey" | 16:9 | Medium | Lộ trình học AI modular: Claude Guide → AI Playbook → YES A.I DO → AI Showcase → Study Tour | Premium AI learning hub, navy gradient, orange glow vừa phải, product-tech, không poster |
+| `ahamove-company.png` | `index.mdx` | Section "Ahamove — ngôi nhà chung" | 21:9 | Medium | Ảnh công ty: đội ngũ, văn phòng, tài xế hoặc khoảnh khắc công ty | Ảnh thương hiệu chân thực, tông cam/navy |
+| `message-2026.png` | `ahamazing-guide/company-overview.mdx` | Dưới khung "Thông điệp 2026" | 16:9 | Medium | Key visual thông điệp 2026 trong khung brand guideline (CEO/town hall/strategy key visual) | Navy gradient, accent cam, logo Ahamove |
+| `uniform-team.png` | `ahamazing-guide/culture.mdx` | Khu "Văn hóa" — ảnh lớn bên trái | 4:5 hoặc 1:1 | Medium | Nhân viên Ahamove mặc áo cam trong "Thứ Hai Chill" | Ảnh đời thường, tươi, đúng tông thương hiệu |
+| `shirt-classic.png` · `shirt-polo.png` · `shirt-jacket.png` · `shirt-event.png` | `ahamazing-guide/culture.mdx` | Carousel ấn phẩm áo (cuộn ngang) | 1:1 | Low | Ảnh ấn phẩm áo Ahamove: thun cổ điển, polo, khoác, bản sự kiện | Nền sạch, tông cam/navy, product shot |
+| `org-chart.png` | `handbook/org-structure.mdx` | Section "Sơ đồ cơ cấu tổ chức" | 16:9 hoặc dọc | High | Sơ đồ tổ chức hiện tại của Ahamove, **click-to-zoom** (chèn bằng component Frame) | Sơ đồ sạch, tông navy/cam |
 
 ## Cách thay placeholder bằng ảnh thật
 

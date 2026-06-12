@@ -16,7 +16,7 @@ export const S = {
   rail: { flex: "1 1 296px", minWidth: 0, display: "flex", flexDirection: "column", gap: "16px" },
 
   // HERO (split)
-  hero: { position: "relative", overflow: "hidden", borderRadius: "24px", color: "#fff", padding: "38px 34px", background: "radial-gradient(680px 280px at 92% -20%, rgba(255,122,33,.14), transparent 60%), linear-gradient(135deg,#0B1530 0%,#0E4174 100%)" },
+  hero: { position: "relative", overflow: "hidden", borderRadius: "24px", color: "#fff", padding: "38px 34px", background: "radial-gradient(680px 280px at 92% -20%, rgba(255,122,33,.34), transparent 60%), linear-gradient(135deg,#0B1530 0%,#0E4174 100%)" },
   heroRow: { display: "flex", flexWrap: "wrap", gap: "30px", alignItems: "center" },
   heroLeft: { flex: "1 1 320px", minWidth: 0 },
   heroRight: { flex: "1 1 340px", minWidth: 0 },
@@ -84,16 +84,16 @@ export const S = {
   band: { position: "relative", overflow: "hidden", borderRadius: "22px", padding: "26px 24px", marginTop: "6px", background: "radial-gradient(600px 220px at 85% 120%, rgba(255,122,33,.16), transparent 60%), linear-gradient(135deg,#EAF1FA,#F4F8FD)", border: "1px solid #DCE6F2" },
   statRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "14px", position: "relative", zIndex: 1 },
   stat: { background: "#fff", border: "1px solid #DCE6F2", borderRadius: "16px", padding: "18px 16px" },
-  statN: { fontSize: "48px", fontWeight: 800, color: C.orangeDk, lineHeight: 1, margin: 0 },
+  statN: { fontSize: "27px", fontWeight: 800, color: C.orangeDk, lineHeight: 1, margin: 0 },
   statL: { fontSize: "13px", color: C.grey, margin: "7px 0 0" },
   bandBrief: { position: "relative", zIndex: 1, marginTop: "14px", fontSize: "10.5px", color: "#7A8499", fontFamily: "ui-monospace,Menlo,Consolas,monospace" },
 
   // RAIL
-  aiCard: { position: "relative", overflow: "hidden", borderRadius: "18px", padding: "22px 20px", color: "#fff", background: "radial-gradient(420px 200px at 85% -25%, rgba(255,122,33,.20), transparent 60%), linear-gradient(135deg,#0B1530,#0E4174)" },
+  aiCard: { position: "relative", overflow: "hidden", borderRadius: "18px", padding: "22px 20px", color: "#fff", background: "radial-gradient(420px 200px at 85% -25%, rgba(255,122,33,.40), transparent 60%), linear-gradient(135deg,#0B1530,#0E4174)" },
   aiEyebrow: { color: "#FF9A52", letterSpacing: "1.5px", fontSize: "11px", fontWeight: 700, margin: 0, textTransform: "uppercase" },
   aiTitle: { color: "#fff", fontWeight: 800, fontSize: "17px", margin: "7px 0 5px" },
   aiText: { color: "rgba(255,255,255,.82)", fontSize: "12.5px", margin: 0, lineHeight: 1.55 },
-  aiBtn: { display: "inline-block", marginTop: "14px", background: "transparent", color: "#fff", fontWeight: 700, fontSize: "13px", padding: "8px 16px", borderRadius: "11px", textDecoration: "none", border: "1px solid rgba(255,255,255,.40)" },
+  aiBtn: { display: "inline-block", marginTop: "14px", background: "#FF7A21", color: "#fff", fontWeight: 700, fontSize: "13px", padding: "9px 16px", borderRadius: "11px", textDecoration: "none" },
   panel: { background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px" },
   panelTitle: { fontSize: "15px", fontWeight: 800, color: C.navy, margin: "0 0 4px" },
   panelText: { fontSize: "12.5px", color: C.grey, margin: "0 0 12px", lineHeight: 1.55 },
@@ -111,11 +111,16 @@ export const S = {
         <div style={S.heroRow}>
           <div style={S.heroLeft}>
             <p style={S.heroEyebrow}>Ahamove · Employee Hub</p>
-            <h1 style={S.heroTitle}>Một nơi cho mọi Ahamover</h1>
-            <p style={S.heroText}>Từ hội nhập, 1Office, chính sách đến hỗ trợ — tất cả trong một nơi. <b style={{ color: "#fff" }}>Always Moving.</b></p>
+            <h1 style={S.heroTitle}>Một nơi cho mọi thông tin Ahamovers cần</h1>
+            <p style={S.heroText}>Từ hành trình hội nhập, hệ thống 1Office, chính sách, phúc lợi, văn phòng đến hỗ trợ nội bộ — tất cả trong một nơi. <b style={{ color: "#fff" }}>Always Moving.</b></p>
+            <a style={S.qbar} href="/help-center/faq">
+              <Icon icon="magnifying-glass" size={16} color="rgba(255,255,255,.8)" />
+              <span style={S.qbarText}>Bạn cần tìm gì? (nghỉ phép, 1Office, bảo hiểm…)</span>
+            </a>
             <div style={S.ctaRow}>
               <a style={{ ...S.cta, ...S.ctaPrimary }} href="/ahamazing-guide/overview"><Icon icon="compass" size={16} color="#fff" /><span style={S.ctaTitle}>Bắt đầu hội nhập</span></a>
               <a style={S.cta} href="/handbook/internal-systems"><Icon icon="building-user" size={16} color="#fff" /><span style={S.ctaTitle}>Mở 1Office</span></a>
+              <a style={S.cta} href="/help-center/overview"><Icon icon="life-ring" size={16} color="#fff" /><span style={S.ctaTitle}>Cần hỗ trợ?</span></a>
             </div>
           </div>
 
@@ -144,12 +149,13 @@ export const S = {
                   <p style={S.mcLbl}>Mới cập nhật</p>
                   <p style={{ ...S.mcVal, fontSize: "12px", color: C.grey, fontWeight: 600 }}>Bảo hiểm Generali 2025</p>
                 </div>
-                <div style={S.mc}>
-                  <p style={S.mcLbl}>Hỗ trợ IT</p>
-                  <p style={{ ...S.mcVal, fontSize: "12.5px" }}>@tuanhn_hcm →</p>
+                <div style={S.mcAI}>
+                  <p style={{ ...S.mcLbl, color: "#FF9A52" }}>AI Academy</p>
+                  <p style={{ ...S.mcVal, color: "#fff", fontSize: "12.5px" }}>Claude Pro · 100%</p>
                 </div>
               </div>
             </div>
+            <p style={S.brief}>Visual placeholder · employee-hub-dashboard.png · 16:10 · clean SaaS dashboard, navy/off-white, orange accent</p>
           </div>
         </div>
       </div>
@@ -162,7 +168,7 @@ export const S = {
       <div style={S.journey}>
         <div style={S.jcell}>
           <a style={S.jcard} href="/ahamazing-guide/day-1">
-            <div style={S.jtop}><div style={S.jnum}>1</div></div>
+            <div style={S.jtop}><div style={S.jnum}>1</div><span style={S.badge}>New joiner</span></div>
             <p style={S.jname}>Ngày đầu tiên</p>
             <p style={S.jdesc}>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự.</p>
             <span style={S.jgo}>Xem chặng 1 →</span>
@@ -171,7 +177,7 @@ export const S = {
         <div style={S.jconn} />
         <div style={S.jcell}>
           <a style={S.jcard} href="/ahamazing-guide/week-1">
-            <div style={S.jtop}><div style={S.jnum}>2</div></div>
+            <div style={S.jtop}><div style={S.jnum}>2</div><span style={{ ...S.badge, ...S.badgeNavy }}>IT · Required</span></div>
             <p style={S.jname}>Tuần đầu tiên</p>
             <p style={S.jdesc}>Kích hoạt tài khoản, ký số hợp đồng & làm quen quy trình cốt lõi.</p>
             <span style={S.jgo}>Xem chặng 2 →</span>
@@ -180,54 +186,16 @@ export const S = {
         <div style={S.jconn} />
         <div style={S.jcell}>
           <a style={S.jcard} href="/ahamazing-guide/first-month">
-            <div style={S.jtop}><div style={S.jnum}>3</div></div>
+            <div style={S.jtop}><div style={S.jnum}>3</div><span style={{ ...S.badge, ...S.badgeNavy }}>Manager</span></div>
             <p style={S.jname}>Tháng đầu tiên</p>
             <p style={S.jdesc}>Lộ trình 30-60-90 cùng quản lý & tạo "first-win" đầu tiên.</p>
             <span style={S.jgo}>Xem chặng 3 →</span>
           </a>
         </div>
       </div>
+      <p style={{ ...S.brief, color: "#7A8499", marginTop: "12px" }}>Visual placeholder · onboarding-journey-map.png · 16:9 · friendly journey map Day 1 → Week 1 → First month, Ahamove orange/navy path</p>
 
-      {/* 3 · VIỆC CẦN LÀM ĐẦU TIÊN */}
-      <div style={S.secHead}>
-        <h2 style={S.h2}><span style={S.bar} />Việc cần làm đầu tiên</h2>
-      </div>
-      <p style={S.intro}>Các tác vụ thường dùng nhất — chọn việc bạn cần xử lý.</p>
-      <div style={S.taskWrap}>
-
-        {/* Card lớn: 1Office + mini mockup workflow */}
-        <a style={S.bigCard} href="/handbook/internal-systems">
-          <div style={S.bigLeft}>
-            <p style={S.bigEyebrow}>Hệ thống nội bộ</p>
-            <p style={S.bigTitle}>Hệ thống 1Office</p>
-            <p style={S.bigText}>Đăng nhập, chấm công, nghỉ phép, ký số hợp đồng, phiếu lương và trợ lý AI — tất cả trong một hệ thống.</p>
-            <div style={S.miniChips}>
-              <span style={S.badge}>Chấm công</span>
-              <span style={S.badge}>Nghỉ phép</span>
-              <span style={S.badge}>Phiếu lương</span>
-              <span style={S.badge}>Chữ ký số</span>
-            </div>
-          </div>
-          <div style={S.bigRight}>
-            <div className="aha-mock">
-              <div className="bar"><span className="dot" /><span className="dot" /><span className="dot" /></div>
-              <div className="grid2">
-                <div className="mc"><p className="lbl">Chấm công hôm nay</p><p className="val">08:32 · Đúng giờ</p></div>
-                <div className="mc"><p className="lbl">Quỹ phép còn lại</p><p className="val">8.5 ngày</p></div>
-                <div className="mc"><p className="lbl">Phiếu lương</p><p className="val">Tháng gần nhất</p></div>
-                <div className="mc"><p className="lbl">Chữ ký số</p><span className="pill">Đã kích hoạt</span></div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a style={S.tile} href="/policies/leave-policy"><span style={S.tileIc}><Icon icon="umbrella-beach" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Nghỉ phép & chấm công</p><p style={S.tileDesc}>Tạo đơn nghỉ phép, chấm công, làm thêm giờ.</p></span></a>
-        <a style={S.tile} href="/benefits/overview"><span style={S.tileIc}><Icon icon="heart-pulse" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Lương & phúc lợi</p><p style={S.tileDesc}>Phiếu lương, bảo hiểm Generali, khám sức khỏe.</p></span></a>
-        <a style={S.tile} href="/handbook/it-support"><span style={S.tileIc}><Icon icon="laptop" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Hỗ trợ IT</p><p style={S.tileDesc}>Tài khoản, máy móc, email & truy cập hệ thống.</p></span></a>
-        <a style={S.tile} href="/help-center/overview"><span style={S.tileIc}><Icon icon="life-ring" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Trung tâm hỗ trợ</p><p style={S.tileDesc}>Không biết hỏi ai? Danh bạ HR & câu hỏi thường gặp.</p></span></a>
-      </div>
-
-      {/* 4 · AHAMOVE QUA NHỮNG CON SỐ — network proof band */}
+      {/* 3 · AHAMOVE QUA NHỮNG CON SỐ — network proof band */}
       <div style={S.secHead}>
         <h2 style={S.h2}><span style={S.bar} />Ahamove qua những con số</h2>
       </div>
@@ -235,9 +203,23 @@ export const S = {
       <div style={S.band}>
         <div style={S.statRow}>
           <div style={S.stat}><p style={S.statN}>2015</p><p style={S.statL}>Năm thành lập</p></div>
-          <div style={S.stat}><p style={S.statN}>45M+</p><p style={S.statL}>Đơn hàng mỗi năm</p></div>
-          <div style={S.stat}><p style={S.statN}>150K+</p><p style={S.statL}>Tài xế đồng hành</p></div>
+          <div style={S.stat}><p style={S.statN}>45 triệu+</p><p style={S.statL}>Đơn hàng mỗi năm</p></div>
+          <div style={S.stat}><p style={S.statN}>150.000+</p><p style={S.statL}>Đối tác tài xế</p></div>
         </div>
+        <p style={S.bandBrief}>Visual placeholder · ahamove-network-proof.png · 21:9 · abstract logistics network, soft blue bg, orange motion line</p>
+      </div>
+
+      {/* 4 · HÌNH ẢNH CÔNG TY */}
+      <div style={S.secHead}>
+        <h2 style={S.h2}><span style={S.bar} />Ahamove — ngôi nhà chung</h2>
+      </div>
+      <div className="aha-visual-slot">
+        <span className="vbadge">Visual placeholder</span>
+        <span className="vicon"><Icon icon="building" size={24} color="#FF7A21" /></span>
+        <p className="vtitle">Hình ảnh công ty Ahamove</p>
+        <span className="vratio">21:9 · suggested</span>
+        <p className="vdesc">Ảnh thật về Ahamove: đội ngũ, văn phòng, tài xế hoặc khoảnh khắc công ty. Style: ảnh thương hiệu chân thực, tông cam/navy.</p>
+        <span className="vfile">images/ahamove-company.png</span>
       </div>
     </div>
 
@@ -249,14 +231,6 @@ export const S = {
         <p style={S.aiTitle}>AI Academy</p>
         <p style={S.aiText}>Claude Pro cho 100% nhân sự, AI Playbook & các chương trình học AI nội bộ.</p>
         <a style={S.aiBtn} href="/ai-hub/overview">Khám phá AI Academy</a>
-      </div>
-
-      <div style={S.panel}>
-        <p style={S.panelTitle}>Cần hỗ trợ?</p>
-        <p style={S.panelText}>Không biết hỏi ai? Bắt đầu từ đây — danh bạ nhân sự, câu hỏi thường gặp và trợ lý AI nội bộ.</p>
-        <a style={{ ...S.railLink, borderTop: "none", paddingTop: 0 }} href="/help-center/overview"><Icon icon="address-book" size={16} color="#FF7A21" /> Danh bạ HR & các bộ phận</a>
-        <a style={S.railLink} href="/help-center/faq"><Icon icon="circle-question" size={16} color="#FF7A21" /> Câu hỏi thường gặp</a>
-        <a style={S.railLink} href="/help-center/ask-ahamove-ai"><Icon icon="robot" size={16} color="#FF7A21" /> Hỏi Ahamove AI</a>
       </div>
 
       <div style={S.panel}>
