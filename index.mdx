@@ -23,32 +23,11 @@ mode: "custom"
           </div>
 
           <div className="aha-hero-right">
-            <div className="aha-frame">
-              <div className="aha-dashboard">
-                <div className="bar">
-                  <span className="dot" /><span className="dot o" /><span className="dot b" />
-                  <b>Ahamove Employee Hub</b>
-                </div>
-                <div className="grid">
-                  <div className="mc wide">
-                    <p className="lbl">Tiến độ hội nhập</p>
-                    <p className="val">Tuần 1 / 4 · 35%</p>
-                    <span className="prog"><i /></span>
-                  </div>
-                  <div className="mc">
-                    <p className="lbl">1Office · Thao tác nhanh</p>
-                    <span className="pill">Chấm công</span><span className="pill">Nghỉ phép</span>
-                  </div>
-                  <div className="mc">
-                    <p className="lbl">Trung tâm hỗ trợ</p>
-                    <p className="val" style={{ fontSize: "12.5px" }}>Hỏi Ahamove AI →</p>
-                  </div>
-                  <div className="mc wide">
-                    <p className="lbl">Mới cập nhật</p>
-                    <p className="val sub">Bảo hiểm Generali 2025</p>
-                  </div>
-                </div>
-              </div>
+            <div className="aha-hero-image-placeholder">
+              <span className="motif" />
+              <p className="title">Hero image placeholder</p>
+              <p>images/ahamove-employee-hub-hero.png</p>
+              <p className="sub">Suggested ratio: 4:3 or 16:10</p>
             </div>
           </div>
         </div>
@@ -85,25 +64,34 @@ mode: "custom"
       <div className="aha-section">
         <p className="aha-h2">Hành trình hội nhập</p>
         <p className="aha-intro">Nhân viên mới? Đây là lộ trình 30 ngày đầu — đi lần lượt từng chặng để bắt nhịp nhanh và tự tin.</p>
-        <div className="aha-journey flow">
-          <a className="aha-jcard" href="/ahamazing-guide/day-1">
-            <div className="step"><span className="num">1</span><span className="aha-badge">New joiner</span></div>
-            <h4>Ngày đầu tiên</h4>
-            <p>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự.</p>
-            <span className="go">Xem chặng 1 →</span>
-          </a>
-          <a className="aha-jcard" href="/ahamazing-guide/week-1">
-            <div className="step"><span className="num">2</span><span className="aha-badge navy">IT · Required</span></div>
-            <h4>Tuần đầu tiên</h4>
-            <p>Kích hoạt tài khoản, ký số hợp đồng & làm quen quy trình cốt lõi.</p>
-            <span className="go">Xem chặng 2 →</span>
-          </a>
-          <a className="aha-jcard" href="/ahamazing-guide/first-month">
-            <div className="step"><span className="num">3</span><span className="aha-badge navy">Manager</span></div>
-            <h4>Tháng đầu tiên</h4>
-            <p>Lộ trình 30-60-90 cùng quản lý & tạo "first-win" đầu tiên.</p>
-            <span className="go">Xem chặng 3 →</span>
-          </a>
+        <div className="aha-roadmap">
+          <div className="aha-rm-step">
+            <div className="rm-node"><span className="dot" /></div>
+            <div className="rm-content">
+              <span className="aha-badge solid">New joiner</span>
+              <h4>Ngày đầu tiên</h4>
+              <p>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự.</p>
+              <a className="rm-go" href="/ahamazing-guide/day-1">Xem chặng 1 →</a>
+            </div>
+          </div>
+          <div className="aha-rm-step">
+            <div className="rm-node"><span className="dot" /></div>
+            <div className="rm-content">
+              <span className="aha-badge navy">IT · Required</span>
+              <h4>Tuần đầu tiên</h4>
+              <p>Kích hoạt tài khoản, ký số hợp đồng & làm quen quy trình cốt lõi.</p>
+              <a className="rm-go" href="/ahamazing-guide/week-1">Xem chặng 2 →</a>
+            </div>
+          </div>
+          <div className="aha-rm-step">
+            <div className="rm-node"><span className="dot" /></div>
+            <div className="rm-content">
+              <span className="aha-badge navy">Manager</span>
+              <h4>Tháng đầu tiên</h4>
+              <p>Lộ trình 30-60-90 cùng quản lý & tạo "first-win" đầu tiên.</p>
+              <a className="rm-go" href="/ahamazing-guide/first-month">Xem chặng 3 →</a>
+            </div>
+          </div>
         </div>
         <a className="aha-section-link" href="/ahamazing-guide/overview">Xem toàn bộ hành trình hội nhập →</a>
       </div>
@@ -111,29 +99,6 @@ mode: "custom"
 
     </div>
 
-    {/* ============ CỘT PHẢI ============ */}
-    <div className="aha-home-rail">
-
-      <div className="aha-aispot">
-        <p className="eyebrow">Spotlight</p>
-        <h3>AI Academy</h3>
-        <p>Claude Pro cho 100% nhân sự, AI Playbook & các chương trình học AI nội bộ.</p>
-        <a className="btn" href="/ai-hub/overview">Khám phá AI Academy</a>
-      </div>
-
-      <div className="aha-panel">
-        <h4>Mới cập nhật</h4>
-        <p>Theo dõi những thay đổi mới nhất trên cổng thông tin nội bộ.</p>
-        <a className="aha-panel-link" href="/whats-new"><Icon icon="bell" size={16} color="#FF7A21" /> Xem nhật ký cập nhật</a>
-      </div>
-
-      <div className="aha-panel">
-        <h4>Cần hỗ trợ nhanh?</h4>
-        <p>Tự phục vụ hoặc tìm đúng đầu mối trong vài giây.</p>
-        <a className="aha-panel-link" href="/help-center/ask-ahamove-ai"><Icon icon="robot" size={16} color="#FF7A21" /> Hỏi Ahamove AI</a>
-        <a className="aha-panel-link" href="/help-center/faq"><Icon icon="circle-question" size={16} color="#FF7A21" /> Câu hỏi thường gặp</a>
-        <a className="aha-panel-link" href="/help-center/overview"><Icon icon="address-book" size={16} color="#FF7A21" /> Danh bạ nhân sự</a>
-      </div>
     </div>
   </div>
 </div>
