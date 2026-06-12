@@ -17,13 +17,8 @@ mode: "custom"
             <p className="eyebrow">Ahamove · Employee Hub</p>
             <h1>Một nơi cho mọi thông tin Ahamovers cần</h1>
             <p className="lead">Từ hành trình hội nhập, hệ thống 1Office, chính sách, phúc lợi, văn phòng đến hỗ trợ nội bộ — tất cả trong một nơi. <b>Always Moving.</b></p>
-            <a className="aha-searchbar" href="/help-center/faq">
-              <Icon icon="magnifying-glass" size={16} color="#8A93A6" />
-              <span>Bạn cần tìm gì? (nghỉ phép, 1Office, bảo hiểm…)</span>
-            </a>
             <div className="aha-cta-row">
               <a className="aha-cta primary" href="/ahamazing-guide/overview"><Icon icon="compass" size={16} color="#fff" />Bắt đầu hội nhập</a>
-              <a className="aha-cta" href="/help-center/overview"><Icon icon="life-ring" size={16} color="#0E4174" />Cần hỗ trợ?</a>
             </div>
           </div>
 
@@ -48,13 +43,9 @@ mode: "custom"
                     <p className="lbl">Trung tâm hỗ trợ</p>
                     <p className="val" style={{ fontSize: "12.5px" }}>Hỏi Ahamove AI →</p>
                   </div>
-                  <div className="mc">
+                  <div className="mc wide">
                     <p className="lbl">Mới cập nhật</p>
                     <p className="val sub">Bảo hiểm Generali 2025</p>
-                  </div>
-                  <div className="mc ai">
-                    <p className="lbl">AI Academy</p>
-                    <p className="val">Claude Pro · 100%</p>
                   </div>
                 </div>
               </div>
@@ -65,31 +56,27 @@ mode: "custom"
 
       {/* 2 · AHAMOVE QUA NHỮNG CON SỐ */}
       <div className="aha-section">
-        <div className="aha-statpanel">
-          <div className="sp-left">
-            <p className="eyebrow">Ahamove qua những con số</p>
-            <h2>Tự hào về ngôi nhà chung bạn vừa gia nhập</h2>
-            <p className="sp-sub">Hành trình tăng trưởng của Ahamove, kể bằng những con số.</p>
-            <div className="sp-stats">
-              <div className="s"><b>2015</b><span>Năm thành lập</span></div>
-              <div className="s"><b>45 triệu+</b><span>Đơn hàng mỗi năm</span></div>
+        <div className="aha-home-stat-editorial">
+          <div className="aha-stat-left">
+            <p className="eyebrow">AHAMOVE QUA NHỮNG CON SỐ</p>
+            <h2>Những cột mốc trên hành trình Ahamove</h2>
+            <p className="sp-sub">Những cột mốc giúp Ahamovers hiểu nhanh về hành trình phát triển của Ahamove.</p>
+          </div>
+          <div className="aha-stat-middle">
+            <div className="aha-stat-main">
+              <b>2015</b><span>Năm thành lập</span>
+            </div>
+            <div className="aha-stat-secondary">
+              <div className="s"><b>45 triệu+</b><span>Đơn hàng</span></div>
               <div className="s"><b>150.000+</b><span>Đối tác tài xế</span></div>
             </div>
           </div>
-          <div className="sp-right">
-            <div className="aha-network" aria-hidden="true">
-              <span className="ring r1" />
-              <span className="ring r2" />
-              <span className="ring r3" />
-              <span className="route ra" />
-              <span className="route rb" />
-              <span className="accent" />
-              <span className="core"><Icon icon="motorcycle" size={22} color="#fff" /></span>
-              <span className="node n1" />
-              <span className="node n2" />
-              <span className="node n3" />
-              <span className="node n4" />
-              <span className="node n5" />
+          <div className="aha-stat-right">
+            <div className="aha-stat-image-placeholder">
+              <p className="title">Image placeholder: Ahamove logistics network visual</p>
+              <p>Suggested asset: images/ahamove-network-proof.png</p>
+              <p>Ratio: 1:1 or 4:3</p>
+              <p>Style: abstract logistics network / Vietnam map / orange route lines / navy-orange brand</p>
             </div>
           </div>
         </div>
@@ -122,77 +109,7 @@ mode: "custom"
         <a className="aha-section-link" href="/ahamazing-guide/overview">Xem toàn bộ hành trình hội nhập →</a>
       </div>
 
-      {/* 4 · TRUY CẬP NHANH — product dashboard */}
-      <div className="aha-section">
-        <p className="aha-h2">Truy cập nhanh</p>
-        <p className="aha-intro">Những việc Ahamover làm thường xuyên nhất — vào thẳng đúng nơi cần.</p>
 
-        <a className="aha-feature-card" href="/handbook/internal-systems">
-          <div className="fc-main">
-            <p className="eyebrow">Hệ thống nội bộ</p>
-            <h4>1Office — công cụ làm việc mỗi ngày</h4>
-            <p>Chấm công, nghỉ phép, đề xuất, ký số hợp đồng & xem phiếu lương. Tất cả hướng dẫn ở một trang.</p>
-            <div className="chips">
-              <span className="aha-badge">Chấm công</span>
-              <span className="aha-badge">Nghỉ phép</span>
-              <span className="aha-badge">Ký số</span>
-              <span className="aha-badge">Phiếu lương</span>
-            </div>
-          </div>
-        </a>
-
-        <div className="aha-tilegrid">
-          <a className="aha-tile2" href="/policies/leave-policy">
-            <span className="ic"><Icon icon="umbrella-beach" size={20} color="#FF7A21" /></span>
-            <div><h4>Xin nghỉ phép</h4><p>Quy định phép năm & cách tạo đơn trên 1Office.</p></div>
-          </a>
-          <a className="aha-tile2" href="/handbook/payroll">
-            <span className="ic"><Icon icon="money-bill-wave" size={20} color="#FF7A21" /></span>
-            <div><h4>Xem phiếu lương</h4><p>Phiếu lương, bảng công & thưởng.</p></div>
-          </a>
-          <a className="aha-tile2" href="/benefits/overview">
-            <span className="ic"><Icon icon="gift" size={20} color="#FF7A21" /></span>
-            <div><h4>Phúc lợi của tôi</h4><p>Bảo hiểm Generali, BHXH & khám sức khỏe.</p></div>
-          </a>
-          <a className="aha-tile2" href="/handbook/it-support">
-            <span className="ic"><Icon icon="laptop" size={20} color="#FF7A21" /></span>
-            <div><h4>Hỗ trợ IT</h4><p>Tài khoản, máy móc & tài sản IT.</p></div>
-          </a>
-        </div>
-      </div>
-
-      {/* 5 · TÀI NGUYÊN PHỔ BIẾN — resource hub */}
-      <div className="aha-section">
-        <p className="aha-h2">Tài nguyên phổ biến</p>
-        <p className="aha-intro">Những trang được tra cứu nhiều nhất trên cổng thông tin.</p>
-        <div className="aha-rowlist">
-          <a className="aha-link-row" href="/help-center/faq">
-            <span className="ic"><Icon icon="circle-question" size={16} color="#FF7A21" /></span>
-            <span className="tx"><h5>Câu hỏi thường gặp</h5><p>Lương & phúc lợi · công cụ · quy trình.</p></span>
-            <span className="go">→</span>
-          </a>
-          <a className="aha-link-row" href="/policies/overview">
-            <span className="ic"><Icon icon="scale-balanced" size={16} color="#FF7A21" /></span>
-            <span className="tx"><h5>Chính sách & quy định</h5><p>Nghỉ phép, chấm công, chi phí & công tác.</p></span>
-            <span className="go">→</span>
-          </a>
-          <a className="aha-link-row" href="/office-guide/overview">
-            <span className="ic"><Icon icon="building" size={16} color="#FF7A21" /></span>
-            <span className="tx"><h5>Văn phòng & tiện ích</h5><p>Địa điểm, gửi xe, pantry & phòng họp.</p></span>
-            <span className="go">→</span>
-          </a>
-          <a className="aha-link-row" href="/handbook/glossary">
-            <span className="ic"><Icon icon="book-bookmark" size={16} color="#FF7A21" /></span>
-            <span className="tx"><h5>Thuật ngữ nội bộ</h5><p>Giải mã từ viết tắt trong tuần đầu.</p></span>
-            <span className="go">→</span>
-          </a>
-          <a className="aha-link-row" href="/help-center/overview">
-            <span className="ic"><Icon icon="headset" size={16} color="#FF7A21" /></span>
-            <span className="tx"><h5>Danh bạ nhân sự</h5><p>HRBP, C&B, Admin, IT — hỏi đúng người.</p></span>
-            <span className="go">→</span>
-          </a>
-        </div>
-      </div>
     </div>
 
     {/* ============ CỘT PHẢI ============ */}
