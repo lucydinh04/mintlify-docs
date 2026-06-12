@@ -1,610 +1,1548 @@
 /* =====================================================================
-   AHAMOVE EMPLOYEE HUB — Design System
-   Clean · product-tech · branded · human
-   50% Atlassian (structure) · 25% Dropbox (brand energy)
-   15% Intercom (self-service) · 10% Webflow U (journey) · Stripe (polish)
-   Mintlify tự nạp mọi file .css đặt ở thư mục gốc của dự án.
+   AHAMOVE EMPLOYEE HUB — Design System v2
+   Clean · Product-Tech · Branded · Human
+   Atlassian (structure + spacing) · Dropbox (brand energy) ·
+   Intercom (self-service) · Webflow U (journey) · Stripe (polish)
    ===================================================================== */
 
 /* ---------- 1 · TOKENS ---------- */
-:root{
-  --aha-orange:#FF7A21; --aha-orange2:#FF9A52; --aha-orange-dk:#D65A12;
-  --aha-navy:#0E4174;   --aha-navy2:#0B1530;
-  --aha-cream:#FFF4EC;  --aha-cream-line:#F6DCC8;
-  --aha-line:#E7EAF0;   --aha-grey:#667089;     --aha-soft:#F6F8FC;
-  --aha-radius:14px; --aha-radius-lg:20px; --aha-radius-xl:24px;
-  /* Stripe-grade shadows: rất nhẹ ở trạng thái nghỉ, nâng vừa phải khi hover */
-  --aha-shadow-sm:0 1px 2px rgba(16,24,40,.05), 0 2px 8px rgba(16,24,40,.04);
-  --aha-shadow-md:0 4px 14px rgba(20,34,70,.06);
-  --aha-shadow-hover:0 10px 28px rgba(14,30,60,.12);
-  --aha-grad-brand:linear-gradient(135deg,var(--aha-orange),var(--aha-orange2));
-  --aha-grad-navy:linear-gradient(135deg,var(--aha-navy2) 0%,var(--aha-navy) 100%);
+:root {
+  /* Brand */
+  --aha-orange: #FF7A21;
+  --aha-orange2: #FF9A52;
+  --aha-orange-dk: #D65A12;
+  --aha-navy: #0E4174;
+  --aha-navy2: #0B1530;
+  --aha-cream: #FFF4EC;
+  --aha-cream-line: #F0D8C4;
+
+  /* Neutral */
+  --aha-line: #E5E9F2;
+  --aha-line-soft: #EEF1F7;
+  --aha-grey: #667089;
+  --aha-grey-lt: #8A93A6;
+  --aha-soft: #F6F8FC;
+  --aha-white: #FFFFFF;
+
+  /* Radius */
+  --aha-radius: 12px;
+  --aha-radius-lg: 16px;
+  --aha-radius-xl: 20px;
+
+  /* Shadows — Stripe-grade, very subtle at rest */
+  --aha-shadow-sm: 0 1px 2px rgba(14, 30, 60, .04), 0 2px 6px rgba(14, 30, 60, .04);
+  --aha-shadow-md: 0 3px 12px rgba(14, 30, 60, .07);
+  --aha-shadow-hover: 0 8px 24px rgba(14, 30, 60, .11);
+
+  /* Gradients — use sparingly */
+  --aha-grad-brand: linear-gradient(135deg, var(--aha-orange), var(--aha-orange2));
+  --aha-grad-navy: linear-gradient(150deg, #0B1530 0%, #0E4174 100%);
+
+  /* Spacing scale */
+  --aha-space-xs: 8px;
+  --aha-space-sm: 14px;
+  --aha-space-md: 20px;
+  --aha-space-lg: 32px;
+  --aha-space-xl: 48px;
 }
 
 /* ---------- 2 · BASE / TYPOGRAPHY ---------- */
-.prose p{ line-height:1.7; }
+.prose p { line-height: 1.72; }
 
-/* H2 có gạch nhấn cam — nhịp thị giác nhất quán toàn site */
+/* H2 accent bar — consistent visual rhythm */
 .prose h2::before,
-article h2::before{
-  content:""; display:inline-block; width:18px; height:3px; border-radius:3px;
-  background:var(--aha-orange); margin-right:10px; vertical-align:middle;
+article h2::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--aha-orange);
+  margin-right: 9px;
+  vertical-align: middle;
 }
 
-/* Bo góc cho ảnh nội dung */
-img{ border-radius:14px; }
-[class*="frame"], figure[class*="Frame"]{ border-radius:16px; overflow:hidden; }
-img[src*="/logo/"], nav img, header img{ border-radius:0; }
+/* Image rounding */
+img { border-radius: 12px; }
+[class*="frame"], figure[class*="Frame"] { border-radius: 14px; overflow: hidden; }
+img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
-/* Card native của Mintlify — nâng nhẹ, tinh tế kiểu Stripe */
-.card, [class*="Card"]{ transition:transform .15s ease, box-shadow .15s ease; }
-.card:hover, [class*="Card"]:hover{
-  transform:translateY(-2px);
-  box-shadow:var(--aha-shadow-hover);
+/* Mintlify native cards — Stripe-like lift */
+.card, [class*="Card"] {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover, [class*="Card"]:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--aha-shadow-hover);
 }
 
-/* ---------- 3 · LAYOUT TRANG CHỦ (mode: custom) ---------- */
-.aha-home{ max-width:1180px; margin:0 auto; padding:24px 16px 64px; }
-.aha-home-wrap{ display:flex; flex-wrap:wrap; gap:26px; align-items:flex-start; }
-.aha-home-main{ flex:999 1 460px; min-width:0; }
-.aha-home-rail{ flex:1 1 296px; min-width:0; display:flex; flex-direction:column; gap:16px; }
+/* ---------- 3 · LAYOUT — Homepage (mode: custom) ---------- */
+.aha-home {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px 16px 72px;
+}
+.aha-home-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+.aha-home-main { flex: 999 1 460px; min-width: 0; }
+.aha-home-rail {
+  flex: 1 1 288px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
 /* ---------- 4 · SECTION RHYTHM ---------- */
-.aha-section{ margin-top:38px; }
+.aha-section { margin-top: var(--aha-space-xl); }
 .aha-section > h2,
-.aha-section .aha-h2{
-  font-size:21px; font-weight:800; color:var(--aha-navy);
-  margin:0 0 6px; display:flex; align-items:center; gap:10px;
+.aha-section .aha-h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--aha-navy);
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
-.aha-section .aha-h2::before, .aha-section > h2::before{
-  content:""; width:18px; height:3px; border-radius:3px;
-  background:var(--aha-orange); display:inline-block; margin:0;
+.aha-section .aha-h2::before,
+.aha-section > h2::before {
+  content: "";
+  width: 16px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--aha-orange);
+  display: inline-block;
+  flex-shrink: 0;
 }
-.aha-intro{ color:var(--aha-grey); font-size:14.5px; line-height:1.6; margin:0 0 18px; max-width:680px; }
-.aha-section-link{ display:inline-block; margin-top:12px; color:var(--aha-orange-dk); font-weight:700; font-size:13px; text-decoration:none; }
-.aha-section-link:hover{ color:var(--aha-orange); }
+.aha-intro {
+  color: var(--aha-grey);
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+  max-width: 660px;
+}
+.aha-section-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--aha-orange-dk);
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: .1px;
+}
+.aha-section-link:hover { color: var(--aha-orange); }
 
-/* ---------- 5 · HERO (homepage) ---------- */
-.aha-hero{
-  position:relative; overflow:hidden; border-radius:var(--aha-radius-xl); color:#fff;
-  padding:38px 34px;
-  background:
-    radial-gradient(680px 280px at 92% -20%, rgba(255,122,33,.34), transparent 60%),
-    var(--aha-grad-navy);
+/* ---------- 5 · HERO — Homepage ---------- */
+/* Promo variant: pastel field + diagonal divider */
+.aha-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--aha-radius-xl);
+  color: #fff;
+  padding: 38px 34px;
+  background: var(--aha-grad-navy);
 }
-.aha-hero-row{ display:flex; flex-wrap:wrap; gap:30px; align-items:center; }
-.aha-hero-left{ flex:1 1 320px; min-width:0; }
-.aha-hero-right{ flex:1 1 340px; min-width:0; }
-.aha-hero .eyebrow{
-  color:var(--aha-orange2); letter-spacing:2.5px; font-size:12px; font-weight:700;
-  margin:0; text-transform:uppercase;
-}
-.aha-hero h1{ font-size:33px; font-weight:800; color:#fff; line-height:1.12; margin:12px 0 10px; }
-.aha-hero .lead{ color:rgba(255,255,255,.84); font-size:15px; max-width:520px; margin:0; line-height:1.6; }
-.aha-hero .lead b{ color:#fff; }
 
-/* Search-first bar (Intercom) */
-.aha-searchbar{
-  display:flex; align-items:center; gap:10px; margin-top:20px; text-decoration:none;
-  background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22);
-  border-radius:13px; padding:11px 14px; transition:background .15s ease, border-color .15s ease;
+.aha-hero.promo {
+  background: linear-gradient(155deg, #EAE8FA 0%, #EDF2FE 50%, #F9EFE8 100%);
+  color: var(--aha-navy);
+  padding: 44px 36px 78px;
 }
-.aha-searchbar:hover{ background:rgba(255,255,255,.18); border-color:rgba(255,255,255,.34); }
-.aha-searchbar span{ color:rgba(255,255,255,.72); font-size:13.5px; }
+.aha-hero.promo::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 122, 33, .13), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+/* diagonal white transition at bottom */
+.aha-hero.promo::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: -1px;
+  height: 70px;
+  background: #fff;
+  clip-path: polygon(0 100%, 100% 36%, 100% 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+.aha-hero.promo .aha-hero-row { position: relative; z-index: 1; }
+.aha-hero.promo .eyebrow { color: var(--aha-orange-dk); }
+.aha-hero.promo h1 { color: var(--aha-navy); }
+.aha-hero.promo .lead { color: var(--aha-grey); }
+.aha-hero.promo .lead b { color: var(--aha-navy); }
+.aha-hero.promo .aha-searchbar {
+  background: #fff;
+  border-color: #DDDFE8;
+  box-shadow: var(--aha-shadow-sm);
+}
+.aha-hero.promo .aha-searchbar:hover { border-color: #C9CEDC; }
+.aha-hero.promo .aha-searchbar span { color: var(--aha-grey-lt); }
+.aha-hero.promo .aha-cta {
+  background: #fff;
+  border-color: #D9DEEA;
+  color: var(--aha-navy);
+}
+.aha-hero.promo .aha-cta:hover { background: #F2F4FB; }
+.aha-hero.promo .aha-cta.primary {
+  background: var(--aha-orange);
+  border-color: var(--aha-orange);
+  color: #fff;
+}
+.aha-hero.promo .aha-cta.primary:hover { background: var(--aha-orange-dk); }
+
+.aha-hero-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+}
+.aha-hero-left { flex: 1 1 320px; min-width: 0; }
+.aha-hero-right { flex: 1 1 320px; min-width: 0; }
+
+.aha-hero .eyebrow {
+  color: var(--aha-orange2);
+  letter-spacing: 2.2px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+.aha-hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.14;
+  margin: 11px 0 10px;
+}
+.aha-hero .lead {
+  color: rgba(255, 255, 255, .84);
+  font-size: 15px;
+  max-width: 500px;
+  margin: 0;
+  line-height: 1.62;
+}
+
+/* Search bar */
+.aha-searchbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .11);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 11px;
+  padding: 11px 14px;
+  transition: background .14s ease, border-color .14s ease;
+}
+.aha-searchbar:hover {
+  background: rgba(255, 255, 255, .17);
+  border-color: rgba(255, 255, 255, .32);
+}
+.aha-searchbar span { color: rgba(255, 255, 255, .7); font-size: 13.5px; }
 
 /* CTA buttons */
-.aha-cta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
-.aha-cta{
-  display:inline-flex; gap:9px; align-items:center; text-decoration:none;
-  background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.20);
-  border-radius:12px; padding:11px 15px; color:#fff; font-weight:700; font-size:13.5px;
-  transition:background .15s ease, transform .15s ease;
+.aha-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
 }
-.aha-cta:hover{ background:rgba(255,255,255,.16); transform:translateY(-1px); }
-.aha-cta.primary{ background:var(--aha-orange); border-color:var(--aha-orange); }
-.aha-cta.primary:hover{ background:#F06E15; }
+.aha-cta {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .10);
+  border: 1px solid rgba(255, 255, 255, .20);
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: background .14s ease, transform .14s ease;
+}
+.aha-cta:hover { background: rgba(255, 255, 255, .16); transform: translateY(-1px); }
+.aha-cta.primary { background: var(--aha-orange); border-color: var(--aha-orange); }
+.aha-cta.primary:hover { background: var(--aha-orange-dk); }
 
-/* ---------- 6 · DASHBOARD MOCKUP (hero phải + tái dùng) ---------- */
-.aha-dashboard{
-  background:#fff; border-radius:18px; border:1px solid rgba(255,255,255,.4);
-  box-shadow:0 24px 60px rgba(8,16,40,.45); padding:14px; color:var(--aha-navy);
+/* ---------- 6 · DASHBOARD MOCKUP ---------- */
+.aha-dashboard {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  box-shadow: 0 20px 52px rgba(8, 16, 40, .38);
+  padding: 13px;
+  color: var(--aha-navy);
 }
-.aha-dashboard .bar{ display:flex; align-items:center; gap:6px; margin-bottom:12px; }
-.aha-dashboard .dot{ width:9px; height:9px; border-radius:50%; background:#E2E8F2; }
-.aha-dashboard .dot.o{ background:#F0D2BC; } .aha-dashboard .dot.b{ background:#CFE0F2; }
-.aha-dashboard .bar b{ margin-left:8px; font-size:11.5px; font-weight:700; color:var(--aha-grey); }
-.aha-dashboard .grid{ display:grid; grid-template-columns:1fr 1fr; gap:9px; }
-.aha-dashboard .mc{ border:1px solid var(--aha-line); border-radius:12px; padding:11px; background:#FCFDFF; }
-.aha-dashboard .mc.wide{ grid-column:1 / -1; }
-.aha-dashboard .lbl{ font-size:10.5px; color:var(--aha-grey); font-weight:600; margin:0; }
-.aha-dashboard .val{ font-size:13.5px; color:var(--aha-navy); font-weight:800; margin:3px 0 0; }
-.aha-dashboard .val.sub{ font-size:12px; color:var(--aha-grey); font-weight:600; }
-.aha-dashboard .prog{ display:block; height:7px; border-radius:6px; background:#EEF2F8; overflow:hidden; margin-top:8px; }
-.aha-dashboard .prog i{ display:block; height:100%; width:35%; border-radius:6px; background:var(--aha-grad-brand); }
-.aha-dashboard .pill{
-  display:inline-block; font-size:10px; font-weight:700; color:var(--aha-orange-dk);
-  background:var(--aha-cream); border:1px solid var(--aha-cream-line);
-  border-radius:999px; padding:3px 8px; margin:2px 5px 0 0;
+.aha-dashboard .bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 11px;
 }
-.aha-dashboard .mc.ai{
-  border:1px solid #21345C; background:var(--aha-grad-navy); color:#fff;
+.aha-dashboard .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E2E8F2;
 }
-.aha-dashboard .mc.ai .lbl{ color:var(--aha-orange2); }
-.aha-dashboard .mc.ai .val{ color:#fff; font-size:12.5px; }
+.aha-dashboard .dot.o { background: #F0D2BC; }
+.aha-dashboard .dot.b { background: #CFE0F2; }
+.aha-dashboard .bar b {
+  margin-left: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--aha-grey);
+}
+.aha-dashboard .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.aha-dashboard .mc {
+  border: 1px solid var(--aha-line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #FCFDFF;
+}
+.aha-dashboard .mc.wide { grid-column: 1 / -1; }
+.aha-dashboard .lbl {
+  font-size: 10px;
+  color: var(--aha-grey);
+  font-weight: 600;
+  margin: 0;
+}
+.aha-dashboard .val {
+  font-size: 13px;
+  color: var(--aha-navy);
+  font-weight: 800;
+  margin: 3px 0 0;
+}
+.aha-dashboard .val.sub { font-size: 11.5px; color: var(--aha-grey); font-weight: 600; }
+.aha-dashboard .prog {
+  display: block;
+  height: 6px;
+  border-radius: 6px;
+  background: #EEF2F8;
+  overflow: hidden;
+  margin-top: 7px;
+}
+.aha-dashboard .prog i {
+  display: block;
+  height: 100%;
+  width: 35%;
+  border-radius: 6px;
+  background: var(--aha-grad-brand);
+}
+.aha-dashboard .pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--aha-orange-dk);
+  background: var(--aha-cream);
+  border: 1px solid var(--aha-cream-line);
+  border-radius: 999px;
+  padding: 2px 7px;
+  margin: 2px 4px 0 0;
+}
+.aha-dashboard .mc.ai {
+  border: 1px solid #1A3160;
+  background: linear-gradient(150deg, #0B1530 0%, #0E4174 100%);
+  color: #fff;
+}
+.aha-dashboard .mc.ai .lbl { color: var(--aha-orange2); }
+.aha-dashboard .mc.ai .val { color: #fff; font-size: 12px; }
 
-/* ---------- 7 · HERO STRIP (đầu trang nội dung) ---------- */
-.aha-strip{
-  position:relative; overflow:hidden; border-radius:var(--aha-radius-lg);
-  padding:26px 28px; margin:4px 0 22px; color:#fff;
-  background:
-    radial-gradient(620px 240px at 92% -30%, rgba(255,122,33,.30), transparent 60%),
-    var(--aha-grad-navy);
+/* ---------- 7 · COLORFUL FRAME (hero mockup) ---------- */
+.aha-frame {
+  position: relative;
+  border-radius: 22px;
+  padding: 10px;
+  background: linear-gradient(135deg, #FF7A21 0%, #FF9A52 18%, #6FCF97 46%, #B7A6F2 72%, #0E4174 100%);
+  box-shadow: 0 22px 52px rgba(8, 16, 40, .20);
 }
-.aha-strip .eyebrow{ color:var(--aha-orange2); letter-spacing:2px; font-size:11.5px;
-  font-weight:700; text-transform:uppercase; margin:0; }
-.aha-strip h2, .aha-strip h3{ color:#fff !important; margin:8px 0 6px; font-size:22px; font-weight:800; }
-.aha-strip h2::before, .aha-strip h3::before{ display:none !important; content:none !important; }
-.aha-strip p{ color:rgba(255,255,255,.82); margin:0; font-size:14.5px; max-width:640px; line-height:1.6; }
-/* biến thể warm (cream) — Phúc lợi / Văn phòng / Life at Ahamove */
-.aha-strip.warm{
-  color:var(--aha-navy);
-  background:
-    radial-gradient(560px 220px at 90% -30%, rgba(255,154,82,.35), transparent 60%),
-    linear-gradient(135deg,#FFF4EC 0%,#FFE7D3 100%);
-  border:1px solid var(--aha-cream-line);
+.aha-frame::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
+  background: #E7E2FB;
+  z-index: -1;
 }
-.aha-strip.warm .eyebrow{ color:var(--aha-orange-dk); }
-.aha-strip.warm h2, .aha-strip.warm h3{ color:var(--aha-navy) !important; }
-.aha-strip.warm p{ color:var(--aha-grey); }
+.aha-frame .aha-dashboard { box-shadow: none; border: none; border-radius: 14px; }
 
-/* Legacy hero-glow (giữ cho trang đang dùng) */
-.aha-hero-glow{
-  position:relative; overflow:hidden;
-  background:
-    radial-gradient(720px 300px at 88% -12%, rgba(255,122,33,.38), transparent 60%),
-    var(--aha-grad-navy);
+/* ---------- 8 · PAGE HERO STRIP (content pages) ---------- */
+.aha-strip {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--aha-radius-lg);
+  padding: 26px 28px;
+  margin: 4px 0 22px;
+  color: #fff;
+  background: linear-gradient(150deg, #0B1530 0%, #0E4174 100%);
+  border: 1px solid #1A2F5A;
 }
-.aha-eyebrow{
-  color:var(--aha-orange2); letter-spacing:2px; font-size:12px; font-weight:700;
-  text-transform:uppercase; margin:0;
+/* subtle orange glow top-right — restrained */
+.aha-strip::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 33, .22) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.aha-strip > * { position: relative; z-index: 1; }
+.aha-strip .eyebrow {
+  color: var(--aha-orange2);
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+.aha-strip h2,
+.aha-strip h3 {
+  color: #fff !important;
+  margin: 8px 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.aha-strip h2::before,
+.aha-strip h3::before { display: none !important; content: none !important; }
+.aha-strip p {
+  color: rgba(255, 255, 255, .80);
+  margin: 0;
+  font-size: 14.5px;
+  max-width: 620px;
+  line-height: 1.62;
 }
 
-/* ---------- 8 · BADGES ---------- */
-.aha-badge{
-  display:inline-block; font-size:11px; font-weight:700; letter-spacing:.4px;
-  padding:3px 9px; border-radius:999px; line-height:1.4; vertical-align:middle;
-  background:var(--aha-cream); color:var(--aha-orange-dk); border:1px solid var(--aha-cream-line);
+/* Warm variant */
+.aha-strip.warm {
+  color: var(--aha-navy);
+  background: linear-gradient(135deg, #FFF4EC 0%, #FFE8D6 100%);
+  border-color: var(--aha-cream-line);
 }
-.aha-badge.navy{ background:#EAF0F8; color:var(--aha-navy); border-color:#D6E0EE; }
-.aha-badge.green{ background:#E8F6EE; color:#1E7A46; border-color:#CDE8D8; }
-.aha-badge.grey{ background:#EEF1F6; color:#56607A; border-color:#E1E6EF; }
-.aha-badge.solid{ background:var(--aha-orange); color:#fff; border-color:var(--aha-orange); }
+.aha-strip.warm::after { display: none; }
+.aha-strip.warm .eyebrow { color: var(--aha-orange-dk); }
+.aha-strip.warm h2,
+.aha-strip.warm h3 { color: var(--aha-navy) !important; }
+.aha-strip.warm p { color: var(--aha-grey); }
 
-/* ---------- 9 · CARD SYSTEM ---------- */
-/* Card grid chung */
-.aha-card-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:6px 0; }
+/* Legacy hero-glow — kept for backward compat, toned down */
+.aha-hero-glow {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(150deg, #0B1530 0%, #0E4174 100%);
+  border: 1px solid #1A2F5A;
+}
+.aha-hero-glow::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -30px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 33, .20) 0%, transparent 70%);
+  pointer-events: none;
+}
+.aha-eyebrow {
+  color: var(--aha-orange2);
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
 
-/* Task tile — dashboard feel (Atlassian) */
-.aha-tilegrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:6px 0; }
-.aha-tile2{
-  display:flex; gap:13px; align-items:flex-start; text-decoration:none;
-  background:#fff; border:1px solid var(--aha-line); border-radius:var(--aha-radius);
-  padding:16px; box-shadow:var(--aha-shadow-sm);
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+/* ---------- 9 · BADGES ---------- */
+.aha-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  line-height: 1.4;
+  vertical-align: middle;
+  background: var(--aha-cream);
+  color: var(--aha-orange-dk);
+  border: 1px solid var(--aha-cream-line);
 }
-.aha-tile2:hover{ transform:translateY(-2px); border-color:#F3C9AC; box-shadow:var(--aha-shadow-hover); }
-.aha-tile2 .ic{ flex:0 0 42px; height:42px; border-radius:12px; background:var(--aha-cream);
-  display:grid; place-items:center; }
-.aha-tile2 h4{ color:var(--aha-navy); font-size:14.5px; font-weight:700; margin:0 0 3px; }
-.aha-tile2 p{ color:var(--aha-grey); font-size:13px; line-height:1.45; margin:0; }
+.aha-badge.navy { background: #EAF0F8; color: var(--aha-navy); border-color: #D4DEF0; }
+.aha-badge.green { background: #E6F5EE; color: #1A6E3E; border-color: #C8E6D8; }
+.aha-badge.grey { background: #EEF1F6; color: #545F7A; border-color: #DDE2EC; }
+.aha-badge.solid { background: var(--aha-orange); color: #fff; border-color: var(--aha-orange); }
+.aha-badge.host {
+  background: var(--aha-navy);
+  color: #fff;
+  border-color: var(--aha-navy);
+  font-size: 10px;
+  padding: 2px 8px;
+}
 
-/* Feature card — card lớn nhấn mạnh (Dropbox energy) */
-.aha-feature-card{
-  display:flex; flex-wrap:wrap; gap:20px; align-items:center; text-decoration:none;
-  background:#fff; border:1px solid var(--aha-line); border-radius:18px; padding:20px 22px;
-  box-shadow:var(--aha-shadow-md);
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-  margin:6px 0;
+/* ---------- 10 · CARD SYSTEM ---------- */
+/* Generic card grid */
+.aha-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 13px;
+  margin: 6px 0;
 }
-.aha-feature-card:hover{ transform:translateY(-2px); border-color:#F3C9AC; box-shadow:var(--aha-shadow-hover); }
-.aha-feature-card .fc-main{ flex:1 1 260px; min-width:0; }
-.aha-feature-card .fc-side{ flex:1 1 300px; min-width:0; }
-.aha-feature-card .eyebrow{
-  color:var(--aha-orange-dk); letter-spacing:1.2px; font-size:11px; font-weight:700;
-  margin:0; text-transform:uppercase;
+
+/* Task tile — dashboard feel */
+.aha-tilegrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin: 6px 0;
 }
-.aha-feature-card h4{ color:var(--aha-navy); font-size:19px; font-weight:800; margin:6px 0; }
-.aha-feature-card p{ color:var(--aha-grey); font-size:13.5px; margin:0; line-height:1.55; }
-.aha-feature-card .chips{ display:flex; flex-wrap:wrap; gap:7px; margin-top:12px; }
+.aha-tile2 {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  text-decoration: none;
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius);
+  padding: 15px;
+  box-shadow: var(--aha-shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+.aha-tile2:hover {
+  transform: translateY(-2px);
+  border-color: #E8C9AE;
+  box-shadow: var(--aha-shadow-hover);
+}
+.aha-tile2 .ic {
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--aha-cream);
+  display: grid;
+  place-items: center;
+}
+.aha-tile2 h4 { color: var(--aha-navy); font-size: 14px; font-weight: 700; margin: 0 0 3px; }
+.aha-tile2 p { color: var(--aha-grey); font-size: 12.5px; line-height: 1.45; margin: 0; }
+
+/* Feature card — emphasized */
+.aha-feature-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  text-decoration: none;
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius-lg);
+  padding: 20px 22px;
+  box-shadow: var(--aha-shadow-md);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+  margin: 6px 0;
+}
+.aha-feature-card:hover {
+  transform: translateY(-2px);
+  border-color: #E8C9AE;
+  box-shadow: var(--aha-shadow-hover);
+}
+.aha-feature-card .fc-main { flex: 1 1 260px; min-width: 0; }
+.aha-feature-card .fc-side { flex: 1 1 280px; min-width: 0; }
+.aha-feature-card .eyebrow {
+  color: var(--aha-orange-dk);
+  letter-spacing: 1px;
+  font-size: 10.5px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+.aha-feature-card h4 { color: var(--aha-navy); font-size: 18px; font-weight: 800; margin: 5px 0; }
+.aha-feature-card p { color: var(--aha-grey); font-size: 13.5px; margin: 0; line-height: 1.55; }
+.aha-feature-card .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
 
 /* Category card — Help Center (Intercom) */
-.aha-cats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:8px 0; }
-.aha-cat{
-  display:block; text-decoration:none; background:#fff; border:1px solid var(--aha-line);
-  border-radius:var(--aha-radius); padding:18px; box-shadow:var(--aha-shadow-sm);
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+.aha-cats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin: 8px 0;
 }
-.aha-cat:hover{ transform:translateY(-2px); border-color:#F3C9AC; box-shadow:var(--aha-shadow-hover); }
-.aha-cat .ic{ width:40px; height:40px; border-radius:11px; background:var(--aha-cream);
-  display:grid; place-items:center; margin-bottom:12px; }
-.aha-cat h4{ color:var(--aha-navy); font-size:15.5px; font-weight:700; margin:0 0 4px; }
-.aha-cat p{ color:var(--aha-grey); font-size:13px; line-height:1.5; margin:0; }
-
-/* Viền gradient cam khi hover (chỉ dùng có chủ đích trên AI pages) */
-.aha-card{ position:relative; }
-.aha-card::after{
-  content:""; position:absolute; inset:0; border-radius:var(--aha-radius); padding:1px;
-  background:linear-gradient(135deg, var(--aha-orange), transparent 60%);
-  opacity:0; transition:opacity .18s ease; pointer-events:none;
-  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor; mask-composite:exclude;
+.aha-cat {
+  display: block;
+  text-decoration: none;
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius);
+  padding: 18px;
+  box-shadow: var(--aha-shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
 }
-.aha-card:hover::after{ opacity:1; }
+.aha-cat:hover {
+  transform: translateY(-2px);
+  border-color: #E8C9AE;
+  box-shadow: var(--aha-shadow-hover);
+}
+.aha-cat .ic {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--aha-cream);
+  display: grid;
+  place-items: center;
+  margin-bottom: 11px;
+}
+.aha-cat h4 { color: var(--aha-navy); font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+.aha-cat p { color: var(--aha-grey); font-size: 13px; line-height: 1.5; margin: 0; }
 
-/* Glassmorphism (nền sáng) */
-.aha-glass{
-  background:rgba(255,255,255,.66) !important;
-  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.55) !important;
+/* Gradient border on hover — AI pages only, used sparingly */
+.aha-card { position: relative; }
+.aha-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--aha-radius);
+  padding: 1px;
+  background: linear-gradient(135deg, var(--aha-orange), transparent 60%);
+  opacity: 0;
+  transition: opacity .18s ease;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.aha-card:hover::after { opacity: 1; }
+
+/* Glass — used only where needed */
+.aha-glass {
+  background: rgba(255, 255, 255, .66) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, .52) !important;
 }
 
 /* Legacy tile */
-.aha-tile{ border-radius:16px; border:1px solid var(--aha-line); padding:18px; background:#fff; transition:box-shadow .18s ease; }
-.aha-tile:hover{ box-shadow:var(--aha-shadow-hover); }
+.aha-tile {
+  border-radius: 14px;
+  border: 1px solid var(--aha-line);
+  padding: 18px;
+  background: var(--aha-white);
+  transition: box-shadow .16s ease;
+}
+.aha-tile:hover { box-shadow: var(--aha-shadow-hover); }
 
-/* ---------- 10 · LINK ROWS — self-service shortcuts (giảm card fatigue) ---------- */
-.aha-rowlist{
-  background:#fff; border:1px solid var(--aha-line); border-radius:var(--aha-radius);
-  overflow:hidden; margin:6px 0; box-shadow:var(--aha-shadow-sm);
+/* ---------- 11 · LINK ROWS — self-service, reduces card fatigue ---------- */
+.aha-rowlist {
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius);
+  overflow: hidden;
+  margin: 6px 0;
+  box-shadow: var(--aha-shadow-sm);
 }
-.aha-link-row{
-  display:flex; align-items:center; gap:13px; text-decoration:none;
-  padding:13px 16px; border-bottom:1px solid var(--aha-line);
-  transition:background .14s ease;
+.aha-link-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--aha-line-soft);
+  transition: background .13s ease;
 }
-.aha-link-row:last-child{ border-bottom:none; }
-.aha-link-row:hover{ background:var(--aha-soft); }
-.aha-link-row .ic{ flex:0 0 34px; height:34px; border-radius:10px; background:var(--aha-cream);
-  display:grid; place-items:center; }
-.aha-link-row .tx{ flex:1; min-width:0; }
-.aha-link-row h5{ color:var(--aha-navy); font-size:13.5px; font-weight:700; margin:0; }
-.aha-link-row p{ color:var(--aha-grey); font-size:12px; margin:1px 0 0; line-height:1.4; }
-.aha-link-row .go{ color:var(--aha-orange); font-weight:700; font-size:13px; flex:0 0 auto; }
+.aha-link-row:last-child { border-bottom: none; }
+.aha-link-row:hover { background: var(--aha-soft); }
+.aha-link-row .ic {
+  flex: 0 0 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--aha-cream);
+  display: grid;
+  place-items: center;
+}
+.aha-link-row .tx { flex: 1; min-width: 0; }
+.aha-link-row h5 { color: var(--aha-navy); font-size: 13.5px; font-weight: 700; margin: 0; }
+.aha-link-row p { color: var(--aha-grey); font-size: 12px; margin: 1px 0 0; line-height: 1.4; }
+.aha-link-row .go { color: var(--aha-orange); font-weight: 700; font-size: 13px; flex: 0 0 auto; }
 
-/* ---------- 11 · JOURNEY (Webflow learning-path) ---------- */
-.aha-journey{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:6px 0 8px; }
-.aha-jcard{
-  position:relative; display:flex; flex-direction:column; text-decoration:none;
-  background:#fff; border:1px solid var(--aha-line); border-radius:var(--aha-radius);
-  padding:18px 16px 16px; box-shadow:var(--aha-shadow-sm);
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+/* ---------- 12 · JOURNEY CARDS (Webflow-inspired) ---------- */
+.aha-journey {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin: 6px 0 8px;
 }
-.aha-jcard:hover{ transform:translateY(-2px); border-color:#F3C9AC; box-shadow:var(--aha-shadow-hover); }
-.aha-jcard .step{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; }
-.aha-jcard .num{
-  width:30px; height:30px; border-radius:50%; flex:0 0 30px;
-  background:var(--aha-grad-brand);
-  color:#fff; font-weight:800; font-size:14px; display:grid; place-items:center;
+.aha-jcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius);
+  padding: 18px 16px 15px;
+  box-shadow: var(--aha-shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
 }
-.aha-jcard h4{ color:var(--aha-navy); font-size:15.5px; font-weight:700; margin:0 0 4px; }
-.aha-jcard p{ color:var(--aha-grey); font-size:13px; line-height:1.5; margin:0 0 12px; }
-.aha-jcard .go{ margin-top:auto; color:var(--aha-orange); font-size:12.5px; font-weight:700; }
+.aha-jcard:hover {
+  transform: translateY(-2px);
+  border-color: #E8C9AE;
+  box-shadow: var(--aha-shadow-hover);
+}
+.aha-jcard .step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.aha-jcard .num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex: 0 0 28px;
+  background: var(--aha-grad-brand);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+}
+.aha-jcard h4 { color: var(--aha-navy); font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+.aha-jcard p { color: var(--aha-grey); font-size: 13px; line-height: 1.5; margin: 0 0 12px; }
+.aha-jcard .go { margin-top: auto; color: var(--aha-orange); font-size: 12.5px; font-weight: 700; }
 
-/* connector giữa các journey card trên màn rộng */
-@media (min-width:760px){
-  .aha-journey.flow .aha-jcard::before{
-    content:""; position:absolute; top:33px; right:-14px; width:14px; height:2px;
-    background:#F3C9AC; z-index:1;
+/* step connector line on wide screens */
+@media (min-width: 760px) {
+  .aha-journey.flow .aha-jcard::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    right: -12px;
+    width: 12px;
+    height: 2px;
+    background: #EACDB6;
+    z-index: 1;
   }
-  .aha-journey.flow .aha-jcard:last-child::before{ display:none; }
+  .aha-journey.flow .aha-jcard:last-child::before { display: none; }
 }
 
-/* Phase label cho journey nhiều giai đoạn */
-.aha-phase{
-  font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
-  color:var(--aha-orange); margin:24px 0 12px;
+/* Phase label */
+.aha-phase {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--aha-orange);
+  margin: 22px 0 10px;
 }
 
-/* ---------- 12 · TIMELINE ---------- */
-.aha-timeline{ border-left:2px solid var(--aha-cream-line); margin-left:8px; padding-left:24px; }
-.aha-timeline .t{ position:relative; padding-bottom:18px; }
-.aha-timeline .t::before{ content:""; position:absolute; left:-31px; top:3px; width:13px; height:13px;
-  border-radius:50%; background:#fff; border:3px solid var(--aha-orange); }
+/* ---------- 13 · TIMELINE ---------- */
+.aha-timeline {
+  border-left: 2px solid var(--aha-cream-line);
+  margin-left: 8px;
+  padding-left: 22px;
+}
+.aha-timeline .t { position: relative; padding-bottom: 16px; }
+.aha-timeline .t::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--aha-orange);
+}
 
-/* ---------- 13 · SUPPORT PANEL (Intercom) ---------- */
+/* ---------- 14 · SUPPORT PANEL (Intercom-style) ---------- */
 .aha-support,
-.aha-support-panel{
-  display:flex; gap:14px; align-items:center; border-radius:var(--aha-radius);
-  border:1px solid var(--aha-cream-line); background:var(--aha-cream); padding:16px 18px; margin:8px 0;
+.aha-support-panel {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border-radius: var(--aha-radius);
+  border: 1px solid var(--aha-cream-line);
+  background: var(--aha-cream);
+  padding: 15px 17px;
+  margin: 8px 0;
 }
-.aha-support .ic, .aha-support-panel .ic{
-  flex:0 0 44px; height:44px; border-radius:12px; background:#fff;
-  display:grid; place-items:center; border:1px solid var(--aha-cream-line);
+.aha-support .ic,
+.aha-support-panel .ic {
+  flex: 0 0 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--aha-cream-line);
 }
-.aha-support h4, .aha-support-panel h4{ color:var(--aha-navy); font-size:15px; font-weight:700; margin:0 0 2px; }
-.aha-support p, .aha-support-panel p{ color:var(--aha-grey); font-size:13px; margin:0; line-height:1.5; }
+.aha-support h4,
+.aha-support-panel h4 { color: var(--aha-navy); font-size: 14.5px; font-weight: 700; margin: 0 0 2px; }
+.aha-support p,
+.aha-support-panel p { color: var(--aha-grey); font-size: 13px; margin: 0; line-height: 1.5; }
 
-/* ---------- 14 · RAIL PANELS (cột phải homepage) ---------- */
-.aha-panel{ background:#fff; border:1px solid var(--aha-line); border-radius:16px; padding:18px; box-shadow:var(--aha-shadow-sm); }
-.aha-panel h4{ font-size:15px; font-weight:800; color:var(--aha-navy); margin:0 0 4px; }
-.aha-panel > p{ font-size:12.5px; color:var(--aha-grey); margin:0 0 12px; line-height:1.55; }
-.aha-panel-link{
-  display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--aha-navy);
-  font-weight:600; font-size:13.5px; padding:10px 0; border-top:1px solid var(--aha-line);
+/* ---------- 15 · RAIL PANELS (homepage right column) ---------- */
+.aha-panel {
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius-lg);
+  padding: 18px;
+  box-shadow: var(--aha-shadow-sm);
 }
-.aha-panel-link:first-of-type{ border-top:none; padding-top:0; }
-.aha-panel-link:hover{ color:var(--aha-orange-dk); }
+.aha-panel h4 { font-size: 14.5px; font-weight: 800; color: var(--aha-navy); margin: 0 0 4px; }
+.aha-panel > p { font-size: 12.5px; color: var(--aha-grey); margin: 0 0 11px; line-height: 1.55; }
+.aha-panel-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--aha-navy);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 9px 0;
+  border-top: 1px solid var(--aha-line-soft);
+}
+.aha-panel-link:first-of-type { border-top: none; padding-top: 0; }
+.aha-panel-link:hover { color: var(--aha-orange-dk); }
 
-/* Spotlight AI card — gradient mạnh hơn, chỉ dùng cho AI/spotlight */
-.aha-aispot{
-  border-radius:var(--aha-radius-lg); padding:22px; color:#fff;
+/* AI Spotlight card — navy solid, orange accent button only */
+.aha-aispot {
+  border-radius: var(--aha-radius-lg);
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(150deg, #0B1530 0%, #0E4174 100%);
+  border: 1px solid #1A2F5A;
+  position: relative;
+  overflow: hidden;
+}
+.aha-aispot::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 33, .18) 0%, transparent 70%);
+  pointer-events: none;
+}
+.aha-aispot > * { position: relative; z-index: 1; }
+.aha-aispot .eyebrow {
+  color: var(--aha-orange2);
+  letter-spacing: 1.5px;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+.aha-aispot h3 { color: #fff !important; font-size: 17px; font-weight: 800; margin: 5px 0 4px; }
+.aha-aispot h3::before { display: none !important; content: none !important; }
+.aha-aispot p { color: rgba(255, 255, 255, .80); font-size: 13px; margin: 0; line-height: 1.55; }
+.aha-aispot .btn {
+  display: inline-block;
+  margin-top: 13px;
+  background: var(--aha-orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 15px;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: background .14s ease;
+}
+.aha-aispot .btn:hover { background: var(--aha-orange-dk); }
+
+/* ---------- 16 · STATS ---------- */
+.aha-stats,
+.aha-statband {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 10px 0;
+}
+.aha-stat,
+.aha-sb {
+  background: var(--aha-cream);
+  border: 1px solid var(--aha-cream-line);
+  border-radius: var(--aha-radius);
+  padding: 16px;
+}
+.aha-stat b,
+.aha-sb b {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--aha-orange-dk);
+  line-height: 1;
+}
+.aha-stat span,
+.aha-sb span { display: block; font-size: 13px; color: var(--aha-grey); margin-top: 6px; }
+
+/* ---------- 17 · STAT PANEL (homepage) ---------- */
+.aha-statpanel {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+  background: #FCFDFE;
+  border: 1px solid #E8EDF5;
+  border-radius: 22px;
+  padding: 38px 38px;
+  box-shadow: var(--aha-shadow-md);
+  overflow: hidden;
+}
+.aha-statpanel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
   background:
-    radial-gradient(520px 220px at 85% -25%, rgba(255,122,33,.40), transparent 60%),
-    var(--aha-grad-navy);
+    radial-gradient(240px 200px at 2% 0%, rgba(183, 166, 242, .10), transparent 70%),
+    radial-gradient(260px 220px at 100% 100%, rgba(111, 207, 151, .09), transparent 70%);
 }
-.aha-aispot .eyebrow{ color:var(--aha-orange2); letter-spacing:1.5px; font-size:11px; font-weight:700; text-transform:uppercase; margin:0; }
-.aha-aispot h3{ color:#fff !important; font-size:18px; font-weight:800; margin:6px 0 4px; }
-.aha-aispot h3::before{ display:none !important; content:none !important; }
-.aha-aispot p{ color:rgba(255,255,255,.82); font-size:13px; margin:0; line-height:1.55; }
-.aha-aispot .btn{
-  display:inline-block; margin-top:14px; background:var(--aha-orange); color:#fff;
-  font-weight:700; font-size:13px; padding:9px 16px; border-radius:11px; text-decoration:none;
-  transition:background .15s ease;
+.aha-statpanel::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--aha-orange);
+  box-shadow: 20px 12px 0 -2px #B7A6F2, 38px -4px 0 -3px #6FCF97;
+  z-index: 0;
+  opacity: .7;
 }
-.aha-aispot .btn:hover{ background:#F06E15; }
-
-/* ---------- 15 · STATS ---------- */
-.aha-stats, .aha-statband{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:14px; margin:10px 0; }
-.aha-stat, .aha-sb{ background:var(--aha-cream); border:1px solid var(--aha-cream-line); border-radius:var(--aha-radius); padding:18px 16px; }
-.aha-stat b, .aha-sb b{ display:block; font-size:26px; font-weight:800; color:var(--aha-orange-dk); line-height:1; }
-.aha-stat span, .aha-sb span{ display:block; font-size:13px; color:var(--aha-grey); margin-top:6px; }
-
-/* Stat band trên nền xanh nhạt (homepage proof) */
-.aha-proofband{
-  position:relative; overflow:hidden; border-radius:22px; padding:26px 24px; margin-top:6px;
-  background:
-    radial-gradient(600px 220px at 85% 120%, rgba(255,122,33,.16), transparent 60%),
-    linear-gradient(135deg,#EAF1FA,#F4F8FD);
-  border:1px solid #DCE6F2;
+.aha-statpanel > * { position: relative; z-index: 1; }
+.aha-statpanel .sp-left { flex: 1 1 340px; min-width: 0; }
+.aha-statpanel .sp-right { flex: 0 1 280px; min-width: 0; display: flex; justify-content: center; }
+.aha-statpanel .eyebrow {
+  color: var(--aha-orange-dk);
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
 }
-.aha-proofband .row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; }
-.aha-proofband .stat{ background:#fff; border:1px solid #DCE6F2; border-radius:16px; padding:18px 16px; }
-.aha-proofband .stat b{ display:block; font-size:27px; font-weight:800; color:var(--aha-orange-dk); line-height:1; }
-.aha-proofband .stat span{ display:block; font-size:13px; color:var(--aha-grey); margin-top:7px; }
+.aha-statpanel h2 {
+  color: var(--aha-navy);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.18;
+  margin: 10px 0 0;
+}
+.aha-statpanel h2::before { content: none !important; }
+.aha-statpanel .sp-sub {
+  color: var(--aha-grey);
+  font-size: 14px;
+  line-height: 1.62;
+  margin: 8px 0 0;
+  max-width: 420px;
+}
+.aha-statpanel .sp-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 34px;
+  margin-top: 24px;
+}
+.aha-statpanel .sp-stats .s b {
+  display: block;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--aha-navy);
+  line-height: 1;
+  letter-spacing: -.5px;
+}
+.aha-statpanel .sp-stats .s:first-child b { color: var(--aha-orange-dk); }
+.aha-statpanel .sp-stats .s span {
+  display: block;
+  font-size: 12.5px;
+  color: var(--aha-grey);
+  margin-top: 8px;
+}
 
-/* ---------- 16 · SOFT BACKGROUND BLOCKS ---------- */
-.aha-softgrid{
-  border-radius:var(--aha-radius-lg); padding:22px; margin:18px 0;
-  background-color:#FAFBFD;
+/* ---------- 18 · NETWORK VISUAL ---------- */
+.aha-network { position: relative; width: 250px; max-width: 100%; aspect-ratio: 1; }
+.aha-network .ring { position: absolute; border-radius: 50%; }
+.aha-network .ring.r1 { inset: 0; border: 1.5px solid #D4DEEC; }
+.aha-network .ring.r2 { inset: 16%; border: 1.5px dashed #C5D0E4; }
+.aha-network .ring.r3 { inset: 33%; border: 1.5px solid #DDD8F2; }
+.aha-network .core {
+  position: absolute;
+  inset: 40%;
+  border-radius: 50%;
+  background: linear-gradient(150deg, #0B1530 0%, #0E4174 100%);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(14, 30, 60, .28);
+}
+.aha-network .accent {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 122, 33, .80), rgba(255, 122, 33, .15) 70%, transparent);
+  opacity: .50;
+  pointer-events: none;
+}
+.aha-network .node {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--aha-orange);
+  box-shadow: 0 2px 5px rgba(255, 122, 33, .25);
+}
+.aha-network .node.n1 { top: 3%; left: 46%; }
+.aha-network .node.n2 { top: 29%; left: 87%; border-color: #3DAE6E; }
+.aha-network .node.n3 { top: 84%; left: 71%; }
+.aha-network .node.n4 { top: 80%; left: 13%; border-color: #8E78D6; }
+.aha-network .node.n5 { top: 33%; left: 1%; }
+.aha-network .route {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, transparent, var(--aha-orange2));
+  opacity: .60;
+}
+.aha-network .route.ra { width: 46%; transform: rotate(-58deg); }
+.aha-network .route.rb { width: 42%; transform: rotate(150deg); }
+
+/* ---------- 19 · SOFT GRID BACKGROUND ---------- */
+.aha-softgrid {
+  border-radius: var(--aha-radius-lg);
+  padding: 20px;
+  margin: 16px 0;
+  background-color: #FAFBFD;
   background-image:
-    linear-gradient(rgba(14,65,116,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(14,65,116,.04) 1px, transparent 1px);
-  background-size:22px 22px;
-  border:1px solid var(--aha-line);
+    linear-gradient(rgba(14, 65, 116, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 65, 116, .035) 1px, transparent 1px);
+  background-size: 22px 22px;
+  border: 1px solid var(--aha-line);
 }
 
-/* ---------- 17 · VISUAL PLACEHOLDER SYSTEM ---------- */
-.aha-visual-slot{
-  position:relative; border-radius:24px; border:1px solid #DCE6F2;
-  background-color:#F4F8FD;
-  background-image:radial-gradient(circle at 1px 1px, rgba(14,65,116,.07) 1px, transparent 0);
-  background-size:18px 18px;
-  box-shadow:var(--aha-shadow-md);
-  padding:30px 26px; margin:16px 0;
-  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
-  overflow:hidden; min-height:200px;
+/* ---------- 20 · VISUAL PLACEHOLDER SYSTEM ---------- */
+.aha-visual-slot {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #D8E4F0;
+  background-color: #F4F8FD;
+  background-image: radial-gradient(circle at 1px 1px, rgba(14, 65, 116, .06) 1px, transparent 0);
+  background-size: 18px 18px;
+  box-shadow: var(--aha-shadow-md);
+  padding: 28px 24px;
+  margin: 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  min-height: 200px;
 }
-.aha-visual-slot::before{
-  content:""; position:absolute; inset:14px; border:1.5px dashed #C7D6EA;
-  border-radius:18px; pointer-events:none; opacity:.7;
+.aha-visual-slot::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1.5px dashed #C4D4E6;
+  border-radius: 16px;
+  pointer-events: none;
+  opacity: .65;
 }
-.aha-visual-slot > *{ position:relative; z-index:1; }
-.aha-visual-slot .vbadge{
-  position:absolute; top:14px; right:14px; z-index:2;
-  font-size:10.5px; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
-  background:#fff; color:#4B6CB7; border:1px solid #D6E0EE;
-  padding:4px 10px; border-radius:999px;
+.aha-visual-slot > * { position: relative; z-index: 1; }
+.aha-visual-slot .vbadge {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #4B6CB7;
+  border: 1px solid #D4DEEE;
+  padding: 3px 9px;
+  border-radius: 999px;
 }
-.aha-visual-slot .vicon{
-  width:54px; height:54px; border-radius:16px; display:grid; place-items:center;
-  background:#fff; border:1px solid #DCE6F2; box-shadow:0 6px 16px rgba(20,34,70,.08);
-  margin-bottom:14px;
+.aha-visual-slot .vicon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 1px solid #D8E4F0;
+  box-shadow: 0 4px 14px rgba(20, 34, 70, .07);
+  margin-bottom: 12px;
 }
-.aha-visual-slot .vtitle{ color:var(--aha-navy); font-size:16px; font-weight:800; margin:0; }
-.aha-visual-slot .vratio{
-  display:inline-block; margin:8px 0 0; font-size:11.5px; font-weight:700; letter-spacing:.3px;
-  color:var(--aha-orange-dk); background:var(--aha-cream); border:1px solid var(--aha-cream-line);
-  padding:3px 10px; border-radius:999px;
+.aha-visual-slot .vtitle { color: var(--aha-navy); font-size: 15.5px; font-weight: 800; margin: 0; }
+.aha-visual-slot .vratio {
+  display: inline-block;
+  margin: 7px 0 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  color: var(--aha-orange-dk);
+  background: var(--aha-cream);
+  border: 1px solid var(--aha-cream-line);
+  padding: 3px 9px;
+  border-radius: 999px;
 }
-.aha-visual-slot .vdesc{ color:var(--aha-grey); font-size:13px; line-height:1.55; margin:12px auto 0; max-width:520px; }
-.aha-visual-slot .vfile{
-  margin-top:12px; font-size:11.5px; color:#7A8499;
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  background:#fff; border:1px dashed #C7D6EA; border-radius:8px; padding:4px 10px; display:inline-block;
+.aha-visual-slot .vdesc {
+  color: var(--aha-grey);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 11px auto 0;
+  max-width: 500px;
+}
+.aha-visual-slot .vfile {
+  margin-top: 11px;
+  font-size: 11px;
+  color: #7A8499;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: #fff;
+  border: 1px dashed #C4D4E6;
+  border-radius: 7px;
+  padding: 4px 10px;
+  display: inline-block;
 }
 
-/* DARK — AI / hero */
-.aha-visual-slot.dark{
-  border-color:#21345C; background-color:#0E1F3D;
-  background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0),
-    radial-gradient(520px 220px at 85% -25%, rgba(255,122,33,.30), transparent 60%);
-  background-size:18px 18px, auto;
+/* DARK variant */
+.aha-visual-slot.dark {
+  border-color: #1E3360;
+  background-color: #0E1F3D;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .055) 1px, transparent 0);
+  background-size: 18px 18px;
 }
-.aha-visual-slot.dark::before{ border-color:rgba(255,255,255,.18); }
-.aha-visual-slot.dark .vbadge{ background:rgba(255,255,255,.10); color:#FFB57E; border-color:rgba(255,255,255,.22); }
-.aha-visual-slot.dark .vicon{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.18); }
-.aha-visual-slot.dark .vtitle{ color:#fff; }
-.aha-visual-slot.dark .vdesc{ color:rgba(255,255,255,.74); }
-.aha-visual-slot.dark .vfile{ background:rgba(255,255,255,.06); color:#9FB0CC; border-color:rgba(255,255,255,.20); }
+.aha-visual-slot.dark::before { border-color: rgba(255, 255, 255, .16); }
+.aha-visual-slot.dark .vbadge { background: rgba(255, 255, 255, .09); color: #FFB57E; border-color: rgba(255, 255, 255, .20); }
+.aha-visual-slot.dark .vicon { background: rgba(255, 255, 255, .07); border-color: rgba(255, 255, 255, .16); }
+.aha-visual-slot.dark .vtitle { color: #fff; }
+.aha-visual-slot.dark .vdesc { color: rgba(255, 255, 255, .72); }
+.aha-visual-slot.dark .vfile { background: rgba(255, 255, 255, .06); color: #98AACC; border-color: rgba(255, 255, 255, .18); }
 
-/* WARM — benefits / life at Ahamove */
-.aha-visual-slot.warm{
-  border-color:var(--aha-cream-line); background-color:#FFF7F0;
-  background-image:radial-gradient(circle at 1px 1px, rgba(214,90,18,.07) 1px, transparent 0);
+/* WARM variant */
+.aha-visual-slot.warm {
+  border-color: var(--aha-cream-line);
+  background-color: #FFF7F1;
+  background-image: radial-gradient(circle at 1px 1px, rgba(214, 90, 18, .06) 1px, transparent 0);
 }
-.aha-visual-slot.warm::before{ border-color:#F1CBAE; }
-.aha-visual-slot.warm .vbadge{ color:var(--aha-orange-dk); border-color:var(--aha-cream-line); }
+.aha-visual-slot.warm::before { border-color: #F0C8A8; }
+.aha-visual-slot.warm .vbadge { color: var(--aha-orange-dk); border-color: var(--aha-cream-line); }
 
-/* COMPACT */
-.aha-visual-slot.compact{ min-height:130px; padding:20px 18px; border-radius:18px; }
-.aha-visual-slot.compact .vicon{ width:42px; height:42px; border-radius:12px; margin-bottom:10px; }
-.aha-visual-slot.compact .vtitle{ font-size:14px; }
-.aha-visual-slot.compact::before{ inset:10px; border-radius:13px; }
+/* COMPACT variant */
+.aha-visual-slot.compact { min-height: 120px; padding: 18px; border-radius: 16px; }
+.aha-visual-slot.compact .vicon { width: 40px; height: 40px; border-radius: 11px; margin-bottom: 9px; }
+.aha-visual-slot.compact .vtitle { font-size: 13.5px; }
+.aha-visual-slot.compact::before { inset: 9px; border-radius: 11px; }
 
-/* Image brief caption */
-.aha-image-brief{
-  font-size:11.5px; color:#7A8499; line-height:1.5; margin:8px 2px 18px;
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+.aha-image-brief {
+  font-size: 11px;
+  color: #7A8499;
+  line-height: 1.5;
+  margin: 7px 2px 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
-.aha-image-brief b{ color:#4B6CB7; }
+.aha-image-brief b { color: #4B6CB7; }
 
-/* ---------- 18 · CSS-BUILT MOCKUPS (trang nội dung) ---------- */
-.aha-mock{
-  border-radius:18px; border:1px solid var(--aha-line); background:#fff;
-  box-shadow:0 18px 44px rgba(20,34,70,.12); padding:14px; overflow:hidden;
+/* ---------- 21 · CSS MOCKUPS (content pages) ---------- */
+.aha-mock {
+  border-radius: 16px;
+  border: 1px solid var(--aha-line);
+  background: var(--aha-white);
+  box-shadow: 0 14px 38px rgba(20, 34, 70, .10);
+  padding: 13px;
+  overflow: hidden;
 }
-.aha-mock .bar{ display:flex; align-items:center; gap:6px; margin-bottom:12px; }
-.aha-mock .dot{ width:9px; height:9px; border-radius:50%; background:#E2E8F2; }
-.aha-mock .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.aha-mock .mc{ border:1px solid var(--aha-line); border-radius:12px; padding:12px; background:#FCFDFF; }
-.aha-mock .mc .lbl{ font-size:11px; color:var(--aha-grey); font-weight:600; margin:0 0 8px; }
-.aha-mock .mc .val{ font-size:15px; color:var(--aha-navy); font-weight:800; margin:0; }
-.aha-mock .prog{ height:7px; border-radius:6px; background:#EEF2F8; overflow:hidden; margin-top:8px; }
-.aha-mock .prog i{ display:block; height:100%; border-radius:6px; background:var(--aha-grad-brand); }
-.aha-mock .pill{ display:inline-block; font-size:10.5px; font-weight:700; color:var(--aha-orange-dk);
-  background:var(--aha-cream); border:1px solid var(--aha-cream-line); border-radius:999px; padding:2px 8px; }
+.aha-mock .bar { display: flex; align-items: center; gap: 6px; margin-bottom: 11px; }
+.aha-mock .dot { width: 8px; height: 8px; border-radius: 50%; background: #E2E8F2; }
+.aha-mock .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.aha-mock .mc { border: 1px solid var(--aha-line); border-radius: 10px; padding: 11px; background: #FCFDFF; }
+.aha-mock .mc .lbl { font-size: 10.5px; color: var(--aha-grey); font-weight: 600; margin: 0 0 7px; }
+.aha-mock .mc .val { font-size: 14.5px; color: var(--aha-navy); font-weight: 800; margin: 0; }
+.aha-mock .prog { height: 6px; border-radius: 6px; background: #EEF2F8; overflow: hidden; margin-top: 7px; }
+.aha-mock .prog i { display: block; height: 100%; border-radius: 6px; background: var(--aha-grad-brand); }
+.aha-mock .pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--aha-orange-dk);
+  background: var(--aha-cream);
+  border: 1px solid var(--aha-cream-line);
+  border-radius: 999px;
+  padding: 2px 7px;
+}
 
-/* =====================================================================
-   19 · ATLASSIAN-INSPIRED COLOR-BLOCK TREATMENTS  (homepage)
-   Mượn ngôn ngữ thị giác: pastel color field, angled white divider,
-   colorful frame, off-white stat panel, abstract geometric accents,
-   strong whitespace — nhưng branding hoàn toàn Ahamove.
-   Soft palette: lavender #ECEAFB · sky #EEF3FE · cream #FBF1EA
-                 muted green #6FCF97 · lavender accent #B7A6F2
-   ===================================================================== */
+/* ---------- 22 · RESOURCE HUB (AI Academy) ---------- */
+/* Section group — used in ai-hub/overview.mdx */
+.aha-resource-section {
+  margin: 24px 0;
+}
+.aha-resource-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.aha-resource-section-header .rh-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--aha-cream);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.aha-resource-section-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aha-navy);
+  margin: 0;
+}
+.aha-resource-section-header h3::before { display: none !important; }
+.aha-resource-section-header p {
+  font-size: 12.5px;
+  color: var(--aha-grey);
+  margin: 1px 0 0;
+  line-height: 1.4;
+}
 
-/* ---- 19a · HERO PROMO — pastel field + diagonal white divider ---- */
-.aha-hero.promo{
-  background:linear-gradient(158deg,#ECEAFB 0%, #EEF3FE 52%, #FBF1EA 100%);
-  color:var(--aha-navy);
-  padding:42px 34px 76px;          /* chừa chỗ cho dải cắt chéo dưới đáy */
+/* Resource grid — 2-col, denser than tilegrid */
+.aha-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
 }
-/* quầng trang trí trừu tượng góc trên-phải (đặt sau nội dung) */
-.aha-hero.promo::before{
-  content:""; position:absolute; top:-46px; right:-36px; width:230px; height:230px; border-radius:50%;
-  background:radial-gradient(circle at 32% 32%, rgba(255,122,33,.16), transparent 70%);
-  z-index:0; pointer-events:none;
+/* Resource card — compact, horizontal icon+text */
+.aha-resource-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none;
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius);
+  padding: 14px 15px;
+  box-shadow: var(--aha-shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
 }
-/* dải trắng cắt chéo gần đáy — chuyển hero hoà vào nền trang */
-.aha-hero.promo::after{
-  content:""; position:absolute; left:-2%; right:-2%; bottom:-1px; height:74px; background:#fff;
-  clip-path:polygon(0 100%, 100% 34%, 100% 100%);
-  z-index:0; pointer-events:none;
+.aha-resource-card:hover {
+  transform: translateY(-2px);
+  border-color: #E8C9AE;
+  box-shadow: var(--aha-shadow-hover);
 }
-.aha-hero.promo .aha-hero-row{ position:relative; z-index:1; }
-.aha-hero.promo .eyebrow{ color:var(--aha-orange-dk); }
-.aha-hero.promo h1{ color:var(--aha-navy); }
-.aha-hero.promo .lead{ color:var(--aha-grey); }
-.aha-hero.promo .lead b{ color:var(--aha-navy); }
-/* search bar + CTA biến thể nền sáng */
-.aha-hero.promo .aha-searchbar{
-  background:#fff; border-color:#E2E6F0; box-shadow:var(--aha-shadow-sm);
+.aha-resource-card .rc-icon {
+  flex: 0 0 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--aha-cream);
+  display: grid;
+  place-items: center;
 }
-.aha-hero.promo .aha-searchbar:hover{ border-color:#CFD6E6; }
-.aha-hero.promo .aha-searchbar span{ color:var(--aha-grey); }
-.aha-hero.promo .aha-cta{
-  background:#fff; border-color:#D9DEEA; color:var(--aha-navy);
+.aha-resource-card h5 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--aha-navy);
+  margin: 0 0 2px;
 }
-.aha-hero.promo .aha-cta:hover{ background:#F4F6FB; }
-.aha-hero.promo .aha-cta.primary{ background:var(--aha-orange); border-color:var(--aha-orange); color:#fff; }
-.aha-hero.promo .aha-cta.primary:hover{ background:#F06E15; }
+.aha-resource-card p {
+  font-size: 12px;
+  color: var(--aha-grey);
+  margin: 0;
+  line-height: 1.4;
+}
+/* AI-page resource card — subtle navy tint */
+.aha-resource-card.ai {
+  background: #F7F9FF;
+  border-color: #DDE4F0;
+}
+.aha-resource-card.ai .rc-icon {
+  background: #EAF0F8;
+}
 
-/* ---- 19b · COLORFUL FRAME quanh dashboard mockup ---- */
-.aha-frame{
-  position:relative; border-radius:26px; padding:11px;
-  background:linear-gradient(135deg,#FF7A21 0%, #FF9A52 18%, #6FCF97 46%, #B7A6F2 72%, #0E4174 100%);
-  box-shadow:0 26px 60px rgba(8,16,40,.22);
+/* Resource divider */
+.aha-resource-divider {
+  height: 1px;
+  background: var(--aha-line-soft);
+  margin: 24px 0;
 }
-/* khối màu lệch phía sau — tạo lớp (layered color block) */
-.aha-frame::before{
-  content:""; position:absolute; top:-14px; left:-14px; width:120px; height:120px;
-  border-radius:22px; background:#E7E2FB; z-index:-1;
-}
-.aha-frame .aha-dashboard{ box-shadow:none; border:none; border-radius:18px; }
 
-/* ---- 19c · STAT PANEL (Atlassian-style) ---- */
-.aha-statpanel{
-  position:relative; display:flex; flex-wrap:wrap; gap:30px; align-items:center;
-  background:#FCFDFE; border:1px solid #E9EDF5; border-radius:26px;
-  padding:40px 40px; box-shadow:var(--aha-shadow-md); overflow:hidden;
+/* ---------- 23 · WORKSHOP CARD (YES A.I DO) ---------- */
+.aha-workshop {
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius-lg);
+  overflow: hidden;
+  margin: 16px 0;
+  box-shadow: var(--aha-shadow-sm);
 }
-/* nền hơi nhuốm màu (lavender/green) tạo chiều sâu nhẹ */
-.aha-statpanel::before{
-  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
-  background:
-    radial-gradient(260px 220px at 2% 0%, rgba(183,166,242,.14), transparent 70%),
-    radial-gradient(280px 240px at 100% 100%, rgba(111,207,151,.12), transparent 70%);
+.aha-workshop-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--aha-line-soft);
+  background: var(--aha-soft);
 }
-/* chấm trang trí trừu tượng */
-.aha-statpanel::after{
-  content:""; position:absolute; top:26px; right:30px; width:10px; height:10px; border-radius:50%;
-  background:var(--aha-orange); box-shadow:22px 14px 0 -3px #B7A6F2, 40px -6px 0 -4px #6FCF97;
-  z-index:0; opacity:.8;
+.aha-workshop-head .wnum {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--aha-grad-brand);
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
-.aha-statpanel > *{ position:relative; z-index:1; }
-.aha-statpanel .sp-left{ flex:1 1 360px; min-width:0; }
-.aha-statpanel .sp-right{ flex:0 1 300px; min-width:0; display:flex; justify-content:center; }
-.aha-statpanel .eyebrow{
-  color:var(--aha-orange-dk); letter-spacing:2px; font-size:11.5px; font-weight:700;
-  text-transform:uppercase; margin:0;
+.aha-workshop-head .wmeta { flex: 1; min-width: 0; }
+.aha-workshop-head h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--aha-navy);
+  margin: 0 0 4px;
+  letter-spacing: -.1px;
 }
-.aha-statpanel h2{ color:var(--aha-navy); font-size:26px; font-weight:800; line-height:1.18; margin:10px 0 0; }
-.aha-statpanel h2::before{ content:none !important; }
-.aha-statpanel .sp-sub{ color:var(--aha-grey); font-size:14px; line-height:1.6; margin:8px 0 0; max-width:430px; }
-.aha-statpanel .sp-stats{ display:flex; flex-wrap:wrap; gap:30px 36px; margin-top:26px; }
-.aha-statpanel .sp-stats .s b{
-  display:block; font-size:40px; font-weight:800; color:var(--aha-navy);
-  line-height:1; letter-spacing:-.5px;
+.aha-workshop-head .whost {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--aha-grey);
+  font-weight: 500;
 }
-.aha-statpanel .sp-stats .s:first-child b{ color:var(--aha-orange-dk); }   /* accent cam */
-.aha-statpanel .sp-stats .s span{ display:block; font-size:13px; color:var(--aha-grey); margin-top:9px; }
+.aha-workshop-head .whost b { color: var(--aha-navy); font-weight: 700; }
+.aha-workshop-body { padding: 16px 20px; }
+.aha-workshop-body p { font-size: 13.5px; color: var(--aha-grey); line-height: 1.6; margin: 0 0 12px; }
+.aha-workshop-body h5 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: var(--aha-grey-lt);
+  margin: 12px 0 8px;
+}
+.aha-workshop-body h5::before { display: none !important; }
+/* Workshop content list */
+.aha-workshop-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+.aha-workshop-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--aha-navy);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--aha-line-soft);
+}
+.aha-workshop-list li:last-child { border-bottom: none; }
+.aha-workshop-list li::before {
+  content: "→";
+  color: var(--aha-orange);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+/* Workshop resources row */
+.aha-workshop-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--aha-line-soft);
+}
+.aha-workshop-res-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--aha-navy);
+  background: var(--aha-soft);
+  border: 1px solid var(--aha-line);
+  border-radius: 8px;
+  padding: 5px 10px;
+  transition: background .13s ease, border-color .13s ease, color .13s ease;
+}
+.aha-workshop-res-link:hover {
+  background: var(--aha-cream);
+  border-color: var(--aha-cream-line);
+  color: var(--aha-orange-dk);
+}
+.aha-workshop-platform-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 4px;
+}
 
-/* ---- 19d · ABSTRACT LOGISTICS NETWORK (visual bên phải stat panel) ---- */
-.aha-network{ position:relative; width:262px; max-width:100%; aspect-ratio:1; }
-.aha-network .ring{ position:absolute; border-radius:50%; }
-.aha-network .ring.r1{ inset:0; border:1.5px solid #D6E0EE; }
-.aha-network .ring.r2{ inset:16%; border:1.5px dashed #C7D2E6; }
-.aha-network .ring.r3{ inset:33%; border:1.5px solid #E3DAF6; }
-.aha-network .core{
-  position:absolute; inset:40%; border-radius:50%; background:var(--aha-grad-navy);
-  display:grid; place-items:center; box-shadow:0 8px 20px rgba(14,30,60,.3);
+/* ---------- 24 · HELP CENTER SPOTLIGHT ---------- */
+/* 3-panel prominent support entry points */
+.aha-help-spotlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 6px 0 20px;
 }
-.aha-network .accent{
-  position:absolute; top:-8px; right:0; width:88px; height:88px; border-radius:50%;
-  background:radial-gradient(circle at 35% 35%, rgba(255,122,33,.85), rgba(255,122,33,.22) 70%, transparent);
-  opacity:.55; pointer-events:none;
+.aha-help-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  text-decoration: none;
+  border-radius: var(--aha-radius-lg);
+  padding: 20px 18px;
+  border: 1px solid var(--aha-line);
+  background: var(--aha-white);
+  box-shadow: var(--aha-shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
 }
-.aha-network .node{
-  position:absolute; width:13px; height:13px; border-radius:50%;
-  background:#fff; border:3px solid var(--aha-orange); box-shadow:0 2px 6px rgba(255,122,33,.3);
+.aha-help-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--aha-shadow-hover);
+  border-color: #E8C9AE;
 }
-.aha-network .node.n1{ top:3%;  left:46%; }
-.aha-network .node.n2{ top:29%; left:87%; border-color:#3DAE6E; }
-.aha-network .node.n3{ top:84%; left:71%; }
-.aha-network .node.n4{ top:80%; left:13%; border-color:#8E78D6; }
-.aha-network .node.n5{ top:33%; left:1%; }
-.aha-network .route{
-  position:absolute; top:50%; left:50%; height:2px; transform-origin:left center;
-  background:linear-gradient(90deg, transparent, var(--aha-orange2)); opacity:.65;
+.aha-help-panel .hp-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 13px;
+  background: var(--aha-cream);
+  border: 1px solid var(--aha-cream-line);
 }
-.aha-network .route.ra{ width:46%; transform:rotate(-58deg); }
-.aha-network .route.rb{ width:42%; transform:rotate(150deg); }
+.aha-help-panel.it .hp-icon { background: #EAF0F8; border-color: #D0DFEF; }
+.aha-help-panel.ai .hp-icon { background: #0E4174; border-color: #1A2F5A; }
+.aha-help-panel h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aha-navy);
+  margin: 0 0 5px;
+}
+.aha-help-panel p {
+  font-size: 12.5px;
+  color: var(--aha-grey);
+  margin: 0 0 14px;
+  line-height: 1.5;
+  flex: 1;
+}
+.aha-help-panel .hp-cta {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--aha-orange-dk);
+  margin-top: auto;
+}
+.aha-help-panel:hover .hp-cta { color: var(--aha-orange); }
 
-/* ---- 19e · RESPONSIVE ---- */
-@media (max-width:760px){
-  .aha-hero.promo{ padding:34px 22px 64px; }
-  .aha-statpanel{ padding:30px 24px; }
-  .aha-statpanel .sp-right{ flex-basis:100%; }
-  .aha-statpanel .sp-stats .s b{ font-size:34px; }
-  .aha-network{ width:220px; }
+/* ---------- 25 · PROCESS ROW (compact, replaces repetitive cards) ---------- */
+.aha-process-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--aha-line-soft);
+}
+.aha-process-row:last-child { border-bottom: none; }
+.aha-process-row .pr-num {
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--aha-grad-brand);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+}
+.aha-process-row h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--aha-navy);
+  margin: 0 0 3px;
+}
+.aha-process-row p { font-size: 13px; color: var(--aha-grey); margin: 0; line-height: 1.5; }
+
+/* ---------- 26 · PROOF BAND ---------- */
+.aha-proofband {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 24px 22px;
+  margin-top: 6px;
+  background: linear-gradient(135deg, #EAF1FA, #F2F7FC);
+  border: 1px solid #D8E4EE;
+}
+.aha-proofband .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+.aha-proofband .stat {
+  background: #fff;
+  border: 1px solid #D8E4EE;
+  border-radius: 14px;
+  padding: 16px 14px;
+}
+.aha-proofband .stat b {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--aha-orange-dk);
+  line-height: 1;
+}
+.aha-proofband .stat span {
+  display: block;
+  font-size: 12.5px;
+  color: var(--aha-grey);
+  margin-top: 6px;
+}
+
+/* ---------- 27 · RESPONSIVE ---------- */
+@media (max-width: 760px) {
+  .aha-hero.promo { padding: 32px 20px 62px; }
+  .aha-statpanel { padding: 26px 22px; }
+  .aha-statpanel .sp-right { flex-basis: 100%; }
+  .aha-statpanel .sp-stats .s b { font-size: 32px; }
+  .aha-network { width: 210px; }
+  .aha-help-spotlight { grid-template-columns: 1fr; }
+  .aha-workshop-head { flex-direction: column; gap: 10px; }
 }

@@ -4,12 +4,35 @@ description: "Không biết hỏi ai? Bắt đầu từ đây — danh bạ nhâ
 icon: "life-ring"
 ---
 
-<div className="aha-strip">
+<div className="aha-strip" style={{ marginBottom: "24px" }}>
   <p className="eyebrow">Trung tâm hỗ trợ</p>
   <h2>Không biết hỏi ai? Bắt đầu từ đây</h2>
-  <p>Tự phục vụ với FAQ & trợ lý AI, hoặc xem danh bạ đầy đủ các đầu mối nhân sự của Ahamove bên dưới.</p>
+  <p>Tự phục vụ với FAQ & trợ lý AI, hoặc tìm đúng đầu mối nhân sự — trong vài giây.</p>
 </div>
 
+{/* 3 spotlight support panels — Intercom-inspired */}
+<div className="aha-help-spotlight">
+  <a className="aha-help-panel it" href="/handbook/it-support">
+    <div className="hp-icon"><Icon icon="laptop" size={20} color="#0E4174" /></div>
+    <h4>Hỗ trợ IT</h4>
+    <p>Tài khoản, email, thiết bị & tài sản IT.</p>
+    <span className="hp-cta">Xem hướng dẫn →</span>
+  </a>
+  <a className="aha-help-panel" href="#danh-ba-nhan-su">
+    <div className="hp-icon"><Icon icon="address-book" size={20} color="#FF7A21" /></div>
+    <h4>HR Support</h4>
+    <p>HRBP, C&B, Admin, L&OD — hỏi đúng người theo việc cần.</p>
+    <span className="hp-cta">Xem danh bạ →</span>
+  </a>
+  <a className="aha-help-panel ai" href="/help-center/ask-ahamove-ai">
+    <div className="hp-icon"><Icon icon="robot" size={20} color="#FF9A52" /></div>
+    <h4>Hỏi Ahamove AI</h4>
+    <p>Trợ lý AI trả lời 24/7 — hỏi về bất kỳ nội dung nào trên cổng thông tin.</p>
+    <span className="hp-cta">Bắt đầu hỏi →</span>
+  </a>
+</div>
+
+{/* FAQ + contact quick access */}
 <div className="aha-cats">
   <a className="aha-cat" href="/help-center/faq">
     <span className="ic"><Icon icon="circle-question" size={20} color="#FF7A21" /></span>
