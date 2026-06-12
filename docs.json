@@ -18,7 +18,7 @@
     "default": "light"
   },
   "banner": {
-    "content": "Ahamove 2026 — AI-Driven Company. Khám phá [AI Academy](/ai-hub/overview) cùng Claude Pro cho 100% nhân sự.",
+    "content": "Chào mừng đến với Ahamove Employee Hub — một nơi cho mọi thông tin Ahamovers cần. Mới vào? [Bắt đầu tại đây](/ahamazing-guide/overview).",
     "dismissible": true
   },
   "fonts": {
@@ -125,6 +125,7 @@
             "root": "help-center/overview",
             "pages": [
               "help-center/faq",
+              "help-center/ask-ahamove-ai",
               "handbook/it-support"
             ]
           }

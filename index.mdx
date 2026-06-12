@@ -1,51 +1,71 @@
 ---
-title: "Ahamove Handbook"
-description: "Một nơi duy nhất để Ahamovers tra cứu thông tin nội bộ."
+title: "Ahamove Employee Hub"
+description: "Một nơi cho mọi thông tin Ahamovers cần — hội nhập, 1Office, chính sách, phúc lợi, văn phòng & hỗ trợ."
 mode: "custom"
 ---
 
 export const C = {
-  orange: "#FF7A21", orange2: "#FF9A52", navy: "#0E4174",
+  orange: "#FF7A21", orange2: "#FF9A52", orangeDk: "#D65A12", navy: "#0E4174", navy2: "#0B1530",
   cream: "#FFF4EC", line: "#E7EAF0", grey: "#667089", soft: "#F6F8FC",
 };
 
 export const S = {
   page: { maxWidth: "1180px", margin: "0 auto", padding: "24px 16px 64px" },
-  wrap: { display: "flex", flexWrap: "wrap", gap: "24px", alignItems: "flex-start" },
-  main: { flex: "999 1 440px", minWidth: 0 },
-  rail: { flex: "1 1 300px", minWidth: 0, display: "flex", flexDirection: "column", gap: "20px" },
-  hero: { position: "relative", overflow: "hidden", borderRadius: "22px", color: "#fff", padding: "40px 32px", background: "linear-gradient(135deg,#0E4174 0%,#142246 100%)" },
+  wrap: { display: "flex", flexWrap: "wrap", gap: "26px", alignItems: "flex-start" },
+  main: { flex: "999 1 460px", minWidth: 0 },
+  rail: { flex: "1 1 296px", minWidth: 0, display: "flex", flexDirection: "column", gap: "16px" },
+
+  // HERO
+  hero: { position: "relative", overflow: "hidden", borderRadius: "24px", color: "#fff", padding: "44px 34px", background: "radial-gradient(680px 280px at 90% -20%, rgba(255,122,33,.34), transparent 60%), linear-gradient(135deg,#0B1530 0%,#0E4174 100%)" },
   heroEyebrow: { color: "#FF9A52", letterSpacing: "2.5px", fontSize: "12px", fontWeight: 700, margin: 0, textTransform: "uppercase" },
-  heroTitle: { fontSize: "32px", fontWeight: 800, color: "#fff", lineHeight: 1.12, margin: "10px 0 0" },
-  heroSub2: { fontSize: "17px", fontWeight: 700, color: "#FF9A52", margin: "6px 0 12px" },
-  heroText: { color: "rgba(255,255,255,.82)", fontSize: "15px", maxWidth: "480px", margin: 0 },
-  ctaRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "14px", marginTop: "22px" },
-  cta: { display: "flex", gap: "12px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "15px 16px", boxShadow: "0 4px 14px rgba(20,34,70,.06)" },
-  ctaIcon: { flex: "0 0 38px", height: "38px", borderRadius: "10px", background: C.cream, display: "grid", placeItems: "center" },
-  ctaTitle: { color: C.navy, fontWeight: 700, fontSize: "15px", margin: "0 0 3px" },
-  ctaDesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.5 },
-  h2: { fontSize: "20px", fontWeight: 800, color: C.navy, margin: "28px 0 14px" },
-  qgrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "14px" },
-  qcard: { display: "flex", gap: "13px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "14px", padding: "16px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
-  qicon: { flex: "0 0 42px", height: "42px", borderRadius: "12px", background: C.cream, display: "grid", placeItems: "center" },
-  qtitle: { color: C.navy, fontWeight: 700, fontSize: "14.5px", margin: "0 0 3px" },
-  qdesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
-  journey: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "12px", margin: "4px 0" },
-  jstep: { textAlign: "center", textDecoration: "none" },
-  jdot: { width: "46px", height: "46px", borderRadius: "50%", margin: "0 auto 10px", display: "grid", placeItems: "center", background: C.cream, border: `2px solid ${C.orange2}` },
-  jname: { color: C.navy, fontWeight: 700, fontSize: "13.5px", margin: "0 0 3px" },
-  jdesc: { color: C.grey, fontSize: "11.5px", margin: 0, lineHeight: 1.4 },
-  statRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "12px", margin: "4px 0" },
-  stat: { background: "#FFF4EC", border: "1px solid #F6DCC8", borderRadius: "14px", padding: "16px" },
-  statN: { fontSize: "24px", fontWeight: 800, color: "#D65A12", lineHeight: 1, margin: 0 },
-  statL: { fontSize: "12.5px", color: C.grey, margin: "5px 0 0" },
+  heroTitle: { fontSize: "34px", fontWeight: 800, color: "#fff", lineHeight: 1.1, margin: "12px 0 10px" },
+  heroText: { color: "rgba(255,255,255,.84)", fontSize: "15.5px", maxWidth: "560px", margin: 0, lineHeight: 1.6 },
+  ctaRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: "12px", marginTop: "24px" },
+  cta: { display: "flex", gap: "12px", alignItems: "center", textDecoration: "none", background: "rgba(255,255,255,.10)", border: "1px solid rgba(255,255,255,.20)", borderRadius: "14px", padding: "14px 15px", backdropFilter: "blur(6px)" },
+  ctaPrimary: { background: "#FF7A21", border: "1px solid #FF7A21" },
+  ctaIcon: { flex: "0 0 34px", height: "34px", borderRadius: "10px", background: "rgba(255,255,255,.16)", display: "grid", placeItems: "center" },
+  ctaTitle: { color: "#fff", fontWeight: 700, fontSize: "14px", margin: 0 },
+
+  // SECTION
+  secHead: { margin: "32px 0 6px" },
+  h2: { fontSize: "21px", fontWeight: 800, color: C.navy, margin: 0, display: "flex", alignItems: "center", gap: "10px" },
+  bar: { width: "18px", height: "3px", borderRadius: "3px", background: C.orange, display: "inline-block" },
+  intro: { color: C.grey, fontSize: "14px", margin: "6px 0 16px", lineHeight: 1.6, maxWidth: "660px" },
+
+  // JOURNEY CARDS
+  journey: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "14px" },
+  jcard: { position: "relative", display: "flex", flexDirection: "column", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px 16px 16px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
+  jtop: { display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" },
+  jnum: { width: "34px", height: "34px", borderRadius: "50%", background: "linear-gradient(135deg,#FF7A21,#FF9A52)", color: "#fff", fontWeight: 800, fontSize: "15px", display: "grid", placeItems: "center" },
+  jname: { color: C.navy, fontWeight: 700, fontSize: "16px", margin: "0 0 5px" },
+  jdesc: { color: C.grey, fontSize: "13px", margin: "0 0 14px", lineHeight: 1.5 },
+  jgo: { marginTop: "auto", color: C.orange, fontSize: "12.5px", fontWeight: 700 },
+  badge: { fontSize: "10.5px", fontWeight: 700, letterSpacing: ".3px", padding: "3px 9px", borderRadius: "999px", background: C.cream, color: C.orangeDk, border: "1px solid #F6DCC8" },
+  badgeNavy: { background: "#EAF0F8", color: C.navy, border: "1px solid #D6E0EE" },
+
+  // TASK TILES
+  tiles: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(232px,1fr))", gap: "14px" },
+  tile: { display: "flex", gap: "13px", alignItems: "flex-start", textDecoration: "none", background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "16px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
+  tileIc: { flex: "0 0 44px", height: "44px", borderRadius: "12px", background: C.cream, display: "grid", placeItems: "center" },
+  tileTitle: { color: C.navy, fontWeight: 700, fontSize: "14.5px", margin: "0 0 3px" },
+  tileDesc: { color: C.grey, fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
+
+  // STATS
+  statRow: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: "14px" },
+  stat: { background: C.cream, border: "1px solid #F6DCC8", borderRadius: "16px", padding: "20px 18px" },
+  statN: { fontSize: "27px", fontWeight: 800, color: C.orangeDk, lineHeight: 1, margin: 0 },
+  statL: { fontSize: "13px", color: C.grey, margin: "7px 0 0" },
+
+  // RAIL
+  aiCard: { position: "relative", overflow: "hidden", borderRadius: "18px", padding: "22px 20px", color: "#fff", background: "radial-gradient(420px 200px at 85% -25%, rgba(255,122,33,.40), transparent 60%), linear-gradient(135deg,#0B1530,#0E4174)" },
+  aiEyebrow: { color: "#FF9A52", letterSpacing: "1.5px", fontSize: "11px", fontWeight: 700, margin: 0, textTransform: "uppercase" },
+  aiTitle: { color: "#fff", fontWeight: 800, fontSize: "17px", margin: "7px 0 5px" },
+  aiText: { color: "rgba(255,255,255,.82)", fontSize: "12.5px", margin: 0, lineHeight: 1.55 },
+  aiBtn: { display: "inline-block", marginTop: "14px", background: "#FF7A21", color: "#fff", fontWeight: 700, fontSize: "13px", padding: "9px 16px", borderRadius: "11px", textDecoration: "none" },
   panel: { background: "#fff", border: `1px solid ${C.line}`, borderRadius: "16px", padding: "18px" },
-  panelHead: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px" },
-  panelTitle: { fontSize: "15px", fontWeight: 800, color: C.navy, margin: 0 },
-  seeAll: { fontSize: "12px", fontWeight: 600, color: C.orange, textDecoration: "none" },
-  aiCard: { background: "#FFF4EC", border: `1px solid #F6DCC8`, borderRadius: "16px", padding: "20px 18px" },
-  aiBtn: { display: "inline-block", marginTop: "12px", background: C.orange, color: "#fff", fontWeight: 700, fontSize: "13.5px", padding: "10px 18px", borderRadius: "11px", textDecoration: "none" },
-  res: { display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", padding: "11px 0", borderTop: `1px solid ${C.line}`, color: C.navy, fontWeight: 600, fontSize: "13.5px" },
+  panelTitle: { fontSize: "15px", fontWeight: 800, color: C.navy, margin: "0 0 4px" },
+  panelText: { fontSize: "12.5px", color: C.grey, margin: "0 0 12px", lineHeight: 1.55 },
+  railLink: { display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", color: C.navy, fontWeight: 600, fontSize: "13.5px", padding: "10px 0", borderTop: `1px solid ${C.line}` },
 };
 
 <div style={S.page}>
@@ -54,61 +74,104 @@ export const S = {
     {/* ============ CỘT CHÍNH ============ */}
     <div style={S.main}>
 
-      {/* 1 · HERO — Cổng thông tin nội bộ */}
+      {/* 1 · HERO — Employee Hub */}
       <div style={S.hero}>
-        <p style={S.heroEyebrow}>Ahamove · Cổng thông tin nội bộ</p>
-        <h1 style={S.heroTitle}>Ahamove Handbook</h1>
-        <p style={S.heroSub2}>Một nơi duy nhất để Ahamovers tra cứu thông tin nội bộ.</p>
-        <p style={S.heroText}>Hệ thống 1Office, nghỉ phép & chấm công, lương, bảo hiểm, phúc lợi, văn phòng và hỗ trợ — tất cả trong vài giây. <b style={{ color: "#fff" }}>Always Moving.</b></p>
+        <p style={S.heroEyebrow}>Ahamove · Employee Hub</p>
+        <h1 style={S.heroTitle}>Một nơi cho mọi thông tin Ahamovers cần</h1>
+        <p style={S.heroText}>Từ hành trình hội nhập, hệ thống 1Office, chính sách nhân sự, phúc lợi, văn phòng đến các kênh hỗ trợ nội bộ — tất cả được gom trong một nơi duy nhất. <b style={{ color: "#fff" }}>Always Moving.</b></p>
         <div style={S.ctaRow}>
-          <a style={S.cta} href="/ahamazing-guide/overview">
-            <span style={S.ctaIcon}><Icon icon="compass" size={19} color="#FF7A21" /></span>
-            <span><p style={S.ctaTitle}>Nhân viên mới? Bắt đầu tại đây</p><p style={S.ctaDesc}>Hành trình hội nhập: ngày đầu, tuần đầu, tháng đầu.</p></span>
+          <a style={{ ...S.cta, ...S.ctaPrimary }} href="/ahamazing-guide/overview">
+            <span style={S.ctaIcon}><Icon icon="compass" size={17} color="#fff" /></span>
+            <span style={S.ctaTitle}>Bắt đầu hành trình hội nhập</span>
           </a>
           <a style={S.cta} href="/handbook/internal-systems">
-            <span style={S.ctaIcon}><Icon icon="building-user" size={19} color="#FF7A21" /></span>
-            <span><p style={S.ctaTitle}>Tra cứu nhanh</p><p style={S.ctaDesc}>Hệ thống 1Office: công cụ, quy trình, lương, ký số.</p></span>
+            <span style={S.ctaIcon}><Icon icon="building-user" size={17} color="#fff" /></span>
+            <span style={S.ctaTitle}>Mở 1Office Guide</span>
+          </a>
+          <a style={S.cta} href="/help-center/overview">
+            <span style={S.ctaIcon}><Icon icon="life-ring" size={17} color="#fff" /></span>
+            <span style={S.ctaTitle}>Cần hỗ trợ?</span>
           </a>
         </div>
       </div>
 
-      {/* 2 · CỘT MỐC NỔI BẬT — Ahamove qua những con số */}
-      <h2 style={{ ...S.h2, marginTop: "28px" }}>Ahamove qua những con số</h2>
+      {/* 2 · HÀNH TRÌNH HỘI NHẬP */}
+      <div style={S.secHead}>
+        <h2 style={S.h2}><span style={S.bar} />Hành trình hội nhập</h2>
+      </div>
+      <p style={S.intro}>Nhân viên mới? Đây là lộ trình 30 ngày đầu — đi lần lượt từng chặng để bắt nhịp nhanh và tự tin.</p>
+      <div style={S.journey}>
+        <a style={S.jcard} href="/ahamazing-guide/day-1">
+          <div style={S.jtop}><div style={S.jnum}>1</div><span style={S.badge}>New joiner</span></div>
+          <p style={S.jname}>Ngày đầu tiên</p>
+          <p style={S.jdesc}>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự cần hoàn tất.</p>
+          <span style={S.jgo}>Xem chặng 1 →</span>
+        </a>
+        <a style={S.jcard} href="/ahamazing-guide/week-1">
+          <div style={S.jtop}><div style={S.jnum}>2</div><span style={{ ...S.badge, ...S.badgeNavy }}>IT · Required</span></div>
+          <p style={S.jname}>Tuần đầu tiên</p>
+          <p style={S.jdesc}>Kích hoạt tài khoản, ký số hợp đồng & làm quen các quy trình cốt lõi.</p>
+          <span style={S.jgo}>Xem chặng 2 →</span>
+        </a>
+        <a style={S.jcard} href="/ahamazing-guide/first-month">
+          <div style={S.jtop}><div style={S.jnum}>3</div><span style={{ ...S.badge, ...S.badgeNavy }}>Manager</span></div>
+          <p style={S.jname}>Tháng đầu tiên</p>
+          <p style={S.jdesc}>Lộ trình 30-60-90 cùng quản lý trực tiếp & tạo "first-win" đầu tiên.</p>
+          <span style={S.jgo}>Xem chặng 3 →</span>
+        </a>
+      </div>
+
+      {/* 3 · BẠN CẦN LÀM GÌ HÔM NAY? */}
+      <div style={S.secHead}>
+        <h2 style={S.h2}><span style={S.bar} />Bạn cần làm gì hôm nay?</h2>
+      </div>
+      <p style={S.intro}>Các tác vụ thường dùng nhất — chọn việc bạn cần xử lý.</p>
+      <div style={S.tiles}>
+        <a style={S.tile} href="/handbook/internal-systems"><span style={S.tileIc}><Icon icon="building-user" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Hệ thống 1Office</p><p style={S.tileDesc}>Đăng nhập, ký số, chấm công, phiếu lương & trợ lý AI.</p></span></a>
+        <a style={S.tile} href="/policies/leave-policy"><span style={S.tileIc}><Icon icon="umbrella-beach" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Nghỉ phép & chấm công</p><p style={S.tileDesc}>Tạo đơn nghỉ phép, chấm công, làm thêm giờ.</p></span></a>
+        <a style={S.tile} href="/benefits/overview"><span style={S.tileIc}><Icon icon="heart-pulse" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Lương & phúc lợi</p><p style={S.tileDesc}>Phiếu lương, bảo hiểm Generali, khám sức khỏe.</p></span></a>
+        <a style={S.tile} href="/handbook/it-support"><span style={S.tileIc}><Icon icon="laptop" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Hỗ trợ IT</p><p style={S.tileDesc}>Tài khoản, máy móc, email & truy cập hệ thống.</p></span></a>
+        <a style={S.tile} href="/office-guide/overview"><span style={S.tileIc}><Icon icon="building" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Văn phòng</p><p style={S.tileDesc}>Địa điểm, gửi xe, pantry, đặt phòng họp.</p></span></a>
+        <a style={S.tile} href="/help-center/overview"><span style={S.tileIc}><Icon icon="life-ring" size={20} color="#FF7A21" /></span><span><p style={S.tileTitle}>Trung tâm hỗ trợ</p><p style={S.tileDesc}>Không biết hỏi ai? Danh bạ HR & Hỏi Ahamove AI.</p></span></a>
+      </div>
+
+      {/* 4 · AHAMOVE QUA NHỮNG CON SỐ */}
+      <div style={S.secHead}>
+        <h2 style={S.h2}><span style={S.bar} />Ahamove qua những con số</h2>
+      </div>
+      <p style={S.intro}>Một chút tự hào về ngôi nhà chung mà bạn vừa gia nhập.</p>
       <div style={S.statRow}>
         <div style={S.stat}><p style={S.statN}>2015</p><p style={S.statL}>Năm thành lập</p></div>
         <div style={S.stat}><p style={S.statN}>45 triệu+</p><p style={S.statL}>Đơn hàng mỗi năm</p></div>
         <div style={S.stat}><p style={S.statN}>150.000+</p><p style={S.statL}>Đối tác tài xế</p></div>
       </div>
-
-      {/* 3 · HÀNH TRÌNH HỘI NHẬP */}
-      <h2 style={S.h2}>Hành trình hội nhập</h2>
-      <div style={S.journey}>
-        <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}><Icon icon="sun" size={20} color="#FF7A21" /></div><p style={S.jname}>Ngày đầu tiên</p><p style={S.jdesc}>Lịch trình ngày đầu, giờ làm việc & thủ tục.</p></a>
-        <a style={S.jstep} href="/ahamazing-guide/week-1"><div style={S.jdot}><Icon icon="list-check" size={20} color="#FF7A21" /></div><p style={S.jname}>Tuần đầu tiên</p><p style={S.jdesc}>Kích hoạt công cụ & làm quen quy trình.</p></a>
-        <a style={S.jstep} href="/ahamazing-guide/first-month"><div style={S.jdot}><Icon icon="chart-line" size={20} color="#FF7A21" /></div><p style={S.jname}>Tháng đầu tiên</p><p style={S.jdesc}>Lộ trình 30-60-90 & tạo first-win.</p></a>
-      </div>
-
-      {/* 4 · TRUY CẬP NHANH */}
-      <h2 style={S.h2}>Truy cập nhanh</h2>
-      <div style={S.qgrid}>
-        <a style={S.qcard} href="/handbook/internal-systems"><span style={S.qicon}><Icon icon="building-user" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hệ thống 1Office</p><p style={S.qdesc}>Đăng nhập, chấm công, nghỉ phép, ký số & trợ lý AI.</p></span></a>
-        <a style={S.qcard} href="/policies/leave-policy"><span style={S.qicon}><Icon icon="umbrella-beach" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Nghỉ phép & Chấm công</p><p style={S.qdesc}>Tạo đơn nghỉ phép, chấm công, làm thêm giờ.</p></span></a>
-        <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}><Icon icon="heart-pulse" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Lương & Phúc lợi</p><p style={S.qdesc}>Phiếu lương, bảo hiểm, khám sức khỏe.</p></span></a>
-        <a style={S.qcard} href="/handbook/it-support"><span style={S.qicon}><Icon icon="laptop" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hỗ trợ IT</p><p style={S.qdesc}>Tài khoản, máy móc, truy cập hệ thống.</p></span></a>
-        <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}><Icon icon="building" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Địa điểm, gửi xe, pantry, phòng họp.</p></span></a>
-        <a style={S.qcard} href="/help-center/overview"><span style={S.qicon}><Icon icon="headset" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Liên hệ HR</p><p style={S.qdesc}>Hỏi HR & đầu mối các phòng ban.</p></span></a>
-      </div>
     </div>
 
-    {/* ============ CỘT PHẢI — Spotlight & tài nguyên ============ */}
+    {/* ============ CỘT PHẢI ============ */}
     <div style={S.rail}>
 
       {/* AI Academy — spotlight phụ */}
       <div style={S.aiCard}>
-        <p style={{ color: "#D65A12", letterSpacing: "1.5px", fontSize: "11px", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>Spotlight</p>
-        <p style={{ color: C.navy, fontWeight: 800, fontSize: "16px", margin: "6px 0 4px" }}>AI Academy</p>
-        <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Claude Pro cho 100% nhân sự, AI Playbook & các chương trình học AI nội bộ.</p>
+        <p style={S.aiEyebrow}>Spotlight</p>
+        <p style={S.aiTitle}>AI Academy</p>
+        <p style={S.aiText}>Claude Pro cho 100% nhân sự, AI Playbook & các chương trình học AI nội bộ.</p>
         <a style={S.aiBtn} href="/ai-hub/overview">Khám phá AI Academy</a>
+      </div>
+
+      {/* Cần hỗ trợ? */}
+      <div style={S.panel}>
+        <p style={S.panelTitle}>Cần hỗ trợ?</p>
+        <p style={S.panelText}>Không biết hỏi ai? Bắt đầu từ đây — danh bạ nhân sự, câu hỏi thường gặp và trợ lý AI nội bộ.</p>
+        <a style={{ ...S.railLink, borderTop: "none", paddingTop: 0 }} href="/help-center/overview"><Icon icon="address-book" size={16} color="#FF7A21" /> Danh bạ HR & các bộ phận</a>
+        <a style={S.railLink} href="/help-center/faq"><Icon icon="circle-question" size={16} color="#FF7A21" /> Câu hỏi thường gặp</a>
+        <a style={S.railLink} href="/help-center/ask-ahamove-ai"><Icon icon="robot" size={16} color="#FF7A21" /> Hỏi Ahamove AI</a>
+      </div>
+
+      {/* Mới cập nhật */}
+      <div style={S.panel}>
+        <p style={S.panelTitle}>Mới cập nhật</p>
+        <p style={S.panelText}>Theo dõi những thay đổi mới nhất trên cổng thông tin nội bộ.</p>
+        <a style={{ ...S.railLink, borderTop: "none", paddingTop: 0 }} href="/whats-new"><Icon icon="bell" size={16} color="#FF7A21" /> Xem nhật ký cập nhật</a>
       </div>
     </div>
   </div>
