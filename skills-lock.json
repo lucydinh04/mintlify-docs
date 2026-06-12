@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "aos": {
+      "source": "thangden/skills",
+      "sourceType": "github",
+      "skillPath": "skills/setup/aos/SKILL.md",
+      "computedHash": "58dd58c4c05c26dbceb2cb125203c9b3419aade307afc8ae7d2c9cc8aa354e5a"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "784f0dbb7403b0f00324bce9a112f715342777a0daee7bbb7385f9c6f0a170ea"
+    }
+  }
+}

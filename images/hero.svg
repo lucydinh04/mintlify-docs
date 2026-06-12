@@ -1,0 +1,7 @@
+<svg width="520" height="360" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="360" rx="20" fill="#FFE7D6"/>
+  <circle cx="190" cy="150" r="46" fill="#FF7A21"/>
+  <circle cx="320" cy="150" r="46" fill="#0E4174"/>
+  <path d="M150 250h220v40H150z" fill="#FF9A52" opacity="0.5"/>
+  <text x="260" y="320" font-family="Lexend, sans-serif" font-size="18" font-weight="700" fill="#0E4174" text-anchor="middle">Ảnh minh hoạ — thay tại /images/hero.png</text>
+</svg>
