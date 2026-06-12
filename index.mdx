@@ -10,52 +10,53 @@ mode: "custom"
     {/* ============ CỘT CHÍNH ============ */}
     <div className="aha-home-main">
 
-      {/* 1 · HERO — split: copy + dashboard mockup */}
-      <div className="aha-hero">
+      {/* 1 · HERO — promo treatment: pastel field + colorful frame + dashboard mockup */}
+      <div className="aha-hero promo">
         <div className="aha-hero-row">
           <div className="aha-hero-left">
             <p className="eyebrow">Ahamove · Employee Hub</p>
             <h1>Một nơi cho mọi thông tin Ahamovers cần</h1>
             <p className="lead">Từ hành trình hội nhập, hệ thống 1Office, chính sách, phúc lợi, văn phòng đến hỗ trợ nội bộ — tất cả trong một nơi. <b>Always Moving.</b></p>
             <a className="aha-searchbar" href="/help-center/faq">
-              <Icon icon="magnifying-glass" size={16} color="rgba(255,255,255,.8)" />
+              <Icon icon="magnifying-glass" size={16} color="#8A93A6" />
               <span>Bạn cần tìm gì? (nghỉ phép, 1Office, bảo hiểm…)</span>
             </a>
             <div className="aha-cta-row">
               <a className="aha-cta primary" href="/ahamazing-guide/overview"><Icon icon="compass" size={16} color="#fff" />Bắt đầu hội nhập</a>
-              <a className="aha-cta" href="/handbook/internal-systems"><Icon icon="building-user" size={16} color="#fff" />Mở 1Office</a>
-              <a className="aha-cta" href="/help-center/overview"><Icon icon="life-ring" size={16} color="#fff" />Cần hỗ trợ?</a>
+              <a className="aha-cta" href="/help-center/overview"><Icon icon="life-ring" size={16} color="#0E4174" />Cần hỗ trợ?</a>
             </div>
           </div>
 
-          {/* Dashboard mockup dựng bằng CSS — thay bằng images/employee-hub-dashboard.png khi có ảnh thật */}
+          {/* Dashboard mockup trong khung màu — thay bằng images/employee-hub-dashboard.png khi có ảnh thật */}
           <div className="aha-hero-right">
-            <div className="aha-dashboard">
-              <div className="bar">
-                <span className="dot" /><span className="dot o" /><span className="dot b" />
-                <b>Ahamove Employee Hub</b>
-              </div>
-              <div className="grid">
-                <div className="mc wide">
-                  <p className="lbl">Tiến độ hội nhập</p>
-                  <p className="val">Tuần 1 / 4 · 35%</p>
-                  <span className="prog"><i /></span>
+            <div className="aha-frame">
+              <div className="aha-dashboard">
+                <div className="bar">
+                  <span className="dot" /><span className="dot o" /><span className="dot b" />
+                  <b>Ahamove Employee Hub</b>
                 </div>
-                <div className="mc">
-                  <p className="lbl">1Office · Thao tác nhanh</p>
-                  <span className="pill">Chấm công</span><span className="pill">Nghỉ phép</span>
-                </div>
-                <div className="mc">
-                  <p className="lbl">Trung tâm hỗ trợ</p>
-                  <p className="val" style={{ fontSize: "12.5px" }}>Hỏi Ahamove AI →</p>
-                </div>
-                <div className="mc">
-                  <p className="lbl">Mới cập nhật</p>
-                  <p className="val sub">Bảo hiểm Generali 2025</p>
-                </div>
-                <div className="mc ai">
-                  <p className="lbl">AI Academy</p>
-                  <p className="val">Claude Pro · 100%</p>
+                <div className="grid">
+                  <div className="mc wide">
+                    <p className="lbl">Tiến độ hội nhập</p>
+                    <p className="val">Tuần 1 / 4 · 35%</p>
+                    <span className="prog"><i /></span>
+                  </div>
+                  <div className="mc">
+                    <p className="lbl">1Office · Thao tác nhanh</p>
+                    <span className="pill">Chấm công</span><span className="pill">Nghỉ phép</span>
+                  </div>
+                  <div className="mc">
+                    <p className="lbl">Trung tâm hỗ trợ</p>
+                    <p className="val" style={{ fontSize: "12.5px" }}>Hỏi Ahamove AI →</p>
+                  </div>
+                  <div className="mc">
+                    <p className="lbl">Mới cập nhật</p>
+                    <p className="val sub">Bảo hiểm Generali 2025</p>
+                  </div>
+                  <div className="mc ai">
+                    <p className="lbl">AI Academy</p>
+                    <p className="val">Claude Pro · 100%</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -63,7 +64,39 @@ mode: "custom"
         </div>
       </div>
 
-      {/* 2 · HÀNH TRÌNH HỘI NHẬP — guided journey */}
+      {/* 2 · AHAMOVE QUA NHỮNG CON SỐ — stat panel (Atlassian-inspired) */}
+      <div className="aha-section">
+        <div className="aha-statpanel">
+          <div className="sp-left">
+            <p className="eyebrow">Ahamove qua những con số</p>
+            <h2>Tự hào về ngôi nhà chung bạn vừa gia nhập</h2>
+            <p className="sp-sub">Hành trình tăng trưởng của Ahamove, kể bằng những con số.</p>
+            <div className="sp-stats">
+              <div className="s"><b>2015</b><span>Năm thành lập</span></div>
+              <div className="s"><b>45 triệu+</b><span>Đơn hàng mỗi năm</span></div>
+              <div className="s"><b>150.000+</b><span>Đối tác tài xế</span></div>
+            </div>
+          </div>
+          <div className="sp-right">
+            <div className="aha-network" aria-hidden="true">
+              <span className="ring r1" />
+              <span className="ring r2" />
+              <span className="ring r3" />
+              <span className="route ra" />
+              <span className="route rb" />
+              <span className="accent" />
+              <span className="core"><Icon icon="motorcycle" size={22} color="#fff" /></span>
+              <span className="node n1" />
+              <span className="node n2" />
+              <span className="node n3" />
+              <span className="node n4" />
+              <span className="node n5" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3 · HÀNH TRÌNH HỘI NHẬP — guided journey */}
       <div className="aha-section">
         <p className="aha-h2">Hành trình hội nhập</p>
         <p className="aha-intro">Nhân viên mới? Đây là lộ trình 30 ngày đầu — đi lần lượt từng chặng để bắt nhịp nhanh và tự tin.</p>
@@ -90,7 +123,7 @@ mode: "custom"
         <a className="aha-section-link" href="/ahamazing-guide/overview">Xem toàn bộ hành trình hội nhập →</a>
       </div>
 
-      {/* 3 · TRUY CẬP NHANH — task-based dashboard */}
+      {/* 4 · TRUY CẬP NHANH — task-based dashboard */}
       <div className="aha-section">
         <p className="aha-h2">Truy cập nhanh</p>
         <p className="aha-intro">Những việc Ahamover làm thường xuyên nhất — vào thẳng đúng nơi cần.</p>
@@ -129,7 +162,7 @@ mode: "custom"
         </div>
       </div>
 
-      {/* 4 · TÀI NGUYÊN PHỔ BIẾN — self-service shortcuts */}
+      {/* 5 · TÀI NGUYÊN PHỔ BIẾN — self-service shortcuts */}
       <div className="aha-section">
         <p className="aha-h2">Tài nguyên phổ biến</p>
         <p className="aha-intro">Những trang được tra cứu nhiều nhất trên cổng thông tin.</p>
@@ -159,32 +192,6 @@ mode: "custom"
             <span className="tx"><h5>Danh bạ nhân sự</h5><p>HRBP, C&B, Admin, IT — hỏi đúng người.</p></span>
             <span className="go">→</span>
           </a>
-        </div>
-      </div>
-
-      {/* 5 · AHAMOVE QUA NHỮNG CON SỐ */}
-      <div className="aha-section">
-        <p className="aha-h2">Ahamove qua những con số</p>
-        <p className="aha-intro">Một chút tự hào về ngôi nhà chung mà bạn vừa gia nhập.</p>
-        <div className="aha-proofband">
-          <div className="row">
-            <div className="stat"><b>2015</b><span>Năm thành lập</span></div>
-            <div className="stat"><b>45 triệu+</b><span>Đơn hàng mỗi năm</span></div>
-            <div className="stat"><b>150.000+</b><span>Đối tác tài xế</span></div>
-          </div>
-        </div>
-      </div>
-
-      {/* 6 · HÌNH ẢNH CÔNG TY */}
-      <div className="aha-section">
-        <p className="aha-h2">Ahamove — ngôi nhà chung</p>
-        <div className="aha-visual-slot compact">
-          <span className="vbadge">Visual placeholder</span>
-          <span className="vicon"><Icon icon="building" size={20} color="#FF7A21" /></span>
-          <p className="vtitle">Hình ảnh công ty Ahamove</p>
-          <span className="vratio">21:9 · suggested</span>
-          <p className="vdesc">Ảnh thật về Ahamove: đội ngũ, văn phòng, tài xế hoặc khoảnh khắc công ty. Style: ảnh thương hiệu chân thực, tông cam/navy.</p>
-          <span className="vfile">images/ahamove-company.png</span>
         </div>
       </div>
     </div>

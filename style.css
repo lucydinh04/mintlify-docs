@@ -473,3 +473,138 @@ img[src*="/logo/"], nav img, header img{ border-radius:0; }
 .aha-mock .prog i{ display:block; height:100%; border-radius:6px; background:var(--aha-grad-brand); }
 .aha-mock .pill{ display:inline-block; font-size:10.5px; font-weight:700; color:var(--aha-orange-dk);
   background:var(--aha-cream); border:1px solid var(--aha-cream-line); border-radius:999px; padding:2px 8px; }
+
+/* =====================================================================
+   19 · ATLASSIAN-INSPIRED COLOR-BLOCK TREATMENTS  (homepage)
+   Mượn ngôn ngữ thị giác: pastel color field, angled white divider,
+   colorful frame, off-white stat panel, abstract geometric accents,
+   strong whitespace — nhưng branding hoàn toàn Ahamove.
+   Soft palette: lavender #ECEAFB · sky #EEF3FE · cream #FBF1EA
+                 muted green #6FCF97 · lavender accent #B7A6F2
+   ===================================================================== */
+
+/* ---- 19a · HERO PROMO — pastel field + diagonal white divider ---- */
+.aha-hero.promo{
+  background:linear-gradient(158deg,#ECEAFB 0%, #EEF3FE 52%, #FBF1EA 100%);
+  color:var(--aha-navy);
+  padding:42px 34px 76px;          /* chừa chỗ cho dải cắt chéo dưới đáy */
+}
+/* quầng trang trí trừu tượng góc trên-phải (đặt sau nội dung) */
+.aha-hero.promo::before{
+  content:""; position:absolute; top:-46px; right:-36px; width:230px; height:230px; border-radius:50%;
+  background:radial-gradient(circle at 32% 32%, rgba(255,122,33,.16), transparent 70%);
+  z-index:0; pointer-events:none;
+}
+/* dải trắng cắt chéo gần đáy — chuyển hero hoà vào nền trang */
+.aha-hero.promo::after{
+  content:""; position:absolute; left:-2%; right:-2%; bottom:-1px; height:74px; background:#fff;
+  clip-path:polygon(0 100%, 100% 34%, 100% 100%);
+  z-index:0; pointer-events:none;
+}
+.aha-hero.promo .aha-hero-row{ position:relative; z-index:1; }
+.aha-hero.promo .eyebrow{ color:var(--aha-orange-dk); }
+.aha-hero.promo h1{ color:var(--aha-navy); }
+.aha-hero.promo .lead{ color:var(--aha-grey); }
+.aha-hero.promo .lead b{ color:var(--aha-navy); }
+/* search bar + CTA biến thể nền sáng */
+.aha-hero.promo .aha-searchbar{
+  background:#fff; border-color:#E2E6F0; box-shadow:var(--aha-shadow-sm);
+}
+.aha-hero.promo .aha-searchbar:hover{ border-color:#CFD6E6; }
+.aha-hero.promo .aha-searchbar span{ color:var(--aha-grey); }
+.aha-hero.promo .aha-cta{
+  background:#fff; border-color:#D9DEEA; color:var(--aha-navy);
+}
+.aha-hero.promo .aha-cta:hover{ background:#F4F6FB; }
+.aha-hero.promo .aha-cta.primary{ background:var(--aha-orange); border-color:var(--aha-orange); color:#fff; }
+.aha-hero.promo .aha-cta.primary:hover{ background:#F06E15; }
+
+/* ---- 19b · COLORFUL FRAME quanh dashboard mockup ---- */
+.aha-frame{
+  position:relative; border-radius:26px; padding:11px;
+  background:linear-gradient(135deg,#FF7A21 0%, #FF9A52 18%, #6FCF97 46%, #B7A6F2 72%, #0E4174 100%);
+  box-shadow:0 26px 60px rgba(8,16,40,.22);
+}
+/* khối màu lệch phía sau — tạo lớp (layered color block) */
+.aha-frame::before{
+  content:""; position:absolute; top:-14px; left:-14px; width:120px; height:120px;
+  border-radius:22px; background:#E7E2FB; z-index:-1;
+}
+.aha-frame .aha-dashboard{ box-shadow:none; border:none; border-radius:18px; }
+
+/* ---- 19c · STAT PANEL (Atlassian-style) ---- */
+.aha-statpanel{
+  position:relative; display:flex; flex-wrap:wrap; gap:30px; align-items:center;
+  background:#FCFDFE; border:1px solid #E9EDF5; border-radius:26px;
+  padding:40px 40px; box-shadow:var(--aha-shadow-md); overflow:hidden;
+}
+/* nền hơi nhuốm màu (lavender/green) tạo chiều sâu nhẹ */
+.aha-statpanel::before{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(260px 220px at 2% 0%, rgba(183,166,242,.14), transparent 70%),
+    radial-gradient(280px 240px at 100% 100%, rgba(111,207,151,.12), transparent 70%);
+}
+/* chấm trang trí trừu tượng */
+.aha-statpanel::after{
+  content:""; position:absolute; top:26px; right:30px; width:10px; height:10px; border-radius:50%;
+  background:var(--aha-orange); box-shadow:22px 14px 0 -3px #B7A6F2, 40px -6px 0 -4px #6FCF97;
+  z-index:0; opacity:.8;
+}
+.aha-statpanel > *{ position:relative; z-index:1; }
+.aha-statpanel .sp-left{ flex:1 1 360px; min-width:0; }
+.aha-statpanel .sp-right{ flex:0 1 300px; min-width:0; display:flex; justify-content:center; }
+.aha-statpanel .eyebrow{
+  color:var(--aha-orange-dk); letter-spacing:2px; font-size:11.5px; font-weight:700;
+  text-transform:uppercase; margin:0;
+}
+.aha-statpanel h2{ color:var(--aha-navy); font-size:26px; font-weight:800; line-height:1.18; margin:10px 0 0; }
+.aha-statpanel h2::before{ content:none !important; }
+.aha-statpanel .sp-sub{ color:var(--aha-grey); font-size:14px; line-height:1.6; margin:8px 0 0; max-width:430px; }
+.aha-statpanel .sp-stats{ display:flex; flex-wrap:wrap; gap:30px 36px; margin-top:26px; }
+.aha-statpanel .sp-stats .s b{
+  display:block; font-size:40px; font-weight:800; color:var(--aha-navy);
+  line-height:1; letter-spacing:-.5px;
+}
+.aha-statpanel .sp-stats .s:first-child b{ color:var(--aha-orange-dk); }   /* accent cam */
+.aha-statpanel .sp-stats .s span{ display:block; font-size:13px; color:var(--aha-grey); margin-top:9px; }
+
+/* ---- 19d · ABSTRACT LOGISTICS NETWORK (visual bên phải stat panel) ---- */
+.aha-network{ position:relative; width:262px; max-width:100%; aspect-ratio:1; }
+.aha-network .ring{ position:absolute; border-radius:50%; }
+.aha-network .ring.r1{ inset:0; border:1.5px solid #D6E0EE; }
+.aha-network .ring.r2{ inset:16%; border:1.5px dashed #C7D2E6; }
+.aha-network .ring.r3{ inset:33%; border:1.5px solid #E3DAF6; }
+.aha-network .core{
+  position:absolute; inset:40%; border-radius:50%; background:var(--aha-grad-navy);
+  display:grid; place-items:center; box-shadow:0 8px 20px rgba(14,30,60,.3);
+}
+.aha-network .accent{
+  position:absolute; top:-8px; right:0; width:88px; height:88px; border-radius:50%;
+  background:radial-gradient(circle at 35% 35%, rgba(255,122,33,.85), rgba(255,122,33,.22) 70%, transparent);
+  opacity:.55; pointer-events:none;
+}
+.aha-network .node{
+  position:absolute; width:13px; height:13px; border-radius:50%;
+  background:#fff; border:3px solid var(--aha-orange); box-shadow:0 2px 6px rgba(255,122,33,.3);
+}
+.aha-network .node.n1{ top:3%;  left:46%; }
+.aha-network .node.n2{ top:29%; left:87%; border-color:#3DAE6E; }
+.aha-network .node.n3{ top:84%; left:71%; }
+.aha-network .node.n4{ top:80%; left:13%; border-color:#8E78D6; }
+.aha-network .node.n5{ top:33%; left:1%; }
+.aha-network .route{
+  position:absolute; top:50%; left:50%; height:2px; transform-origin:left center;
+  background:linear-gradient(90deg, transparent, var(--aha-orange2)); opacity:.65;
+}
+.aha-network .route.ra{ width:46%; transform:rotate(-58deg); }
+.aha-network .route.rb{ width:42%; transform:rotate(150deg); }
+
+/* ---- 19e · RESPONSIVE ---- */
+@media (max-width:760px){
+  .aha-hero.promo{ padding:34px 22px 64px; }
+  .aha-statpanel{ padding:30px 24px; }
+  .aha-statpanel .sp-right{ flex-basis:100%; }
+  .aha-statpanel .sp-stats .s b{ font-size:34px; }
+  .aha-network{ width:220px; }
+}
