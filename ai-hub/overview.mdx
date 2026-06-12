@@ -4,8 +4,8 @@ description: "Ahamove AI-Driven — học, ứng dụng và toả sáng cùng AI
 icon: "wand-magic-sparkles"
 ---
 
-<div style={{ borderRadius: "20px", color: "#fff", padding: "32px 28px", background: "radial-gradient(700px 280px at 88% -15%, rgba(255,122,33,.38), transparent 60%), linear-gradient(135deg,#0B1530,#0E4174)" }}>
-  <p style={{ color: "#FF9A52", letterSpacing: "2px", fontSize: "12px", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>AI-Driven Company · 2026</p>
+<div className="aha-hero-glow" style={{ borderRadius: "20px", padding: "32px 28px", color: "#fff" }}>
+  <p className="aha-eyebrow">AI-Driven Company · 2026</p>
   <h1 style={{ fontSize: "28px", fontWeight: 800, color: "#fff", margin: "8px 0" }}>AI Academy</h1>
   <p style={{ maxWidth: "560px", color: "rgba(255,255,255,.82)", margin: 0 }}>Claude Pro cho 100% nhân sự. Học cách dùng AI, ứng dụng theo phòng ban, và toả sáng tại AI Showcase.</p>
 </div>
@@ -20,6 +20,8 @@ icon: "wand-magic-sparkles"
 </div>
 
 ## Learning Journey
+
+<p className="aha-intro">Lộ trình 5 bước — từ làm quen công cụ đến trình diễn kết quả thật trước toàn công ty.</p>
 
 <Steps>
   <Step title="1 · Khởi động — AI Mindset & Tooling" icon="seedling">
@@ -41,28 +43,37 @@ icon: "wand-magic-sparkles"
 
 ## Học & Công cụ
 
-<CardGroup cols={3}>
-  <Card title="Hướng dẫn Claude" icon="robot" href="/ai-hub/claude-guide">
-    Claude Pro — trợ lý AI chính thức cho 100% nhân sự.
-  </Card>
-  <Card title="AI Playbook" icon="lightbulb" href="/ai-hub/ai-playbook">
-    Cách các phòng ban ứng dụng AI trong công việc.
-  </Card>
-</CardGroup>
+<p className="aha-intro">Hai tài nguyên nền tảng để bắt đầu dùng AI mỗi ngày.</p>
+
+<div className="aha-tilegrid">
+  <a className="aha-tile2" href="/ai-hub/claude-guide">
+    <span className="ic"><Icon icon="robot" size={20} color="#FF7A21" /></span>
+    <div><h4>Hướng dẫn Claude <span className="aha-badge">Guide</span></h4><p>Claude Pro — trợ lý AI chính thức cho 100% nhân sự.</p></div>
+  </a>
+  <a className="aha-tile2" href="/ai-hub/ai-playbook">
+    <span className="ic"><Icon icon="lightbulb" size={20} color="#FF7A21" /></span>
+    <div><h4>AI Playbook <span className="aha-badge">Guide</span></h4><p>Cách các phòng ban ứng dụng AI trong công việc.</p></div>
+  </a>
+</div>
 
 ## Chương trình
 
-<CardGroup cols={3}>
-  <Card title="YES A.I DO" icon="chalkboard-user" href="/ai-hub/yes-ai-do">
-    **PROGRAM** · Chuỗi workshop training ứng dụng AI.
-  </Card>
-  <Card title="Study Tour Trung Quốc" icon="plane" href="/ai-hub/study-tour-china">
-    **HOT** · Học mô hình AI & logistics tại Trung Quốc.
-  </Card>
-  <Card title="AI Showcase 2026" icon="trophy" href="/ai-hub/ai-showcase-2026">
-    **EVENT** · "YES AI Powered Me" — sân khấu trình diễn AI.
-  </Card>
-</CardGroup>
+<p className="aha-intro">Các chương trình AI nội bộ đang diễn ra — học, thi và đi xa hơn.</p>
+
+<div className="aha-tilegrid">
+  <a className="aha-tile2" href="/ai-hub/yes-ai-do">
+    <span className="ic"><Icon icon="chalkboard-user" size={20} color="#FF7A21" /></span>
+    <div><h4>YES A.I DO <span className="aha-badge navy">Program</span></h4><p>Chuỗi workshop training ứng dụng AI.</p></div>
+  </a>
+  <a className="aha-tile2" href="/ai-hub/ai-showcase-2026">
+    <span className="ic"><Icon icon="trophy" size={20} color="#FF7A21" /></span>
+    <div><h4>AI Showcase 2026 <span className="aha-badge navy">Event</span></h4><p>"YES AI Powered Me" — sân khấu trình diễn AI.</p></div>
+  </a>
+  <a className="aha-tile2" href="/ai-hub/study-tour-china">
+    <span className="ic"><Icon icon="plane" size={20} color="#FF7A21" /></span>
+    <div><h4>Study Tour Trung Quốc <span className="aha-badge solid">Hot</span></h4><p>Học mô hình AI & logistics tại Trung Quốc.</p></div>
+  </a>
+</div>
 
 <div id="responsible-ai" />
 

@@ -5,16 +5,6 @@ description: "Chào mừng Ahamover mới — hiểu công ty, hoàn tất ngày
 icon: "compass"
 ---
 
-export const J = {
-  navy: "#0E4174", orange: "#FF7A21", cream: "#FFF4EC", line: "#E7EAF0", grey: "#667089",
-  phase: { fontSize: "12px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", color: "#FF7A21", margin: "22px 0 12px" },
-  row: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: "12px" },
-  stop: { position: "relative", textDecoration: "none", background: "#fff", border: "1px solid #E7EAF0", borderRadius: "14px", padding: "16px 14px", boxShadow: "0 4px 14px rgba(20,34,70,.05)" },
-  num: { width: "30px", height: "30px", borderRadius: "50%", background: "linear-gradient(135deg,#FF7A21,#FF9A52)", color: "#fff", fontWeight: 800, fontSize: "14px", display: "grid", placeItems: "center", marginBottom: "10px" },
-  st: { color: "#0E4174", fontWeight: 700, fontSize: "14.5px", margin: "0 0 3px" },
-  sd: { color: "#667089", fontSize: "12.5px", margin: 0, lineHeight: 1.45 },
-};
-
 <div className="aha-strip warm">
   <p className="eyebrow">Chào mừng Ahamover mới</p>
   <h2>Hành trình hội nhập của bạn bắt đầu từ đây</h2>
@@ -39,19 +29,44 @@ Chào bạn — và chúc mừng bạn đã chính thức trở thành một **A
 
 ![Ahamazing Journey](/images/onboarding-journey-map.png)
 
-<p style={J.phase}>① Hiểu về Ahamove</p>
+<p className="aha-phase">① Hiểu về Ahamove</p>
 
-<div style={J.row} className="aha-row">
-  <a style={J.stop} href="/ahamazing-guide/company-overview"><div style={J.num}>1</div><p style={J.st}>Tổng quan công ty</p><p style={J.sd}>Ahamove là ai, dịch vụ, hành trình & hệ sinh thái Scommerce.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/culture"><div style={J.num}>2</div><p style={J.st}>Văn hóa & Giá trị</p><p style={J.sd}>Bộ 4 giá trị văn hóa & Áo Aha mỗi thứ Hai.</p></a>
+<div className="aha-journey flow">
+  <a className="aha-jcard" href="/ahamazing-guide/company-overview">
+    <div className="step"><span className="num">1</span></div>
+    <h4>Tổng quan công ty</h4>
+    <p>Ahamove là ai, dịch vụ, hành trình & hệ sinh thái Scommerce.</p>
+    <span className="go">Bắt đầu →</span>
+  </a>
+  <a className="aha-jcard" href="/ahamazing-guide/culture">
+    <div className="step"><span className="num">2</span></div>
+    <h4>Văn hóa & Giá trị</h4>
+    <p>Bộ 4 giá trị văn hóa & Áo Aha mỗi thứ Hai.</p>
+    <span className="go">Khám phá →</span>
+  </a>
 </div>
 
-<p style={J.phase}>② Hành trình 30 ngày đầu</p>
+<p className="aha-phase">② Hành trình 30 ngày đầu</p>
 
-<div style={J.row} className="aha-row">
-  <a style={J.stop} href="/ahamazing-guide/day-1"><div style={J.num}>3</div><p style={J.st}>Ngày đầu tiên</p><p style={J.sd}>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/week-1"><div style={J.num}>4</div><p style={J.st}>Tuần đầu tiên</p><p style={J.sd}>Kích hoạt tài khoản, ký số hợp đồng & làm quen quy trình.</p></a>
-  <a style={J.stop} href="/ahamazing-guide/first-month"><div style={J.num}>5</div><p style={J.st}>Tháng đầu tiên</p><p style={J.sd}>Lộ trình 30-60-90 & tạo "first-win" đầu tiên.</p></a>
+<div className="aha-journey flow">
+  <a className="aha-jcard" href="/ahamazing-guide/day-1">
+    <div className="step"><span className="num">3</span><span className="aha-badge">Day 1</span></div>
+    <h4>Ngày đầu tiên</h4>
+    <p>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự.</p>
+    <span className="go">Xem chặng 3 →</span>
+  </a>
+  <a className="aha-jcard" href="/ahamazing-guide/week-1">
+    <div className="step"><span className="num">4</span><span className="aha-badge navy">Week 1</span></div>
+    <h4>Tuần đầu tiên</h4>
+    <p>Kích hoạt tài khoản, ký số hợp đồng & làm quen quy trình.</p>
+    <span className="go">Xem chặng 4 →</span>
+  </a>
+  <a className="aha-jcard" href="/ahamazing-guide/first-month">
+    <div className="step"><span className="num">5</span><span className="aha-badge navy">Month 1</span></div>
+    <h4>Tháng đầu tiên</h4>
+    <p>Lộ trình 30-60-90 & tạo "first-win" đầu tiên.</p>
+    <span className="go">Xem chặng 5 →</span>
+  </a>
 </div>
 
 <Tip>
