@@ -1,5 +1,5 @@
 ---
-title: "Ahamove Employee Portal"
+title: "Ahamove Handbook"
 description: "Một nơi duy nhất để Ahamovers tra cứu thông tin nội bộ."
 mode: "custom"
 ---
@@ -57,7 +57,7 @@ export const S = {
       {/* 1 · HERO — Cổng thông tin nội bộ */}
       <div style={S.hero}>
         <p style={S.heroEyebrow}>Ahamove · Cổng thông tin nội bộ</p>
-        <h1 style={S.heroTitle}>Ahamove Employee Portal</h1>
+        <h1 style={S.heroTitle}>Ahamove Handbook</h1>
         <p style={S.heroSub2}>Một nơi duy nhất để Ahamovers tra cứu thông tin nội bộ.</p>
         <p style={S.heroText}>Hệ thống 1Office, nghỉ phép & chấm công, lương, bảo hiểm, phúc lợi, văn phòng và hỗ trợ — tất cả trong vài giây. <b style={{ color: "#fff" }}>Always Moving.</b></p>
         <div style={S.ctaRow}>
@@ -65,14 +65,22 @@ export const S = {
             <span style={S.ctaIcon}><Icon icon="compass" size={19} color="#FF7A21" /></span>
             <span><p style={S.ctaTitle}>Nhân viên mới? Bắt đầu tại đây</p><p style={S.ctaDesc}>Hành trình hội nhập: ngày đầu, tuần đầu, tháng đầu.</p></span>
           </a>
-          <a style={S.cta} href="/handbook/overview">
-            <span style={S.ctaIcon}><Icon icon="book-open" size={19} color="#FF7A21" /></span>
-            <span><p style={S.ctaTitle}>Tra cứu nhanh</p><p style={S.ctaDesc}>Sổ tay nhân sự: công cụ, hệ thống, quy trình, lương.</p></span>
+          <a style={S.cta} href="/handbook/internal-systems">
+            <span style={S.ctaIcon}><Icon icon="building-user" size={19} color="#FF7A21" /></span>
+            <span><p style={S.ctaTitle}>Tra cứu nhanh</p><p style={S.ctaDesc}>Hệ thống 1Office: công cụ, quy trình, lương, ký số.</p></span>
           </a>
         </div>
       </div>
 
-      {/* 2 · HÀNH TRÌNH HỘI NHẬP */}
+      {/* 2 · CỘT MỐC NỔI BẬT — Ahamove qua những con số */}
+      <h2 style={{ ...S.h2, marginTop: "28px" }}>Ahamove qua những con số</h2>
+      <div style={S.statRow}>
+        <div style={S.stat}><p style={S.statN}>2015</p><p style={S.statL}>Năm thành lập</p></div>
+        <div style={S.stat}><p style={S.statN}>45 triệu+</p><p style={S.statL}>Đơn hàng mỗi năm</p></div>
+        <div style={S.stat}><p style={S.statN}>150.000+</p><p style={S.statL}>Đối tác tài xế</p></div>
+      </div>
+
+      {/* 3 · HÀNH TRÌNH HỘI NHẬP */}
       <h2 style={S.h2}>Hành trình hội nhập</h2>
       <div style={S.journey}>
         <a style={S.jstep} href="/ahamazing-guide/day-1"><div style={S.jdot}><Icon icon="sun" size={20} color="#FF7A21" /></div><p style={S.jname}>Ngày đầu tiên</p><p style={S.jdesc}>Lịch trình ngày đầu, giờ làm việc & thủ tục.</p></a>
@@ -80,7 +88,7 @@ export const S = {
         <a style={S.jstep} href="/ahamazing-guide/first-month"><div style={S.jdot}><Icon icon="chart-line" size={20} color="#FF7A21" /></div><p style={S.jname}>Tháng đầu tiên</p><p style={S.jdesc}>Lộ trình 30-60-90 & tạo first-win.</p></a>
       </div>
 
-      {/* 3 · TRUY CẬP NHANH */}
+      {/* 4 · TRUY CẬP NHANH */}
       <h2 style={S.h2}>Truy cập nhanh</h2>
       <div style={S.qgrid}>
         <a style={S.qcard} href="/handbook/internal-systems"><span style={S.qicon}><Icon icon="building-user" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hệ thống 1Office</p><p style={S.qdesc}>Đăng nhập, chấm công, nghỉ phép, ký số & trợ lý AI.</p></span></a>
@@ -88,15 +96,7 @@ export const S = {
         <a style={S.qcard} href="/benefits/overview"><span style={S.qicon}><Icon icon="heart-pulse" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Lương & Phúc lợi</p><p style={S.qdesc}>Phiếu lương, bảo hiểm, khám sức khỏe.</p></span></a>
         <a style={S.qcard} href="/handbook/it-support"><span style={S.qicon}><Icon icon="laptop" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Hỗ trợ IT</p><p style={S.qdesc}>Tài khoản, máy móc, truy cập hệ thống.</p></span></a>
         <a style={S.qcard} href="/office-guide/overview"><span style={S.qicon}><Icon icon="building" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Văn phòng</p><p style={S.qdesc}>Địa điểm, gửi xe, pantry, phòng họp.</p></span></a>
-        <a style={S.qcard} href="/help-center/contact-hr"><span style={S.qicon}><Icon icon="headset" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Liên hệ HR</p><p style={S.qdesc}>Hỏi HR & đầu mối các phòng ban.</p></span></a>
-      </div>
-
-      {/* 4 · CỘT MỐC NỔI BẬT */}
-      <h2 style={S.h2}>Ahamove qua những con số</h2>
-      <div style={S.statRow}>
-        <div style={S.stat}><p style={S.statN}>2015</p><p style={S.statL}>Năm thành lập</p></div>
-        <div style={S.stat}><p style={S.statN}>45 triệu+</p><p style={S.statL}>Đơn hàng mỗi năm</p></div>
-        <div style={S.stat}><p style={S.statN}>150.000+</p><p style={S.statL}>Đối tác tài xế</p></div>
+        <a style={S.qcard} href="/help-center/overview"><span style={S.qicon}><Icon icon="headset" size={20} color="#0E4174" /></span><span><p style={S.qtitle}>Liên hệ HR</p><p style={S.qdesc}>Hỏi HR & đầu mối các phòng ban.</p></span></a>
       </div>
     </div>
 
@@ -109,20 +109,6 @@ export const S = {
         <p style={{ color: C.navy, fontWeight: 800, fontSize: "16px", margin: "6px 0 4px" }}>AI Academy</p>
         <p style={{ color: C.grey, fontSize: "12.5px", margin: 0 }}>Claude Pro cho 100% nhân sự, AI Playbook & các chương trình học AI nội bộ.</p>
         <a style={S.aiBtn} href="/ai-hub/overview">Khám phá AI Academy</a>
-      </div>
-
-      {/* Tài nguyên phổ biến */}
-      <div style={S.panel}>
-        <div style={S.panelHead}>
-          <p style={S.panelTitle}>Tài nguyên phổ biến</p>
-          <a style={S.seeAll} href="/handbook/overview">Xem tất cả</a>
-        </div>
-        <a style={{ ...S.res, borderTop: "none" }} href="/policies/leave-policy"><Icon icon="umbrella-beach" size={17} color="#FF7A21" /> Chính sách nghỉ phép</a>
-        <a style={S.res} href="/handbook/internal-systems"><Icon icon="building-user" size={17} color="#FF7A21" /> Hệ thống 1Office</a>
-        <a style={S.res} href="/benefits/insurance"><Icon icon="heart-pulse" size={17} color="#FF7A21" /> Bảo hiểm</a>
-        <a style={S.res} href="/handbook/payroll"><Icon icon="money-bill-wave" size={17} color="#FF7A21" /> Lương & phiếu lương</a>
-        <a style={S.res} href="/handbook/it-support"><Icon icon="laptop" size={17} color="#FF7A21" /> Hỗ trợ IT</a>
-        <a style={S.res} href="/office-guide/parking"><Icon icon="motorcycle" size={17} color="#FF7A21" /> Gửi xe</a>
       </div>
     </div>
   </div>
