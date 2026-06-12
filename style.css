@@ -10,7 +10,7 @@
   --aha-radius:14px; --aha-radius-lg:20px;
 }
 
-/* Hero / khối AI: nền navy + quầng sáng cam (AI glow) */
+/* Hero / khối AI: nền navy + quầng sáng cam (AI glow) — dùng class này thay gradient inline dài */
 .aha-hero-glow{
   position:relative; overflow:hidden;
   background:
@@ -22,66 +22,95 @@
   text-transform:uppercase; margin:0;
 }
 
-/* Glassmorphism card */
+/* Glassmorphism card (dùng trên nền sáng) */
 .aha-glass{
   background:rgba(255,255,255,.66) !important;
   backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
   border:1px solid rgba(255,255,255,.55) !important;
 }
 
-/* Gradient border on hover */
+/* Gradient viền cam khi hover — cảm giác AI/công nghệ */
 .aha-card{ position:relative; }
 .aha-card::after{
   content:""; position:absolute; inset:0; border-radius:var(--aha-radius); padding:1px;
-  background:linear-gradient(135deg, var(--aha-navy), transparent 60%);
+  background:linear-gradient(135deg, var(--aha-orange), transparent 60%);
   opacity:0; transition:opacity .18s ease; pointer-events:none;
   -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite:xor; mask-composite:exclude;
 }
 .aha-card:hover::after{ opacity:1; }
 
-/* Prose spacing */
+/* Spacing dễ đọc hơn */
 .prose p{ line-height:1.7; }
 
-/* Stat row */
+/* Stat row — metric AI adoption (tái dùng nhiều trang) */
 .aha-stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:16px 0; }
 .aha-stat{ background:var(--aha-cream); border:1px solid #F6DCC8; border-radius:14px; padding:16px; }
 .aha-stat b{ display:block; font-size:24px; font-weight:800; color:#D65A12; line-height:1; }
 .aha-stat span{ font-size:12.5px; color:var(--aha-grey); }
 
-/* Timeline */
+/* Timeline dọc có chấm cam */
 .aha-timeline{ border-left:2px solid #F6DCC8; margin-left:8px; padding-left:24px; }
 .aha-timeline .t{ position:relative; padding-bottom:18px; }
 .aha-timeline .t::before{ content:""; position:absolute; left:-31px; top:3px; width:13px; height:13px;
   border-radius:50%; background:#fff; border:3px solid var(--aha-orange); }
 
-/* Tile hover glow */
+/* Dashboard tile glow khi hover */
 .aha-tile{ border-radius:16px; border:1px solid var(--aha-line); padding:18px; background:#fff; transition:box-shadow .18s ease; }
 .aha-tile:hover{ box-shadow:0 0 0 1px rgba(255,122,33,.4), 0 14px 34px rgba(255,122,33,.15); }
 
-/* Image rounding */
-img { border-radius: 14px; }
-[class*="frame"], figure[class*="Frame"] { border-radius: 16px; overflow: hidden; }
-img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
-/* Card lift on hover */
-.card, [class*="Card"] { transition: transform .15s ease, box-shadow .15s ease; }
-.card:hover, [class*="Card"]:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(20,34,70,.14); }
+/* Bo góc cho mọi hình ảnh chèn vào nội dung (Markdown, <img>, <Frame>) */
+img {
+  border-radius: 14px;
+}
 
-/* Homepage: suppress auto ::before bar — homepage uses inline <span> bar instead */
-.aha-page h2::before { display: none !important; content: none !important; }
+/* Component <Frame> của Mintlify: bo góc & ẩn phần tràn để ảnh bên trong cũng bo theo */
+[class*="frame"],
+figure[class*="Frame"] {
+  border-radius: 16px;
+  overflow: hidden;
+}
 
-/* H2 orange accent bar */
-.prose h2::before, article h2::before {
-  content: ""; display: inline-block; width: 18px; height: 3px;
-  border-radius: 3px; background: #FF7A21; margin-right: 10px; vertical-align: middle;
+/* Không bo góc logo trên thanh điều hướng (giữ logo hiển thị đúng) */
+img[src*="/logo/"],
+nav img,
+header img {
+  border-radius: 0;
+}
+
+/* Card nâng nhẹ khi hover — cảm giác product/SaaS */
+.card,
+[class*="Card"] {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover,
+[class*="Card"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(20, 34, 70, .14);
+}
+
+/* H2 có gạch nhấn cam — tạo nhịp thị giác nhất quán */
+.prose h2::before,
+article h2::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  border-radius: 3px;
+  background: #FF7A21;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 /* =====================================================================
-   BRANDED EMPLOYEE-PORTAL UTILITIES
+   BRANDED EMPLOYEE-PORTAL UTILITIES  (Atlassian structure · Dropbox energy
+   · Intercom support · Webflow journey · Stripe polish)
+   Dùng trên các trang nội dung qua <div className="…">, đi kèm component
+   native của Mintlify. Giữ CSS đơn giản, chỉ dùng brand tokens.
    ===================================================================== */
 
-/* Page hero strip */
+/* ---- Page hero strip (đầu trang nội dung, không phải homepage) ---- */
 .aha-strip{
   position:relative; overflow:hidden; border-radius:var(--aha-radius-lg);
   padding:26px 28px; margin:4px 0 22px; color:#fff;
@@ -91,9 +120,11 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 .aha-strip .eyebrow{ color:var(--aha-orange2); letter-spacing:2px; font-size:11.5px;
   font-weight:700; text-transform:uppercase; margin:0; }
-.aha-strip h2, .aha-strip h3{ color:#fff !important; margin:8px 0 6px; font-size:22px; font-weight:800; }
+.aha-strip h2,
+.aha-strip h3{ color:#fff !important; margin:8px 0 6px; font-size:22px; font-weight:800; }
 .aha-strip h2::before, .aha-strip h3::before{ display:none !important; content:none !important; }
 .aha-strip p{ color:rgba(255,255,255,.82); margin:0; font-size:14.5px; max-width:640px; line-height:1.6; }
+/* biến thể warm (cream) cho trang Phúc lợi/Office */
 .aha-strip.warm{
   color:var(--aha-navy);
   background:
@@ -105,10 +136,10 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-strip.warm h2, .aha-strip.warm h3{ color:var(--aha-navy) !important; }
 .aha-strip.warm p{ color:var(--aha-grey); }
 
-/* Intro paragraph */
+/* ---- Intro ngắn dưới section title ---- */
 .aha-intro{ color:var(--aha-grey); font-size:14.5px; line-height:1.6; margin:-4px 0 16px; max-width:680px; }
 
-/* Badge */
+/* ---- Badge nhỏ (HR / IT / Guide / Support / Required / New / Manager) ---- */
 .aha-badge{
   display:inline-block; font-size:11px; font-weight:700; letter-spacing:.4px;
   padding:3px 9px; border-radius:999px; line-height:1.4; vertical-align:middle;
@@ -119,7 +150,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-badge.grey{ background:#EEF1F6; color:#56607A; border-color:#E1E6EF; }
 .aha-badge.solid{ background:var(--aha-orange); color:#fff; border-color:var(--aha-orange); }
 
-/* Journey cards */
+/* ---- Journey cards (Webflow learning-path vibe) ---- */
 .aha-journey{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:6px 0 8px; }
 .aha-jcard{
   position:relative; display:flex; flex-direction:column; text-decoration:none;
@@ -127,8 +158,8 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   padding:18px 16px 16px; box-shadow:0 4px 14px rgba(20,34,70,.05);
   transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
 }
-.aha-jcard:hover{ transform:translateY(-2px); border-color:#CBD8EC; box-shadow:0 8px 28px rgba(14,65,116,.13); }
-.aha-jcard:hover .num{ background:linear-gradient(135deg,#0E4174,#1A6BB5); }
+.aha-jcard:hover{ transform:translateY(-3px); border-color:#F3C9AC;
+  box-shadow:0 16px 36px rgba(255,122,33,.14); }
 .aha-jcard .step{ display:flex; align-items:center; gap:8px; margin-bottom:10px; }
 .aha-jcard .num{
   width:30px; height:30px; border-radius:50%; flex:0 0 30px;
@@ -136,9 +167,10 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   color:#fff; font-weight:800; font-size:14px; display:grid; place-items:center;
 }
 .aha-jcard h4{ color:var(--aha-navy); font-size:15.5px; font-weight:700; margin:0 0 4px; }
-.aha-jcard h4::before{ display:none !important; content:none !important; }
 .aha-jcard p{ color:var(--aha-grey); font-size:13px; line-height:1.5; margin:0 0 12px; }
 .aha-jcard .go{ margin-top:auto; color:var(--aha-orange); font-size:12.5px; font-weight:700; }
+
+/* connector line giữa các journey card trên màn rộng */
 @media (min-width:760px){
   .aha-journey.flow .aha-jcard::before{
     content:""; position:absolute; top:33px; right:-14px; width:14px; height:2px;
@@ -147,7 +179,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   .aha-journey.flow .aha-jcard:last-child::before{ display:none; }
 }
 
-/* Dashboard tile grid */
+/* ---- Dashboard task tiles (Atlassian product feel) ---- */
 .aha-tilegrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:6px 0; }
 .aha-tile2{
   display:flex; gap:13px; align-items:flex-start; text-decoration:none;
@@ -155,12 +187,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   padding:16px; box-shadow:0 4px 14px rgba(20,34,70,.05);
   transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
 }
-.aha-tile2:hover{ transform:translateY(-2px); border-color:#CBD8EC; box-shadow:0 8px 28px rgba(14,65,116,.12); }
-.aha-tile2 .ic{ flex:0 0 42px; height:42px; border-radius:12px; background:var(--aha-cream); display:grid; place-items:center; }
+.aha-tile2:hover{ transform:translateY(-3px); border-color:#F3C9AC;
+  box-shadow:0 16px 36px rgba(255,122,33,.14); }
+.aha-tile2 .ic{ flex:0 0 42px; height:42px; border-radius:12px; background:var(--aha-cream);
+  display:grid; place-items:center; }
 .aha-tile2 h4{ color:var(--aha-navy); font-size:14.5px; font-weight:700; margin:0 0 3px; }
 .aha-tile2 p{ color:var(--aha-grey); font-size:13px; line-height:1.45; margin:0; }
 
-/* Support card */
+/* ---- Support / contact card (Intercom) ---- */
 .aha-support{
   display:flex; gap:14px; align-items:center; border-radius:var(--aha-radius);
   border:1px solid var(--aha-line); background:var(--aha-cream); padding:16px 18px; margin:8px 0;
@@ -170,20 +204,20 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-support h4{ color:var(--aha-navy); font-size:15px; font-weight:700; margin:0 0 2px; }
 .aha-support p{ color:var(--aha-grey); font-size:13px; margin:0; line-height:1.5; }
 
-/* Category card */
+/* ---- Category card (Help Center, search-first hub) ---- */
 .aha-cats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:8px 0; }
 .aha-cat{
   display:block; text-decoration:none; background:#fff; border:1px solid var(--aha-line);
   border-radius:var(--aha-radius); padding:18px; box-shadow:0 4px 14px rgba(20,34,70,.05);
   transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
 }
-.aha-cat:hover{ transform:translateY(-2px); border-color:#CBD8EC; box-shadow:0 8px 28px rgba(14,65,116,.12); }
+.aha-cat:hover{ transform:translateY(-3px); border-color:#F3C9AC; box-shadow:0 16px 36px rgba(255,122,33,.14); }
 .aha-cat .ic{ width:40px; height:40px; border-radius:11px; background:var(--aha-cream);
   display:grid; place-items:center; margin-bottom:12px; }
 .aha-cat h4{ color:var(--aha-navy); font-size:15.5px; font-weight:700; margin:0 0 4px; }
 .aha-cat p{ color:var(--aha-grey); font-size:13px; line-height:1.5; margin:0; }
 
-/* Soft grid background block */
+/* ---- Soft grid background block (section nền nhẹ có lưới) ---- */
 .aha-softgrid{
   border-radius:var(--aha-radius-lg); padding:22px; margin:18px 0;
   background-color:#FAFBFD;
@@ -194,13 +228,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   border:1px solid var(--aha-line);
 }
 
-/* Stat band (content pages) */
+/* ---- Stat band (brand proof nhẹ nhàng) ---- */
 .aha-statband{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:14px; margin:10px 0; }
 .aha-sb{ background:var(--aha-cream); border:1px solid #F6DCC8; border-radius:var(--aha-radius); padding:18px 16px; }
 .aha-sb b{ display:block; font-size:26px; font-weight:800; color:#D65A12; line-height:1; }
 .aha-sb span{ display:block; font-size:13px; color:var(--aha-grey); margin-top:6px; }
 
-/* AI spotlight card */
+/* Spotlight AI card (tech-enabled, mạnh hơn) — dùng trên AI pages */
 .aha-aispot{
   border-radius:var(--aha-radius-lg); padding:22px; color:#fff;
   background:
@@ -213,7 +247,11 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-aispot p{ color:rgba(255,255,255,.82); font-size:13px; margin:0; }
 
 /* =====================================================================
-   VISUAL PLACEHOLDER SYSTEM
+   VISUAL PLACEHOLDER SYSTEM  (Atlassian-inspired product platform)
+   Khung hình "có chủ đích" dùng khi CHƯA có asset thật. Nhìn premium,
+   không giống lỗi thiếu ảnh. Mỗi slot kèm asset-brief để designer/AI
+   image generator bổ sung sau. Thay nội dung slot bằng <img>/<Frame>
+   khi đã có ảnh thật.
    ===================================================================== */
 .aha-visual-slot{
   position:relative; border-radius:24px; border:1px solid #DCE6F2;
@@ -225,6 +263,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
   overflow:hidden; min-height:200px;
 }
+/* khung gạch nét đứt rất nhẹ bên trong — cảm giác "slot" chủ đích */
 .aha-visual-slot::before{
   content:""; position:absolute; inset:14px; border:1.5px dashed #C7D6EA;
   border-radius:18px; pointer-events:none; opacity:.7;
@@ -253,6 +292,8 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   background:#fff; border:1px dashed #C7D6EA; border-radius:8px; padding:4px 10px; display:inline-block;
 }
+
+/* DARK — AI / hero */
 .aha-visual-slot.dark{
   border-color:#21345C; background-color:#0E1F3D;
   background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0),
@@ -265,19 +306,28 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-visual-slot.dark .vtitle{ color:#fff; }
 .aha-visual-slot.dark .vdesc{ color:rgba(255,255,255,.74); }
 .aha-visual-slot.dark .vfile{ background:rgba(255,255,255,.06); color:#9FB0CC; border-color:rgba(255,255,255,.20); }
+
+/* WARM — benefits / life at Ahamove */
 .aha-visual-slot.warm{
   border-color:#F6DCC8; background-color:#FFF7F0;
   background-image:radial-gradient(circle at 1px 1px, rgba(214,90,18,.07) 1px, transparent 0);
 }
 .aha-visual-slot.warm::before{ border-color:#F1CBAE; }
 .aha-visual-slot.warm .vbadge{ color:#D65A12; border-color:#F6DCC8; }
+
+/* COMPACT — card nhỏ / inline */
 .aha-visual-slot.compact{ min-height:130px; padding:20px 18px; border-radius:18px; }
 .aha-visual-slot.compact .vicon{ width:42px; height:42px; border-radius:12px; margin-bottom:10px; }
 .aha-visual-slot.compact .vtitle{ font-size:14px; }
 .aha-visual-slot.compact::before{ inset:10px; border-radius:13px; }
-.aha-product-mockup, .aha-hero-visual, .aha-workflow-visual, .aha-illustration-slot{ }
 
-/* Image brief caption */
+/* Aliases ngữ nghĩa — cùng look, đặt tên theo vai trò để code dễ đọc */
+.aha-product-mockup,
+.aha-hero-visual,
+.aha-workflow-visual,
+.aha-illustration-slot{ /* kế thừa .aha-visual-slot khi dùng kèm */ }
+
+/* Image brief caption (đặt dưới ảnh/slot) — dòng ghi chú cho designer */
 .aha-image-brief{
   font-size:11.5px; color:#7A8499; line-height:1.5; margin:8px 2px 18px;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -285,121 +335,20 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-image-brief b{ color:#4B6CB7; }
 
 /* =====================================================================
-   CSS-BUILT MOCKUPS
+   CSS-BUILT MOCKUPS (dùng khi muốn nhìn "xịn" ngay, không cần ảnh thật)
+   Tái dùng trên trang nội dung; homepage hero dùng inline-style riêng.
    ===================================================================== */
 .aha-mock{
   border-radius:18px; border:1px solid var(--aha-line); background:#fff;
   box-shadow:0 18px 44px rgba(20,34,70,.12); padding:14px; overflow:hidden;
 }
-.aha-mock-bar{ display:flex; align-items:center; gap:6px; margin-bottom:12px; }
-.aha-mock-dot{ width:9px; height:9px; border-radius:50%; background:#E2E8F2; }
-.aha-mock-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.aha-mock-card{ border:1px solid var(--aha-line); border-radius:12px; padding:12px; background:#FCFDFF; }
-.aha-mock-label{ font-size:11px; color:var(--aha-grey); font-weight:600; margin:0 0 8px; }
-.aha-mock-value{ font-size:15px; color:var(--aha-navy); font-weight:800; margin:0; }
+.aha-mock .bar{ display:flex; align-items:center; gap:6px; margin-bottom:12px; }
+.aha-mock .dot{ width:9px; height:9px; border-radius:50%; background:#E2E8F2; }
+.aha-mock .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.aha-mock .mc{ border:1px solid var(--aha-line); border-radius:12px; padding:12px; background:#FCFDFF; }
+.aha-mock .mc .lbl{ font-size:11px; color:var(--aha-grey); font-weight:600; margin:0 0 8px; }
+.aha-mock .mc .val{ font-size:15px; color:var(--aha-navy); font-weight:800; margin:0; }
 .aha-mock .prog{ height:7px; border-radius:6px; background:#EEF2F8; overflow:hidden; margin-top:8px; }
 .aha-mock .prog i{ display:block; height:100%; border-radius:6px; background:linear-gradient(90deg,#FF7A21,#FF9A52); }
-.aha-mock-pill{ display:inline-block; font-size:10.5px; font-weight:700; color:#D65A12;
+.aha-mock .pill{ display:inline-block; font-size:10.5px; font-weight:700; color:#D65A12;
   background:var(--aha-cream); border:1px solid #F6DCC8; border-radius:999px; padding:2px 8px; }
-
-/* =====================================================================
-   HOMEPAGE LAYOUT COMPONENTS
-   Hero · Stat band · Journey path · Bottom support band
-   ===================================================================== */
-
-/* ---- Hero (padding pulled out of inline style so media queries work) ---- */
-.aha-hero{ padding:60px 48px; }
-
-/* ---- Stat band — dark navy platform metric bar ---- */
-.aha-stat-band{
-  position:relative; border-radius:24px;
-  padding:44px 48px; margin-top:48px;
-  background:linear-gradient(140deg,#0B1530 0%,#0E2E5A 100%);
-  border:1px solid rgba(255,255,255,.07);
-  display:flex; flex-direction:column; gap:32px;
-  overflow:hidden;
-}
-/* subtle radial highlight — top-left, blue not orange */
-.aha-stat-band::before{
-  content:""; position:absolute; left:-60px; top:-60px;
-  width:320px; height:320px; border-radius:50%; pointer-events:none;
-  background:radial-gradient(circle, rgba(30,90,200,.18) 0%, transparent 70%);
-}
-.aha-stat-band h2::before{ display:none !important; content:none !important; }
-
-/* eyebrow label at top of stat band */
-.aha-stat-band-eyebrow{
-  font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
-  color:#FF9A52; margin:0; position:relative; z-index:1;
-}
-
-/* row wrapping stat-list + stat-visual */
-.aha-stat-band-body{
-  display:flex; flex-wrap:wrap; gap:28px; align-items:center;
-  position:relative; z-index:1;
-}
-.aha-stat-list{
-  display:flex; flex:1 1 360px; flex-wrap:wrap; gap:0; align-items:flex-start;
-}
-.aha-stat-item{ flex:1 1 120px; padding:0 36px 0 0; }
-.aha-stat-div{ border-left:1px solid rgba(255,255,255,.12); padding:0 36px; }
-.aha-stat-n{ font-size:52px; font-weight:800; color:#fff; line-height:1; margin:0; letter-spacing:-2px; }
-.aha-stat-l{ font-size:14px; color:rgba(255,255,255,.58); margin:10px 0 0; line-height:1.4; }
-.aha-stat-visual{ flex:0 1 200px; position:relative; z-index:1; }
-
-/* ---- Bottom support + updates band ---- */
-.aha-bottom-band{
-  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:52px;
-}
-.aha-s-panel{ background:#FAFBFD; border:1px solid var(--aha-line); border-radius:18px; padding:22px 24px; }
-.aha-s-title{ font-size:15px; font-weight:800; color:var(--aha-navy); margin:0 0 4px; }
-.aha-s-text{ font-size:13px; color:var(--aha-grey); margin:0 0 14px; line-height:1.55; }
-.aha-s-link{
-  display:flex; align-items:center; gap:10px; text-decoration:none;
-  color:var(--aha-navy); font-weight:600; font-size:13.5px;
-  padding:10px 0; border-top:1px solid var(--aha-line);
-}
-.aha-s-link-first{ border-top:none; padding-top:0; }
-.aha-s-link:hover{ color:var(--aha-orange); }
-
-/* ---- Journey path (alias for .aha-journey.flow) ---- */
-.aha-journey-path{ margin-top:0; }
-
-/* ---- First actions / feature + utility cards ---- */
-.aha-first-actions{ }
-.aha-feature-card{ }
-.aha-utility-card{ }
-
-/* ---- Homepage responsive ---- */
-@media (max-width:860px){
-  .aha-bottom-band{ grid-template-columns:1fr; }
-  .aha-stat-band{ padding:36px 28px; gap:20px; }
-  .aha-stat-div{ padding-left:24px; padding-right:24px; }
-}
-@media (max-width:740px){
-  /* Journey: inherit .aha-journey grid auto-fit; cards stack gracefully */
-  .aha-journey-row{ flex-direction:column; gap:12px; }
-  .aha-jconn{ display:none; }
-  .aha-journey-row > div{ flex:unset; margin:0; }
-}
-@media (max-width:740px){
-  /* Hero: hide mockup at same breakpoint journey stacks — cleaner single-column hero */
-  .aha-hero-mock{ display:none; }
-}
-@media (max-width:600px){
-  .aha-hero{ padding:36px 24px; }
-}
-@media (max-width:640px){
-  .aha-stat-n{ font-size:40px; }
-  .aha-stat-visual{ display:none; }
-  .aha-stat-band::before{ display:none; }
-  .aha-stat-item{ flex:1 1 90px; padding-right:20px; }
-  .aha-stat-div{ padding:0 20px; }
-}
-/* Narrow phones: stat items stack vertically */
-@media (max-width:420px){
-  .aha-stat-list{ flex-direction:column; gap:14px; }
-  .aha-stat-item{ padding:0; flex:unset; }
-  .aha-stat-div{ border-left:none; padding:0; border-top:1px solid #C8D8EC; padding-top:14px; }
-  .aha-stat-n{ font-size:36px; }
-}

@@ -1,89 +1,85 @@
 ---
 title: "Tổng quan công ty"
 sidebarTitle: "Tổng quan công ty"
-description: "Hiểu nhanh Ahamove trong 1 phút — dịch vụ, tầm nhìn, lịch sử & hệ sinh thái Scommerce."
+description: "Về Ahamove — sứ mệnh, tầm nhìn, hành trình phát triển & hệ sinh thái Scommerce."
 icon: "building-flag"
 ---
 
-**Ahamove** là thương hiệu giao hàng theo nhu cầu (on-demand) chuyên nghiệp, trên nền tảng công nghệ hiện đại. Dịch vụ được tối ưu cho nhu cầu địa phương, đáp ứng nhanh mọi nhu cầu vận chuyển của người tiêu dùng và chủ doanh nghiệp.
+export const T = {
+  orange: "#FF7A21", navy: "#0E4174", line: "#E7EAF0", grey: "#667089",
+  quote: { position: "relative", background: "linear-gradient(135deg,#0E4174,#142246)", color: "#fff", borderRadius: "16px", padding: "26px 28px", margin: "8px 0 4px" },
+  quoteText: { fontSize: "16px", fontStyle: "italic", lineHeight: 1.6, margin: 0, color: "#E6ECF4" },
+  quoteName: { marginTop: "12px", fontWeight: 700, color: "#FF9A52", fontSize: "13.5px" },
+  tl: { position: "relative", borderLeft: "2px solid #F6DCC8", marginLeft: "8px", paddingLeft: "26px", marginTop: "10px" },
+  item: { position: "relative", paddingBottom: "20px" },
+  dot: { position: "absolute", left: "-35px", top: "3px", width: "14px", height: "14px", borderRadius: "50%", background: "#fff", border: "3px solid #FF7A21" },
+  card: { background: "#fff", border: "1px solid #E7EAF0", borderRadius: "12px", padding: "13px 16px", boxShadow: "0 3px 10px rgba(20,34,70,.05)" },
+  year: { fontFamily: "Lexend, sans-serif", fontWeight: 800, color: "#FF7A21", fontSize: "15px", margin: 0 },
+  ttl: { fontWeight: 700, color: "#0E4174", fontSize: "14.5px", margin: "2px 0 4px" },
+  desc: { color: "#667089", fontSize: "13px", margin: 0, lineHeight: 1.5 },
+};
 
-<Info>
-  **Tầm nhìn:** Trở thành đơn vị dẫn đầu lĩnh vực ứng dụng công nghệ logistics tại Việt Nam và vươn tầm khu vực;
-  tiên phong thúc đẩy đổi mới, sáng tạo; tạo ra hàng trăm ngàn cơ hội việc làm bền vững cho người Việt.
-</Info>
+**Ahamove** là thương hiệu giao hàng theo nhu cầu chuyên nghiệp, trên nền tảng công nghệ hiện đại. Thành lập từ **2015**, Ahamove phục vụ tại TP.HCM, Hà Nội và nhiều thành phố khác với tốc độ nhanh, chi phí hợp lý và đội ngũ đối tác tài xế hùng hậu — đơn giản hóa việc giao hàng cho cả người tiêu dùng lẫn chủ doanh nghiệp.
+
+## Sứ mệnh & Tầm nhìn
+
+<CardGroup cols={2}>
+  <Card title="Sứ mệnh" icon="bullseye">
+    Thương hiệu giao hàng theo nhu cầu chuyên nghiệp, tối ưu cho nhu cầu địa phương, đáp ứng nhanh mọi nhu cầu vận chuyển của người tiêu dùng và chủ doanh nghiệp.
+  </Card>
+  <Card title="Tầm nhìn" icon="eye">
+    Vươn lên hàng đầu trong lĩnh vực ứng dụng công nghệ giao hàng tại Việt Nam và vươn ra khu vực.
+  </Card>
+</CardGroup>
+
+<div style={T.quote}>
+  <p style={T.quoteText}>"Trong tổ chức, dù nhỏ hay lớn, đều cần có sự ngăn nắp và minh bạch, thì các cá nhân mới có thể làm việc, hợp tác với nhau một cách hiệu quả và phát huy tối đa khả năng của mình."</p>
+  <p style={T.quoteName}>Phạm Hữu Ngôn — CEO Ahamove</p>
+</div>
 
 ## Dịch vụ chính
 
 <CardGroup cols={2}>
-  <Card title="AhaDelivery (xe máy)" icon="motorcycle">
-    Giao hàng nhanh nội thành & liên tỉnh.
-  </Card>
-  <Card title="AhaTruck (xe tải)" icon="truck">
-    Vận chuyển hàng lớn, cồng kềnh.
-  </Card>
-  <Card title="Shop / SME / Doanh nghiệp" icon="store">
-    Giải pháp giao hàng cho cửa hàng & doanh nghiệp.
-  </Card>
-  <Card title="Công nghệ & AI" icon="microchip">
-    Tối ưu tốc độ, chi phí & trải nghiệm vận hành.
-  </Card>
+  <Card title="AhaDelivery (xe máy)" icon="motorcycle">Giao hàng nhanh nội thành & liên tỉnh.</Card>
+  <Card title="AhaTruck (xe tải)" icon="truck">Vận chuyển hàng lớn, cồng kềnh.</Card>
+  <Card title="Shop / SME / Doanh nghiệp" icon="store">Giải pháp giao hàng cho cửa hàng & doanh nghiệp.</Card>
+  <Card title="Công nghệ & AI" icon="microchip">Tối ưu tốc độ, chi phí & trải nghiệm vận hành.</Card>
 </CardGroup>
+
+## Hành trình phát triển của Ahamove
+
+<div style={T.tl}>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2015</p><p style={T.ttl}>Thành lập</p><p style={T.desc}>AhaMove được thành lập dựa trên ý tưởng "Uber of Truck".</p></div></div>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2016</p><p style={T.ttl}>Thay đổi để phát triển</p><p style={T.desc}>Chuyển trọng tâm từ giao hàng xe tải sang xe máy; ra mắt dịch vụ xe máy tại Hà Nội.</p></div></div>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2017</p><p style={T.ttl}>Tăng trưởng kỷ lục</p><p style={T.desc}>Ra mắt dịch vụ Siêu Rẻ.</p></div></div>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2018</p><p style={T.ttl}>Đa dạng hóa dịch vụ & tệp khách hàng</p><p style={T.desc}>Ra mắt dịch vụ Đồng giá; nâng cao tích lũy công nghệ và hợp tác đối tác lớn như KiotViet, iPOS.</p></div></div>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2019</p><p style={T.ttl}>Khẳng định giá trị công nghệ & vận hành</p><p style={T.desc}>Gọi vốn thành công 100 tỷ từ Quỹ Temasek (Singapore); ra mắt dịch vụ 4H.</p></div></div>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2020</p><p style={T.ttl}>Doanh thu nghìn tỷ</p><p style={T.desc}>Phát triển vượt trội, phục vụ lượng khách hàng lớn trên cả nước.</p></div></div>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2021</p><p style={T.ttl}>Mở rộng & phủ sóng</p><p style={T.desc}>Ahamove tiếp tục tăng trưởng, phủ sóng và mở rộng.</p></div></div>
+  <div style={T.item}><span style={T.dot} /><div style={T.card}><p style={T.year}>2022</p><p style={T.ttl}>Thay đổi để tiến xa hơn</p><p style={T.desc}>Từ "AhaMove" thành "Ahamove" — diện mạo trẻ trung, năng động, khẳng định khát vọng chiếm lĩnh thị trường.</p></div></div>
+</div>
 
 ## Số liệu nhanh
 
 <Note>
-  **Cần COMM/EX cập nhật số liệu thật.** Các ô `[…]` bên dưới là chỗ điền tạm — thay bằng dữ liệu chính thức mới nhất.
+  **Cần COMM/EX cập nhật số liệu thật.** Các ô `[…]` là chỗ điền tạm — thay bằng dữ liệu chính thức mới nhất.
 </Note>
 
 | Chỉ số | Giá trị |
 | --- | --- |
 | Năm thành lập | 2015 |
-| Phạm vi phủ sóng | `[N]` tỉnh thành |
-| Đối tác tài xế | `150.000+` |
-| Khách hàng / merchant | `400.000+` |
-| Đơn mỗi ngày | `[N]+` |
+| Phạm vi phủ sóng | 20+ tỉnh thành |
+| Đối tác tài xế | `[N]+` |
+| Đơn mỗi năm | `45 triệu+` |
 | Văn phòng | 3 (HCM · Hà Nội · Đà Nẵng) |
 
 ## Trong hệ sinh thái Scommerce
 
 Ahamove cùng **GHN** thuộc Tập đoàn **Scommerce** (CEO: Lương Duy Hoài), hậu thuẫn bởi quỹ Seedcom. CEO Ahamove là **Phạm Hữu Ngôn**. GHN mạnh ở giao hàng TMĐT (Hub & Spoke), Ahamove mạnh ở giao tức thì theo nhu cầu (On-demand) — cùng tạo nên mô hình **Hybrid Synergy** (case study của Harvard Business School).
 
-## Lịch sử hình thành
-
-<Steps>
-  <Step title="2015 — Thành lập">AhaMove thành lập dựa trên ý tưởng "Uber of Truck".</Step>
-  <Step title="2016 — Thay đổi để phát triển">Chuyển trọng tâm từ xe tải sang xe máy; ra mắt dịch vụ xe máy tại Hà Nội.</Step>
-  <Step title="2017 — Tăng trưởng kỷ lục">Ra mắt dịch vụ Siêu Rẻ — tăng trưởng ~900% đơn hàng so với năm trước.</Step>
-  <Step title="2018 — Đa dạng hóa">Ra mắt dịch vụ Đồng giá; hợp tác KiotViet, iPOS.</Step>
-  <Step title="2019 — Khẳng định giá trị công nghệ">Gọi vốn 100 tỷ từ Quỹ Temasek (Singapore); ra mắt dịch vụ 4H.</Step>
-  <Step title="2020 — Doanh thu nghìn tỷ">Phục vụ 400.000+ khách hàng, hơn 150.000 tài xế trên cả nước.</Step>
-  <Step title="2021 — Mở rộng & phủ sóng">Tăng trưởng 50%, mở rộng trên 9 tỉnh thành.</Step>
-  <Step title="2022 — Thay đổi để tiến xa">Từ "AhaMove" thành "Ahamove" — diện mạo trẻ trung, năng động.</Step>
-</Steps>
-
-## Lợi thế cạnh tranh
-
-- Nền tảng công nghệ hiện đại, tối ưu tốc độ, chi phí & trải nghiệm vận hành.
-- Mạng lưới tài xế lớn (150.000+), phủ nhiều tỉnh thành.
-- Mô hình giao tức thì (On-demand), linh hoạt theo nhu cầu địa phương.
-- Cộng hưởng hệ sinh thái Scommerce & GHN — mô hình Hybrid Synergy.
-
 ## Đối tác chiến lược
 
-Ahamove đồng hành cùng nhiều thương hiệu lớn: **Lazada · The Coffee House · Con Cưng · Fahasa · Juno · Pharmacity**… <Tooltip tip="COMM cập nhật danh sách & logo đối tác">*[COMM cập nhật]*</Tooltip>
-
-## Đào tạo sản phẩm
-
-Chương trình đào tạo giúp bạn hiểu nhanh các dịch vụ của Ahamove; học liên tục trên **AhaLearn**.
-
-<CardGroup cols={2}>
-  <Card title="Website Ahamove" icon="globe" href="https://ahamove.com">
-    Tìm hiểu thêm về công ty.
-  </Card>
-  <Card title="AhaLearn" icon="graduation-cap" href="https://sites.google.com/ahamove.com/sotaynhansu2025/e-learning/ahalearn">
-    Đào tạo sản phẩm & e-learning.
-  </Card>
-</CardGroup>
+Ahamove đồng hành cùng nhiều thương hiệu lớn: **Lazada · The Coffee House · Con Cưng · Fahasa · Juno · Pharmacity**…
 
 <div id="message-2026" />
 
@@ -92,6 +88,9 @@ Chương trình đào tạo giúp bạn hiểu nhanh các dịch vụ của Aham
 <Info>
   **Tầm nhìn 2026 — "AI-Driven Company".** Năm 2025 khép lại với mức **tăng trưởng 20%**. Bước sang 2026, Ahamove
   không chỉ *ứng dụng* công nghệ mà để **công nghệ dẫn lối**: cấu trúc quản trị phẳng hơn, trao quyền nhiều hơn cho
-  người trẻ. Mọi quyết định thông minh hơn; mọi bác tài và khách hàng có trợ lý ảo đắc lực. *Ahamove 2026 — AI-Driven,
-  Human-Centric, Always Moving.*
+  người trẻ. *Ahamove 2026 — AI-Driven, Human-Centric, Always Moving.*
 </Info>
+
+<Tip>
+  Tìm hiểu văn hóa & bộ giá trị tại [Văn hóa & Giá trị](/ahamazing-guide/culture), và cách Ahamove ứng dụng AI tại [AI Academy](/ai-hub/overview).
+</Tip>

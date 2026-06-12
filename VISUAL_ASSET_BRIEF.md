@@ -1,120 +1,50 @@
-# Visual Asset Brief — Ahamove Employee Hub Homepage
+# Ahamove Employee Hub — Visual Asset Brief
 
-Ghi chú các asset placeholder đang dùng trong `index.mdx` và cách thay thế khi có ảnh thật.
-Đặt ảnh vào `/public/images/` và dùng đường dẫn `/images/<filename>` trong MDX.
+Danh sách hình ảnh cần bổ sung để hoàn thiện visual system theo hướng **Atlassian-inspired product platform** (branded Ahamove, không copy Atlassian).
 
-> Cập nhật lần cuối theo brief tháng 6/2026 — homepage redesign.
+Mỗi vị trí hiện đang dùng **placeholder có chủ đích** (class `.aha-visual-slot` trong `style.css`, hoặc mockup dựng bằng CSS ở homepage). Khi có ảnh thật, thay khối placeholder bằng `<Frame>![alt](/images/<file>)</Frame>` (trang nội dung) hoặc `<img>` (homepage `mode: custom`).
 
+## Brand & style chung
 
----
+- Màu: Orange `#FF7A21` · Light orange `#FF9A52` · Navy `#0E4174` · Navy đậm `#0B1530` · Cream `#FFF4EC`.
+- Nền chính: navy / off-white / white. Cam dùng cho accent, CTA, motion line. Cream cho warm.
+- Mood: clean SaaS / enterprise product, rounded cards (radius 16–24px), soft shadow, subtle grid. **Không** poster truyền thông, **không** cartoon, **không** neon gradient nặng.
+- Tất cả mockup/illustration: không chứa dữ liệu mật thật (khách hàng, tài xế, lương cá nhân).
 
-## 1. Hero Right Panel
+## Bảng asset
 
-| Field | Value |
-|---|---|
-| **Element** | `className="aha-hero-mock"` — right column of hero |
-| **Target file** | `/public/images/employee-hub-dashboard.png` |
-| **Aspect ratio** | 16:10 (wider than tall) |
-| **Dimensions** | 640 × 400 px minimum; 2× for retina |
-| **Background** | Dark navy / transparent (will sit on navy hero bg) |
-| **Description** | A product UI screenshot or illustrative mockup of the Employee Hub portal dashboard. Shows the navigation, a welcome card, and key quick-action tiles. Should feel like a real-product screenshot, not an illustration. |
-| **Tone** | Premium, clean, professional. No stock photo people. |
+| Asset | Page | Placement | Ratio | Priority | Brief | Style direction |
+| --- | --- | --- | --- | --- | --- | --- |
+| `employee-hub-dashboard.png` | `index.mdx` | Hero — visual bên phải | 16:10 | High | Dashboard "Employee Hub" với mini card: Onboarding progress, 1Office quick action, Help Center, Latest update, AI Academy spotlight | Clean SaaS dashboard, navy/off-white, orange accent, rounded cards, subtle shadow |
+| `onboarding-journey-map.png` | `index.mdx` · `ahamazing-guide/overview.mdx` | Sau section Hành trình hội nhập / trước phase ① | 16:9 | High | Bản đồ hành trình Ngày đầu → Tuần đầu → Tháng đầu nối bằng path | Friendly product illustration, cam/navy, đường path mềm, không trẻ con |
+| `1office-workflow-preview.png` | `index.mdx` | Trong card lớn "Hệ thống 1Office" | 16:10 | High | Mockup UI workflow: Chấm công, Nghỉ phép, Phiếu lương, Chữ ký số, Trợ lý AI 1Office | Product UI mockup, workflow cards, clean enterprise portal |
+| `1office-system-map.png` | `handbook/internal-systems.mdx` | Sau intro/CTA, đầu trang | 16:9 | High | Sơ đồ hệ thống: Đăng nhập → Thiết lập → Chấm công/Nghỉ phép → Phiếu lương → Chữ ký số → Trợ lý AI | System map, connected workflow cards, navy/cam, internal product style |
+| `ahamove-network-proof.png` | `index.mdx` | Nền band "Ahamove qua những con số" | 21:9 | Medium | Mạng lưới logistics trừu tượng làm nền cho 3 stat card | Abstract logistics network, soft blue bg, orange motion line, premium, không cartoon |
+| `help-center-search-hub.png` | `help-center/overview.mdx` | Sau hero strip | 16:9 | Medium | Support hub: thanh search lớn, category icons, support routing flow | Intercom/Atlassian-inspired, clean search UI, category cards, thân thiện-chuyên nghiệp |
+| `benefits-care-illustration.png` | `benefits/overview.mdx` | Sau benefit tiles | 16:9 | Medium | Minh họa employee care: khám sức khỏe, bảo hiểm, chăm sóc nhân viên | Warm corporate illustration, nền cream, accent cam/navy, hiện đại, không quá cute |
+| `office-guide-map.png` | `office-guide/overview.mdx` | Sau facility tiles | 16:9 | Low | Sơ đồ/card văn phòng: địa điểm, phòng họp, pantry, gửi xe, hỗ trợ | Modern workplace map, facility icons sạch, nền sáng, accent thương hiệu |
+| `ai-academy-learning-path.png` | `ai-hub/overview.mdx` | Trước "Learning Journey" | 16:9 | Medium | Lộ trình học AI modular: Claude Guide → AI Playbook → YES A.I DO → AI Showcase → Study Tour | Premium AI learning hub, navy gradient, orange glow vừa phải, product-tech, không poster |
 
-**When ready, replace:**
+## Cách thay placeholder bằng ảnh thật
+
+**Trang nội dung (MDX thường):**
+
 ```mdx
-<div className="aha-hero-mock" ...>
-  {/* CSS mock */}
-</div>
-```
-**With:**
-```mdx
-<img src="/images/employee-hub-dashboard.png" alt="Employee Hub dashboard" style={{ borderRadius: "16px", width: "100%", boxShadow: "0 20px 50px rgba(0,0,0,.35)" }} />
+<Frame caption="Ahamove Employee Hub">
+  ![Employee Hub dashboard](/images/employee-hub-dashboard.png)
+</Frame>
 ```
 
----
+**Homepage (`index.mdx`, `mode: custom`):** thay block mockup/`<p style={S.brief}>` bằng:
 
-## 2. Stat Band Visual
+```jsx
+<img src="/images/employee-hub-dashboard.png" alt="Employee Hub dashboard" style={{ width: "100%", borderRadius: "18px" }} />
+```
 
-| Field | Value |
-|---|---|
-| **Element** | `className="aha-stat-visual"` — right side of stat band |
-| **Target file** | `/public/images/ahamove-network-proof.png` |
-| **Aspect ratio** | 4:3 (landscape) |
-| **Dimensions** | 400 × 300 px minimum |
-| **Background** | Dark navy (will sit on `#0B1530 → #0E2E5A` band — use transparent PNG or light-on-dark treatment) |
-| **Description** | A map, network visualization, or data chart that represents Ahamove's scale (cities, deliveries, shipper network). Alternatively: a montage of delivery moments. Illustrates the stats beside it. |
-| **Tone** | Data-driven, energetic, brand-positive. |
+Đặt file vào thư mục `images/`. Giữ đúng tên file ở cột Asset để khớp brief.
 
-**When ready, add** `<img>` inside `.aha-stat-visual` div and remove the `.aha-visual-slot.compact` placeholder.
+## Lưu ý
 
----
-
-## 3. 1Office Feature Card Visual
-
-| Field | Value |
-|---|---|
-| **Element** | `className="aha-visual-slot compact"` inside `bigCard` |
-| **Target file** | `/public/images/1office-workflow-preview.png` |
-| **Aspect ratio** | 16:10 |
-| **Dimensions** | 560 × 350 px minimum |
-| **Background** | White / very light (card has white background) |
-| **Description** | Screenshot of the 1Office UI — ideally the leave-request or payroll screen. Shows real interface to build confidence before user clicks through. |
-| **Tone** | Clean UI screenshot. Cropped tightly to the key workflow. |
-
----
-
-## 4. Onboarding Journey Map
-
-| Field | Value |
-|---|---|
-| **Element** | Journey section background / decorative (optional) |
-| **Target file** | `/public/images/onboarding-journey-map.png` |
-| **Aspect ratio** | 16:9 |
-| **Dimensions** | 900 × 506 px minimum |
-| **Description** | A timeline or roadmap graphic showing the 3-phase onboarding journey (Day 1 → Week 1 → Month 1). Could be an illustrated infographic or a clean diagram. Optional — section works without it. |
-
----
-
-## 5. 1Office System Map
-
-| Field | Value |
-|---|---|
-| **Element** | Small scard tile — "1Office" quick link |
-| **Target file** | `/public/images/1office-system-map.png` |
-| **Aspect ratio** | 1:1 (square icon/thumb) |
-| **Dimensions** | 160 × 160 px minimum |
-| **Description** | Icon or small illustration representing 1Office. Could be the 1Office logo on a clean background. |
-
----
-
-## 6. Help Center Search Hub
-
-| Field | Value |
-|---|---|
-| **Element** | Support panel in `.aha-bottom-band` |
-| **Target file** | `/public/images/help-center-search-hub.png` |
-| **Aspect ratio** | 3:2 |
-| **Dimensions** | 480 × 320 px |
-| **Description** | A simple illustration of an HR support / help desk concept. Could be an icon-based illustration — no real people faces. |
-
----
-
-## 7. AI Academy Learning Path
-
-| Field | Value |
-|---|---|
-| **Element** | AI Academy mention in bottom band updates panel |
-| **Target file** | `/public/images/ai-academy-learning-path.png` |
-| **Aspect ratio** | 16:9 |
-| **Dimensions** | 560 × 315 px minimum |
-| **Description** | Clean illustration of an AI learning journey or course curriculum cards. Should not dominate — this section is de-emphasized. Small thumbnail usage only. |
-
----
-
-## Implementation Notes
-
-- All images go in `/public/images/` — Mintlify serves `/public/` as the static root.
-- Reference in MDX as `/images/<filename>` (no `/public` prefix).
-- Use `width: "100%"` and explicit `borderRadius` in inline style when replacing a `.aha-visual-slot`.
-- Remove the entire `<div className="aha-visual-slot ...">` block including `.vbadge`, `.vicon`, `.vtitle`, `.vratio`, `.vfile` children when replacing.
-- Keep `.aha-hero-mock` div wrapper and just swap its contents for the `<img>` tag — the wrapper handles responsive hide on mobile.
+- Không dùng ảnh Atlassian thật, không dùng ảnh random từ internet.
+- Không đưa poster AI vuông lớn vào homepage (AI giữ vai trò spotlight phụ).
+- Không khôi phục các mục đã bỏ: Prompt Library, Quy tắc ứng xử, Hỗ trợ học tập, Ghi nhận & vinh danh.
