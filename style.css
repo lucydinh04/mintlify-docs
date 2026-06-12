@@ -1547,6 +1547,192 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   margin-top: 6px;
 }
 
+/* ---------- 18 · HISTORY TIMELINE (homepage) ---------- */
+.aha-home .aha-home-history {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 40px;
+  background: #FFFBF8;
+  border: 1px solid #F6E2D4;
+  border-radius: var(--aha-radius-xl);
+  padding: 48px 40px;
+  margin-top: 32px;
+  box-shadow: 0 4px 24px rgba(255, 122, 33, .04), 0 2px 8px rgba(14, 30, 60, .02);
+}
+
+.aha-home .aha-history-intro {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aha-home .aha-history-intro .eyebrow {
+  color: var(--aha-orange-dk);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.aha-home .aha-history-intro h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--aha-navy);
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.aha-home .aha-history-intro .sp-sub {
+  color: var(--aha-grey);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.aha-home .aha-history-intro .aha-section-link {
+  color: var(--aha-orange);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.aha-home .aha-history-intro .aha-section-link:hover {
+  color: var(--aha-orange-dk);
+}
+
+.aha-home .aha-history-hint {
+  font-size: 12px;
+  color: var(--aha-grey-lt);
+  margin-top: auto;
+  font-weight: 600;
+}
+
+.aha-home .aha-history-scroll {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 122, 33, 0.4) transparent;
+}
+
+.aha-home .aha-history-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.aha-home .aha-history-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.aha-home .aha-history-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 122, 33, 0.4);
+  border-radius: 4px;
+}
+
+.aha-home .aha-history-track {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  position: relative;
+  padding-top: 16px;
+}
+
+.aha-home .aha-history-track::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(14, 65, 116, 0.1);
+  z-index: 0;
+}
+
+.aha-home .aha-history-item {
+  width: 280px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.aha-home .aha-history-node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.aha-home .aha-history-node .aha-history-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FFFBF8;
+  border: 3px solid var(--aha-orange);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 6px #FFFBF8;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.aha-home .aha-history-node .aha-history-dot::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--aha-orange);
+}
+
+.aha-home .aha-history-year {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--aha-navy);
+}
+
+.aha-home .aha-history-content {
+  background: #FFFFFF;
+  border: 1px solid #DCE6F2;
+  border-radius: var(--aha-radius-lg);
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(14, 30, 60, .03);
+  height: 100%;
+}
+
+.aha-home .aha-history-content h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--aha-navy);
+  margin: 0 0 8px;
+}
+
+.aha-home .aha-history-content p {
+  font-size: 14px;
+  color: var(--aha-grey);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* History Responsive */
+@media (max-width: 900px) {
+  .aha-home .aha-home-history {
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+  .aha-home .aha-history-intro {
+    flex: none;
+    width: 100%;
+  }
+  .aha-home .aha-history-scroll {
+    width: 100%;
+  }
+}
+
+
 /* ---------- 26 · LOWER HUB ---------- */
 .aha-home .aha-lower-hub {
   display: grid;
