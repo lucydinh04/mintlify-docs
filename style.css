@@ -133,7 +133,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 /* ---------- 5 · HERO — Homepage ---------- */
 /* Promo variant: pastel field + diagonal divider */
-.aha-hero {
+.aha-home .aha-hero {
   position: relative;
   overflow: hidden;
   border-radius: var(--aha-radius-xl);
@@ -142,7 +142,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background: var(--aha-grad-navy);
 }
 
-.aha-hero.promo {
+.aha-home .aha-hero.promo {
   background: #FCFDFE;
   border: 1px solid #E8EDF5;
   color: var(--aha-navy);
@@ -150,30 +150,30 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   box-shadow: 0 4px 20px rgba(14, 30, 60, .03);
   border-radius: 20px;
 }
-.aha-hero.promo .aha-hero-row { position: relative; z-index: 1; }
-.aha-hero.promo .eyebrow { color: var(--aha-orange); font-size: 12px; }
-.aha-hero.promo h1 { color: var(--aha-navy); font-size: 36px; font-weight: 800; line-height: 1.25; margin: 12px 0 16px; }
-.aha-hero.promo .lead { color: var(--aha-grey); font-size: 16px; line-height: 1.6; max-width: 90%; }
-.aha-hero.promo .lead b { color: var(--aha-navy); font-weight: 700; }
-.aha-hero.promo .aha-searchbar {
+.aha-home .aha-hero.promo .aha-hero-row { position: relative; z-index: 1; }
+.aha-home .aha-hero.promo .eyebrow { color: var(--aha-orange); font-size: 12px; }
+.aha-home .aha-hero.promo h1 { color: var(--aha-navy); font-size: 36px; font-weight: 800; line-height: 1.25; margin: 12px 0 16px; }
+.aha-home .aha-hero.promo .lead { color: var(--aha-grey); font-size: 16px; line-height: 1.6; max-width: 90%; }
+.aha-home .aha-hero.promo .lead b { color: var(--aha-navy); font-weight: 700; }
+.aha-home .aha-hero.promo .aha-searchbar {
   background: #fff;
   border-color: #DDDFE8;
   box-shadow: var(--aha-shadow-sm);
 }
-.aha-hero.promo .aha-searchbar:hover { border-color: #C9CEDC; }
-.aha-hero.promo .aha-searchbar span { color: var(--aha-grey-lt); }
-.aha-hero.promo .aha-cta {
+.aha-home .aha-hero.promo .aha-searchbar:hover { border-color: #C9CEDC; }
+.aha-home .aha-hero.promo .aha-searchbar span { color: var(--aha-grey-lt); }
+.aha-home .aha-hero.promo .aha-cta {
   background: #fff;
   border-color: #D9DEEA;
   color: var(--aha-navy);
 }
-.aha-hero.promo .aha-cta:hover { background: #F2F4FB; }
-.aha-hero.promo .aha-cta.primary {
+.aha-home .aha-hero.promo .aha-cta:hover { background: #F2F4FB; }
+.aha-home .aha-hero.promo .aha-cta.primary {
   background: var(--aha-orange);
   border-color: var(--aha-orange);
   color: #fff;
 }
-.aha-hero.promo .aha-cta.primary:hover { background: var(--aha-orange-dk); }
+.aha-home .aha-hero.promo .aha-cta.primary:hover { background: var(--aha-orange-dk); }
 
 .aha-hero-row {
   display: flex;
@@ -609,14 +609,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-link-row .go { color: var(--aha-orange); font-weight: 700; font-size: 13px; flex: 0 0 auto; }
 
 /* ---------- 12 · LIGHT ROADMAP (Homepage) ---------- */
-.aha-roadmap {
+.aha-home .aha-roadmap {
   display: flex;
-  position: relative;
+  align-items: stretch;
   gap: 16px;
-  margin: 32px 0;
+  position: relative;
+  margin-top: 12px;
 }
-
-.aha-roadmap::before {
+.aha-home .aha-roadmap::before {
   content: "";
   position: absolute;
   top: 16px;
@@ -626,8 +626,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background: rgba(255, 122, 33, 0.2);
   z-index: 0;
 }
-
-.aha-rm-step {
+.aha-home .aha-rm-step {
   flex: 1;
   position: relative;
   z-index: 1;
@@ -635,8 +634,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   flex-direction: column;
   align-items: flex-start;
 }
-
-.aha-rm-step .rm-node {
+.aha-home .aha-rm-step .rm-node {
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -647,15 +645,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   margin-bottom: 16px;
   box-shadow: 0 0 0 6px #FCFDFE;
 }
-
-.aha-rm-step .rm-node .dot {
+.aha-home .aha-rm-step .rm-node .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: var(--aha-orange);
 }
-
-.aha-rm-step .rm-content {
+.aha-home .aha-rm-step .rm-content {
   background: var(--aha-white);
   border: 1px solid var(--aha-line);
   border-radius: var(--aha-radius-lg);
@@ -664,23 +660,83 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
   width: 100%;
 }
-
-.aha-rm-step .rm-content:hover {
+.aha-home .aha-rm-step .rm-content:hover {
   transform: translateY(-2px);
   border-color: #E8C9AE;
   box-shadow: var(--aha-shadow-hover);
 }
-
-.aha-rm-step h4 { color: var(--aha-navy); font-size: 16px; font-weight: 800; margin: 10px 0 6px; }
-.aha-rm-step p { color: var(--aha-grey); font-size: 13.5px; line-height: 1.55; margin: 0 0 16px; }
-.aha-rm-step .rm-go { 
+.aha-home .aha-rm-step h4 { color: var(--aha-navy); font-size: 16px; font-weight: 800; margin: 10px 0 6px; }
+.aha-home .aha-rm-step p { color: var(--aha-grey); font-size: 13.5px; line-height: 1.55; margin: 0 0 16px; }
+.aha-home .aha-rm-step .rm-go { 
   display: inline-block;
   color: var(--aha-orange); 
   font-size: 13px; 
   font-weight: 700; 
   text-decoration: none; 
 }
-.aha-rm-step .rm-go:hover { color: var(--aha-orange-dk); }
+.aha-home .aha-rm-step .rm-go:hover { color: var(--aha-orange-dk); }
+
+/* ---------- 12a · JOURNEY CARDS (Webflow-inspired) ---------- */
+.aha-journey {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin: 6px 0 8px;
+}
+.aha-jcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: var(--aha-white);
+  border: 1px solid var(--aha-line);
+  border-radius: var(--aha-radius);
+  padding: 18px 16px 15px;
+  box-shadow: var(--aha-shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+.aha-jcard:hover {
+  transform: translateY(-2px);
+  border-color: #E8C9AE;
+  box-shadow: var(--aha-shadow-hover);
+}
+.aha-jcard .step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.aha-jcard .num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex: 0 0 28px;
+  background: var(--aha-grad-brand);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+}
+.aha-jcard h4 { color: var(--aha-navy); font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+.aha-jcard p { color: var(--aha-grey); font-size: 13px; line-height: 1.5; margin: 0 0 12px; }
+.aha-jcard .go { margin-top: auto; color: var(--aha-orange); font-size: 12.5px; font-weight: 700; }
+
+/* step connector line on wide screens */
+@media (min-width: 760px) {
+  .aha-journey.flow .aha-jcard::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    right: -12px;
+    width: 12px;
+    height: 2px;
+    background: #EACDB6;
+    z-index: 1;
+  }
+  .aha-journey.flow .aha-jcard:last-child::before { display: none; }
+}
 
 /* Phase label */
 .aha-phase {
@@ -1491,13 +1547,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 
 /* ---------- 26 · LOWER HUB ---------- */
-.aha-lower-hub {
+.aha-home .aha-lower-hub {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 24px;
 }
-.aha-hub-card {
+.aha-home .aha-hub-card {
   background: #FCFDFE;
   border: 1px solid #E8EDF5;
   border-radius: var(--aha-radius-lg);
@@ -1507,19 +1563,19 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   align-items: flex-start;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
-.aha-hub-card:hover {
+.aha-home .aha-hub-card:hover {
   transform: translateY(-2px);
   border-color: #D4DEEC;
   box-shadow: var(--aha-shadow-hover);
 }
-.aha-hub-card.spotlight {
+.aha-home .aha-hub-card.spotlight {
   background: #FFF9F5;
   border-color: #FCE1CE;
 }
-.aha-hub-card.spotlight:hover {
+.aha-home .aha-hub-card.spotlight:hover {
   border-color: #F8C9A8;
 }
-.aha-hub-card .hub-icon {
+.aha-home .aha-hub-card .hub-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1528,27 +1584,27 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   place-items: center;
   flex-shrink: 0;
 }
-.aha-hub-card.spotlight .hub-icon {
+.aha-home .aha-hub-card.spotlight .hub-icon {
   background: #FFEBE0;
 }
-.aha-hub-card .hub-text {
+.aha-home .aha-hub-card .hub-text {
   flex: 1;
   min-width: 0;
 }
-.aha-hub-card h4 {
+.aha-home .aha-hub-card h4 {
   margin: 0 0 6px;
   color: var(--aha-navy);
   font-size: 16px;
   font-weight: 800;
 }
-.aha-hub-card p {
+.aha-home .aha-hub-card p {
   margin: 0 0 14px;
   color: var(--aha-grey);
   font-size: 14px;
   line-height: 1.5;
 }
-.aha-hub-card .aha-panel-link,
-.aha-hub-card .hub-links a {
+.aha-home .aha-hub-card .aha-panel-link,
+.aha-home .aha-hub-card .hub-links a {
   display: block;
   color: var(--aha-orange);
   font-size: 13.5px;
@@ -1556,17 +1612,17 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   text-decoration: none;
   margin-bottom: 8px;
 }
-.aha-hub-card .aha-panel-link:hover,
-.aha-hub-card .hub-links a:hover {
+.aha-home .aha-hub-card .aha-panel-link:hover,
+.aha-home .aha-hub-card .hub-links a:hover {
   color: var(--aha-orange-dk);
 }
-.aha-hub-card .hub-links a:last-child {
+.aha-home .aha-hub-card .hub-links a:last-child {
   margin-bottom: 0;
 }
 
 /* ---------- 27 · RESPONSIVE ---------- */
 @media (max-width: 760px) {
-  .aha-hero.promo { padding: 32px 24px; }
+  .aha-home .aha-hero.promo { padding: 32px 24px; }
   .aha-home-stat-editorial { 
     flex-direction: column;
     padding: 32px 24px; 
@@ -1581,11 +1637,11 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
     width: 100%;
   }
   .aha-stat-visual { justify-content: center; width: 100%; }
-  .aha-roadmap {
+  .aha-home .aha-roadmap {
     flex-direction: column;
     gap: 24px;
   }
-  .aha-roadmap::before {
+  .aha-home .aha-roadmap::before {
     top: 16px;
     bottom: 16px;
     left: 17px;
@@ -1593,11 +1649,11 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
     width: 2px;
     height: auto;
   }
-  .aha-rm-step {
+  .aha-home .aha-rm-step {
     flex-direction: row;
     gap: 16px;
   }
-  .aha-rm-step .rm-node {
+  .aha-home .aha-rm-step .rm-node {
     margin-bottom: 0;
     flex-shrink: 0;
     box-shadow: 0 0 0 6px #fff;
