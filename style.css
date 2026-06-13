@@ -2709,7 +2709,20 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   overflow: hidden;
 }
 
-/* Removed orange circle because the photo has its own background */
+/* Orange arch background */
+.aha-ceo-quote-right::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 95%;
+  background-color: #F17540;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  z-index: 0;
+}
 
 /* Dots pattern placeholder */
 .aha-ceo-quote-right::after {
@@ -2725,17 +2738,26 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   z-index: 0;
 }
 
-.aha-ceo-quote-right img {
-  width: 90%;
-  margin-left: 10%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.aha-ceo-quote-right img.aha-ceo-photo {
+  width: 80%;
+  margin-left: 0;
+  height: auto;
+  object-fit: contain;
+  object-position: bottom;
   display: block;
   position: relative;
+  z-index: 2;
+  border-radius: 0;
+}
+
+.aha-ceo-quote-right img.aha-ceo-bg-logo {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  opacity: 0.9;
   z-index: 1;
-  border-top-left-radius: 250px;
-  border-top-right-radius: 250px;
 }
 
 @media (max-width: 768px) {
@@ -2756,11 +2778,12 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   .aha-ceo-quote-right {
     min-height: 280px;
   }
-  .aha-ceo-quote-right img {
+  .aha-ceo-quote-right::before {
     width: 100%;
-    margin-left: 0;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
+    border-radius: 150px 150px 0 0;
+  }
+  .aha-ceo-quote-right img.aha-ceo-photo {
+    width: 90%;
   }
 }
 
