@@ -252,64 +252,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-cta.primary:hover { background: var(--aha-orange-dk); }
 
 /* ---------- 6 · HERO IMAGE PLACEHOLDER ---------- */
-.aha-home .aha-hero-image-placeholder {
+.aha-home .aha-hero-image {
   width: 100%;
   aspect-ratio: 16/10;
   border-radius: var(--aha-radius-lg);
-  background: #FFF9F5;
-  border: 2px solid #FCE1CE;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 32px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 2px 10px rgba(255, 122, 33, .04);
-}
-
-.aha-home .aha-hero-image-placeholder .motif {
-  position: absolute;
-  inset: 15px;
-  border: 1px dashed rgba(255, 122, 33, 0.4);
-  border-radius: 12px;
-  pointer-events: none;
-}
-
-.aha-home .aha-hero-image-placeholder .motif::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--aha-orange);
-}
-
-.aha-home .aha-hero-image-placeholder p {
-  font-size: 13px;
-  color: var(--aha-navy);
-  margin: 4px 0;
-  font-family: monospace;
-  position: relative;
-  z-index: 1;
-}
-
-.aha-home .aha-hero-image-placeholder p.title {
-  font-weight: 800;
-  font-size: 15px;
-  color: var(--aha-navy);
-  font-family: inherit;
-  margin-bottom: 8px;
-}
-
-.aha-home .aha-hero-image-placeholder p.sub {
-  font-size: 11px;
-  color: var(--aha-grey);
-  margin-top: 16px;
-  font-family: inherit;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 16px rgba(14, 30, 60, .04);
 }
 
 /* ---------- 8 · PAGE HERO STRIP (content pages) ---------- */
@@ -993,58 +942,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   justify-content: flex-end;
 }
 
-.aha-home .aha-stat-image-placeholder {
+.aha-home .aha-stat-visual-image {
   width: 100%;
   max-width: 260px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #FFF9F5;
-  border: 1px solid #FCE1CE;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 24px;
-  position: relative;
-  box-shadow: inset 0 2px 10px rgba(255, 122, 33, .04);
-}
-
-.aha-home .aha-stat-image-placeholder .motif {
-  position: absolute;
-  inset: 15px;
-  border: 1px dashed rgba(255, 122, 33, 0.3);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.aha-home .aha-stat-image-placeholder .motif::after {
-  content: "";
-  position: absolute;
-  top: 15%;
-  right: 15%;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--aha-orange);
-  box-shadow: 0 0 0 4px #FFF9F5;
-}
-
-.aha-home .aha-stat-image-placeholder p {
-  font-size: 11px;
-  color: var(--aha-navy);
-  margin: 4px 0;
-  font-family: monospace;
-  position: relative;
-  z-index: 1;
-}
-
-.aha-home .aha-stat-image-placeholder p.title {
-  color: var(--aha-navy);
-  font-weight: 800;
-  font-size: 14px;
-  font-family: inherit;
-  margin-bottom: 6px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 24px rgba(14, 30, 60, .06);
 }
 
 /* ---------- 19 · SOFT GRID BACKGROUND ---------- */
@@ -1806,93 +1711,69 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   }
 }
 
-/* ---------- 26 · DISCOVER STRIP ---------- */
-.aha-home .aha-discover-section {
+/* ---------- 26 · DISCOVER GRID ---------- */
+.aha-home .aha-home-discover {
   margin-top: 48px;
 }
-.aha-home .aha-discover-strip {
-  background: #FFFBF8;
-  border: 1px solid #FCE1CE;
-  border-radius: var(--aha-radius-xl);
-  padding: 32px;
-  box-shadow: 0 4px 24px rgba(255, 122, 33, 0.04);
+.aha-home .aha-home-discover p.aha-h2 {
+  margin: 0 0 8px;
 }
-.aha-home .aha-discover-intro {
+.aha-home .aha-home-discover p.aha-intro {
   margin-bottom: 24px;
 }
-.aha-home .aha-discover-intro p.aha-h2 {
-  margin: 0 0 8px;
-  font-size: 22px;
-}
-.aha-home .aha-discover-scroll {
-  display: flex;
+.aha-home .aha-discover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 8px;
-  scrollbar-width: none;
 }
-.aha-home .aha-discover-scroll::-webkit-scrollbar {
-  display: none;
-}
-.aha-home .aha-discover-item {
-  flex: 0 0 280px;
+.aha-home .aha-discover-card {
   background: #FFFFFF;
   border: 1px solid #E4EBF4;
-  border-radius: 16px;
+  border-radius: var(--aha-radius-lg);
   padding: 20px;
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  scroll-snap-align: start;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 8px rgba(14, 30, 60, 0.02);
 }
-.aha-home .aha-discover-item:hover {
+.aha-home .aha-discover-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(14, 30, 60, 0.05);
   border-color: #D4DEEC;
 }
-.aha-home .aha-discover-item.spotlight {
-  border: 1px solid #FCE1CE;
-  background: #FFFBF8;
-}
-.aha-home .aha-discover-item.spotlight:hover {
-  border-color: #F8C9A8;
-}
-.aha-home .aha-discover-item .d-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.aha-home .aha-discover-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   background: #EEF2F8;
   display: grid;
   place-items: center;
   flex-shrink: 0;
 }
-.aha-home .aha-discover-item.spotlight .d-icon {
-  background: #FFEBE0;
-}
-.aha-home .aha-discover-item .d-text {
+.aha-home .aha-discover-copy {
   flex: 1;
 }
-.aha-home .aha-discover-item h4 {
+.aha-home .aha-discover-copy h4 {
   font-size: 15px;
   font-weight: 800;
   color: var(--aha-navy);
   margin: 0 0 6px;
 }
-.aha-home .aha-discover-item p {
+.aha-home .aha-discover-copy p {
   font-size: 13px;
   color: var(--aha-grey);
   line-height: 1.5;
   margin: 0 0 12px;
 }
-.aha-home .aha-discover-item a {
+.aha-home .aha-discover-link {
   font-size: 13px;
   font-weight: 700;
   color: var(--aha-orange);
   text-decoration: none;
+  display: inline-block;
 }
-.aha-home .aha-discover-item a:hover {
+.aha-home .aha-discover-link:hover {
   color: var(--aha-orange-dk);
 }
 

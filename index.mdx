@@ -23,12 +23,7 @@ mode: "custom"
           </div>
 
           <div className="aha-hero-right">
-            <div className="aha-hero-image-placeholder">
-              <span className="motif" />
-              <p className="title">Hero image placeholder</p>
-              <p>images/ahamove-employee-hub-hero.png</p>
-              <p className="sub">Suggested ratio: 4:3 or 16:10</p>
-            </div>
+            <img src="/images/highfive.png" alt="Ahamove employees high five" className="aha-hero-image" />
           </div>
         </div>
       </div>
@@ -51,11 +46,7 @@ mode: "custom"
             <div className="s"><b className="aha-countup" data-count-to="150000" data-count-suffix="+" data-count-format="true">150.000+</b><span>Đối tác tài xế</span></div>
           </div>
           <div className="aha-stat-visual">
-            <div className="aha-stat-image-placeholder">
-              <span className="motif" />
-              <p className="title">Visual placeholder</p>
-              <p>images/ahamove-network-proof.png</p>
-            </div>
+            <img src="/images/chuyen-gia.png" alt="Ahamove expert visual" className="aha-stat-visual-image" />
           </div>
         </div>
       </div>
@@ -113,43 +104,39 @@ mode: "custom"
         <a className="aha-section-link" href="/ahamazing-guide/overview">Xem toàn bộ hành trình hội nhập →</a>
       </div>
 
-      {/* 4 · DISCOVER STRIP */}
-      <div className="aha-section aha-discover-section">
-        <div className="aha-discover-strip">
-          <div className="aha-discover-intro">
-            <p className="aha-h2">Khám phá thêm</p>
-            <p className="aha-intro">Các công cụ, cập nhật và kênh hỗ trợ giúp bạn làm việc hiệu quả hơn mỗi ngày.</p>
+      {/* 4 · DISCOVER SECTION */}
+      <div className="aha-section aha-home-discover">
+        <p className="aha-h2">Khám phá thêm</p>
+        <p className="aha-intro">Các công cụ, cập nhật và kênh hỗ trợ giúp bạn làm việc hiệu quả hơn mỗi ngày.</p>
+        <div className="aha-discover-grid">
+          
+          <div className="aha-discover-card">
+            <div className="aha-discover-icon"><Icon icon="sparkles" size={16} color="#FF7A21" /></div>
+            <div className="aha-discover-copy">
+              <h4>AI Academy</h4>
+              <p>Claude Pro, AI Playbook và các chương trình học AI nội bộ.</p>
+              <a className="aha-discover-link" href="/ai-hub/overview">Khám phá →</a>
+            </div>
           </div>
-          <div className="aha-discover-scroll">
-            
-            <div className="aha-discover-item spotlight">
-              <div className="d-icon"><Icon icon="sparkles" size={20} color="#FF7A21" /></div>
-              <div className="d-text">
-                <h4>AI Academy</h4>
-                <p>Claude Pro, AI Playbook & học thuật.</p>
-                <a href="/ai-hub/overview">Khám phá →</a>
-              </div>
-            </div>
 
-            <div className="aha-discover-item">
-              <div className="d-icon"><Icon icon="bell" size={20} color="#0E4174" /></div>
-              <div className="d-text">
-                <h4>Mới cập nhật</h4>
-                <p>Theo dõi các thay đổi mới nhất.</p>
-                <a href="/whats-new">Xem nhật ký →</a>
-              </div>
+          <div className="aha-discover-card">
+            <div className="aha-discover-icon"><Icon icon="bell" size={16} color="#0E4174" /></div>
+            <div className="aha-discover-copy">
+              <h4>Mới cập nhật</h4>
+              <p>Theo dõi những thay đổi mới nhất trên cổng thông tin nội bộ.</p>
+              <a className="aha-discover-link" href="/whats-new">Xem nhật ký →</a>
             </div>
-
-            <div className="aha-discover-item">
-              <div className="d-icon"><Icon icon="headset" size={20} color="#0E4174" /></div>
-              <div className="d-text">
-                <h4>Cần hỗ trợ nhanh?</h4>
-                <p>Hỏi Ahamove AI, FAQ hoặc IT.</p>
-                <a href="/help-center/overview">Tìm đầu mối →</a>
-              </div>
-            </div>
-
           </div>
+
+          <div className="aha-discover-card">
+            <div className="aha-discover-icon"><Icon icon="headset" size={16} color="#0E4174" /></div>
+            <div className="aha-discover-copy">
+              <h4>Cần hỗ trợ nhanh?</h4>
+              <p>Tìm đúng đầu mối để được hỗ trợ nhanh về AI, FAQ và IT.</p>
+              <a className="aha-discover-link" href="/help-center/overview">Tìm đầu mối →</a>
+            </div>
+          </div>
+
         </div>
       </div>
 
