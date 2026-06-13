@@ -6,13 +6,17 @@ icon: "building-flag"
 mode: "wide"
 ---
 
-<div className="aha-company-hero" style={{ padding: '60px 24px', textAlign: 'center', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', marginBottom: '48px' }}>
-  <h1 style={{ color: '#0E4174', margin: '0 0 16px 0', fontSize: '32px', fontWeight: 800, letterSpacing: '-0.5px' }}>
-    Ahamove là chuyên gia giao hàng của riêng bạn
-  </h1>
-  <p style={{ margin: '0 auto', color: '#475569', fontSize: '16.5px', lineHeight: '1.6', maxWidth: '640px' }}>
-    Mang đến giải pháp hoàn hảo cho mọi nhu cầu giao hàng của bạn nhờ công nghệ đột phá — tất cả trong một ứng dụng duy nhất.
-  </p>
+<div className="aha-company-hero" style={{ padding: '0', textAlign: 'center', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', marginBottom: '48px', overflow: 'hidden' }}>
+  <img src="/images/banner.jpg" alt="Ahamove Banner" style={{ width: '100%', height: 'auto', display: 'block', margin: 0 }} />
+  <div style={{ padding: '40px 24px' }}>
+    <h1 style={{ color: '#0E4174', margin: '0 0 16px 0', fontSize: '32px', fontWeight: 800, letterSpacing: '-0.5px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+      <img src="/logo/ahamove-light.svg" alt="Ahamove" style={{ height: '40px' }} />
+      <span style={{ whiteSpace: 'nowrap' }}>là chuyên gia giao hàng của riêng bạn</span>
+    </h1>
+    <p style={{ margin: '0 auto', color: '#475569', fontSize: '16.5px', lineHeight: '1.6', maxWidth: '640px' }}>
+      Mang đến giải pháp hoàn hảo cho mọi nhu cầu giao hàng của bạn nhờ công nghệ đột phá — tất cả trong một ứng dụng duy nhất.
+    </p>
+  </div>
 </div>
 
 ## Giải pháp giao hàng trong một ứng dụng
@@ -20,28 +24,23 @@ mode: "wide"
 Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng, giúp khách hàng dễ dàng chọn dịch vụ phù hợp.
 
 <CardGroup cols={2} className="aha-company-services">
-  <Card title="Giao hàng" icon="box-fast">
-    Giao hàng nhanh, đảm bảo và giá tốt với dịch vụ phù hợp được tối ưu cho bạn.
+  <Card title="Giao hàng">
+    <img src="/images/giao.png" alt="Giao hàng" style={{ height: '40px', marginBottom: '12px' }} />
+    <div style={{ color: '#475569', fontSize: '14.5px', lineHeight: '1.5' }}>Giao hàng nhanh, đảm bảo và giá tốt với dịch vụ phù hợp được tối ưu cho bạn.</div>
   </Card>
-  <Card title="AhaTruck" icon="truck">
-    Đa dạng phương tiện vận chuyển dành cho các mặt hàng lớn và cồng kềnh.
-  </Card>
-  <Card title="Chuyển nhà" icon="house">
-    Giải pháp hỗ trợ chuyển nhà, chuyển phòng và vận chuyển nhiều đồ đạc.
-  </Card>
-  <Card title="Doanh nghiệp" icon="building">
-    Giải pháp giao hàng cho cửa hàng, SME và doanh nghiệp cần vận hành ổn định hơn.
-  </Card>
-  <Card title="Giao hàng đồng giá" icon="tag">
-    Lựa chọn giao hàng đơn giản, dễ dự trù chi phí cho nhu cầu phù hợp.
+  <Card title="AhaTruck">
+    <img src="/images/AhaTruck.png" alt="AhaTruck" style={{ height: '40px', marginBottom: '12px' }} />
+    <div style={{ color: '#475569', fontSize: '14.5px', lineHeight: '1.5' }}>Đa dạng phương tiện vận chuyển dành cho các mặt hàng lớn và cồng kềnh.</div>
   </Card>
 </CardGroup>
+
+<br />
 
 <div className="aha-company-history">
   <div className="aha-history-intro">
     <p className="eyebrow">HÀNH TRÌNH PHÁT TRIỂN</p>
     <h2>Hành trình phát triển của Ahamove</h2>
-    <p className="sp-sub">Từ những đơn hàng đầu tiên đến hệ sinh thái giao nhận hôm nay, Ahamove luôn chuyển động để phục vụ nhiều nhu cầu giao hàng hơn mỗi ngày.</p>
+    <p className="sp-sub">Từ ý tưởng ứng dụng công nghệ vào vận chuyển, Ahamove từng bước mở rộng dịch vụ, tối ưu vận hành và xây dựng vị thế Chuyên gia giao hàng theo nhu cầu tại Việt Nam.</p>
     <p className="aha-history-hint">Kéo ngang để xem tiếp →</p>
   </div>
   
@@ -54,8 +53,19 @@ Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng
           <span className="aha-history-year">2015</span>
         </div>
         <div className="aha-history-content">
-          <h4>Ahamove bắt đầu hành trình</h4>
-          <p>Ahamove ra đời với định hướng ứng dụng công nghệ để giải quyết nhu cầu giao hàng theo cách nhanh hơn và linh hoạt hơn.</p>
+          <h4>Thành lập</h4>
+          <p>Ahamove được thành lập từ ý tưởng “Uber of Truck”, đặt nền móng cho mô hình vận chuyển linh hoạt hơn nhờ công nghệ.</p>
+        </div>
+      </div>
+
+      <div className="aha-history-item">
+        <div className="aha-history-node">
+          <span className="aha-history-dot" />
+          <span className="aha-history-year">2016</span>
+        </div>
+        <div className="aha-history-content">
+          <h4>Thay đổi để phát triển</h4>
+          <p>Ahamove chuyển trọng tâm từ giao hàng xe tải sang xe máy, đồng thời ra mắt dịch vụ xe máy tại Hà Nội để đáp ứng nhu cầu giao hàng nhanh và linh hoạt hơn.</p>
         </div>
       </div>
 
@@ -65,8 +75,30 @@ Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng
           <span className="aha-history-year">2017</span>
         </div>
         <div className="aha-history-content">
-          <h4>Mở rộng năng lực vận hành</h4>
-          <p>Ahamove tiếp tục phát triển mạng lưới dịch vụ và tối ưu trải nghiệm đặt đơn trên ứng dụng.</p>
+          <h4>Tăng trưởng kỷ lục</h4>
+          <p>Ahamove ra mắt dịch vụ Siêu Rẻ, mở rộng khả năng phục vụ nhóm khách hàng cần giải pháp giao hàng tiết kiệm và dễ tiếp cận.</p>
+        </div>
+      </div>
+
+      <div className="aha-history-item">
+        <div className="aha-history-node">
+          <span className="aha-history-dot" />
+          <span className="aha-history-year">2018</span>
+        </div>
+        <div className="aha-history-content">
+          <h4>Đa dạng hóa dịch vụ và tệp khách hàng</h4>
+          <p>Ahamove ra mắt dịch vụ Đồng giá, tiếp tục nâng cao năng lực công nghệ và hợp tác cùng nhiều đối tác lớn như KiotViet, iPOS.</p>
+        </div>
+      </div>
+
+      <div className="aha-history-item">
+        <div className="aha-history-node">
+          <span className="aha-history-dot" />
+          <span className="aha-history-year">2019</span>
+        </div>
+        <div className="aha-history-content">
+          <h4>Khẳng định giá trị công nghệ và vận hành</h4>
+          <p>Ahamove gọi vốn thành công 100 tỷ đồng từ Quỹ đầu tư Temasek của Singapore. Cùng năm, dịch vụ 4H được ra mắt, thể hiện khả năng ứng dụng công nghệ vào vận hành giao nhận.</p>
         </div>
       </div>
 
@@ -76,8 +108,19 @@ Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng
           <span className="aha-history-year">2020</span>
         </div>
         <div className="aha-history-content">
-          <h4>Đồng hành cùng nhu cầu giao nhận mới</h4>
-          <p>Nhu cầu giao nhận thay đổi nhanh hơn, đòi hỏi Ahamove liên tục cải thiện dịch vụ và cách vận hành.</p>
+          <h4>Doanh thu nghìn tỷ</h4>
+          <p>Ahamove ghi nhận bước phát triển vượt trội trong quá trình phục vụ khách hàng, tiếp tục mở rộng năng lực vận hành trên thị trường giao nhận.</p>
+        </div>
+      </div>
+
+      <div className="aha-history-item">
+        <div className="aha-history-node">
+          <span className="aha-history-dot" />
+          <span className="aha-history-year">2021</span>
+        </div>
+        <div className="aha-history-content">
+          <h4>Mở rộng và phủ sóng</h4>
+          <p>Ahamove tiếp tục tăng trưởng, mở rộng độ phủ dịch vụ và tăng cường khả năng đáp ứng nhu cầu vận chuyển ngày càng đa dạng.</p>
         </div>
       </div>
 
@@ -87,19 +130,20 @@ Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng
           <span className="aha-history-year">2022</span>
         </div>
         <div className="aha-history-content">
-          <h4>Đa dạng hóa giải pháp giao hàng</h4>
-          <p>Các nhóm dịch vụ như giao hàng, xe tải, chuyển nhà và giải pháp doanh nghiệp giúp Ahamove phục vụ nhiều tình huống vận chuyển hơn.</p>
+          <h4>Thay đổi để tiến xa hơn</h4>
+          <p>Từ AhaMove thành Ahamove, thương hiệu khoác lên diện mạo mới trẻ trung và năng động hơn, khẳng định khát vọng phủ sóng và chiếm lĩnh thị trường.</p>
         </div>
       </div>
 
       <div className="aha-history-item">
         <div className="aha-history-node">
           <span className="aha-history-dot" />
-          <span className="aha-history-year">Hôm nay</span>
+          <span className="aha-history-year">2023–2026</span>
         </div>
         <div className="aha-history-content">
-          <h4>Chuyên gia giao hàng</h4>
-          <p>Ahamove tiếp tục mang đến giải pháp giao hàng bằng công nghệ trong một ứng dụng duy nhất.</p>
+          <h4>Chuyển đổi công nghệ</h4>
+          <p>Ahamove bước vào giai đoạn tăng tốc chuyển đổi công nghệ, bắt nhịp với làn sóng đổi mới toàn cầu để ứng dụng các công nghệ mới vào sản phẩm, vận hành và trải nghiệm dịch vụ.</p>
+          <p style={{ marginTop: '8px' }}>Trong giai đoạn này, Ahamove tiếp tục tối ưu nền tảng, nâng cao năng lực dữ liệu, tự động hóa và ứng dụng AI vào các quy trình nội bộ, hướng đến mục tiêu vận hành hiệu quả hơn, phục vụ khách hàng tốt hơn và giúp Ahamovers làm việc thông minh hơn mỗi ngày.</p>
         </div>
       </div>
 
@@ -109,10 +153,35 @@ Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng
 
 <br />
 
+## Trong hệ sinh thái Scommerce
+
+Ahamove là một phần trong hệ sinh thái Scommerce, cùng các đơn vị giao nhận và thương mại điện tử khác tạo nên năng lực vận chuyển đa dạng cho nhiều nhóm khách hàng.
+
+<CardGroup cols={2}>
+  <Card title="Ahamove" icon="motorcycle">
+    Mạng lưới giao hàng tức thì theo nhu cầu (On-demand).
+  </Card>
+  <Card title="GHN" icon="truck-fast">
+    Giao hàng thương mại điện tử theo mô hình Hub & Spoke.
+  </Card>
+</CardGroup>
+
+<Tip>
+Scommerce được hậu thuẫn bởi quỹ Seedcom. Sự kết hợp giữa năng lực giao TMĐT của GHN và giao tức thì của Ahamove tạo nên một hệ sinh thái vận chuyển toàn diện (Hybrid Synergy).
+</Tip>
+
+<br />
+
 ## Xem tiếp
 
 <CardGroup cols={3}>
-  <Card title="Giá trị & Văn hóa" icon="heart" href="/ahamazing-guide/culture" />
-  <Card title="Hành trình hội nhập" icon="compass" href="/ahamazing-guide/overview" />
-  <Card title="Hệ thống 1Office" icon="laptop" href="/handbook/internal-systems" />
+  <Card title="Giá trị & Văn hóa" icon="heart" href="/ahamazing-guide/culture">
+    Tìm hiểu Giá trị & Văn hóa
+  </Card>
+  <Card title="Hành trình hội nhập" icon="compass" href="/ahamazing-guide/overview">
+    Xem Hành trình hội nhập
+  </Card>
+  <Card title="Hệ thống 1Office" icon="laptop" href="/handbook/internal-systems">
+    Tìm hiểu Hệ thống 1Office
+  </Card>
 </CardGroup>
