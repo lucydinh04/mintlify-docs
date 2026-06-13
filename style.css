@@ -1423,12 +1423,22 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   flex-direction: row;
   align-items: stretch;
   gap: 40px;
-  background: #FFFBF8;
+  background-color: #FFFBF8;
+  background-image: url('/images/a-bg.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 450px;
   border: 1px solid #F6E2D4;
   border-radius: var(--aha-radius-xl);
   padding: 48px 40px;
   margin-top: 32px;
   box-shadow: 0 4px 24px rgba(255, 122, 33, .04), 0 2px 8px rgba(14, 30, 60, .02);
+  position: relative;
+  overflow: hidden;
+}
+.aha-company-history > * {
+  position: relative;
+  z-index: 2;
 }
 
 .aha-company-history .aha-history-intro {
