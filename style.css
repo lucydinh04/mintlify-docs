@@ -2295,3 +2295,65 @@ div[data-testid="table-of-contents"],
 .hidden.xl\:block.xl\:w-64.xl\:shrink-0.xl\:border-l {
   display: none !important;
 }
+
+/* =====================================================================
+   COMPANY OVERVIEW HERO & SERVICES
+   ===================================================================== */
+.aha-company-banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  border-radius: 16px 16px 0 0;
+}
+
+.aha-company-services {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .aha-company-services {
+    flex-direction: column;
+  }
+}
+
+.aha-company-service-card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(14, 65, 116, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aha-company-service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(14, 65, 116, 0.08);
+}
+
+.aha-company-service-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 0 auto 20px !important; /* Force override Mintlify global img margin */
+  display: block;
+}
+
+.aha-company-service-title {
+  color: #0E4174;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 12px !important;
+}
+
+.aha-company-service-desc {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 !important;
+}

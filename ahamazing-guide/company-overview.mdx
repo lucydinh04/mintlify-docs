@@ -7,7 +7,7 @@ mode: "wide"
 ---
 
 <div className="aha-company-hero" style={{ padding: '0', textAlign: 'center', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', marginBottom: '48px', overflow: 'hidden' }}>
-  <img src="/images/banner.jpg" alt="Ahamove Banner" style={{ width: '100%', height: 'auto', display: 'block', margin: 0 }} />
+  <img src="/images/banner.jpg" alt="Ahamove chuyên gia giao hàng banner" className="aha-company-banner-image" style={{ width: '100%', height: 'auto', display: 'block', margin: 0, borderBottom: '1px solid #E2E8F0' }} />
   <div style={{ padding: '40px 24px' }}>
     <h1 style={{ color: '#0E4174', margin: '0 0 16px 0', fontSize: '32px', fontWeight: 800, letterSpacing: '-0.5px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
       <img src="/logo/ahamove-light.svg" alt="Ahamove" style={{ height: '40px' }} />
@@ -23,16 +23,18 @@ mode: "wide"
 
 Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng, giúp khách hàng dễ dàng chọn dịch vụ phù hợp.
 
-<CardGroup cols={2} className="aha-company-services">
-  <Card title="Giao hàng">
-    <img src="/images/giao.png" alt="Giao hàng" style={{ height: '40px', marginBottom: '12px' }} />
-    <div style={{ color: '#475569', fontSize: '14.5px', lineHeight: '1.5' }}>Giao hàng nhanh, đảm bảo và giá tốt với dịch vụ phù hợp được tối ưu cho bạn.</div>
-  </Card>
-  <Card title="AhaTruck">
-    <img src="/images/AhaTruck.png" alt="AhaTruck" style={{ height: '40px', marginBottom: '12px' }} />
-    <div style={{ color: '#475569', fontSize: '14.5px', lineHeight: '1.5' }}>Đa dạng phương tiện vận chuyển dành cho các mặt hàng lớn và cồng kềnh.</div>
-  </Card>
-</CardGroup>
+<div className="aha-company-services">
+  <div className="aha-company-service-card">
+    <img src="/images/giao.png" alt="Giao hàng" className="aha-company-service-icon" />
+    <h3 className="aha-company-service-title">Giao hàng</h3>
+    <p className="aha-company-service-desc">Giao hàng nhanh, đảm bảo và giá tốt với dịch vụ phù hợp được tối ưu cho bạn.</p>
+  </div>
+  <div className="aha-company-service-card">
+    <img src="/images/AhaTruck.png" alt="AhaTruck" className="aha-company-service-icon" />
+    <h3 className="aha-company-service-title">AhaTruck</h3>
+    <p className="aha-company-service-desc">Đa dạng phương tiện vận chuyển dành cho các mặt hàng lớn và cồng kềnh.</p>
+  </div>
+</div>
 
 <br />
 
@@ -135,17 +137,7 @@ Ahamove kết nối nhiều nhu cầu giao nhận trong cùng một nền tảng
         </div>
       </div>
 
-      <div className="aha-history-item">
-        <div className="aha-history-node">
-          <span className="aha-history-dot" />
-          <span className="aha-history-year">2023–2026</span>
-        </div>
-        <div className="aha-history-content">
-          <h4>Chuyển đổi công nghệ</h4>
-          <p>Ahamove bước vào giai đoạn tăng tốc chuyển đổi công nghệ, bắt nhịp với làn sóng đổi mới toàn cầu để ứng dụng các công nghệ mới vào sản phẩm, vận hành và trải nghiệm dịch vụ.</p>
-          <p style={{ marginTop: '8px' }}>Trong giai đoạn này, Ahamove tiếp tục tối ưu nền tảng, nâng cao năng lực dữ liệu, tự động hóa và ứng dụng AI vào các quy trình nội bộ, hướng đến mục tiêu vận hành hiệu quả hơn, phục vụ khách hàng tốt hơn và giúp Ahamovers làm việc thông minh hơn mỗi ngày.</p>
-        </div>
-      </div>
+
 
     </div>
   </div>
