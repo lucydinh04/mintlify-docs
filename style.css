@@ -252,13 +252,36 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-cta.primary:hover { background: var(--aha-orange-dk); }
 
 /* ---------- 6 · HERO IMAGE PLACEHOLDER ---------- */
+.aha-home .aha-home-hero-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .aha-home .aha-hero-image {
   width: 100%;
-  aspect-ratio: 16/10;
-  border-radius: var(--aha-radius-lg);
-  object-fit: cover;
+  max-width: 460px;
+  object-fit: contain;
   display: block;
-  box-shadow: 0 4px 16px rgba(14, 30, 60, .04);
+  position: relative;
+  z-index: 2;
+}
+.aha-home .hero-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  z-index: 1;
+  pointer-events: none;
+}
+.aha-home .hero-doodle {
+  position: absolute;
+  top: -5%;
+  right: 5%;
+  z-index: 3;
 }
 
 /* ---------- 8 · PAGE HERO STRIP (content pages) ---------- */
@@ -1658,16 +1681,36 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-home .aha-welcome-visual-right {
   flex: 0 0 160px;
   height: 120px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px dashed rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
   display: grid;
   place-items: center;
+  position: relative;
 }
-.aha-home .welcome-placeholder {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
+
+/* Doodle Accents */
+.aha-home .aha-doodle-accent,
+.aha-home .aha-doodle-spark,
+.aha-home .aha-doodle-line {
+  pointer-events: none;
+}
+.aha-home .welcome-doodle-left {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+.aha-home .welcome-doodle-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.aha-home .stat-doodle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.aha-home .stat-doodle {
+  position: absolute;
+  bottom: -10px;
+  left: 60%;
+  transform: translateX(-50%);
 }
 .aha-home .aha-welcome-text {
   flex: 1;
