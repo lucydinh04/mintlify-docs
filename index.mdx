@@ -89,11 +89,11 @@ mode: "custom"
         </div>
       </div>
 
-      {/* 2.75 · PEOPLE & OFFICE SNAPSHOT */}
+      {/* 2.75 · PEOPLE SNAPSHOT */}
       <div className="aha-section aha-home-people">
         <div className="aha-people-header">
-          <p className="aha-h2">Những con người phía sau nền tảng</p>
-          <p className="aha-intro">Ahamove không chỉ là một nền tảng công nghệ giao nhận — phía sau đó là đội ngũ Ahamovers đang cùng nhau vận hành, phát triển sản phẩm và tạo nên trải nghiệm tốt hơn mỗi ngày.</p>
+          <p className="aha-h2">Đội ngũ phía sau nền tảng</p>
+          <p className="aha-intro">Ahamove không chỉ là một nền tảng công nghệ giao nhận. Phía sau mỗi trải nghiệm là đội ngũ Ahamovers đang cùng nhau vận hành, phát triển sản phẩm và kết nối dịch vụ mỗi ngày.</p>
         </div>
         <div className="aha-people-stats">
           <div className="aha-people-stat">
@@ -101,7 +101,7 @@ mode: "custom"
             <span className="aha-people-label">Ahamovers</span>
             <p>Nhân viên chính thức & cộng tác viên cùng tạo nên nhịp vận hành của Ahamove.</p>
           </div>
-          <div className="aha-people-stat accent">
+          <div className="aha-people-stat">
             <span className="aha-people-value">3</span>
             <span className="aha-people-label">Văn phòng</span>
             <p>Hiện diện tại TP.HCM, Hà Nội và Đà Nẵng.</p>
@@ -112,60 +112,90 @@ mode: "custom"
             <p>Trẻ, nhanh, linh hoạt và luôn sẵn sàng chuyển động.</p>
           </div>
         </div>
-        <div className="aha-office-list-wrap">
-          <p className="aha-office-title">Văn phòng Ahamove</p>
-          <div className="aha-office-list">
-            <div className="aha-office-item">
-              <strong>TP.HCM:</strong> Tầng 1, Tòa nhà Rivera Park, 7/28 Thành Thái, Phường Diên Hồng, Quận 10.
+      </div>
+
+      {/* 3 · INTERACTIVE OFFICE LOCATIONS */}
+      <div className="aha-section aha-home-offices">
+        <p className="aha-h2">Địa chỉ văn phòng Ahamove</p>
+        <div className="aha-office-tabs">
+          <input type="radio" name="aha-office" id="off-hcm" defaultChecked />
+          <input type="radio" name="aha-office" id="off-hn" />
+          <input type="radio" name="aha-office" id="off-dn" />
+
+          <div className="aha-office-labels">
+            <label htmlFor="off-hcm">Hồ Chí Minh</label>
+            <label htmlFor="off-hn">Hà Nội</label>
+            <label htmlFor="off-dn">Đà Nẵng</label>
+          </div>
+
+          <div className="aha-office-panels">
+            <div className="aha-office-panel panel-hcm">
+              <div className="aha-office-map">
+                <div className="aha-map-placeholder">
+                  <Icon icon="map-location-dot" size={32} color="#0E4174" />
+                  <span>Bản đồ Hồ Chí Minh</span>
+                </div>
+              </div>
+              <div className="aha-office-info">
+                <h4>Văn phòng Hồ Chí Minh</h4>
+                <p>Tầng 1, Tòa nhà Rivera Park, 7/28 Thành Thái, Phường Diên Hồng.</p>
+                <a href="#">Xem hướng dẫn đường đi →</a>
+              </div>
             </div>
-            <div className="aha-office-item">
-              <strong>Hà Nội:</strong> Tầng 9, Tòa nhà Mipec, số 229 Tây Sơn, Phường Kim Liên, Quận Đống Đa.
+
+            <div className="aha-office-panel panel-hn">
+              <div className="aha-office-map">
+                <div className="aha-map-placeholder">
+                  <Icon icon="map-location-dot" size={32} color="#0E4174" />
+                  <span>Bản đồ Hà Nội</span>
+                </div>
+              </div>
+              <div className="aha-office-info">
+                <h4>Văn phòng Hà Nội</h4>
+                <p>Tầng 9, Tòa nhà Mipec, số 229 Tây Sơn, Phường Kim Liên.</p>
+                <a href="#">Xem hướng dẫn đường đi →</a>
+              </div>
             </div>
-            <div className="aha-office-item">
-              <strong>Đà Nẵng:</strong> 66A Lê Đình Lý, Phường Thanh Khê.
+
+            <div className="aha-office-panel panel-dn">
+              <div className="aha-office-map">
+                <div className="aha-map-placeholder">
+                  <Icon icon="map-location-dot" size={32} color="#0E4174" />
+                  <span>Bản đồ Đà Nẵng</span>
+                </div>
+              </div>
+              <div className="aha-office-info">
+                <h4>Văn phòng Đà Nẵng</h4>
+                <p>66A Lê Đình Lý, Phường Thanh Khê.</p>
+                <a href="#">Xem hướng dẫn đường đi →</a>
+              </div>
             </div>
           </div>
         </div>
+        <p className="aha-office-note">Vui lòng kiểm tra thông tin với People Team trước khi đến văn phòng nếu bạn cần hỗ trợ trực tiếp.</p>
       </div>
 
-      {/* 3 · HÀNH TRÌNH HỘI NHẬP — đẩy lên trên Truy cập nhanh */}
-      <div className="aha-section">
-        <p className="aha-h2">Hành trình hội nhập</p>
-        <p className="aha-intro">Nhân viên mới? Đây là lộ trình 30 ngày đầu — đi lần lượt từng chặng để bắt nhịp nhanh và tự tin.</p>
-        <div className="aha-roadmap">
-          <div className="aha-rm-step">
-            <div className="rm-node"><span className="dot" /></div>
-            <div className="rm-content">
-              <span className="aha-badge solid">New joiner</span>
-              <h4>Ngày đầu tiên</h4>
-              <p>Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự.</p>
-              <a className="rm-go" href="/ahamazing-guide/day-1">Xem chặng 1 →</a>
-            </div>
-          </div>
-          <div className="aha-rm-step">
-            <div className="rm-node"><span className="dot" /></div>
-            <div className="rm-content">
-              <span className="aha-badge navy">IT · Required</span>
-              <h4>Tuần đầu tiên</h4>
-              <p>Kích hoạt tài khoản, ký số hợp đồng & làm quen quy trình cốt lõi.</p>
-              <a className="rm-go" href="/ahamazing-guide/week-1">Xem chặng 2 →</a>
-            </div>
-          </div>
-          <div className="aha-rm-step">
-            <div className="rm-node"><span className="dot" /></div>
-            <div className="rm-content">
-              <span className="aha-badge navy">Manager</span>
-              <h4>Tháng đầu tiên</h4>
-              <p>Lộ trình 30-60-90 cùng quản lý & tạo "first-win" đầu tiên.</p>
-              <a className="rm-go" href="/ahamazing-guide/first-month">Xem chặng 3 →</a>
-            </div>
-          </div>
+      {/* 4 · FOOTBAR */}
+      <div className="aha-home-footbar">
+        <h3>Bạn cần bắt đầu từ đâu?</h3>
+        <p>Chọn nhanh một điểm đến phổ biến để tiếp tục hành trình tại Ahamove.</p>
+        <div className="aha-footbar-actions">
+          <a href="/ahamazing-guide/overview" className="aha-footbar-action">
+            <h4>Bắt đầu hội nhập</h4>
+            <p>Xem lộ trình 30 ngày đầu và các việc cần hoàn tất.</p>
+            <span className="cta">Xem lộ trình →</span>
+          </a>
+          <a href="/help-center/overview" className="aha-footbar-action">
+            <h4>Cần hỗ trợ?</h4>
+            <p>Hỏi Ahamove AI, tra FAQ hoặc tìm đúng đầu mối hỗ trợ.</p>
+            <span className="cta">Tìm hỗ trợ →</span>
+          </a>
+          <a href="/handbook/internal-systems" className="aha-footbar-action">
+            <h4>Tác vụ thường dùng</h4>
+            <p>Nghỉ phép, chấm công, phiếu lương và các thao tác 1Office.</p>
+            <span className="cta">Mở tác vụ →</span>
+          </a>
         </div>
-        <a className="aha-section-link" href="/ahamazing-guide/overview">Xem toàn bộ hành trình hội nhập →</a>
       </div>
-
-
-
-    </div>
   </div>
 </div>

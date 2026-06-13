@@ -1980,10 +1980,6 @@ html.dark .aha-guide .aha-overview-route-copy p {
   box-shadow: var(--aha-shadow-hover);
   border-color: #C4D4E6;
 }
-.aha-home .aha-people-stat.accent {
-  background: #FFF4EC;
-  border-color: #F8DCC8;
-}
 .aha-home .aha-people-value {
   display: block;
   font-size: 48px;
@@ -1992,9 +1988,6 @@ html.dark .aha-guide .aha-overview-route-copy p {
   line-height: 1;
   letter-spacing: -1px;
   margin-bottom: 8px;
-}
-.aha-home .aha-people-stat.accent .aha-people-value {
-  color: var(--aha-orange);
 }
 .aha-home .aha-people-label {
   display: block;
@@ -2011,38 +2004,6 @@ html.dark .aha-guide .aha-overview-route-copy p {
   line-height: 1.5;
   margin: 0;
 }
-.aha-home .aha-office-list-wrap {
-  border-top: 1px solid var(--aha-line);
-  padding-top: 24px;
-}
-.aha-home .aha-office-title {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--aha-orange);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-.aha-home .aha-office-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.aha-home .aha-office-item {
-  flex: 1;
-  min-width: 250px;
-  background: #F4F8FD;
-  border-radius: 8px;
-  padding: 12px 16px;
-  font-size: 13px;
-  color: var(--aha-navy);
-  line-height: 1.5;
-}
-.aha-home .aha-office-item strong {
-  color: var(--aha-navy);
-  font-weight: 700;
-  margin-right: 4px;
-}
 
 @media (max-width: 900px) {
   .aha-home .aha-people-stats {
@@ -2055,27 +2016,236 @@ html.dark .aha-home .aha-people-stat {
   background: #111827;
   border-color: #1F2937;
 }
-html.dark .aha-home .aha-people-stat.accent {
-  background: rgba(255, 122, 33, 0.05);
-  border-color: rgba(255, 122, 33, 0.2);
-}
 html.dark .aha-home .aha-people-value,
 html.dark .aha-home .aha-people-label {
   color: #F9FAFB;
 }
-html.dark .aha-home .aha-people-stat.accent .aha-people-value {
-  color: var(--aha-orange);
-}
 html.dark .aha-home .aha-people-stat p {
   color: #D1D5DB;
 }
-html.dark .aha-home .aha-office-list-wrap {
-  border-top-color: #1F2937;
+
+/* ---------- 31 · OFFICE INTERACTIVE TABS ---------- */
+.aha-home .aha-home-offices {
+  margin-top: 48px;
 }
-html.dark .aha-home .aha-office-item {
+.aha-home .aha-office-tabs {
+  position: relative;
+  margin-top: 24px;
+}
+.aha-home .aha-office-tabs input[type="radio"] {
+  display: none;
+}
+.aha-home .aha-office-labels {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #DCE6F2;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.aha-home .aha-office-labels label {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aha-grey);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+.aha-home .aha-office-labels label:hover {
+  color: var(--aha-navy);
+}
+
+/* Tab Active States */
+#off-hcm:checked ~ .aha-office-labels label[for="off-hcm"],
+#off-hn:checked ~ .aha-office-labels label[for="off-hn"],
+#off-dn:checked ~ .aha-office-labels label[for="off-dn"] {
+  color: var(--aha-orange);
+  border-bottom-color: var(--aha-orange);
+}
+
+/* Hide all panels by default */
+.aha-home .aha-office-panel {
+  display: none;
+  background: var(--aha-white);
+  border: 1px solid #DCE6F2;
+  border-radius: var(--aha-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(14, 30, 60, .03);
+}
+
+/* Show active panel */
+#off-hcm:checked ~ .aha-office-panels .panel-hcm,
+#off-hn:checked ~ .aha-office-panels .panel-hn,
+#off-dn:checked ~ .aha-office-panels .panel-dn {
+  display: flex;
+}
+
+.aha-home .aha-office-map {
+  flex: 1;
+  background: #E8F0F8;
+  display: flex;
+  align-items: stretch;
+}
+.aha-home .aha-map-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  color: var(--aha-navy);
+  font-weight: 700;
+  opacity: 0.5;
+}
+.aha-home .aha-map-placeholder span {
+  margin-top: 12px;
+}
+.aha-home .aha-office-info {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.aha-home .aha-office-info h4 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--aha-navy);
+  margin: 0 0 12px;
+}
+.aha-home .aha-office-info p {
+  font-size: 15px;
+  color: var(--aha-grey);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+.aha-home .aha-office-info a {
+  color: var(--aha-orange);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+}
+.aha-home .aha-office-info a:hover {
+  text-decoration: underline;
+}
+.aha-home .aha-office-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--aha-grey);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .aha-home .aha-office-panel {
+    flex-direction: column;
+  }
+  .aha-home .aha-office-info {
+    padding: 24px;
+  }
+}
+
+/* Dark mode for Offices */
+html.dark .aha-home .aha-office-labels {
+  border-bottom-color: #1F2937;
+}
+html.dark .aha-home .aha-office-labels label {
+  color: #9CA3AF;
+}
+html.dark .aha-home .aha-office-labels label:hover {
+  color: #F9FAFB;
+}
+#off-hcm:checked ~ .aha-office-labels label[for="off-hcm"],
+#off-hn:checked ~ .aha-office-labels label[for="off-hn"],
+#off-dn:checked ~ .aha-office-labels label[for="off-dn"] {
+  color: var(--aha-orange);
+}
+html.dark .aha-home .aha-office-panel {
+  background: #111827;
+  border-color: #1F2937;
+}
+html.dark .aha-home .aha-office-map {
   background: #1F2937;
+}
+html.dark .aha-home .aha-map-placeholder {
   color: #D1D5DB;
 }
-html.dark .aha-home .aha-office-item strong {
+html.dark .aha-home .aha-office-info h4 {
   color: #F9FAFB;
+}
+html.dark .aha-home .aha-office-info p {
+  color: #D1D5DB;
+}
+
+/* ---------- 32 · FOOTBAR PRE-FOOTER ---------- */
+.aha-home .aha-home-footbar {
+  margin-top: 64px;
+  background: #0E4174;
+  border-radius: var(--aha-radius-xl);
+  padding: 48px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(14, 65, 116, 0.15);
+}
+.aha-home .aha-home-footbar h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: #fff;
+}
+.aha-home .aha-home-footbar > p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 40px;
+}
+.aha-home .aha-footbar-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.aha-home .aha-footbar-action {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--aha-radius-lg);
+  padding: 32px 24px;
+  text-decoration: none;
+  text-align: left;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.aha-home .aha-footbar-action:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+.aha-home .aha-footbar-action h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 8px;
+}
+.aha-home .aha-footbar-action p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 24px;
+  line-height: 1.5;
+  flex: 1;
+}
+.aha-home .aha-footbar-action .cta {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--aha-orange);
+}
+
+@media (max-width: 900px) {
+  .aha-home .aha-footbar-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode for Footbar */
+html.dark .aha-home .aha-home-footbar {
+  background: #111827;
+  border: 1px solid #1F2937;
 }
