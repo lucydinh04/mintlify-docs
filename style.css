@@ -1841,3 +1841,76 @@ html.dark .aha-home .aha-rm-step .rm-node {
 html.dark .aha-home .aha-rm-step:hover .rm-node {
   background: var(--aha-orange);
 }
+
+/* ---------- 29 · GUIDE ROADMAP ---------- */
+.aha-guide .aha-v-roadmap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 32px 0 32px;
+  padding-left: 28px;
+}
+.aha-guide .aha-v-roadmap::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: 6px;
+  width: 2px;
+  background: rgba(255, 122, 33, 0.35);
+  z-index: 0;
+}
+.aha-guide .aha-v-step {
+  position: relative;
+  padding-bottom: 28px;
+}
+.aha-guide .aha-v-step:last-child {
+  padding-bottom: 0;
+}
+.aha-guide .aha-v-step::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -26px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--aha-orange);
+  box-shadow: 0 0 0 4px var(--aha-white);
+  z-index: 1;
+}
+.aha-guide .aha-v-step h4 {
+  color: var(--aha-navy);
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.aha-guide .aha-v-step p {
+  color: var(--aha-grey);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+.aha-guide .aha-v-step .rm-go {
+  color: var(--aha-orange);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.aha-guide .aha-v-step .rm-go:hover {
+  color: var(--aha-orange-dk);
+}
+
+/* Dark theme overrides for guide roadmap */
+html.dark .aha-guide .aha-v-step::before {
+  box-shadow: 0 0 0 4px #0f172a;
+}
+html.dark .aha-guide .aha-v-step h4 {
+  color: #F9FAFB;
+}
+html.dark .aha-guide .aha-v-step p {
+  color: #D1D5DB;
+}
+html.dark .aha-guide .aha-v-roadmap::before {
+  background: #374151;
+}
