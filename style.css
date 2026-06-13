@@ -1880,7 +1880,7 @@ html.dark .aha-guide .aha-overview-route-copy p {
   display: block;
   font-size: 48px;
   font-weight: 800;
-  color: var(--aha-navy);
+  color: var(--aha-orange);
   line-height: 1;
   letter-spacing: -1px;
   margin-bottom: 8px;
@@ -1912,7 +1912,9 @@ html.dark .aha-home .aha-people-stat {
   background: #111827;
   border-color: #1F2937;
 }
-html.dark .aha-home .aha-people-value,
+html.dark .aha-home .aha-people-value {
+  color: var(--aha-orange);
+}
 html.dark .aha-home .aha-people-label {
   color: #F9FAFB;
 }
@@ -1940,12 +1942,12 @@ html.dark .aha-home .aha-people-stat p {
   white-space: nowrap;
 }
 .aha-home .aha-office-labels label {
-  padding: 12px 24px;
-  font-size: 15px;
+  padding: 10px 24px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--aha-grey);
   cursor: pointer;
-  border-bottom: 3px solid transparent;
+  border-radius: 8px;
   transition: all 0.2s ease;
 }
 .aha-home .aha-office-labels label:hover {
@@ -1956,8 +1958,8 @@ html.dark .aha-home .aha-people-stat p {
 #off-hcm:checked ~ .aha-office-labels label[for="off-hcm"],
 #off-hn:checked ~ .aha-office-labels label[for="off-hn"],
 #off-dn:checked ~ .aha-office-labels label[for="off-dn"] {
-  color: var(--aha-orange);
-  border-bottom-color: var(--aha-orange);
+  background-color: var(--aha-orange);
+  color: #fff;
 }
 
 /* Hide all panels by default */
@@ -2080,7 +2082,8 @@ html.dark .aha-home .aha-office-labels label:hover {
 #off-hcm:checked ~ .aha-office-labels label[for="off-hcm"],
 #off-hn:checked ~ .aha-office-labels label[for="off-hn"],
 #off-dn:checked ~ .aha-office-labels label[for="off-dn"] {
-  color: var(--aha-orange);
+  color: #F9FAFB;
+  background-color: var(--aha-orange);
 }
 html.dark .aha-home .aha-office-panel {
   background: #111827;
