@@ -2452,17 +2452,15 @@ div[data-testid="table-of-contents"],
 .aha-culture-card {
   flex: 1 1 calc(33.333% - 16px);
   min-width: 250px;
-  background: var(--aha-white);
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(14, 65, 116, 0.03);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
-.aha-culture-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(14, 65, 116, 0.06);
+.aha-culture-card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: block;
+  object-fit: contain;
 }
 
 .aha-culture-card-title {
@@ -2720,27 +2718,15 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   overflow: hidden;
 }
 
-/* Orange circle shape background */
-.aha-ceo-quote-right::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 120%;
-  height: 90%;
-  background-color: #F17540;
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
-  z-index: 0;
-}
+/* Removed orange circle because the photo has its own background */
 
 /* Dots pattern placeholder */
 .aha-ceo-quote-right::after {
   content: "";
   position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 80px;
+  top: 40px;
+  right: 0;
+  width: 120px;
   height: 80px;
   background-image: radial-gradient(#FFFFFF 2px, transparent 2px);
   background-size: 12px 12px;
@@ -2749,13 +2735,16 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 
 .aha-ceo-quote-right img {
-  width: 100%;
-  height: auto;
+  width: 90%;
+  margin-left: 10%;
+  height: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   display: block;
   position: relative;
   z-index: 1;
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
 }
 
 @media (max-width: 768px) {
@@ -2776,10 +2765,11 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   .aha-ceo-quote-right {
     min-height: 280px;
   }
-  .aha-ceo-quote-right::before {
-    left: 0;
+  .aha-ceo-quote-right img {
     width: 100%;
-    border-radius: 150px 150px 0 0;
+    margin-left: 0;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
   }
 }
 
