@@ -1977,6 +1977,7 @@ html.dark .aha-home .aha-people-stat p {
 #off-hn:checked ~ .aha-office-panels .panel-hn,
 #off-dn:checked ~ .aha-office-panels .panel-dn {
   display: flex;
+  flex-direction: column;
 }
 
 .aha-home .aha-office-map {
@@ -2016,8 +2017,7 @@ html.dark .aha-home .aha-people-stat p {
   box-shadow: 0 4px 12px rgba(14, 30, 60, .1);
 }
 .aha-home .aha-office-info {
-  flex: 1;
-  padding: 40px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2026,13 +2026,12 @@ html.dark .aha-home .aha-people-stat p {
   font-size: 20px;
   font-weight: 800;
   color: var(--aha-navy);
-  margin: 0 0 24px;
+  margin: 0 0 16px;
 }
 .aha-home .aha-office-detail {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 20px;
 }
 .aha-home .aha-office-detail span {
   font-size: 14px;
@@ -2177,4 +2176,91 @@ html.dark .aha-home .aha-map-cta {
 html.dark .aha-home .aha-home-footbar {
   background: #111827;
   border: 1px solid #1F2937;
+}
+
+/* ---------- 33 · CUSTOM FOOTER ---------- */
+.aha-home .aha-home-footer {
+  margin-top: 64px;
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #F3F4F6;
+}
+html.dark .aha-home .aha-home-footer {
+  border-bottom-color: #374151;
+}
+
+.aha-home .aha-footer-brand {
+  width: 200px;
+}
+.aha-home .aha-footer-logo {
+  height: 32px;
+}
+.aha-home .aha-footer-logo.dark-mode { display: none; }
+html.dark .aha-home .aha-footer-logo.light-mode { display: none; }
+html.dark .aha-home .aha-footer-logo.dark-mode { display: block; }
+
+.aha-home .aha-footer-links {
+  display: flex;
+  gap: 64px;
+  flex: 1;
+}
+.aha-home .aha-footer-col h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aha-navy);
+  margin: 0 0 16px;
+}
+.aha-home .aha-footer-col a {
+  display: block;
+  font-size: 14px;
+  color: var(--aha-grey);
+  margin-bottom: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.aha-home .aha-footer-col a:hover {
+  color: var(--aha-orange);
+}
+
+.aha-home .aha-footer-social {
+  display: flex;
+  gap: 16px;
+}
+.aha-home .aha-footer-social a {
+  color: var(--aha-grey);
+  transition: color 0.2s;
+}
+.aha-home .aha-footer-social a:hover {
+  color: var(--aha-navy);
+}
+
+@media (max-width: 900px) {
+  .aha-home .aha-home-footer {
+    flex-direction: column;
+  }
+  .aha-home .aha-footer-links {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+html.dark .aha-home .aha-footer-col h4 {
+  color: #F9FAFB;
+}
+html.dark .aha-home .aha-footer-col a {
+  color: #9CA3AF;
+}
+html.dark .aha-home .aha-footer-col a:hover {
+  color: var(--aha-orange);
+}
+html.dark .aha-home .aha-footer-social a {
+  color: #9CA3AF;
+}
+html.dark .aha-home .aha-footer-social a:hover {
+  color: #F9FAFB;
 }
