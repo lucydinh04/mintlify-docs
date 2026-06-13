@@ -1951,3 +1951,131 @@ html.dark .aha-guide .aha-overview-route-copy h4 {
 html.dark .aha-guide .aha-overview-route-copy p {
   color: #D1D5DB;
 }
+
+/* ---------- 30 · PEOPLE & OFFICE SNAPSHOT ---------- */
+.aha-home .aha-home-people {
+  margin-top: 48px;
+}
+.aha-home .aha-people-header {
+  margin-bottom: 32px;
+}
+.aha-home .aha-people-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.aha-home .aha-people-stat {
+  flex: 1;
+  background: var(--aha-white);
+  border: 1px solid #DCE6F2;
+  border-radius: var(--aha-radius-lg);
+  padding: 32px 24px;
+  box-shadow: 0 4px 16px rgba(14, 30, 60, .03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease;
+}
+.aha-home .aha-people-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--aha-shadow-hover);
+  border-color: #C4D4E6;
+}
+.aha-home .aha-people-stat.accent {
+  background: #FFF4EC;
+  border-color: #F8DCC8;
+}
+.aha-home .aha-people-value {
+  display: block;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--aha-navy);
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+.aha-home .aha-people-stat.accent .aha-people-value {
+  color: var(--aha-orange);
+}
+.aha-home .aha-people-label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aha-navy);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 12px;
+}
+.aha-home .aha-people-stat p {
+  font-size: 14px;
+  color: var(--aha-grey);
+  line-height: 1.5;
+  margin: 0;
+}
+.aha-home .aha-office-list-wrap {
+  border-top: 1px solid var(--aha-line);
+  padding-top: 24px;
+}
+.aha-home .aha-office-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--aha-orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.aha-home .aha-office-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.aha-home .aha-office-item {
+  flex: 1;
+  min-width: 250px;
+  background: #F4F8FD;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--aha-navy);
+  line-height: 1.5;
+}
+.aha-home .aha-office-item strong {
+  color: var(--aha-navy);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+@media (max-width: 900px) {
+  .aha-home .aha-people-stats {
+    flex-direction: column;
+  }
+}
+
+/* Dark mode for People section */
+html.dark .aha-home .aha-people-stat {
+  background: #111827;
+  border-color: #1F2937;
+}
+html.dark .aha-home .aha-people-stat.accent {
+  background: rgba(255, 122, 33, 0.05);
+  border-color: rgba(255, 122, 33, 0.2);
+}
+html.dark .aha-home .aha-people-value,
+html.dark .aha-home .aha-people-label {
+  color: #F9FAFB;
+}
+html.dark .aha-home .aha-people-stat.accent .aha-people-value {
+  color: var(--aha-orange);
+}
+html.dark .aha-home .aha-people-stat p {
+  color: #D1D5DB;
+}
+html.dark .aha-home .aha-office-list-wrap {
+  border-top-color: #1F2937;
+}
+html.dark .aha-home .aha-office-item {
+  background: #1F2937;
+  color: #D1D5DB;
+}
+html.dark .aha-home .aha-office-item strong {
+  color: #F9FAFB;
+}
