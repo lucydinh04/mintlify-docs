@@ -1424,7 +1424,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   align-items: stretch;
   gap: 40px;
   background-color: #FFFBF8;
-  background-image: url('/images/a-bg.png');
+  background-image: url('/images/a-b.png');
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 450px;
@@ -1572,6 +1572,10 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   font-size: 20px;
   font-weight: 800;
   color: var(--aha-navy);
+  background: #FFFBF8; /* Hides the horizontal line behind the text */
+  padding-right: 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .aha-company-history .aha-history-content {
