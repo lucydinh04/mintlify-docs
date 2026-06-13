@@ -57,8 +57,14 @@ mode: "custom"
             </div>
           </div>
           <div className="aha-stat-secondary">
-            <div className="s"><b className="aha-countup" data-count-to="45" data-count-suffix=" triệu+">45 triệu+</b><span>Đơn hàng</span></div>
-            <div className="s"><b className="aha-countup" data-count-to="150000" data-count-suffix="+" data-count-format="true">150.000+</b><span>Đối tác tài xế</span></div>
+            <div className="s">
+              <b className="aha-countup" data-count-to="45" data-count-suffix=" triệu+">45 triệu+</b>
+              <span>Đơn hàng</span>
+            </div>
+            <div className="s">
+              <b className="aha-countup" data-count-to="150000" data-count-suffix="+" data-count-format="true">150.000+</b>
+              <span>Đối tác tài xế</span>
+            </div>
           </div>
           <div className="aha-stat-visual">
             <img src="/images/chuyen-gia.png" alt="Ahamove expert visual" className="aha-stat-visual-image" />
@@ -75,8 +81,8 @@ mode: "custom"
               <circle cx="50" cy="50" r="20" fill="rgba(255,255,255,0.15)" />
               <path d="M10 50 Q 50 10 90 50" stroke="rgba(255,255,255,0.4)" strokeWidth="3" fill="none" strokeLinecap="round" />
             </svg>
-            <svg className="aha-doodle-spark welcome-doodle-left" width="30" height="30" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25 5 L25 15 M25 35 L25 45 M5 25 L15 25 M35 25 L45 25" stroke="#fff" strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+            <svg className="aha-doodle-spark welcome-doodle-left" width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 5 L25 10 M25 40 L25 45 M5 25 L10 25 M40 25 L45 25 M12 12 L18 18 M32 32 L38 38 M12 38 L18 32 M32 12 L38 18" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity="0.9" />
             </svg>
           </div>
           <div className="aha-welcome-text">
@@ -89,8 +95,9 @@ mode: "custom"
               <rect x="20" y="20" width="60" height="60" rx="16" fill="rgba(255,255,255,0.1)" />
               <path d="M30 70 L70 30 M70 30 L50 30 M70 30 L70 50" stroke="rgba(255,255,255,0.5)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <svg className="aha-doodle-line welcome-doodle-right" width="40" height="20" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 25 Q 30 5 50 25 T 90 25" stroke="#fff" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.6" />
+            <svg className="aha-doodle-line welcome-doodle-right" width="60" height="30" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 25 L30 10 L60 40 L90 20" stroke="#fff" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8" />
+              <path d="M40 25 L60 10" stroke="#fff" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.5" />
             </svg>
           </div>
         </div>
@@ -132,41 +139,7 @@ mode: "custom"
         <a className="aha-section-link" href="/ahamazing-guide/overview">Xem toàn bộ hành trình hội nhập →</a>
       </div>
 
-      {/* 4 · DISCOVER SECTION */}
-      <div className="aha-section aha-home-discover">
-        <p className="aha-h2">Khám phá thêm</p>
-        <p className="aha-intro">Các công cụ, cập nhật và kênh hỗ trợ giúp bạn làm việc hiệu quả hơn mỗi ngày.</p>
-        <div className="aha-discover-grid">
-          
-          <div className="aha-discover-card">
-            <div className="aha-discover-icon"><Icon icon="sparkles" size={16} color="#FF7A21" /></div>
-            <div className="aha-discover-copy">
-              <h4>AI Academy</h4>
-              <p>Claude Pro, AI Playbook và các chương trình học AI nội bộ.</p>
-              <a className="aha-discover-link" href="/ai-hub/overview">Khám phá →</a>
-            </div>
-          </div>
 
-          <div className="aha-discover-card">
-            <div className="aha-discover-icon"><Icon icon="bell" size={16} color="#0E4174" /></div>
-            <div className="aha-discover-copy">
-              <h4>Mới cập nhật</h4>
-              <p>Theo dõi những thay đổi mới nhất trên cổng thông tin nội bộ.</p>
-              <a className="aha-discover-link" href="/whats-new">Xem nhật ký →</a>
-            </div>
-          </div>
-
-          <div className="aha-discover-card">
-            <div className="aha-discover-icon"><Icon icon="headset" size={16} color="#0E4174" /></div>
-            <div className="aha-discover-copy">
-              <h4>Cần hỗ trợ nhanh?</h4>
-              <p>Tìm đúng đầu mối để được hỗ trợ nhanh về AI, FAQ và IT.</p>
-              <a className="aha-discover-link" href="/help-center/overview">Tìm đầu mối →</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
 
     </div>
   </div>

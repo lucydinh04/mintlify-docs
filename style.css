@@ -878,7 +878,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   box-shadow: 0 4px 24px rgba(255, 122, 33, .04), 0 2px 8px rgba(14, 30, 60, .02);
 }
 
-.aha-stat-primary {
+.aha-home .aha-stat-primary {
   flex: 1 1 340px;
   min-width: 0;
   display: flex;
@@ -886,7 +886,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   justify-content: space-between;
 }
 
-.aha-stat-content .eyebrow {
+.aha-home .aha-stat-content .eyebrow {
   color: var(--aha-orange-dk);
   letter-spacing: 2px;
   font-size: 11px;
@@ -895,7 +895,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   margin: 0 0 16px;
 }
 
-.aha-stat-content h2 {
+.aha-home .aha-stat-content h2 {
   color: var(--aha-navy);
   font-size: 28px;
   font-weight: 800;
@@ -903,7 +903,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   margin: 0 0 12px;
 }
 
-.aha-stat-content .sp-sub {
+.aha-home .aha-stat-content .sp-sub {
   color: var(--aha-grey);
   font-size: 15px;
   line-height: 1.6;
@@ -911,7 +911,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   max-width: 90%;
 }
 
-.aha-stat-main b {
+.aha-home .aha-stat-main b {
   display: block;
   font-size: 64px;
   font-weight: 800;
@@ -920,7 +920,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   letter-spacing: -1.5px;
 }
 
-.aha-stat-main span {
+.aha-home .aha-stat-main span {
   display: block;
   font-size: 13.5px;
   color: var(--aha-orange);
@@ -930,7 +930,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   letter-spacing: .5px;
 }
 
-.aha-stat-secondary {
+.aha-home .aha-stat-secondary {
   flex: 0 0 auto;
   min-width: 200px;
   display: flex;
@@ -941,7 +941,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   border-left: 1px solid var(--aha-line);
 }
 
-.aha-stat-secondary .s b {
+.aha-home .aha-stat-secondary .s b {
   display: block;
   font-size: 32px;
   font-weight: 800;
@@ -950,14 +950,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   letter-spacing: -.5px;
 }
 
-.aha-stat-secondary .s span {
+.aha-home .aha-stat-secondary .s span {
   display: block;
   font-size: 14px;
   color: var(--aha-grey);
   margin-top: 6px;
 }
 
-.aha-stat-visual {
+.aha-home .aha-stat-visual {
   flex: 1 1 280px;
   min-width: 0;
   display: flex;
@@ -967,12 +967,9 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 .aha-home .aha-stat-visual-image {
   width: 100%;
-  max-width: 260px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
+  max-width: 280px;
+  object-fit: contain;
   display: block;
-  box-shadow: 0 4px 24px rgba(14, 30, 60, .06);
 }
 
 /* ---------- 19 · SOFT GRID BACKGROUND ---------- */
@@ -1754,89 +1751,25 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   }
 }
 
-/* ---------- 26 · DISCOVER GRID ---------- */
-.aha-home .aha-home-discover {
-  margin-top: 48px;
-}
-.aha-home .aha-home-discover p.aha-h2 {
-  margin: 0 0 8px;
-}
-.aha-home .aha-home-discover p.aha-intro {
-  margin-bottom: 24px;
-}
-.aha-home .aha-discover-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-.aha-home .aha-discover-card {
-  background: #FFFFFF;
-  border: 1px solid #E4EBF4;
-  border-radius: var(--aha-radius-lg);
-  padding: 20px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 2px 8px rgba(14, 30, 60, 0.02);
-}
-.aha-home .aha-discover-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14, 30, 60, 0.05);
-  border-color: #D4DEEC;
-}
-.aha-home .aha-discover-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: #EEF2F8;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-}
-.aha-home .aha-discover-copy {
-  flex: 1;
-}
-.aha-home .aha-discover-copy h4 {
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--aha-navy);
-  margin: 0 0 6px;
-}
-.aha-home .aha-discover-copy p {
-  font-size: 13px;
-  color: var(--aha-grey);
-  line-height: 1.5;
-  margin: 0 0 12px;
-}
-.aha-home .aha-discover-link {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--aha-orange);
-  text-decoration: none;
-  display: inline-block;
-}
-.aha-home .aha-discover-link:hover {
-  color: var(--aha-orange-dk);
-}
+
 
 /* ---------- 27 · RESPONSIVE ---------- */
 @media (max-width: 760px) {
   .aha-home .aha-hero.promo { padding: 32px 24px; }
-  .aha-home-stat-editorial { 
+  .aha-home .aha-home-stat-editorial { 
     flex-direction: column;
     padding: 32px 24px; 
     gap: 32px; 
   }
-  .aha-stat-content .sp-sub { margin-bottom: 24px; }
-  .aha-stat-secondary { 
+  .aha-home .aha-stat-content .sp-sub { margin-bottom: 24px; }
+  .aha-home .aha-stat-secondary { 
     padding-left: 0; 
     border-left: none; 
     border-top: 1px solid var(--aha-line); 
     padding-top: 32px;
     width: 100%;
   }
-  .aha-stat-visual { justify-content: center; width: 100%; }
+  .aha-home .aha-stat-visual { justify-content: center; width: 100%; }
   .aha-home .aha-roadmap {
     flex-direction: column;
     gap: 24px;
@@ -1861,4 +1794,37 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   .aha-network { width: 210px; }
   .aha-help-spotlight { grid-template-columns: 1fr; }
   .aha-workshop-head { flex-direction: column; gap: 10px; }
+}
+
+/* ---------- 28 · DARK THEME REFINEMENT ---------- */
+html.dark .aha-home .aha-home-stat-editorial,
+html.dark .aha-home .aha-rm-step .rm-content {
+  background: #111827; /* Deep Navy/Charcoal instead of pure black */
+  border-color: #1F2937;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+html.dark .aha-home .aha-stat-content h2,
+html.dark .aha-home .aha-stat-main b,
+html.dark .aha-home .aha-stat-secondary .s b,
+html.dark .aha-home .aha-rm-step h4,
+html.dark .aha-home .aha-h2 {
+  color: #F9FAFB;
+}
+html.dark .aha-home .aha-stat-content .eyebrow {
+  color: var(--aha-orange);
+}
+html.dark .aha-home .aha-intro,
+html.dark .aha-home .aha-stat-content .sp-sub,
+html.dark .aha-home .aha-rm-step p {
+  color: #D1D5DB;
+}
+html.dark .aha-home .aha-roadmap::before {
+  background: #374151;
+}
+html.dark .aha-home .aha-rm-step .rm-node {
+  background: #4B5563;
+  box-shadow: 0 0 0 6px #030712;
+}
+html.dark .aha-home .aha-rm-step:hover .rm-node {
+  background: var(--aha-orange);
 }
