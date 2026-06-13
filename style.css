@@ -2800,10 +2800,18 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-partners-logos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: safe center;
   align-items: center;
   gap: 48px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+.aha-partners-logos::-webkit-scrollbar {
+  display: none;
 }
 .aha-partners-logos img {
   height: 40px !important;
@@ -2816,6 +2824,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   display: block !important;
   cursor: pointer;
   outline: none;
+  flex-shrink: 0;
 }
 .aha-partners-logos img:hover,
 .aha-partners-logos img:focus,
