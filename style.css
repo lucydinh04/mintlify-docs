@@ -2283,3 +2283,15 @@ html.dark .aha-home .aha-footer-social a:hover {
   line-height: 1.5 !important;
   margin: 0 !important;
 }
+
+/* =====================================================================
+   HIDE RIGHT SIDEBAR (TOC) ON ALL PAGES
+   ===================================================================== */
+#table-of-contents,
+#toc,
+aside[aria-label="Table of contents"],
+aside[aria-label="Table of Contents"],
+div[data-testid="table-of-contents"],
+.hidden.xl\:block.xl\:w-64.xl\:shrink-0.xl\:border-l {
+  display: none !important;
+}
