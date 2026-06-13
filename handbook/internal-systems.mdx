@@ -3,6 +3,7 @@ title: "Hệ thống 1Office"
 sidebarTitle: "Hệ thống 1Office"
 description: "Tất cả về 1Office — công cụ làm việc, đăng nhập, thao tác chấm công/nghỉ phép, ký số & trợ lý AI."
 icon: "building-user"
+mode: "wide"
 ---
 
 <div className="aha-strip">
@@ -64,37 +65,269 @@ icon: "building-user"
 
 <Tabs>
   <Tab title="Đăng nhập">
-    <Steps>
-      <Step title="Truy cập" icon="globe">Vào **https://ahamove.1office.vn**.</Step>
-      <Step title="Tên đăng nhập" icon="user">Dùng **Domain** của bạn (**không** kèm `@ahamove.com`).</Step>
-      <Step title="Mật khẩu" icon="key">Mật khẩu gửi qua **mail công ty**. **Đổi mật khẩu ngay** sau lần đầu đăng nhập.</Step>
-    </Steps>
+    <div className="aha-is">
+      {/* Cấu trúc Data: Các radio inputs điều khiển (ẩn) */}
+      <input type="radio" name="dn-tab" value="1" id="dn-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="dn-tab" value="2" id="dn-2" className="aha-is-input" />
+      <input type="radio" name="dn-tab" value="3" id="dn-3" className="aha-is-input" />
+
+      <div className="aha-is-layout">
+        {/* Cột trái: Hình ảnh */}
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Truy cập (Đang cập nhật)</p>
+            </div>
+            {/* Thay ảnh thực tế vào dòng dưới và xoá block placeholder ở trên: */}
+            {/* <img src="/images/1office/login-1.png" alt="Truy cập 1Office" /> */}
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Tên đăng nhập (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/login-2.png" alt="Tên đăng nhập" /> */}
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Mật khẩu (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/login-3.png" alt="Mật khẩu" /> */}
+          </div>
+        </div>
+
+        {/* Cột phải: Các bước thao tác */}
+        <div className="aha-is-right">
+          <label htmlFor="dn-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="globe" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Truy cập</h4>
+              <p>Vào <a href="https://ahamove.1office.vn" target="_blank">https://ahamove.1office.vn</a>.</p>
+            </div>
+          </label>
+          <label htmlFor="dn-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="user" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Tên đăng nhập</h4>
+              <p>Dùng <strong>Domain</strong> của bạn (<strong>không</strong> kèm <code>@ahamove.com</code>).</p>
+            </div>
+          </label>
+          <label htmlFor="dn-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="key" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Mật khẩu</h4>
+              <p>Mật khẩu gửi qua <strong>mail công ty</strong>. <strong>Đổi mật khẩu ngay</strong> sau lần đầu đăng nhập.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
   </Tab>
+
   <Tab title="Số tài khoản ngân hàng">
-    <Steps>
-      <Step title="Bước 1" icon="circle-user">Chọn **biểu tượng tài khoản** ở góc phải trên cùng trang chủ.</Step>
-      <Step title="Bước 2" icon="arrow-pointer">Nhấp vào **USERNAME** của bạn.</Step>
-      <Step title="Bước 3" icon="address-card">Chọn **Hồ sơ** → **Sơ yếu lí lịch** → **Cập nhật**.</Step>
-      <Step title="Bước 4" icon="building-columns">Điền **số tài khoản chính chủ** → bấm **Cập nhật**.</Step>
-    </Steps>
+    <div className="aha-is">
+      <input type="radio" name="stk-tab" value="1" id="stk-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="stk-tab" value="2" id="stk-2" className="aha-is-input" />
+      <input type="radio" name="stk-tab" value="3" id="stk-3" className="aha-is-input" />
+      <input type="radio" name="stk-tab" value="4" id="stk-4" className="aha-is-input" />
+
+      <div className="aha-is-layout">
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 1 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/bank-1.png" alt="Bước 1" /> */}
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 2 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/bank-2.png" alt="Bước 2" /> */}
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 3 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/bank-3.png" alt="Bước 3" /> */}
+          </div>
+          <div className="aha-is-img" data-step="4">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 4 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/bank-4.png" alt="Bước 4" /> */}
+          </div>
+        </div>
+
+        <div className="aha-is-right">
+          <label htmlFor="stk-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="circle-user" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 1</h4>
+              <p>Chọn <strong>biểu tượng tài khoản</strong> ở góc phải trên cùng trang chủ.</p>
+            </div>
+          </label>
+          <label htmlFor="stk-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="arrow-pointer" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 2</h4>
+              <p>Nhấp vào <strong>USERNAME</strong> của bạn.</p>
+            </div>
+          </label>
+          <label htmlFor="stk-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="address-card" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 3</h4>
+              <p>Chọn <strong>Hồ sơ</strong> → <strong>Sơ yếu lí lịch</strong> → <strong>Cập nhật</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="stk-4" className="aha-is-label" data-step="4">
+            <div className="aha-is-icon"><Icon icon="building-columns" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 4</h4>
+              <p>Điền <strong>số tài khoản chính chủ</strong> → bấm <strong>Cập nhật</strong>.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
   </Tab>
+
   <Tab title="Chữ ký số">
-    <Steps>
-      <Step title="Bước 1" icon="envelope">Thông báo kích hoạt gửi về **mail công ty** → **click vào link**.</Step>
-      <Step title="Bước 2" icon="signature">Chọn **Mẫu chữ ký**.</Step>
-      <Step title="Bước 3" icon="pen">Tạo mẫu chữ ký: **tải ảnh chữ ký** lên, hoặc **dùng chuột ký trực tiếp**.</Step>
-      <Step title="Bước 4" icon="circle-check">Chọn vị trí hiển thị thông tin chứng thực → **Cập nhật**.</Step>
-    </Steps>
+    <div className="aha-is">
+      <input type="radio" name="cks-tab" value="1" id="cks-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="cks-tab" value="2" id="cks-2" className="aha-is-input" />
+      <input type="radio" name="cks-tab" value="3" id="cks-3" className="aha-is-input" />
+      <input type="radio" name="cks-tab" value="4" id="cks-4" className="aha-is-input" />
+
+      <div className="aha-is-layout">
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 1 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/sign-1.png" alt="Bước 1" /> */}
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 2 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/sign-2.png" alt="Bước 2" /> */}
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 3 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/sign-3.png" alt="Bước 3" /> */}
+          </div>
+          <div className="aha-is-img" data-step="4">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Bước 4 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/sign-4.png" alt="Bước 4" /> */}
+          </div>
+        </div>
+
+        <div className="aha-is-right">
+          <label htmlFor="cks-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="envelope" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 1</h4>
+              <p>Thông báo kích hoạt gửi về <strong>mail công ty</strong> → <strong>click vào link</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="cks-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="signature" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 2</h4>
+              <p>Chọn <strong>Mẫu chữ ký</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="cks-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="pen" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 3</h4>
+              <p>Tạo mẫu chữ ký: <strong>tải ảnh chữ ký</strong> lên, hoặc <strong>dùng chuột ký trực tiếp</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="cks-4" className="aha-is-label" data-step="4">
+            <div className="aha-is-icon"><Icon icon="circle-check" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 4</h4>
+              <p>Chọn vị trí hiển thị thông tin chứng thực → <strong>Cập nhật</strong>.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
   </Tab>
+
   <Tab title="Ký hợp đồng">
-    Có hai cách ký số hợp đồng lao động:
+    <div className="aha-is">
+      <input type="radio" name="khd-tab" value="1" id="khd-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="khd-tab" value="2" id="khd-2" className="aha-is-input" />
+      <input type="radio" name="khd-tab" value="3" id="khd-3" className="aha-is-input" />
 
-    1. **Cách 1** — Vào **Workplace → Ký số** → **Hồ sơ → Hợp đồng lao động** → chọn **KÝ**.
-    2. **Cách 2** — Vào **Thông báo** → mở thông báo yêu cầu ký hồ sơ → bấm **Chọn KÝ**.
+      <div className="aha-is-layout">
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Cách 1 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/contract-1.png" alt="Cách 1" /> */}
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Cách 2 (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/contract-2.png" alt="Cách 2" /> */}
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <div className="aha-is-img-placeholder">
+              <Icon icon="image" size={32} color="#CBD5E1" />
+              <p style={{ marginTop: '12px', fontSize: '13px' }}>Minh hoạ: Kiểm tra (Đang cập nhật)</p>
+            </div>
+            {/* <img src="/images/1office/contract-3.png" alt="Kiểm tra" /> */}
+          </div>
+        </div>
 
-    <Warning>
-      Sau khi hệ thống báo **ký thành công**, hãy **mở lại hợp đồng** để kiểm tra chữ ký đã đúng vị trí chưa.
-    </Warning>
+        <div className="aha-is-right">
+          <label htmlFor="khd-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="folder-open" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Cách 1: Qua menu Ký số</h4>
+              <p>Vào <strong>Workplace</strong> → <strong>Ký số</strong> → <strong>Hồ sơ</strong> → <strong>Hợp đồng lao động</strong> → chọn <strong>KÝ</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="khd-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="bell" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Cách 2: Qua Thông báo</h4>
+              <p>Vào <strong>Thông báo</strong> → mở thông báo yêu cầu ký hồ sơ → bấm <strong>Chọn KÝ</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="khd-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="magnifying-glass" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Kiểm tra chữ ký</h4>
+              <p>Sau khi hệ thống báo <strong>ký thành công</strong>, hãy mở lại hợp đồng để kiểm tra chữ ký đã đúng vị trí chưa.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
   </Tab>
 </Tabs>
 
