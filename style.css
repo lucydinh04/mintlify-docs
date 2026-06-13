@@ -1426,7 +1426,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background-color: #FFFBF8;
   background-image: url('/images/a-b.png');
   background-repeat: no-repeat;
-  background-position: left -10px bottom -20px;
+  background-position: left 40px bottom -10px;
   background-size: 320px;
   border: 1px solid #F6E2D4;
   border-radius: var(--aha-radius-xl);
