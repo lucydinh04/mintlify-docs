@@ -1696,6 +1696,12 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   position: relative;
 }
 
+.aha-home .aha-welcome-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* Doodle Accents */
 .aha-home .aha-doodle-accent,
 .aha-home .aha-doodle-spark,
