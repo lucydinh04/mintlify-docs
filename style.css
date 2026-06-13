@@ -2782,3 +2782,53 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     border-radius: 150px 150px 0 0;
   }
 }
+
+/* =====================================================================
+   PARTNERS BANNER
+   ===================================================================== */
+.aha-partners-banner {
+  margin: 64px 0 32px;
+  text-align: center;
+}
+.aha-partners-title {
+  color: #94A3B8;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 32px !important;
+}
+.aha-partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+.aha-partners-logos img {
+  height: 40px !important;
+  width: auto !important;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  margin: 0 !important;
+  display: block !important;
+  cursor: pointer;
+  outline: none;
+}
+.aha-partners-logos img:hover,
+.aha-partners-logos img:focus,
+.aha-partners-logos img:active {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .aha-partners-logos {
+    gap: 32px;
+  }
+  .aha-partners-logos img {
+    height: 32px !important;
+  }
+}
