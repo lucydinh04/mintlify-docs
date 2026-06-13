@@ -1842,75 +1842,106 @@ html.dark .aha-home .aha-rm-step:hover .rm-node {
   background: var(--aha-orange);
 }
 
-/* ---------- 29 · GUIDE ROADMAP ---------- */
-.aha-guide .aha-v-roadmap {
+/* ---------- 29 · GUIDE ACTION LIST ---------- */
+.aha-guide .aha-overview-route-list {
   display: flex;
   flex-direction: column;
-  position: relative;
-  margin: 32px 0 32px;
-  padding-left: 28px;
-}
-.aha-guide .aha-v-roadmap::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  bottom: 0;
-  left: 6px;
-  width: 2px;
-  background: rgba(255, 122, 33, 0.35);
-  z-index: 0;
-}
-.aha-guide .aha-v-step {
-  position: relative;
-  padding-bottom: 28px;
-}
-.aha-guide .aha-v-step:last-child {
-  padding-bottom: 0;
-}
-.aha-guide .aha-v-step::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -26px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--aha-orange);
-  box-shadow: 0 0 0 4px var(--aha-white);
-  z-index: 1;
-}
-.aha-guide .aha-v-step h4 {
-  color: var(--aha-navy);
-  font-size: 16px;
-  font-weight: 800;
-  margin: 0 0 6px;
-}
-.aha-guide .aha-v-step p {
-  color: var(--aha-grey);
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0 0 10px;
-}
-.aha-guide .aha-v-step .rm-go {
-  color: var(--aha-orange);
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-}
-.aha-guide .aha-v-step .rm-go:hover {
-  color: var(--aha-orange-dk);
+  background: var(--aha-white);
+  border: 1px solid #DCE6F2;
+  border-radius: var(--aha-radius-lg);
+  margin: 24px 0 32px;
+  box-shadow: 0 4px 16px rgba(14, 30, 60, .03);
+  overflow: hidden;
 }
 
-/* Dark theme overrides for guide roadmap */
-html.dark .aha-guide .aha-v-step::before {
-  box-shadow: 0 0 0 4px #0f172a;
+.aha-guide .aha-overview-route-row {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #EEF2F8;
+  transition: background-color 0.15s ease;
 }
-html.dark .aha-guide .aha-v-step h4 {
+
+.aha-guide .aha-overview-route-row:last-child {
+  border-bottom: none;
+}
+
+.aha-guide .aha-overview-route-row:hover {
+  background-color: #F8FBFE;
+}
+
+.aha-guide .aha-overview-route-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #FFF4EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.aha-guide .aha-overview-route-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.aha-guide .aha-overview-route-copy h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aha-navy);
+}
+
+.aha-guide .aha-overview-route-copy p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--aha-grey);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aha-guide .aha-overview-route-arrow {
+  flex-shrink: 0;
+  margin-left: 16px;
+  color: var(--aha-orange);
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.15s ease;
+}
+
+.aha-guide .aha-overview-route-row:hover .aha-overview-route-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .aha-guide .aha-overview-route-copy p {
+    white-space: normal;
+  }
+}
+
+/* Dark theme overrides for guide action list */
+html.dark .aha-guide .aha-overview-route-list {
+  background: #111827;
+  border-color: #1F2937;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+html.dark .aha-guide .aha-overview-route-row {
+  border-color: #1F2937;
+}
+html.dark .aha-guide .aha-overview-route-row:hover {
+  background-color: #1F2937;
+}
+html.dark .aha-guide .aha-overview-route-icon {
+  background: rgba(255, 122, 33, 0.1);
+}
+html.dark .aha-guide .aha-overview-route-copy h4 {
   color: #F9FAFB;
 }
-html.dark .aha-guide .aha-v-step p {
+html.dark .aha-guide .aha-overview-route-copy p {
   color: #D1D5DB;
-}
-html.dark .aha-guide .aha-v-roadmap::before {
-  background: #374151;
 }
