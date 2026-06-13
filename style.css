@@ -2391,18 +2391,7 @@ div[data-testid="table-of-contents"],
 
 .aha-company-service-card {
   flex: 1;
-  background: #ffffff;
-  border: 1px solid #E2E8F0;
-  border-radius: 20px;
-  padding: 40px 24px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(14, 65, 116, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.aha-company-service-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(14, 65, 116, 0.08);
 }
 
 .aha-company-service-icon {
@@ -2467,14 +2456,16 @@ div[data-testid="table-of-contents"],
   color: #0E4174;
   font-size: 18px;
   font-weight: 800;
-  margin: 0 0 8px !important;
+  margin: 0 0 12px !important;
+  text-align: center !important;
 }
 
 .aha-culture-card-desc {
   color: #475569;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0 !important;
+  text-align: center !important;
 }
 
 .aha-culture-ai {
