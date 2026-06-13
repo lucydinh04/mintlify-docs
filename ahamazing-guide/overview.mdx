@@ -1,74 +1,84 @@
 ---
 title: "Hành trình hội nhập"
 sidebarTitle: "Hành trình hội nhập"
+mode: "wide"
 ---
 
-<div className="aha-strip warm">
-  <p className="eyebrow">CHÀO MỪNG AHAMOVER MỚI</p>
-  <h2>Bắt đầu từ những điều quan trọng nhất</h2>
-  <p>Đi theo từng chặng bên dưới để hiểu Ahamove, hoàn tất thiết lập cần thiết và biết đúng nơi cần hỏi khi cần hỗ trợ.</p>
-</div>
+<div className="aha-onboarding-overview">
 
+  <div className="aha-strip warm">
+    <p className="eyebrow">CHÀO MỪNG AHAMOVER MỚI</p>
+    <h2>Bắt đầu từ những điều quan trọng nhất</h2>
+    <p>Đi theo từng chặng bên dưới để hiểu Ahamove, hoàn tất thiết lập cần thiết và biết đúng nơi cần hỏi khi cần hỗ trợ.</p>
+  </div>
 
+  <div className="aha-onboarding-cards">
+    <div className="aha-onboarding-card">
+      <div className="aha-onboarding-card-icon"><Icon icon="route" size={20} color="#FF7A21" /></div>
+      <div className="aha-onboarding-card-content">
+        <h4>Đi theo lộ trình</h4>
+        <p>Bạn không cần đọc tất cả trong một lần. Hãy đi lần lượt theo từng chặng để bắt nhịp nhanh hơn.</p>
+      </div>
+    </div>
+    <div className="aha-onboarding-card">
+      <div className="aha-onboarding-card-icon"><Icon icon="robot" size={20} color="#FF7A21" /></div>
+      <div className="aha-onboarding-card-content">
+        <h4>Hỏi Ahamove AI</h4>
+        <p>Không biết hỏi ai? Dùng Ahamove AI để được gợi ý nội dung hoặc đầu mối phù hợp.</p>
+      </div>
+    </div>
+  </div>
 
-<CardGroup cols={2} className="aha-compact-cards">
-  <Card title="Đi theo lộ trình" icon="route">
-    Bạn không cần đọc tất cả trong một lần. Hãy đi lần lượt theo từng chặng để bắt nhịp nhanh hơn.
-  </Card>
-  <Card title="Hỏi Ahamove AI" icon="robot">
-    Không biết hỏi ai? Dùng Ahamove AI để được gợi ý nội dung hoặc đầu mối phù hợp.
-  </Card>
-</CardGroup>
+  <p className="aha-onboarding-map-label">Bản đồ 30 ngày đầu</p>
 
+  ![Bản đồ hành trình hội nhập](/images/onboarding-journey-map.png)
 
-<p style={{ marginTop: '48px', marginBottom: '16px', fontSize: '13px', fontWeight: 700, color: 'var(--aha-grey)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Bản đồ 30 ngày đầu</p>
-
-![Bản đồ hành trình hội nhập](/images/onboarding-journey-map.png)
-
-
-  <div className="aha-overview-route-list">
-    <a className="aha-overview-route-row" href="/ahamazing-guide/company-overview">
-      <div className="aha-overview-route-icon"><Icon icon="building" size={20} color="#FF7A21" /></div>
-      <div className="aha-overview-route-copy">
+  <div className="aha-onboarding-route-list">
+    <a className="aha-onboarding-route-row" href="/ahamazing-guide/company-overview">
+      <div className="aha-onboarding-route-icon"><Icon icon="building" size={18} color="#FF7A21" /></div>
+      <div className="aha-onboarding-route-copy">
         <h4>Tổng quan công ty</h4>
         <p>Hiểu Ahamove là ai, dịch vụ và hệ sinh thái Scommerce.</p>
       </div>
-      <div className="aha-overview-route-arrow">→</div>
+      <div className="aha-onboarding-route-arrow">→</div>
     </a>
-    <a className="aha-overview-route-row" href="/ahamazing-guide/culture">
-      <div className="aha-overview-route-icon"><Icon icon="heart" size={20} color="#FF7A21" /></div>
-      <div className="aha-overview-route-copy">
+    <a className="aha-onboarding-route-row" href="/ahamazing-guide/culture">
+      <div className="aha-onboarding-route-icon"><Icon icon="heart" size={18} color="#FF7A21" /></div>
+      <div className="aha-onboarding-route-copy">
         <h4>Văn hóa & Giá trị</h4>
         <p>Nắm các giá trị văn hóa và cách Ahamovers làm việc cùng nhau.</p>
       </div>
-      <div className="aha-overview-route-arrow">→</div>
+      <div className="aha-onboarding-route-arrow">→</div>
     </a>
-    <a className="aha-overview-route-row" href="/ahamazing-guide/day-1">
-      <div className="aha-overview-route-icon"><Icon icon="sun" size={20} color="#FF7A21" /></div>
-      <div className="aha-overview-route-copy">
+    <a className="aha-onboarding-route-row" href="/ahamazing-guide/day-1">
+      <div className="aha-onboarding-route-icon"><Icon icon="sun" size={18} color="#FF7A21" /></div>
+      <div className="aha-onboarding-route-copy">
         <h4>Ngày đầu tiên</h4>
         <p>Xem lịch trình ngày đầu, giờ làm việc, wifi và thủ tục nhân sự.</p>
       </div>
-      <div className="aha-overview-route-arrow">→</div>
+      <div className="aha-onboarding-route-arrow">→</div>
     </a>
-    <a className="aha-overview-route-row" href="/ahamazing-guide/week-1">
-      <div className="aha-overview-route-icon"><Icon icon="calendar-week" size={20} color="#FF7A21" /></div>
-      <div className="aha-overview-route-copy">
+    <a className="aha-onboarding-route-row" href="/ahamazing-guide/week-1">
+      <div className="aha-onboarding-route-icon"><Icon icon="calendar-week" size={18} color="#FF7A21" /></div>
+      <div className="aha-onboarding-route-copy">
         <h4>Tuần đầu tiên</h4>
         <p>Kích hoạt tài khoản, ký số hợp đồng và làm quen quy trình cốt lõi.</p>
       </div>
-      <div className="aha-overview-route-arrow">→</div>
+      <div className="aha-onboarding-route-arrow">→</div>
     </a>
-    <a className="aha-overview-route-row" href="/ahamazing-guide/first-month">
-      <div className="aha-overview-route-icon"><Icon icon="flag-checkered" size={20} color="#FF7A21" /></div>
-      <div className="aha-overview-route-copy">
+    <a className="aha-onboarding-route-row" href="/ahamazing-guide/first-month">
+      <div className="aha-onboarding-route-icon"><Icon icon="flag-checkered" size={18} color="#FF7A21" /></div>
+      <div className="aha-onboarding-route-copy">
         <h4>Tháng đầu tiên</h4>
         <p>Bắt nhịp với lộ trình 30-60-90 và tạo "first-win" đầu tiên.</p>
       </div>
-      <div className="aha-overview-route-arrow">→</div>
+      <div className="aha-onboarding-route-arrow">→</div>
     </a>
   </div>
+
 </div>
+
+<br />
 
 <Tip>
   Gặp từ viết tắt lạ? Tra [Bảng thuật ngữ](/handbook/glossary). Cần liên hệ ai? Xem [Liên hệ HR & Hỗ trợ IT](/help-center/overview).

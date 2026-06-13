@@ -1744,8 +1744,58 @@ html.dark .aha-home .aha-stat-content .sp-sub {
   color: #D1D5DB;
 }
 
-/* ---------- 29 · GUIDE ACTION LIST ---------- */
-.aha-guide .aha-overview-route-list {
+/* ---------- 29 · ONBOARDING ACTION LIST ---------- */
+.aha-onboarding-map-label {
+  margin: 48px 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #64748B !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.aha-onboarding-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .aha-onboarding-cards { flex-direction: column; }
+}
+
+.aha-onboarding-card {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  background: var(--aha-white);
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(14, 30, 60, .02);
+}
+
+.aha-onboarding-card-icon {
+  margin-top: 2px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.aha-onboarding-card-content h4 {
+  margin: 0 0 4px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--aha-navy);
+}
+
+.aha-onboarding-card-content p {
+  margin: 0 !important;
+  font-size: 14px !important;
+  color: var(--aha-grey);
+  line-height: 1.4 !important;
+}
+
+.aha-guide .aha-onboarding-route-list {
   display: flex;
   flex-direction: column;
   background: var(--aha-white);
@@ -1756,7 +1806,7 @@ html.dark .aha-home .aha-stat-content .sp-sub {
   overflow: hidden;
 }
 
-.aha-guide .aha-overview-route-row {
+.aha-guide .aha-onboarding-route-row {
   display: flex;
   align-items: center;
   padding: 12px 16px;
@@ -1765,15 +1815,15 @@ html.dark .aha-home .aha-stat-content .sp-sub {
   transition: background-color 0.15s ease;
 }
 
-.aha-guide .aha-overview-route-row:last-child {
+.aha-guide .aha-onboarding-route-row:last-child {
   border-bottom: none;
 }
 
-.aha-guide .aha-overview-route-row:hover {
+.aha-guide .aha-onboarding-route-row:hover {
   background-color: #F8FBFE;
 }
 
-.aha-guide .aha-overview-route-icon {
+.aha-guide .aha-onboarding-route-icon {
   width: 36px;
   height: 36px;
   flex-shrink: 0;
@@ -1785,19 +1835,19 @@ html.dark .aha-home .aha-stat-content .sp-sub {
   margin-right: 16px;
 }
 
-.aha-guide .aha-overview-route-copy {
+.aha-guide .aha-onboarding-route-copy {
   flex: 1;
   min-width: 0;
 }
 
-.aha-guide .aha-overview-route-copy h4 {
+.aha-guide .aha-onboarding-route-copy h4 {
   margin: 0 0 4px;
   font-size: 15px;
   font-weight: 700;
   color: var(--aha-navy);
 }
 
-.aha-guide .aha-overview-route-copy p {
+.aha-guide .aha-onboarding-route-copy p {
   margin: 0;
   font-size: 13.5px;
   color: var(--aha-grey);
@@ -1807,7 +1857,7 @@ html.dark .aha-home .aha-stat-content .sp-sub {
   text-overflow: ellipsis;
 }
 
-.aha-guide .aha-overview-route-arrow {
+.aha-guide .aha-onboarding-route-arrow {
   flex-shrink: 0;
   margin-left: 16px;
   color: var(--aha-orange);
@@ -1816,35 +1866,35 @@ html.dark .aha-home .aha-stat-content .sp-sub {
   transition: transform 0.15s ease;
 }
 
-.aha-guide .aha-overview-route-row:hover .aha-overview-route-arrow {
+.aha-guide .aha-onboarding-route-row:hover .aha-onboarding-route-arrow {
   transform: translateX(4px);
 }
 
 @media (max-width: 600px) {
-  .aha-guide .aha-overview-route-copy p {
+  .aha-guide .aha-onboarding-route-copy p {
     white-space: normal;
   }
 }
 
 /* Dark theme overrides for guide action list */
-html.dark .aha-guide .aha-overview-route-list {
+html.dark .aha-guide .aha-onboarding-route-list {
   background: #111827;
   border-color: #1F2937;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
-html.dark .aha-guide .aha-overview-route-row {
+html.dark .aha-guide .aha-onboarding-route-row {
   border-color: #1F2937;
 }
-html.dark .aha-guide .aha-overview-route-row:hover {
+html.dark .aha-guide .aha-onboarding-route-row:hover {
   background-color: #1F2937;
 }
-html.dark .aha-guide .aha-overview-route-icon {
+html.dark .aha-guide .aha-onboarding-route-icon {
   background: rgba(255, 122, 33, 0.1);
 }
-html.dark .aha-guide .aha-overview-route-copy h4 {
+html.dark .aha-guide .aha-onboarding-route-copy h4 {
   color: #F9FAFB;
 }
-html.dark .aha-guide .aha-overview-route-copy p {
+html.dark .aha-guide .aha-onboarding-route-copy p {
   color: #D1D5DB;
 }
 
