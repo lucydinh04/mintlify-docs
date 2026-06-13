@@ -1548,7 +1548,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 
 /* ---------- 18 · HISTORY TIMELINE (homepage) ---------- */
-.aha-home .aha-home-history {
+.aha-company-history {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -1561,13 +1561,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   box-shadow: 0 4px 24px rgba(255, 122, 33, .04), 0 2px 8px rgba(14, 30, 60, .02);
 }
 
-.aha-home .aha-history-intro {
+.aha-company-history .aha-history-intro {
   flex: 0 0 320px;
   display: flex;
   flex-direction: column;
 }
 
-.aha-home .aha-history-intro .eyebrow {
+.aha-company-history .aha-history-intro .eyebrow {
   color: var(--aha-orange-dk);
   font-size: 11px;
   font-weight: 800;
@@ -1576,7 +1576,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   margin-bottom: 12px;
 }
 
-.aha-home .aha-history-intro h2 {
+.aha-company-history .aha-history-intro h2 {
   font-size: 28px;
   font-weight: 800;
   color: var(--aha-navy);
@@ -1584,14 +1584,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   margin: 0 0 16px;
 }
 
-.aha-home .aha-history-intro .sp-sub {
+.aha-company-history .aha-history-intro .sp-sub {
   color: var(--aha-grey);
   font-size: 15px;
   line-height: 1.6;
   margin: 0 0 24px;
 }
 
-.aha-home .aha-history-intro .aha-section-link {
+.aha-company-history .aha-history-intro .aha-section-link {
   color: var(--aha-orange);
   font-weight: 700;
   text-decoration: none;
@@ -1600,18 +1600,18 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   display: inline-block;
 }
 
-.aha-home .aha-history-intro .aha-section-link:hover {
+.aha-company-history .aha-history-intro .aha-section-link:hover {
   color: var(--aha-orange-dk);
 }
 
-.aha-home .aha-history-hint {
+.aha-company-history .aha-history-hint {
   font-size: 12px;
   color: var(--aha-grey-lt);
   margin-top: auto;
   font-weight: 600;
 }
 
-.aha-home .aha-history-scroll {
+.aha-company-history .aha-history-scroll {
   flex: 1;
   min-width: 0;
   overflow-x: auto;
@@ -1621,18 +1621,18 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   scrollbar-color: rgba(255, 122, 33, 0.4) transparent;
 }
 
-.aha-home .aha-history-scroll::-webkit-scrollbar {
+.aha-company-history .aha-history-scroll::-webkit-scrollbar {
   height: 6px;
 }
-.aha-home .aha-history-scroll::-webkit-scrollbar-track {
+.aha-company-history .aha-history-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
-.aha-home .aha-history-scroll::-webkit-scrollbar-thumb {
+.aha-company-history .aha-history-scroll::-webkit-scrollbar-thumb {
   background: rgba(255, 122, 33, 0.4);
   border-radius: 4px;
 }
 
-.aha-home .aha-history-track {
+.aha-company-history .aha-history-track {
   display: flex;
   gap: 32px;
   width: max-content;
@@ -1640,7 +1640,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   padding-top: 16px;
 }
 
-.aha-home .aha-history-track::before {
+.aha-company-history .aha-history-track::before {
   content: "";
   position: absolute;
   top: 32px;
@@ -1651,7 +1651,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   z-index: 0;
 }
 
-.aha-home .aha-history-item {
+.aha-company-history .aha-history-item {
   width: 280px;
   scroll-snap-align: start;
   display: flex;
@@ -1660,14 +1660,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   z-index: 1;
 }
 
-.aha-home .aha-history-node {
+.aha-company-history .aha-history-node {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 24px;
 }
 
-.aha-home .aha-history-node .aha-history-dot {
+.aha-company-history .aha-history-node .aha-history-dot {
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -1680,7 +1680,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   position: relative;
 }
 
-.aha-home .aha-history-node .aha-history-dot::after {
+.aha-company-history .aha-history-node .aha-history-dot::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -1688,13 +1688,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background: var(--aha-orange);
 }
 
-.aha-home .aha-history-year {
+.aha-company-history .aha-history-year {
   font-size: 20px;
   font-weight: 800;
   color: var(--aha-navy);
 }
 
-.aha-home .aha-history-content {
+.aha-company-history .aha-history-content {
   background: #FFFFFF;
   border: 1px solid #DCE6F2;
   border-radius: var(--aha-radius-lg);
@@ -1703,14 +1703,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   height: 100%;
 }
 
-.aha-home .aha-history-content h4 {
+.aha-company-history .aha-history-content h4 {
   font-size: 16px;
   font-weight: 800;
   color: var(--aha-navy);
   margin: 0 0 8px;
 }
 
-.aha-home .aha-history-content p {
+.aha-company-history .aha-history-content p {
   font-size: 14px;
   color: var(--aha-grey);
   line-height: 1.6;
@@ -1719,15 +1719,15 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 /* History Responsive */
 @media (max-width: 900px) {
-  .aha-home .aha-home-history {
+  .aha-company-history {
     flex-direction: column;
     padding: 32px 24px;
   }
-  .aha-home .aha-history-intro {
+  .aha-company-history .aha-history-intro {
     flex: none;
     width: 100%;
   }
-  .aha-home .aha-history-scroll {
+  .aha-company-history .aha-history-scroll {
     width: 100%;
   }
 }

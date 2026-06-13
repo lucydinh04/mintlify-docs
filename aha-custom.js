@@ -1,21 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
+(function initAhamoveCountup() {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) return;
 
-  const elements = document.querySelectorAll(".aha-home .aha-countup");
-  if (!elements.length) return;
+  let observer = null;
+  const init = () => {
+    const elements = document.querySelectorAll(".aha-home .aha-countup:not(.aha-counted)");
+    if (!elements.length) return;
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        animateValue(el);
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
+    if (!observer) {
+      observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            animateValue(el);
+            obs.unobserve(el);
+            el.classList.add("aha-counted");
+          }
+        });
+      }, { threshold: 0.5 });
+    }
 
-  elements.forEach(el => observer.observe(el));
+    elements.forEach(el => observer.observe(el));
+  };
+
+  // Run immediately if possible
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+  // Polling to handle Next.js / Mintlify hydration and SPA navigation
+  setInterval(init, 500);
 
   function animateValue(el) {
     const end = parseInt(el.getAttribute("data-count-to"), 10);
@@ -51,4 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     window.requestAnimationFrame(step);
   }
-});
+})();
