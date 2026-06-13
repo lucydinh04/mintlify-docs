@@ -2392,14 +2392,21 @@ div[data-testid="table-of-contents"],
 }
 
 .aha-company-service-icon {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 16px !important;
+}
+.aha-company-service-icon p {
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
 }
 .aha-company-service-icon img {
-  width: 64px !important;
-  height: 64px !important;
+  width: 52px !important;
+  height: 52px !important;
   object-fit: contain !important;
-  margin: 0 auto 20px !important;
+  margin: 0 !important;
   display: block !important;
 }
 
