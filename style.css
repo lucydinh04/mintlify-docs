@@ -2392,19 +2392,18 @@ div[data-testid="table-of-contents"],
 }
 
 .aha-company-service-icon {
+  width: 140px !important;
+  height: 140px !important;
+  margin: 0 auto 24px !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 16px !important;
 }
-.aha-company-service-icon p {
-  margin: 0 !important;
-  display: flex;
-  justify-content: center;
-}
+.aha-company-service-icon p,
+.aha-company-service-icon span,
 .aha-company-service-icon img {
-  width: 52px !important;
-  height: 52px !important;
+  width: 100% !important;
+  height: auto !important;
   object-fit: contain !important;
   margin: 0 !important;
   display: block !important;
@@ -2415,6 +2414,7 @@ div[data-testid="table-of-contents"],
   font-size: 20px;
   font-weight: 800;
   margin: 0 0 12px !important;
+  text-align: center !important;
 }
 
 .aha-company-service-desc {
@@ -2422,6 +2422,7 @@ div[data-testid="table-of-contents"],
   font-size: 15px;
   line-height: 1.6;
   margin: 0 !important;
+  text-align: center !important;
 }
 
 /* =====================================================================
@@ -2640,4 +2641,130 @@ html.dark .aha-is-input[value="5"]:checked ~ .aha-is-layout .aha-is-label[data-s
 html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-step="6"] {
   background: #1F2937;
   border-color: #FF7A21;
+}
+
+/* =====================================================================
+   CEO QUOTE SECTION
+   ===================================================================== */
+.aha-ceo-quote {
+  display: flex;
+  background-color: #1F508D;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 48px 0;
+  align-items: stretch;
+}
+
+.aha-ceo-quote-left {
+  flex: 1.4;
+  padding: 48px 48px 48px 64px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aha-ceo-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 96px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #FF7A21;
+  line-height: 1;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  opacity: 0.8;
+  user-select: none;
+}
+
+.aha-ceo-quote-text {
+  color: #FFFFFF !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.6 !important;
+  margin: 0 0 24px !important;
+  position: relative;
+  z-index: 2;
+}
+
+.aha-ceo-quote-author {
+  color: #FFFFFF !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  position: relative;
+  z-index: 2;
+}
+
+.aha-ceo-quote-right {
+  flex: 1;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Orange circle shape background */
+.aha-ceo-quote-right::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 120%;
+  height: 90%;
+  background-color: #F17540;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  z-index: 0;
+}
+
+/* Dots pattern placeholder */
+.aha-ceo-quote-right::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 80px;
+  height: 80px;
+  background-image: radial-gradient(#FFFFFF 2px, transparent 2px);
+  background-size: 12px 12px;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.aha-ceo-quote-right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .aha-ceo-quote {
+    flex-direction: column;
+  }
+  .aha-ceo-quote-left {
+    padding: 40px 24px;
+  }
+  .aha-ceo-quote-mark {
+    top: 16px;
+    left: 16px;
+    font-size: 72px;
+  }
+  .aha-ceo-quote-text {
+    font-size: 18px !important;
+  }
+  .aha-ceo-quote-right {
+    min-height: 280px;
+  }
+  .aha-ceo-quote-right::before {
+    left: 0;
+    width: 100%;
+    border-radius: 150px 150px 0 0;
+  }
 }
