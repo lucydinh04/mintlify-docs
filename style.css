@@ -5345,3 +5345,140 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   background: #F1F5F9 !important;
   color: #0E4174 !important;
 }
+
+
+/* Generali & GenVita Insurance */
+.aha-insurance-generali {
+  font-family: inherit;
+  margin-top: 24px;
+}
+.aha-insurance-intro {
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.aha-insurance-benefits {
+  background: #F8FAFC;
+  border-left: 4px solid #0E4174;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.aha-insurance-benefits h4 {
+  color: #0E4174;
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.aha-insurance-benefits p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+.aha-insurance-benefits ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #334155;
+  font-size: 14px;
+}
+.aha-insurance-benefits li {
+  margin-bottom: 8px;
+}
+.aha-insurance-benefits li:last-child {
+  margin-bottom: 0;
+}
+
+.aha-insurance-steps {
+  margin-bottom: 32px;
+}
+.aha-insurance-steps h4 {
+  color: #0E4174;
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.aha-insurance-steps p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+.aha-insurance-steps ol {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: #334155;
+  font-size: 14px;
+}
+.aha-insurance-steps li {
+  margin-bottom: 8px;
+}
+
+.aha-insurance-guide-images {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.aha-insurance-guide-image {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+.aha-insurance-guide-image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #F8FAFC;
+}
+.aha-insurance-guide-image .placeholder-block {
+  aspect-ratio: 1/1;
+  background: #F1F5F9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  border: 2px dashed #CBD5E1;
+  margin-bottom: 12px;
+}
+.aha-insurance-guide-image .placeholder-text {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.aha-insurance-guide-image p {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.aha-insurance-support-note {
+  background: #FFF7ED;
+  border: 1px solid #FFEDD5;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.aha-insurance-support-note p {
+  margin: 0;
+  color: #9A3412;
+  font-size: 14px;
+}
+.aha-insurance-support-note .contact {
+  font-weight: 700;
+  color: #C2410C;
+}
+
+@media (max-width: 768px) {
+  .aha-insurance-guide-images {
+    flex-direction: column;
+  }
+}
