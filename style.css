@@ -4516,3 +4516,294 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     gap: 12px;
   }
 }
+
+
+/* YES A.I DO Redesign */
+.aha-yes-ai-do { font-family: inherit; }
+
+.aha-yes-intro {
+  font-size: 18px;
+  color: #0E4174;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.aha-yes-meaning {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.aha-yes-meaning-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+}
+.aha-yes-meaning-card h3 {
+  color: #FF7A21;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+.aha-yes-meaning-card p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.aha-workshop-panel {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 32px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+.aha-workshop-image {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #F1F5F9;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+}
+.aha-workshop-image.placeholder {
+  background: linear-gradient(135deg, #0A192F 0%, #0E4174 100%);
+  position: relative;
+}
+.aha-workshop-image .placeholder-content {
+  text-align: center;
+  color: #FFFFFF;
+}
+.aha-workshop-image .placeholder-content span {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.aha-workshop-content .aha-workshop-host {
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.aha-workshop-content .aha-badge.host {
+  background: #FFF7ED;
+  color: #EA580C;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.aha-workshop-content .aha-workshop-desc {
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.aha-workshop-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.aha-workshop-list li {
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.aha-workshop-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.aha-workshop-tags .tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.aha-workshop-tags .tag.navy {
+  background: #EFF6FF;
+  color: #1D4ED8;
+}
+.aha-workshop-tags .tag.grey {
+  background: #F1F5F9;
+  color: #64748B;
+}
+.aha-workshop-audience {
+  color: #64748B;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.aha-workshop-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.aha-workshop-links a {
+  background: #0E4174;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: opacity 0.2s;
+}
+.aha-workshop-links a:hover {
+  opacity: 0.9;
+}
+.aha-workshop-links .resource-note {
+  color: #94A3B8;
+  font-size: 13px;
+  font-style: italic;
+  background: #F8FAFC;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.aha-yes-about {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 64px;
+  text-align: center;
+}
+.aha-yes-about h3 {
+  color: #0E4174;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+.aha-yes-about p {
+  color: #475569;
+  font-size: 15px;
+  margin: 0 auto 24px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+.aha-yes-about .about-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.aha-yes-about .about-links a {
+  color: #FF7A21;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .aha-yes-meaning {
+    grid-template-columns: 1fr;
+  }
+  .aha-workshop-panel {
+    grid-template-columns: 1fr;
+  }
+  .aha-workshop-image {
+    aspect-ratio: 16/9;
+  }
+}
+
+
+/* Showcase Restructure */
+.aha-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+.aha-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #F8FAFC;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.aha-checklist li strong {
+  color: #0E4174;
+}
+
+.aha-feature-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.aha-feature {
+  background: linear-gradient(to bottom, #FFFFFF, #F8FAFC);
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+.aha-feature h4 {
+  color: #0E4174;
+  margin: 12px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.aha-award-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+.aha-award-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid #FF7A21;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.aha-award-item .icon-box {
+  background: #FFF7ED;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.aha-award-item h4 {
+  color: #0E4174;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.aha-award-item p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .aha-feature-row {
+    grid-template-columns: 1fr;
+  }
+}
