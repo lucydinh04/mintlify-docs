@@ -2908,170 +2908,188 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 
 .aha-ai-hero {
-  background-color: #F8FAFC;
-  border-left: 4px solid #FF7A21;
-  padding: 32px 24px;
-  border-radius: 0 8px 8px 0;
-  margin-bottom: 40px;
+  background-color: #0E4174;
+  color: #FFFFFF;
+  padding: 40px 32px;
+  border-radius: 12px;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.aha-ai-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,122,33,0.15) 0%, transparent 70%);
 }
 .aha-ai-hero .eyebrow {
   color: #FF7A21;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
-  margin: 0 0 8px;
-  letter-spacing: 1px;
+  margin: 0 0 12px;
+  letter-spacing: 1.5px;
 }
 .aha-ai-hero h2 {
-  color: #0E4174;
-  font-size: 28px;
+  color: #FFFFFF;
+  font-size: 32px;
   font-weight: 800;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 .aha-ai-hero p {
-  color: #475569;
+  color: #E2E8F0;
   font-size: 16px;
-  margin: 0;
+  margin: 0 0 8px;
   line-height: 1.6;
+  max-width: 600px;
+}
+.aha-ai-hero .sub-line {
+  color: #94A3B8;
+  font-size: 14px;
+  font-style: italic;
 }
 
-.aha-ai-path {
+.aha-ai-journey {
   position: relative;
-  margin: 40px 0;
-  padding-left: 20px;
+  margin: 48px 0;
 }
-.aha-ai-path::before {
+.aha-ai-journey-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.aha-ai-journey-track::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 35px; /* Center of the number circle */
-  width: 2px;
+  top: 24px; /* Center of the number circle */
+  left: 50px;
+  right: 50px;
+  height: 2px;
   background-color: #E2E8F0;
   z-index: 0;
 }
 
-.aha-ai-path-step {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 32px;
+.aha-ai-journey-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.aha-ai-path-step:last-child {
-  margin-bottom: 0;
+.aha-ai-journey-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(14,65,116,0.08);
+  border-color: #CBD5E1;
 }
 
-.aha-ai-step-number {
-  width: 32px;
-  height: 32px;
-  background-color: #FF7A21;
-  color: white;
+.aha-ai-stage-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.aha-ai-stage-number {
+  width: 48px;
+  height: 48px;
+  background-color: #FFFFFF;
+  border: 2px solid #FF7A21;
+  color: #FF7A21;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  margin-right: 24px;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 4px #FFFFFF;
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 0 0 8px #FFFFFF;
 }
 
-.aha-ai-step-content {
-  flex: 1;
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-
-.aha-ai-step-text h3 {
+.aha-ai-journey-card h3 {
   color: #0E4174;
   font-size: 18px;
   font-weight: 700;
-  margin: 0 0 8px;
+  margin: 0 0 12px;
+  line-height: 1.4;
 }
-.aha-ai-step-text p {
+.aha-ai-journey-card p {
   color: #475569;
-  font-size: 15px;
-  margin: 0;
-  line-height: 1.6;
+  font-size: 14px;
+  margin: 0 0 20px;
+  line-height: 1.5;
+  flex: 1;
 }
-.aha-ai-step-cta {
-  flex-shrink: 0;
-}
-.aha-ai-step-cta a {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #0E4174;
-  color: #FFFFFF;
-  text-decoration: none;
-  border-radius: 6px;
+.aha-ai-journey-card a {
+  color: #FF7A21;
   font-weight: 600;
   font-size: 14px;
-  transition: opacity 0.2s;
-  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
-.aha-ai-step-cta a:hover {
-  opacity: 0.9;
-  color: #FFFFFF;
+.aha-ai-journey-card a:hover {
+  text-decoration: underline;
 }
 
 .aha-ai-quick-access {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 40px;
+  gap: 20px;
+  margin-top: 32px;
 }
 .aha-ai-quick-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  padding: 20px;
+  background: #F8FAFC;
+  border-radius: 8px;
+  padding: 16px 20px;
+  border-left: 3px solid #0E4174;
   display: flex;
   flex-direction: column;
 }
 .aha-ai-quick-card h4 {
   color: #0E4174;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  margin: 0 0 8px;
+  margin: 0 0 4px;
 }
 .aha-ai-quick-card p {
-  color: #475569;
-  font-size: 14px;
-  margin: 0 0 16px;
+  color: #64748B;
+  font-size: 13px;
+  margin: 0 0 12px;
   flex: 1;
 }
 .aha-ai-quick-card a {
   color: #FF7A21;
+  font-size: 13px;
   font-weight: 600;
-  font-size: 14px;
   text-decoration: none;
 }
 
 .aha-ai-principles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
+  margin-top: 24px;
 }
 .aha-ai-principle-card {
-  background-color: #F8FAFC;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 20px;
-  border-left: 3px solid #0E4174;
 }
 .aha-ai-principle-card h4 {
-  color: #0E4174;
+  color: #C2410C;
   font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .aha-ai-principle-card p {
   color: #475569;
@@ -3080,31 +3098,45 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   line-height: 1.5;
 }
 
+@media (max-width: 1024px) {
+  .aha-ai-journey-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+  .aha-ai-journey-track::before {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
-  .aha-ai-path::before {
-    left: 16px;
-  }
-  .aha-ai-path {
-    padding-left: 0;
-  }
-  .aha-ai-step-number {
-    margin-right: 16px;
-  }
-  .aha-ai-step-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .aha-ai-step-cta a {
-    width: 100%;
-    text-align: center;
-  }
+  .aha-ai-journey-track,
   .aha-ai-quick-access,
   .aha-ai-principles {
     grid-template-columns: 1fr;
   }
+  .aha-ai-journey-track {
+    padding-left: 24px;
+  }
+  .aha-ai-journey-track::before {
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 23px;
+    width: 2px;
+    height: auto;
+    right: auto;
+  }
+  .aha-ai-stage-header {
+    position: absolute;
+    top: 24px;
+    left: -48px;
+  }
+  .aha-ai-stage-number {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    box-shadow: 0 0 0 4px #FFFFFF;
+  }
 }
-
 /* Claude Onboarding Redesign */
 .aha-claude-onboarding {
   display: grid;
