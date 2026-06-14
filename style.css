@@ -3222,3 +3222,243 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     position: static;
   }
 }
+
+/* Day 1 Onboarding Redesign */
+.aha-day-one { font-family: inherit; }
+
+.aha-day-one-welcome {
+  background-color: #FFF7ED;
+  border-left: 4px solid #FF7A21;
+  border-radius: 0 12px 12px 0;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+.aha-day-one-welcome p {
+  color: #0E4174;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+.aha-day-one-welcome .sub-intro {
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.aha-day-one-highlights {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.aha-day-one-highlights span {
+  background: #FFFFFF;
+  color: #FF7A21;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid #FFEDD5;
+  box-shadow: 0 2px 4px rgba(255,122,33,0.05);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aha-day-one-schedule {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.aha-day-one-schedule-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.aha-day-one-schedule-card .time {
+  color: #FF7A21;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.aha-day-one-schedule-card h4 {
+  color: #0E4174;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.aha-day-one-schedule-card p {
+  color: #475569;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.aha-day-one-info {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.aha-day-one-info-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+}
+.aha-day-one-info-card h3 {
+  color: #0E4174;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aha-day-one-info-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.aha-day-one-info-card th, .aha-day-one-info-card td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #E2E8F0;
+  text-align: left;
+}
+.aha-day-one-info-card th {
+  color: #64748B;
+  font-weight: 600;
+}
+.aha-day-one-info-card td {
+  color: #0E4174;
+}
+.aha-day-one-info-card .wifi-note {
+  font-size: 13px;
+  color: #64748B;
+  margin-top: 16px;
+  background: #FFFFFF;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 3px solid #CBD5E1;
+}
+
+.aha-day-one-checklist-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.aha-day-one-checklist-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+.aha-day-one-checklist-card h3 {
+  color: #0E4174;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+.aha-day-one-checklist-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.aha-day-one-checklist-item:last-child {
+  margin-bottom: 0;
+}
+.aha-day-one-checklist-icon {
+  color: #10B981;
+  margin-top: 2px;
+}
+.aha-day-one-checklist-text h4 {
+  color: #0E4174;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.aha-day-one-checklist-text p {
+  color: #475569;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.aha-day-one-docs-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.aha-day-one-doc-chip {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #0E4174;
+  font-weight: 600;
+  font-size: 14px;
+}
+.aha-day-one-doc-note {
+  font-size: 13px;
+  color: #64748B;
+  background: #FFFBEB;
+  border: 1px solid #FEF3C7;
+  padding: 12px;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.aha-day-one-closing {
+  background: #0E4174;
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+}
+.aha-day-one-closing p {
+  font-size: 18px;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+.aha-day-one-closing a {
+  display: inline-flex;
+  background: #FF7A21;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+.aha-day-one-closing a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .aha-day-one-schedule {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .aha-day-one-schedule,
+  .aha-day-one-info,
+  .aha-day-one-checklist-section {
+    grid-template-columns: 1fr;
+  }
+  .aha-day-one-welcome {
+    padding: 20px;
+  }
+}

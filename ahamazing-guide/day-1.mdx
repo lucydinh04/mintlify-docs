@@ -1,90 +1,162 @@
 ---
 title: "Ngày đầu tiên"
 sidebarTitle: "Ngày đầu tiên"
-description: "Lịch trình ngày đầu, giờ làm việc, wifi & thủ tục nhân sự cần hoàn thành."
+description: "Chào mừng bạn đến với Ahamove. Lịch trình ngày đầu, giờ làm việc, wifi & việc cần hoàn tất."
 icon: "sun"
+mode: "wide"
 ---
 
-Đây là cách ngày đầu tiên của bạn diễn ra. Bạn không cần nhớ hết — HRBP và team sẽ dẫn bạn qua từng bước.
+<div className="aha-day-one">
 
-## 1. Lịch trình ngày đầu tiên
+<div className="aha-day-one-welcome">
+  <p>Chào mừng bạn đến với ngày đầu tiên tại Ahamove. HRBP và team sẽ đồng hành cùng bạn để làm quen với công ty, kết nối với đội nhóm và hoàn tất những bước thiết lập đầu tiên.</p>
+  <p className="sub-intro">Bạn không cần nhớ hết mọi thứ trong một lần — cứ đi từng bước, tụi mình sẽ hỗ trợ bạn.</p>
+  <div className="aha-day-one-highlights">
+    <span><Icon icon="users" size={14} /> Gặp HRBP & team</span>
+    <span><Icon icon="circle-info" size={14} /> Nắm thông tin cần biết</span>
+    <span><Icon icon="list-check" size={14} /> Hoàn tất checklist ngày đầu</span>
+  </div>
+</div>
 
-<Steps>
-  <Step title="09:00 – 09:30 · Đào tạo hội nhập cùng HRBP" icon="handshake">
-    Giới thiệu công ty, văn hóa, công cụ & những việc cần làm tuần đầu.
-  </Step>
-  <Step title="09:30 – 10:00 · Giới thiệu nhân sự mới với Team" icon="users">
-    Gặp mặt các thành viên trong team của bạn.
-  </Step>
-  <Step title="12:00 – 13:00 · Ăn trưa cùng Team" icon="utensils">
-    Làm quen mọi người trong không khí thoải mái.
-  </Step>
-  <Step title="13:30 – 17:30 · Đào tạo chuyên môn cùng Team" icon="laptop-code">
-    Bắt đầu nắm công việc & quy trình của vị trí.
-  </Step>
-</Steps>
+## Hôm nay sẽ diễn ra thế nào?
 
-## 2. Thông tin chung
+<div className="aha-day-one-schedule">
+  <div className="aha-day-one-schedule-card">
+    <div className="time"><Icon icon="clock" size={14} /> 09:00 – 09:30</div>
+    <h4>Đào tạo hội nhập cùng HRBP</h4>
+    <p>Giới thiệu công ty, văn hóa, công cụ & những việc cần làm tuần đầu.</p>
+  </div>
+  <div className="aha-day-one-schedule-card">
+    <div className="time"><Icon icon="clock" size={14} /> 09:30 – 10:00</div>
+    <h4>Giới thiệu nhân sự mới với Team</h4>
+    <p>Gặp mặt các thành viên trong team của bạn.</p>
+  </div>
+  <div className="aha-day-one-schedule-card">
+    <div className="time"><Icon icon="clock" size={14} /> 12:00 – 13:00</div>
+    <h4>Ăn trưa cùng Team</h4>
+    <p>Làm quen mọi người trong không khí thoải mái.</p>
+  </div>
+  <div className="aha-day-one-schedule-card">
+    <div className="time"><Icon icon="clock" size={14} /> 13:30 – 17:30</div>
+    <h4>Đào tạo chuyên môn cùng Team</h4>
+    <p>Bắt đầu nắm công việc & quy trình của vị trí.</p>
+  </div>
+</div>
 
-### Thời gian làm việc
+## Thông tin cần biết
 
-| Khung giờ | Làm việc | Nghỉ trưa | Áp dụng cho |
-| --- | --- | --- | --- |
-| **Khung 1** | 8:30 – 18:00 | 12:00 – 13:30 | Deli, HR |
-| **Khung 2** | 9:00 – 18:00 | 12:00 – 13:00 | MKT, Tech, FA, BOD |
+<div className="aha-day-one-info">
+  <div className="aha-day-one-info-card">
+    <h3><Icon icon="calendar-day" size={18} color="#FF7A21" /> Thời gian làm việc</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Khung giờ</th>
+          <th>Làm việc</th>
+          <th>Nghỉ trưa</th>
+          <th>Áp dụng cho</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Khung 1</strong></td>
+          <td>8:30 – 18:00</td>
+          <td>12:00 – 13:30</td>
+          <td>Deli, HR</td>
+        </tr>
+        <tr>
+          <td><strong>Khung 2</strong></td>
+          <td>9:00 – 18:00</td>
+          <td>12:00 – 13:00</td>
+          <td>MKT, Tech, FA, BOD</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div className="aha-day-one-info-card">
+    <h3><Icon icon="wifi" size={18} color="#FF7A21" /> Kết nối wifi</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>Network</strong></td>
+          <td>Ahamove</td>
+        </tr>
+        <tr>
+          <td><strong>Password</strong></td>
+          <td>Ah@Movers</td>
+        </tr>
+      </tbody>
+    </table>
+    <div className="wifi-note">
+      Khi di chuyển giữa các khu vực văn phòng hoặc phòng họp, hãy ngắt kết nối rồi kết nối lại để máy bắt vào mạng gần nhất.
+    </div>
+  </div>
+</div>
 
-### Kết nối wifi
+## Việc cần hoàn tất
 
-| | |
-| --- | --- |
-| **Network** | Ahamove |
-| **Password** | Ah@Movers |
+<div className="aha-day-one-checklist-section">
+  <div className="aha-day-one-checklist-card">
+    <h3>Checklist ngày đầu</h3>
+    <div className="aha-day-one-checklist-item">
+      <div className="aha-day-one-checklist-icon"><Icon icon="circle-check" size={16} /></div>
+      <div className="aha-day-one-checklist-text">
+        <h4>Nhận tài khoản Gmail từ HRBP</h4>
+        <p>Đổi mật khẩu ngay để bắt đầu sử dụng.</p>
+      </div>
+    </div>
+    <div className="aha-day-one-checklist-item">
+      <div className="aha-day-one-checklist-icon"><Icon icon="circle-check" size={16} /></div>
+      <div className="aha-day-one-checklist-text">
+        <h4>Truy cập 1Office</h4>
+        <p>Check mail công ty lấy ID & mật khẩu. Xem <a href="/handbook/internal-systems" style={{ color: '#FF7A21', fontWeight: 600 }}>hướng dẫn 1Office</a>.</p>
+      </div>
+    </div>
+    <div className="aha-day-one-checklist-item">
+      <div className="aha-day-one-checklist-icon"><Icon icon="circle-check" size={16} /></div>
+      <div className="aha-day-one-checklist-text">
+        <h4>Nhập số tài khoản ngân hàng</h4>
+        <p>Dùng số tài khoản chính chủ trên 1Office.</p>
+      </div>
+    </div>
+    <div className="aha-day-one-checklist-item">
+      <div className="aha-day-one-checklist-icon"><Icon icon="circle-check" size={16} /></div>
+      <div className="aha-day-one-checklist-text">
+        <h4>Ký hợp đồng thử việc</h4>
+        <p>Thực hiện ký số trên 1Office.</p>
+      </div>
+    </div>
+    <div className="aha-day-one-checklist-item">
+      <div className="aha-day-one-checklist-icon"><Icon icon="circle-check" size={16} /></div>
+      <div className="aha-day-one-checklist-text">
+        <h4>Ký Cam kết bảo mật</h4>
+        <p>Ký bằng bút xanh, nộp lại cả 2 bản cho HRBP.</p>
+      </div>
+    </div>
+  </div>
 
-<Warning>
-  Khi di chuyển giữa các khu vực văn phòng hoặc phòng họp, hãy **ngắt kết nối Wifi rồi kết nối lại** để máy bắt vào Access Point gần nhất, đảm bảo tín hiệu ổn định.
-</Warning>
+  <div className="aha-day-one-checklist-card">
+    <h3>Hồ sơ cần chuẩn bị</h3>
+    <div className="aha-day-one-docs-chips">
+      <div className="aha-day-one-doc-chip">
+        <Icon icon="id-card" size={16} color="#FF7A21" /> Căn cước công dân (hai mặt, còn hiệu lực)
+      </div>
+      <div className="aha-day-one-doc-chip">
+        <Icon icon="house" size={16} color="#FF7A21" /> Xác nhận cư trú / VNeID cấp 2
+      </div>
+      <div className="aha-day-one-doc-chip">
+        <Icon icon="camera" size={16} color="#FF7A21" /> Ảnh chân dung (rõ mặt, chính diện)
+      </div>
+    </div>
+    <div className="aha-day-one-doc-note">
+      <strong>Lưu ý:</strong> Gửi dạng PNG/PDF, scan/chụp rõ nét, hiển thị đủ thông tin (chủ hộ, nhân viên & người thân). Giấy xác nhận cư trú cần có mộc/chữ ký số của cơ quan Nhà nước, thời hạn trong 01 năm kể từ ngày xác nhận.
+    </div>
+  </div>
+</div>
 
-## 3. Thủ tục nhân sự cần hoàn thành
+<div className="aha-day-one-closing">
+  <p>Hết ngày đầu, tụi mình mong bạn thấy: "Mình chọn đúng nơi rồi!"</p>
+  <a href="/ahamazing-guide/week-1">Tiếp tục với Tuần đầu tiên <Icon icon="arrow-right" size={14} /></a>
+</div>
 
-### Hồ sơ cần nộp
-
-<Steps>
-  <Step title="Căn cước công dân" icon="id-card">
-    Hình **hai mặt**, còn hiệu lực.
-  </Step>
-  <Step title="Xác nhận cư trú" icon="house">
-    Giấy xác nhận cư trú **HOẶC** ảnh thông tin cư trú trên **VNeID** (đã định danh cấp 2). *Không tiếp nhận sổ hộ khẩu.*
-  </Step>
-  <Step title="Ảnh chân dung" icon="camera">
-    Chụp rõ mặt, chính diện; sẽ được lưu trên hệ thống 1Office.
-  </Step>
-</Steps>
-
-<Note>
-  **Lưu ý hồ sơ:** gửi dạng **PNG/PDF**, scan/chụp rõ nét, hiển thị đủ thông tin (chủ hộ, nhân viên & người thân). Giấy
-  xác nhận cư trú cần có **mộc/chữ ký số** của cơ quan Nhà nước, **thời hạn trong 01 năm** kể từ ngày xác nhận.
-</Note>
-
-### Checklist ngày đầu
-
-<Steps>
-  <Step title="Nhận tài khoản Gmail từ HRBP" icon="envelope">
-    Đổi mật khẩu ngay để bắt đầu sử dụng.
-  </Step>
-  <Step title="Truy cập 1Office" icon="building-user">
-    Check mail công ty để lấy ID & mật khẩu. Xem [hướng dẫn 1Office chi tiết](/handbook/internal-systems).
-  </Step>
-  <Step title="Nhập số tài khoản ngân hàng trên 1Office" icon="building-columns">
-    Dùng số tài khoản chính chủ.
-  </Step>
-  <Step title="Ký hợp đồng thử việc" icon="file-signature">
-    Thực hiện ký số trên 1Office.
-  </Step>
-  <Step title="Ký Cam kết bảo mật" icon="file-shield">
-    **Ký bằng bút xanh, nộp lại cả 2 bản** cho HRBP phụ trách.
-  </Step>
-</Steps>
-
-<Tip>
-  Hết ngày đầu, tụi mình mong bạn thấy: **"Mình chọn đúng nơi rồi!"** Việc cần làm tiếp theo xem ở [Tuần đầu tiên](/ahamazing-guide/week-1).
-</Tip>
+</div>
