@@ -3462,3 +3462,190 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     padding: 20px;
   }
 }
+
+
+/* Week 1 Onboarding Redesign */
+.aha-week-one { font-family: inherit; }
+
+.aha-week-one-welcome {
+  background-color: #FFF7ED;
+  border-left: 4px solid #FF7A21;
+  border-radius: 0 12px 12px 0;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+.aha-week-one-welcome p {
+  color: #0E4174;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+.aha-week-one-welcome p.sub-intro {
+  color: #475569;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.aha-week-one-goals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.aha-week-one-goal-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.aha-week-one-goal-card h3 {
+  color: #FF7A21;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aha-week-one-goal-card p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.aha-week-one-checklist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.aha-week-one-check-group {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+}
+.aha-week-one-check-group h3 {
+  color: #0E4174;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E2E8F0;
+}
+.aha-week-one-check-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.aha-week-one-check-item:last-child {
+  margin-bottom: 0;
+}
+.aha-week-one-check-icon {
+  color: #10B981;
+  margin-top: 2px;
+}
+.aha-week-one-check-text h4 {
+  color: #0E4174;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.aha-week-one-check-text p {
+  color: #475569;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+.aha-week-one-check-text a {
+  color: #FF7A21;
+  font-weight: 600;
+  text-decoration: none;
+}
+.aha-week-one-check-text a:hover {
+  text-decoration: underline;
+}
+
+.aha-week-one-tip {
+  background: #E0F2FE;
+  border-left: 4px solid #0EA5E9;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 48px;
+  display: flex;
+  gap: 12px;
+}
+.aha-week-one-tip p {
+  color: #0369A1;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+.aha-week-one-tip a {
+  color: #0284C7;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.aha-week-one-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 48px;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 32px;
+}
+.aha-week-one-nav-card {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  transition: all 0.2s;
+}
+.aha-week-one-nav-card:hover {
+  border-color: #FF7A21;
+  box-shadow: 0 4px 12px rgba(255,122,33,0.08);
+}
+.aha-week-one-nav-card.next {
+  align-items: flex-end;
+  text-align: right;
+}
+.aha-week-one-nav-card span {
+  color: #64748B;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.aha-week-one-nav-card strong {
+  color: #0E4174;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+.aha-week-one-nav-card:hover strong {
+  color: #FF7A21;
+}
+
+@media (max-width: 768px) {
+  .aha-week-one-goals,
+  .aha-week-one-checklist,
+  .aha-week-one-nav {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .aha-week-one-nav-card.next {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
