@@ -3099,3 +3099,89 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     grid-template-columns: 1fr;
   }
 }
+
+/* Claude Onboarding Redesign */
+.aha-claude-onboarding {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 24px;
+}
+.aha-claude-onboarding-left img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 24px;
+}
+.aha-claude-onboarding-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.aha-claude-step {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.aha-claude-step:hover {
+  border-color: #FF7A21;
+  box-shadow: 0 4px 12px rgba(255,122,33,0.1);
+}
+.aha-claude-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: #FF7A21;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.aha-claude-step:hover::before {
+  opacity: 1;
+}
+.aha-claude-step h4 {
+  color: #0E4174;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aha-claude-step p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+.aha-claude-alert {
+  background-color: #FFF7ED;
+  border-left: 4px solid #FF7A21;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.aha-claude-alert p {
+  color: #C2410C;
+  font-size: 14px;
+  margin: 0;
+}
+.aha-claude-alert strong {
+  color: #9A3412;
+}
+@media (max-width: 768px) {
+  .aha-claude-onboarding {
+    grid-template-columns: 1fr;
+  }
+  .aha-claude-onboarding-left img {
+    position: static;
+  }
+}
