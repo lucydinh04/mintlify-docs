@@ -5,86 +5,122 @@ icon: "life-ring"
 mode: "wide"
 ---
 
-<div className="aha-help-center">
+<div className="aha-help-center-v2">
 
-## Bạn cần hỗ trợ gì?
+<div className="hc-search-banner">
+  <h2>Bạn cần hỗ trợ gì?</h2>
+  <p>Hãy tìm kiếm câu trả lời trên Ahamove Employee Hub trước khi gửi yêu cầu hỗ trợ.</p>
+</div>
 
-<p>Chọn đúng kênh để được hỗ trợ nhanh hơn.</p>
+<div className="hc-quick-actions">
+  <a href="/help-center/ask-ahamove-ai" className="hc-action-btn"><Icon icon="robot" color="#FF7A21" /> Hỏi Ahamove AI</a>
+  <a href="/help-center/faq" className="hc-action-btn"><Icon icon="book" color="#0E4174" /> Tra cứu chính sách</a>
+  <a href="/handbook/it-support" className="hc-action-btn"><Icon icon="ticket" color="#0E4174" /> Tạo Ticket IT</a>
+  <a href="#contact-hub" className="hc-action-btn"><Icon icon="flag" color="#0E4174" /> Báo cáo sự cố</a>
+</div>
 
-<div className="aha-help-gateway">
-  <a className="aha-help-card" href="/help-center/ask-ahamove-ai">
-    <h3><Icon icon="robot" color="#FF7A21" /> Hỏi Ahamove AI</h3>
-    <p>Trợ lý AI trả lời 24/7 về nội dung trên cổng thông tin.</p>
-    <span className="cta">Bắt đầu hỏi →</span>
+## Kênh hỗ trợ
+
+<div className="hc-directory">
+  <a href="/handbook/it-support" className="hc-dir-row">
+    <div className="icon-wrapper"><Icon icon="laptop" size={20} /></div>
+    <div className="dir-content">
+      <h3>IT Support</h3>
+      <p>Hỗ trợ thiết bị, phần mềm, tài khoản email và các vấn đề kỹ thuật.</p>
+    </div>
+    <Icon icon="chevron-right" className="arrow" />
   </a>
-  <a className="aha-help-card" href="/help-center/faq">
-    <h3><Icon icon="circle-question" color="#FF7A21" /> Câu hỏi thường gặp</h3>
-    <p>Tự tra cứu nhanh các câu hỏi về lương, phúc lợi, công cụ và quy trình.</p>
-    <span className="cta">Xem FAQ →</span>
+  <a href="/help-center/faq" className="hc-dir-row">
+    <div className="icon-wrapper"><Icon icon="users" size={20} /></div>
+    <div className="dir-content">
+      <h3>HR Support</h3>
+      <p>Giải đáp thắc mắc về lương, thưởng, chế độ phúc lợi và quy trình nhân sự.</p>
+    </div>
+    <Icon icon="chevron-right" className="arrow" />
   </a>
-  <a className="aha-help-card" href="/handbook/it-support">
-    <h3><Icon icon="laptop" color="#FF7A21" /> Hỗ trợ IT</h3>
-    <p>Tài khoản, email, thiết bị, máy móc và tài sản IT.</p>
-    <span className="cta">Xem hướng dẫn →</span>
+  <a href="#contact-hub" className="hc-dir-row">
+    <div className="icon-wrapper"><Icon icon="building" size={20} /></div>
+    <div className="dir-content">
+      <h3>Facilities (Office Support)</h3>
+      <p>Quản lý văn phòng, cơ sở vật chất và thủ tục công tác.</p>
+    </div>
+    <Icon icon="chevron-right" className="arrow" />
   </a>
-  <a className="aha-help-card" href="#danh-ba-nhan-su">
-    <h3><Icon icon="address-book" color="#FF7A21" /> Danh bạ nhân sự</h3>
-    <p>Tìm đúng HRBP, C&B, OM, IT hoặc L&OD theo việc cần hỗ trợ.</p>
-    <span className="cta">Xem danh bạ →</span>
+  <a href="/help-center/ask-ahamove-ai" className="hc-dir-row">
+    <div className="icon-wrapper"><Icon icon="robot" size={20} /></div>
+    <div className="dir-content">
+      <h3>Ask Ahamove AI</h3>
+      <p>Tra cứu nhanh 24/7 với trợ lý AI am hiểu mọi quy định của công ty.</p>
+    </div>
+    <Icon icon="chevron-right" className="arrow" />
   </a>
 </div>
 
-<div id="danh-ba-nhan-su" />
+<div id="contact-hub" />
 
-## Danh bạ nhân sự
+## Contact Hub
 
-Tìm đúng người theo việc bạn cần.
+Tìm đúng người để giải quyết đúng việc.
 
-<div className="aha-help-directory">
+<div className="hc-contact-hub">
 
-### HR Business Partner (HRBP)
+  <div className="hc-contact-block">
+    <div className="block-header">
+      <Icon icon="users" size={20} color="#0E4174" />
+      <h3>HR Team (Nhân sự)</h3>
+    </div>
+    <div className="block-body">
+      <p className="team-note">Hỗ trợ chung: <strong>nhansu@ahamove.com</strong></p>
+      
+      <h4>HR Business Partner (HRBP)</h4>
+      <ul>
+        <li><strong>Đinh Lê Huyền Trang</strong> (Head of HRBP) · @trangdinh1012 · trangdlh@ahamove.com</li>
+        <li><strong>Phạm Minh Quân</strong> (Khối Tech) · @quanpmhr · quanpm@ahamove.com</li>
+        <li><strong>Nguyễn Hoàng Phương Anh</strong> (SMEs, FA, MKT) · @anhnhphr · anhnhp@ahamove.com</li>
+        <li><strong>Trần Thị Thúy</strong> (OPS, Ahafast - Nontech) · @thuytt1hr · thuytt1@ahamove.com</li>
+        <li><strong>Lê Như Hoa</strong> (Com1, Truck & CE) · @nhuhoane · hoaln@ahamove.com</li>
+      </ul>
 
-| Họ và tên | Telegram | Email | Phụ trách |
-| --- | --- | --- | --- |
-| **Đinh Lê Huyền Trang** | @trangdinh1012 | trangdlh@ahamove.com | Head of HRBP |
-| **Phạm Minh Quân** | @quanpmhr | quanpm@ahamove.com | Đối tác & Tuyển dụng nhân sự Khối Tech |
-| **Nguyễn Hoàng Phương Anh** | @anhnhphr | anhnhp@ahamove.com | Đối tác & Tuyển dụng nhân sự Phòng SMEs, FA, MKT |
-| **Trần Thị Thúy** | @thuytt1hr | thuytt1@ahamove.com | Đối tác & Tuyển dụng nhân sự Phòng OPS, Ahafast (Nontech) |
-| **Lê Như Hoa** | @nhuhoane | hoaln@ahamove.com | Đối tác & Tuyển dụng nhân sự Phòng Com1, Truck & CE |
+      <h4>Compensation & Benefits (C&B)</h4>
+      <ul>
+        <li><strong>Đỗ Thị Thanh Tuyền</strong> (Hợp đồng, Lương) · Zalo/SĐT: 0346909637</li>
+        <li><strong>Đỗ Thị Nhớ</strong> (Thuế TNCN, Lương) · @NhoCnB</li>
+        <li><strong>Đỗ Thị Minh Quyên</strong> (Bảo hiểm Xã hội) · @quyendtm2</li>
+        <li><strong>Nguyễn Ngọc Kiều Trinh</strong> (Bảo hiểm Sức khỏe, Tai nạn) · @Trinhnnk</li>
+      </ul>
 
-### Compensation & Benefits (C&B)
+      <h4>Learning & Organization Development (L&OD)</h4>
+      <ul>
+        <li><strong>Đinh Vị Mẫn Nhi</strong> (Truyền thông & Event) · @nhidvm · nhidvm@ahamove.com</li>
+        <li><strong>Nguyễn Trí Thiện Toàn</strong> (Đào tạo & Phát triển) · @Trithientoan · toanntt@ahamove.com</li>
+      </ul>
+    </div>
+  </div>
 
-| Họ và tên | Telegram | Phụ trách |
-| --- | --- | --- |
-| **Đỗ Thị Thanh Tuyền** | 0346909637 | Hợp đồng & Hồ sơ & Lương |
-| **Đỗ Thị Nhớ** | @NhoCnB | Thuế TNCN (Mã số thuế + Giảm trừ gia cảnh + Quyết toán thuế) + Lương |
-| **Đỗ Thị Minh Quyên** | @quyendtm2 | Bảo hiểm Xã hội |
-| **Nguyễn Ngọc Kiều Trinh** | @Trinhnnk | Bảo hiểm Sức khỏe + Bảo hiểm Tai nạn |
+  <div className="hc-contact-block">
+    <div className="block-header">
+      <Icon icon="laptop-code" size={20} color="#0E4174" />
+      <h3>IT Team (Công nghệ)</h3>
+    </div>
+    <div className="block-body">
+      <ul>
+        <li><strong>Huỳnh Nhật Tuấn</strong> (Hệ thống CNTT) · @tuanhn_hcm · tuanhn@ahamove.com</li>
+      </ul>
+    </div>
+  </div>
 
-### Office Management (OM)
+  <div className="hc-contact-block">
+    <div className="block-header">
+      <Icon icon="building" size={20} color="#0E4174" />
+      <h3>Office Support (Văn phòng)</h3>
+    </div>
+    <div className="block-body">
+      <ul>
+        <li><strong>Lê Thị Trí Thức</strong> (Quản lý văn phòng, công tác) · @thucthuc1 · thucltt@ahamove.com</li>
+      </ul>
+    </div>
+  </div>
 
-| Họ và tên | Telegram | Email | Phụ trách |
-| --- | --- | --- | --- |
-| **Lê Thị Trí Thức** | @thucthuc1 | thucltt@ahamove.com | Quản lí văn phòng, thủ tục công tác |
-
-### IT Operation (IT)
-
-| Họ và tên | Telegram | Email | Phụ trách |
-| --- | --- | --- | --- |
-| **Huỳnh Nhật Tuấn** | @tuanhn_hcm | tuanhn@ahamove.com | Hệ thống công nghệ thông tin |
-
-### Learning & Organization Development (L&OD)
-
-| Họ và tên | Telegram | Email | Phụ trách |
-| --- | --- | --- | --- |
-| **Đinh Vị Mẫn Nhi** | @nhidvm | nhidvm@ahamove.com | Truyền thông & Event nội bộ |
-| **Nguyễn Trí Thiện Toàn** | @Trithientoan | toanntt@ahamove.com | Đào tạo & Phát triển tổ chức |
-
-</div>
-
-<div className="aha-help-note">
-  <Icon icon="circle-info" size={20} color="#EA580C" />
-  <p>Thắc mắc chung về nhân sự, chính sách, phép → email <strong>nhansu@ahamove.com</strong> hoặc nhắn HRBP phụ trách phòng bạn.</p>
 </div>
 
 </div>
