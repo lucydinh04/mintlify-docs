@@ -2896,3 +2896,206 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     height: 32px !important;
   }
 }
+
+/* AI Academy Overview Redesign */
+.aha-ai-academy {
+  font-family: inherit;
+}
+
+.aha-ai-hero {
+  background-color: #F8FAFC;
+  border-left: 4px solid #FF7A21;
+  padding: 32px 24px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 40px;
+}
+.aha-ai-hero .eyebrow {
+  color: #FF7A21;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
+}
+.aha-ai-hero h2 {
+  color: #0E4174;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+.aha-ai-hero p {
+  color: #475569;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.aha-ai-path {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 20px;
+}
+.aha-ai-path::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 35px; /* Center of the number circle */
+  width: 2px;
+  background-color: #E2E8F0;
+  z-index: 0;
+}
+
+.aha-ai-path-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+.aha-ai-path-step:last-child {
+  margin-bottom: 0;
+}
+
+.aha-ai-step-number {
+  width: 32px;
+  height: 32px;
+  background-color: #FF7A21;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px #FFFFFF;
+}
+
+.aha-ai-step-content {
+  flex: 1;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.aha-ai-step-text h3 {
+  color: #0E4174;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.aha-ai-step-text p {
+  color: #475569;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.6;
+}
+.aha-ai-step-cta {
+  flex-shrink: 0;
+}
+.aha-ai-step-cta a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0E4174;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.aha-ai-step-cta a:hover {
+  opacity: 0.9;
+  color: #FFFFFF;
+}
+
+.aha-ai-quick-access {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.aha-ai-quick-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.aha-ai-quick-card h4 {
+  color: #0E4174;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.aha-ai-quick-card p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0 0 16px;
+  flex: 1;
+}
+.aha-ai-quick-card a {
+  color: #FF7A21;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.aha-ai-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.aha-ai-principle-card {
+  background-color: #F8FAFC;
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 3px solid #0E4174;
+}
+.aha-ai-principle-card h4 {
+  color: #0E4174;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.aha-ai-principle-card p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .aha-ai-path::before {
+    left: 16px;
+  }
+  .aha-ai-path {
+    padding-left: 0;
+  }
+  .aha-ai-step-number {
+    margin-right: 16px;
+  }
+  .aha-ai-step-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .aha-ai-step-cta a {
+    width: 100%;
+    text-align: center;
+  }
+  .aha-ai-quick-access,
+  .aha-ai-principles {
+    grid-template-columns: 1fr;
+  }
+}
