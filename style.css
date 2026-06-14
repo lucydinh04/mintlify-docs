@@ -2714,13 +2714,12 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  height: 95%;
+  right: 0;
+  width: 90%;
+  height: 90%;
   background-color: #F17540;
-  border-top-left-radius: 300px;
-  border-top-right-radius: 300px;
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
   z-index: 0;
 }
 
@@ -2739,25 +2738,16 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 
 .aha-ceo-quote-right img.aha-ceo-photo {
-  width: 80%;
-  margin-left: 0;
-  height: auto;
+  height: 95%;
+  max-width: 100%;
   object-fit: contain;
-  object-position: bottom;
+  object-position: bottom center;
   display: block;
-  position: relative;
-  z-index: 2;
-  border-radius: 0;
-}
-
-.aha-ceo-quote-right img.aha-ceo-bg-logo {
   position: absolute;
-  top: 15%;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%;
-  opacity: 0.9;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
