@@ -2190,6 +2190,67 @@ html.dark .aha-home .aha-map-cta {
   color: rgba(255, 255, 255, 0.8);
   margin: 0 0 40px;
 }
+.aha-home .aha-culture-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* NEW CULTURE BLOCKS LAYOUT */
+.aha-culture-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.aha-culture-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.aha-culture-block img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.aha-culture-block h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0E4174;
+  margin: 0 0 12px 0;
+}
+
+.aha-culture-block p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .aha-culture-blocks {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}.aha-footbar-action {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--aha-radius-lg);
+  padding: 32px 24px;
+  text-decoration: none;
+  text-align: left;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
 .aha-home .aha-footbar-actions {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
