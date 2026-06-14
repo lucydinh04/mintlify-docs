@@ -51,7 +51,7 @@
             "pages": [
               "ahamazing-guide/company-overview",
               "ahamazing-guide/culture",
-              { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary", "handbook/company-calendar"] },
+              { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] },
               "handbook/internal-systems",
               { "group": "Quy trình & Lương", "icon": "clipboard-list", "expanded": false, "pages": ["handbook/hr-processes", "handbook/payroll", "handbook/offboarding"] },
               "ahamazing-guide/day-1",
