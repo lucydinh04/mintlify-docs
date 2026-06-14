@@ -5320,15 +5320,27 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   border-bottom: none !important;
   gap: 12px !important;
   padding-bottom: 12px !important;
+  position: relative;
+}
+
+/* Hide the default Mintlify sliding tab indicator */
+.aha-yes-ai-do div[role="tablist"] > *:not([role="tab"]) {
+  display: none !important;
+  opacity: 0 !important;
 }
 
 .aha-yes-ai-do [role="tab"][aria-selected="true"] {
   background: #FF7A21 !important;
+  color: #FFFFFF !important;
+  position: relative !important;
+  z-index: 10 !important;
 }
-.aha-yes-ai-do [role="tab"][aria-selected="true"],
+.aha-yes-ai-do [role="tab"][aria-selected="true"] *,
 .aha-yes-ai-do [role="tab"][aria-selected="true"] span,
 .aha-yes-ai-do [role="tab"][aria-selected="true"] p {
   color: #FFFFFF !important;
+  position: relative !important;
+  z-index: 11 !important;
 }
 
 .aha-yes-ai-do [role="tab"][aria-selected="false"] {
