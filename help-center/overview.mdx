@@ -1,67 +1,37 @@
 ---
 title: "Trung tâm hỗ trợ"
-description: "Không biết hỏi ai? Bắt đầu từ đây — danh bạ nhân sự, câu hỏi thường gặp, trợ lý AI & hỗ trợ IT."
+description: "Không biết hỏi ai? Bắt đầu từ đây — tìm đúng kênh hỗ trợ, tra cứu FAQ hoặc hỏi Ahamove AI trong vài giây."
 icon: "life-ring"
+mode: "wide"
 ---
 
-<div className="aha-strip" style={{ marginBottom: "24px" }}>
-  <p className="eyebrow">Trung tâm hỗ trợ</p>
-  <h2>Không biết hỏi ai? Bắt đầu từ đây</h2>
-  <p>Tự phục vụ với FAQ & trợ lý AI, hoặc tìm đúng đầu mối nhân sự — trong vài giây.</p>
-</div>
+<div className="aha-help-center">
 
-{/* 3 spotlight support panels — Intercom-inspired */}
-<div className="aha-help-spotlight">
-  <a className="aha-help-panel it" href="/handbook/it-support">
-    <div className="hp-icon"><Icon icon="laptop" size={20} color="#0E4174" /></div>
-    <h4>Hỗ trợ IT</h4>
-    <p>Tài khoản, email, thiết bị & tài sản IT.</p>
-    <span className="hp-cta">Xem hướng dẫn →</span>
-  </a>
-  <a className="aha-help-panel" href="#danh-ba-nhan-su">
-    <div className="hp-icon"><Icon icon="address-book" size={20} color="#FF7A21" /></div>
-    <h4>HR Support</h4>
-    <p>HRBP, C&B, Admin, L&OD — hỏi đúng người theo việc cần.</p>
-    <span className="hp-cta">Xem danh bạ →</span>
-  </a>
-  <a className="aha-help-panel ai" href="/help-center/ask-ahamove-ai">
-    <div className="hp-icon"><Icon icon="robot" size={20} color="#FF9A52" /></div>
-    <h4>Hỏi Ahamove AI</h4>
-    <p>Trợ lý AI trả lời 24/7 — hỏi về bất kỳ nội dung nào trên cổng thông tin.</p>
-    <span className="hp-cta">Bắt đầu hỏi →</span>
-  </a>
-</div>
+## Bạn cần hỗ trợ gì?
 
-{/* FAQ + contact quick access */}
-<div className="aha-cats">
-  <a className="aha-cat" href="/help-center/faq">
-    <span className="ic"><Icon icon="circle-question" size={20} color="#FF7A21" /></span>
-    <h4>Câu hỏi thường gặp <span className="aha-badge green">Self-service</span></h4>
-    <p>Lương & phúc lợi, công cụ, quy trình — tự tra cứu trong 1 phút.</p>
-  </a>
-  <a className="aha-cat" href="/help-center/ask-ahamove-ai">
-    <span className="ic"><Icon icon="robot" size={20} color="#FF7A21" /></span>
-    <h4>Hỏi Ahamove AI <span className="aha-badge">24/7</span></h4>
-    <p>Trợ lý AI trả lời mọi câu hỏi về cổng thông tin & chỉ đúng người.</p>
-  </a>
-  <a className="aha-cat" href="/handbook/it-support">
-    <span className="ic"><Icon icon="laptop" size={20} color="#FF7A21" /></span>
-    <h4>Hỗ trợ IT <span className="aha-badge navy">IT</span></h4>
-    <p>Tài khoản, email, máy móc & tài sản IT.</p>
-  </a>
-  <a className="aha-cat" href="#danh-ba-nhan-su">
-    <span className="ic"><Icon icon="address-book" size={20} color="#FF7A21" /></span>
-    <h4>Danh bạ nhân sự <span className="aha-badge navy">HR</span></h4>
-    <p>HRBP, C&B, Admin, L&OD — tìm đúng người theo việc cần.</p>
-  </a>
-</div>
+<p>Chọn đúng kênh để được hỗ trợ nhanh hơn.</p>
 
-<div className="aha-support-panel">
-  <span className="ic"><Icon icon="envelope" size={20} color="#FF7A21" /></span>
-  <div>
-    <h4>Hỏi chung về nhân sự & chính sách?</h4>
-    <p>Email <b>nhansu@ahamove.com</b> hoặc nhắn HRBP phụ trách phòng bạn — luôn có người trả lời.</p>
-  </div>
+<div className="aha-help-gateway">
+  <a className="aha-help-card" href="/help-center/ask-ahamove-ai">
+    <h3><Icon icon="robot" color="#FF7A21" /> Hỏi Ahamove AI</h3>
+    <p>Trợ lý AI trả lời 24/7 về nội dung trên cổng thông tin.</p>
+    <span className="cta">Bắt đầu hỏi →</span>
+  </a>
+  <a className="aha-help-card" href="/help-center/faq">
+    <h3><Icon icon="circle-question" color="#FF7A21" /> Câu hỏi thường gặp</h3>
+    <p>Tự tra cứu nhanh các câu hỏi về lương, phúc lợi, công cụ và quy trình.</p>
+    <span className="cta">Xem FAQ →</span>
+  </a>
+  <a className="aha-help-card" href="/handbook/it-support">
+    <h3><Icon icon="laptop" color="#FF7A21" /> Hỗ trợ IT</h3>
+    <p>Tài khoản, email, thiết bị, máy móc và tài sản IT.</p>
+    <span className="cta">Xem hướng dẫn →</span>
+  </a>
+  <a className="aha-help-card" href="#danh-ba-nhan-su">
+    <h3><Icon icon="address-book" color="#FF7A21" /> Danh bạ nhân sự</h3>
+    <p>Tìm đúng HRBP, C&B, OM, IT hoặc L&OD theo việc cần hỗ trợ.</p>
+    <span className="cta">Xem danh bạ →</span>
+  </a>
 </div>
 
 <div id="danh-ba-nhan-su" />
@@ -69,6 +39,8 @@ icon: "life-ring"
 ## Danh bạ nhân sự
 
 Tìm đúng người theo việc bạn cần.
+
+<div className="aha-help-directory">
 
 ### HR Business Partner (HRBP)
 
@@ -108,6 +80,11 @@ Tìm đúng người theo việc bạn cần.
 | **Đinh Vị Mẫn Nhi** | @nhidvm | nhidvm@ahamove.com | Truyền thông & Event nội bộ |
 | **Nguyễn Trí Thiện Toàn** | @Trithientoan | toanntt@ahamove.com | Đào tạo & Phát triển tổ chức |
 
-<Tip>
-  Thắc mắc chung về nhân sự, chính sách, phép → email **nhansu@ahamove.com** hoặc nhắn HRBP phụ trách phòng bạn.
-</Tip>
+</div>
+
+<div className="aha-help-note">
+  <Icon icon="circle-info" size={20} color="#EA580C" />
+  <p>Thắc mắc chung về nhân sự, chính sách, phép → email <strong>nhansu@ahamove.com</strong> hoặc nhắn HRBP phụ trách phòng bạn.</p>
+</div>
+
+</div>
