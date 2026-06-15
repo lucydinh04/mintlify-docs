@@ -291,26 +291,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   border-radius: var(--aha-radius-lg);
   padding: 26px 28px;
   margin: 4px 0 22px;
-  color: #fff;
-  background: linear-gradient(150deg, #0B1530 0%, #0E4174 100%);
-  border: 1px solid #1A2F5A;
+  color: var(--aha-navy);
+  background: linear-gradient(135deg, #FFF4EC 0%, #FFE8D6 100%);
+  border: 1px solid var(--aha-cream-line);
 }
-/* subtle orange glow top-right — restrained */
-.aha-strip::after {
-  content: "";
-  position: absolute;
-  top: -60px;
-  right: -40px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 122, 33, .22) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
+
 .aha-strip > * { position: relative; z-index: 1; }
 .aha-strip .eyebrow {
-  color: var(--aha-orange2);
+  color: var(--aha-orange);
   letter-spacing: 2px;
   font-size: 13px;
   font-weight: 700;
@@ -319,7 +307,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 .aha-strip h2,
 .aha-strip h3 {
-  color: #fff !important;
+  color: var(--aha-navy) !important;
   margin: 8px 0 6px;
   font-size: 23px;
   font-weight: 800;
@@ -327,24 +315,17 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-strip h2::before,
 .aha-strip h3::before { display: none !important; content: none !important; }
 .aha-strip p {
-  color: rgba(255, 255, 255, .80);
+  color: var(--aha-grey);
   margin: 0;
   font-size: 16px;
   max-width: 620px;
   line-height: 1.62;
 }
 
-/* Warm variant */
+/* Keep .warm for backward compatibility if any mdx files use it */
 .aha-strip.warm {
-  color: var(--aha-navy);
   background: linear-gradient(135deg, #FFF4EC 0%, #FFE8D6 100%);
-  border-color: var(--aha-cream-line);
 }
-.aha-strip.warm::after { display: none; }
-.aha-strip.warm .eyebrow { color: var(--aha-orange-dk); }
-.aha-strip.warm h2,
-.aha-strip.warm h3 { color: var(--aha-navy) !important; }
-.aha-strip.warm p { color: var(--aha-grey); }
 
 /* Legacy hero-glow — kept for backward compat, toned down */
 .aha-hero-glow {
