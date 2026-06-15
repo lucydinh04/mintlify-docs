@@ -5,14 +5,21 @@ icon: "building"
 mode: "wide"
 ---
 
-<div className="aha-dashboard-header">
-  <div className="text-content">
-    <p className="eyebrow">Ahamove Workspace</p>
-    <h2>Không gian làm việc</h2>
-    <p>Toàn bộ thông tin vận hành, quy định chỗ ngồi, gửi xe và tiện ích văn phòng được tổng hợp tại đây.</p>
-  </div>
-  <div className="icon-content">
-    <Icon icon="building" size={48} color="#FF7A21" />
+<div className="aha-strip">
+  <p className="eyebrow">CHÀO MỪNG ĐẾN AHAMOVE WORKSPACE</p>
+  <h2>Không gian làm việc</h2>
+  <p>Toàn bộ thông tin về văn phòng, chỗ ngồi, phòng họp, gửi xe, tiện ích và các quy định vận hành được tổng hợp tại đây.</p>
+  
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '20px', fontSize: '14px', color: 'var(--aha-navy)', fontWeight: '700' }}>
+    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(255,122,33,0.1)', padding: '4px 10px', borderRadius: '6px' }}>
+      <Icon icon="location-dot" size={14} color="#FF7A21" /> 3 Văn phòng
+    </span>
+    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(255,122,33,0.1)', padding: '4px 10px', borderRadius: '6px' }}>
+      <Icon icon="clock" size={14} color="#FF7A21" /> 08:30 - 17:30
+    </span>
+    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(255,122,33,0.1)', padding: '4px 10px', borderRadius: '6px' }}>
+      <Icon icon="building-user" size={14} color="#FF7A21" /> Facilities & Amenities
+    </span>
   </div>
 </div>
 
