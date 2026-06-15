@@ -1,75 +1,110 @@
 ---
-title: "Tổng quan Văn phòng"
-sidebarTitle: "Tổng quan"
-description: "Bảng điều khiển thông tin vận hành văn phòng Ahamove."
+title: "Văn phòng & Tiện ích"
+description: "Trang tổng quan vận hành văn phòng Ahamove."
 icon: "building"
 mode: "wide"
 ---
 
-<div className="aha-strip warm">
-  <h2>Thoải mái mỗi ngày làm việc</h2>
-  <p>Toàn bộ thông tin vận hành, quy định chỗ ngồi, gửi xe và tiện ích văn phòng được tổng hợp tại đây.</p>
+<div className="aha-dashboard-header">
+  <div className="text-content">
+    <p className="eyebrow">Ahamove Workspace</p>
+    <h2>Không gian làm việc</h2>
+    <p>Toàn bộ thông tin vận hành, quy định chỗ ngồi, gửi xe và tiện ích văn phòng được tổng hợp tại đây.</p>
+  </div>
+  <div className="icon-content">
+    <Icon icon="building" size={48} color="#FF7A21" />
+  </div>
 </div>
 
-<div className="aha-visual-slot">
-  <span className="vbadge">Visual placeholder</span>
-  <span className="vicon"><Icon icon="map" size={24} color="#FF7A21" /></span>
-  <p className="vtitle">Sơ đồ Văn phòng (Office Map)</p>
-  <span className="vratio">16:9 · suggested</span>
-  <p className="vdesc">Bản đồ vị trí các phòng ban, khu vực pantry, phòng họp, và lối ra vào.</p>
-  <span className="vfile">images/office-guide-map.png</span>
+## Thông tin nhanh
+
+<div className="aha-dashboard-grid cols-3">
+  <div className="aha-dashboard-stat-card">
+    <div className="stat-icon"><Icon icon="location-dot" /></div>
+    <div className="stat-info">
+      <h4>TP.HCM</h4>
+      <p>Rivera Park, 7/28 Thành Thái, Q10</p>
+    </div>
+  </div>
+  <div className="aha-dashboard-stat-card">
+    <div className="stat-icon"><Icon icon="location-dot" /></div>
+    <div className="stat-info">
+      <h4>Hà Nội</h4>
+      <p>Tầng 9, Tòa nhà Mipec, 229 Tây Sơn</p>
+    </div>
+  </div>
+  <div className="aha-dashboard-stat-card">
+    <div className="stat-icon"><Icon icon="location-dot" /></div>
+    <div className="stat-info">
+      <h4>Đà Nẵng</h4>
+      <p>66A Lê Đình Lý, Q. Thanh Khê</p>
+    </div>
+  </div>
 </div>
 
-## Dashboard Vận hành
+<div className="aha-dashboard-notices">
+  <div className="aha-dashboard-notice">
+    <Icon icon="clock" />
+    <div>
+      <strong>Giờ nhận việc:</strong> Ngày đầu tiên, bạn nên có mặt lúc <strong>~09:00 sáng</strong>.
+    </div>
+  </div>
+  <div className="aha-dashboard-notice">
+    <Icon icon="id-card" />
+    <div>
+      <strong>Thẻ định danh:</strong> Bắt buộc mang theo và quẹt hệ thống khi ra vào cửa. Không có ngoại lệ.
+    </div>
+  </div>
+</div>
 
-<AccordionGroup>
-  <Accordion title="Địa chỉ & Giờ làm việc" icon="location-dot">
-    <p>Ahamove có 3 văn phòng trên cả nước:</p>
-    <ul>
-      <li>**TP.HCM:** Rivera Park, 7/28 Thành Thái, Phường 14, Quận 10</li>
-      <li>**Hà Nội:** Tầng 9, Tòa nhà Mipec, 229 Tây Sơn, Quận Đống Đa</li>
-      <li>**Đà Nẵng:** 66A Lê Đình Lý, Quận Thanh Khê</li>
-    </ul>
-    
-    <Tip>Ngày đầu tiên nhận việc, bạn nên có mặt lúc **~09:00 sáng**. Xem hướng dẫn [Ngày đầu tiên](/ahamazing-guide/day-1).</Tip>
-    
-    <Note>**Cần Admin bổ sung:** Sơ đồ tầng/chỗ ngồi, giờ mở cửa & thông tin lễ tân từng văn phòng.</Note>
-  </Accordion>
+## Không gian & Tiện ích
 
-  <Accordion title="Di chuyển & Tiện ích" icon="motorcycle">
-    **1. Gửi xe**
-    - Thẻ xe tháng được phép sử dụng qua đêm tối đa đến **22:30**. Quá giờ sẽ tính phí ngoài.
-    - Mất thẻ xe? Vui lòng báo ngay cho Admin để được cấp lại (**có phí**).
-    <Note>**Cần Admin bổ sung:** Vị trí bãi giữ xe, biểu phí gửi tháng và phí cấp lại thẻ.</Note>
+<div className="aha-dashboard-grid cols-2">
+  <div className="aha-dashboard-feature">
+    <div className="feat-icon"><Icon icon="motorcycle" /></div>
+    <div className="feat-content">
+      <h3>Bãi gửi xe</h3>
+      <p>Thẻ xe tháng được phép để qua đêm tối đa đến <strong>22:30</strong>. Nếu quá giờ sẽ tính phí ngoài. Liên hệ Admin để cấp lại thẻ nếu mất (có phí).</p>
+    </div>
+  </div>
 
-    **2. Khu Pantry (Máy bán hàng tự động)**
-    - Phục vụ đồ uống, bánh, mì.
-    - Nhân viên được **giảm 50%** khi mua đồ tại máy bán hàng (áp dụng HCM & HN).
-    <Note>**Cần Admin bổ sung:** Vị trí pantry/máy bán hàng từng tầng, cách thanh toán và nội quy khu vực chung.</Note>
-  </Accordion>
+  <div className="aha-dashboard-feature">
+    <div className="feat-icon"><Icon icon="mug-hot" /></div>
+    <div className="feat-content">
+      <h3>Khu Pantry</h3>
+      <p>Máy bán hàng tự động phục vụ đồ uống, bánh, mì. Nhân viên được <strong>giảm 50%</strong> khi mua đồ tại máy (áp dụng TP.HCM & Hà Nội).</p>
+    </div>
+  </div>
 
-  <Accordion title="Không gian làm việc" icon="users">
-    **Phòng họp & Thiết bị**
-    - Đặt phòng họp qua hệ thống 1Office hoặc lịch công ty.
-    - Có sẵn cáp và hướng dẫn kết nối **màn hình phòng họp** ngay tại bàn.
-    
-    <Card title="Hướng dẫn máy scan" icon="print" href="https://drive.google.com/file/d/15EU48Uf0LaX0YMH_gqb6qMTu67FY-q3r/view">
-      Tài liệu hướng dẫn sử dụng máy scan (PDF)
-    </Card>
+  <div className="aha-dashboard-feature full-width">
+    <div className="feat-icon"><Icon icon="users" /></div>
+    <div className="feat-content">
+      <h3>Phòng họp & Kết nối</h3>
+      <p>Các phòng họp được trang bị sẵn cáp và màn hình chiếu. Đặt phòng qua hệ thống 1Office. Khu vực in ấn có hỗ trợ scan tài liệu.</p>
+      <a href="https://drive.google.com/file/d/15EU48Uf0LaX0YMH_gqb6qMTu67FY-q3r/view" target="_blank" className="feat-link">
+        <Icon icon="print" /> Hướng dẫn máy scan →
+      </a>
+    </div>
+  </div>
+</div>
 
-    <Note>**Cần Admin/IT bổ sung:** Danh sách phòng họp & sức chứa, cách đặt phòng (lịch/1Office), hướng dẫn kết nối màn hình phòng họp.</Note>
-  </Accordion>
+## Liên hệ hỗ trợ
 
-  <Accordion title="Điều cần biết" icon="circle-exclamation">
-    - **Thẻ định danh:** Bắt buộc mang theo thẻ và quẹt hệ thống khi ra vào cửa. Không có ngoại lệ.
-    - Vui lòng giữ gìn vệ sinh chung tại khu vực làm việc và pantry.
-  </Accordion>
-
-  <Accordion title="Liên hệ hỗ trợ" icon="headset">
-    Khi gặp các vấn đề liên quan đến văn phòng, vui lòng liên hệ đúng đầu mối:
-    
-    - **Sự cố thiết bị phòng họp, máy in, mạng:** Liên hệ **IT** qua Telegram **@tuanhn_hcm** hoặc xem [Hỗ trợ IT](/handbook/it-support).
-    - **Chỗ ngồi, cấp lại thẻ, văn phòng phẩm, cơ sở vật chất:** Liên hệ **Admin (OM)** qua Telegram **@thucthuc1**.
-    - *Các thắc mắc vận hành khác:* Liên hệ Admin hoặc xem [Help Center](/help-center/overview).
-  </Accordion>
-</AccordionGroup>
+<div className="aha-dashboard-grid cols-2 support-grid">
+  <div className="aha-dashboard-support">
+    <div className="sup-icon"><Icon icon="building-user" /></div>
+    <div className="sup-content">
+      <h4>Admin Văn phòng (OM)</h4>
+      <p className="sup-contact">@thucthuc1 (Telegram)</p>
+      <p className="sup-desc">Hỗ trợ chỗ ngồi, thẻ xe, văn phòng phẩm, sự cố cơ sở vật chất.</p>
+    </div>
+  </div>
+  <div className="aha-dashboard-support">
+    <div className="sup-icon"><Icon icon="network-wired" /></div>
+    <div className="sup-content">
+      <h4>IT Support</h4>
+      <p className="sup-contact">@tuanhn_hcm (Telegram)</p>
+      <p className="sup-desc">Hỗ trợ sự cố mạng, màn hình chiếu, máy in, kết nối wifi.</p>
+    </div>
+  </div>
+</div>

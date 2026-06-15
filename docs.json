@@ -91,13 +91,8 @@
           },
           {
             "group": "Văn phòng & Tiện ích",
-            "root": "office-guide/overview",
-            "expanded": false,
             "pages": [
-              "office-guide/office-locations",
-              "office-guide/parking",
-              "office-guide/pantry",
-              "office-guide/meeting-rooms"
+              "office-guide/overview"
             ]
           }
         ]
