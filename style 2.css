@@ -95,7 +95,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-section { margin-top: var(--aha-space-xl); }
 .aha-section > h2,
 .aha-section .aha-h2 {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--aha-navy);
   margin: 0 0 5px;
@@ -115,7 +115,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 .aha-intro {
   color: var(--aha-grey);
-  font-size: 16px;
+  font-size: 14.5px;
   line-height: 1.65;
   margin: 0 0 16px;
   max-width: 660px;
@@ -125,7 +125,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   margin-top: 10px;
   color: var(--aha-orange-dk);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   text-decoration: none;
   letter-spacing: .1px;
 }
@@ -151,9 +151,9 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   border-radius: 20px;
 }
 .aha-home .aha-hero.promo .aha-hero-row { position: relative; z-index: 1; }
-.aha-home .aha-hero.promo .eyebrow { color: var(--aha-orange); font-size: 14px; }
+.aha-home .aha-hero.promo .eyebrow { color: var(--aha-orange); font-size: 12px; }
 .aha-home .aha-hero.promo h1 { color: var(--aha-navy); font-size: 36px; font-weight: 800; line-height: 1.25; margin: 12px 0 16px; }
-.aha-home .aha-hero.promo .lead { color: var(--aha-grey); font-size: 17.5px; line-height: 1.6; max-width: 90%; }
+.aha-home .aha-hero.promo .lead { color: var(--aha-grey); font-size: 16px; line-height: 1.6; max-width: 90%; }
 .aha-home .aha-hero.promo .lead b { color: var(--aha-navy); font-weight: 700; }
 .aha-home .aha-hero.promo .aha-searchbar {
   background: #fff;
@@ -187,7 +187,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-hero .eyebrow {
   color: var(--aha-orange);
   letter-spacing: 2.2px;
-  font-size: 13.5px;
+  font-size: 11.5px;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -201,7 +201,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 .aha-hero .lead {
   color: rgba(255, 255, 255, .84);
-  font-size: 16.5px;
+  font-size: 15px;
   max-width: 500px;
   margin: 0;
   line-height: 1.62;
@@ -224,7 +224,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background: rgba(255, 255, 255, .17);
   border-color: rgba(255, 255, 255, .32);
 }
-.aha-searchbar span { color: rgba(255, 255, 255, .7); font-size: 15.5px; }
+.aha-searchbar span { color: rgba(255, 255, 255, .7); font-size: 13.5px; }
 
 /* CTA buttons */
 .aha-cta-row {
@@ -244,7 +244,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   padding: 10px 15px;
   color: #fff;
   font-weight: 700;
-  font-size: 15.5px;
+  font-size: 13.5px;
   transition: background .14s ease, transform .14s ease;
 }
 .aha-cta:hover { background: rgba(255, 255, 255, .16); transform: translateY(-1px); }
@@ -312,7 +312,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-strip .eyebrow {
   color: var(--aha-orange2);
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
@@ -321,7 +321,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-strip h3 {
   color: #fff !important;
   margin: 8px 0 6px;
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 800;
 }
 .aha-strip h2::before,
@@ -329,7 +329,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-strip p {
   color: rgba(255, 255, 255, .80);
   margin: 0;
-  font-size: 16px;
+  font-size: 14.5px;
   max-width: 620px;
   line-height: 1.62;
 }
@@ -367,7 +367,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-eyebrow {
   color: var(--aha-orange2);
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
@@ -376,7 +376,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 /* ---------- 9 · BADGES ---------- */
 .aha-badge {
   display: inline-block;
-  font-size: 12.5px;
+  font-size: 10.5px;
   font-weight: 700;
   letter-spacing: .3px;
   padding: 3px 9px;
@@ -395,7 +395,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background: var(--aha-navy);
   color: #fff;
   border-color: var(--aha-navy);
-  font-size: 12px;
+  font-size: 10px;
   padding: 2px 8px;
 }
 
@@ -440,8 +440,8 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   display: grid;
   place-items: center;
 }
-.aha-tile2 h4 { color: var(--aha-navy); font-size: 15.5px; font-weight: 700; margin: 0 0 3px; }
-.aha-tile2 p { color: var(--aha-grey); font-size: 14.5px; line-height: 1.45; margin: 0; }
+.aha-tile2 h4 { color: var(--aha-navy); font-size: 14px; font-weight: 700; margin: 0 0 3px; }
+.aha-tile2 p { color: var(--aha-grey); font-size: 12.5px; line-height: 1.45; margin: 0; }
 
 /* Feature card — emphasized */
 .aha-feature-card {
@@ -468,13 +468,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-feature-card .eyebrow {
   color: var(--aha-orange-dk);
   letter-spacing: 1px;
-  font-size: 12.5px;
+  font-size: 10.5px;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
 }
-.aha-feature-card h4 { color: var(--aha-navy); font-size: 19px; font-weight: 800; margin: 5px 0; }
-.aha-feature-card p { color: var(--aha-grey); font-size: 15.5px; margin: 0; line-height: 1.55; }
+.aha-feature-card h4 { color: var(--aha-navy); font-size: 18px; font-weight: 800; margin: 5px 0; }
+.aha-feature-card p { color: var(--aha-grey); font-size: 13.5px; margin: 0; line-height: 1.55; }
 .aha-feature-card .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
 
 /* Category card — Help Center (Intercom) */
@@ -508,8 +508,8 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   place-items: center;
   margin-bottom: 11px;
 }
-.aha-cat h4 { color: var(--aha-navy); font-size: 16.5px; font-weight: 700; margin: 0 0 4px; }
-.aha-cat p { color: var(--aha-grey); font-size: 15px; line-height: 1.5; margin: 0; }
+.aha-cat h4 { color: var(--aha-navy); font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+.aha-cat p { color: var(--aha-grey); font-size: 13px; line-height: 1.5; margin: 0; }
 
 /* Gradient border on hover — AI pages only, used sparingly */
 .aha-card { position: relative; }
@@ -576,9 +576,9 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   place-items: center;
 }
 .aha-link-row .tx { flex: 1; min-width: 0; }
-.aha-link-row h5 { color: var(--aha-navy); font-size: 15.5px; font-weight: 700; margin: 0; }
-.aha-link-row p { color: var(--aha-grey); font-size: 14px; margin: 1px 0 0; line-height: 1.4; }
-.aha-link-row .go { color: var(--aha-orange); font-weight: 700; font-size: 15px; flex: 0 0 auto; }
+.aha-link-row h5 { color: var(--aha-navy); font-size: 13.5px; font-weight: 700; margin: 0; }
+.aha-link-row p { color: var(--aha-grey); font-size: 12px; margin: 1px 0 0; line-height: 1.4; }
+.aha-link-row .go { color: var(--aha-orange); font-weight: 700; font-size: 13px; flex: 0 0 auto; }
 
 /* ---------- 12a · JOURNEY CARDS (Webflow-inspired) ---------- */
 .aha-journey {
@@ -619,13 +619,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background: var(--aha-grad-brand);
   color: #fff;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 13px;
   display: grid;
   place-items: center;
 }
-.aha-jcard h4 { color: var(--aha-navy); font-size: 16.5px; font-weight: 700; margin: 0 0 4px; }
-.aha-jcard p { color: var(--aha-grey); font-size: 15px; line-height: 1.5; margin: 0 0 12px; }
-.aha-jcard .go { margin-top: auto; color: var(--aha-orange); font-size: 14.5px; font-weight: 700; }
+.aha-jcard h4 { color: var(--aha-navy); font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+.aha-jcard p { color: var(--aha-grey); font-size: 13px; line-height: 1.5; margin: 0 0 12px; }
+.aha-jcard .go { margin-top: auto; color: var(--aha-orange); font-size: 12.5px; font-weight: 700; }
 
 /* step connector line on wide screens */
 @media (min-width: 760px) {
@@ -644,7 +644,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 /* Phase label */
 .aha-phase {
-  font-size: 13.5px;
+  font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -694,9 +694,9 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   border: 1px solid var(--aha-cream-line);
 }
 .aha-support h4,
-.aha-support-panel h4 { color: var(--aha-navy); font-size: 16px; font-weight: 700; margin: 0 0 2px; }
+.aha-support-panel h4 { color: var(--aha-navy); font-size: 14.5px; font-weight: 700; margin: 0 0 2px; }
 .aha-support p,
-.aha-support-panel p { color: var(--aha-grey); font-size: 15px; margin: 0; line-height: 1.5; }
+.aha-support-panel p { color: var(--aha-grey); font-size: 13px; margin: 0; line-height: 1.5; }
 
 /* ---------- 15 · RAIL PANELS (homepage right column) ---------- */
 .aha-panel {
@@ -706,8 +706,8 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   padding: 18px;
   box-shadow: var(--aha-shadow-sm);
 }
-.aha-panel h4 { font-size: 16px; font-weight: 800; color: var(--aha-navy); margin: 0 0 4px; }
-.aha-panel > p { font-size: 14.5px; color: var(--aha-grey); margin: 0 0 11px; line-height: 1.55; }
+.aha-panel h4 { font-size: 14.5px; font-weight: 800; color: var(--aha-navy); margin: 0 0 4px; }
+.aha-panel > p { font-size: 12.5px; color: var(--aha-grey); margin: 0 0 11px; line-height: 1.55; }
 .aha-panel-link {
   display: flex;
   align-items: center;
@@ -715,7 +715,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   text-decoration: none;
   color: var(--aha-navy);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   padding: 9px 0;
   border-top: 1px solid var(--aha-line-soft);
 }
@@ -747,21 +747,21 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-aispot .eyebrow {
   color: var(--aha-orange2);
   letter-spacing: 1.5px;
-  font-size: 12.5px;
+  font-size: 10.5px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
 }
-.aha-aispot h3 { color: #fff !important; font-size: 18.5px; font-weight: 800; margin: 5px 0 4px; }
+.aha-aispot h3 { color: #fff !important; font-size: 17px; font-weight: 800; margin: 5px 0 4px; }
 .aha-aispot h3::before { display: none !important; content: none !important; }
-.aha-aispot p { color: rgba(255, 255, 255, .80); font-size: 15px; margin: 0; line-height: 1.55; }
+.aha-aispot p { color: rgba(255, 255, 255, .80); font-size: 13px; margin: 0; line-height: 1.55; }
 .aha-aispot .btn {
   display: inline-block;
   margin-top: 13px;
   background: var(--aha-orange);
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   padding: 8px 15px;
   border-radius: 9px;
   text-decoration: none;
@@ -793,7 +793,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   line-height: 1;
 }
 .aha-stat span,
-.aha-sb span { display: block; font-size: 15px; color: var(--aha-grey); margin-top: 6px; }
+.aha-sb span { display: block; font-size: 13px; color: var(--aha-grey); margin-top: 6px; }
 
 /* ---------- 17 · STAT PANEL (homepage) ---------- */
 .aha-home .aha-home-stat-editorial {
@@ -821,7 +821,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-home .aha-stat-content .eyebrow {
   color: var(--aha-orange-dk);
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 16px;
@@ -837,7 +837,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 .aha-home .aha-stat-content .sp-sub {
   color: var(--aha-grey);
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0 0 32px;
   max-width: 90%;
@@ -860,7 +860,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 .aha-home .aha-stat-main span {
   display: block !important;
-  font-size: 15.5px;
+  font-size: 13.5px;
   color: var(--aha-orange);
   margin-top: 10px;
   font-weight: 700;
@@ -897,7 +897,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 .aha-home .aha-stat-secondary .aha-stat-lbl {
   display: block !important;
-  font-size: 15.5px !important;
+  font-size: 14px !important;
   color: var(--aha-grey) !important;
   margin-top: 0 !important;
 }
@@ -964,7 +964,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   top: 13px;
   right: 13px;
   z-index: 2;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: .4px;
   text-transform: uppercase;
@@ -985,11 +985,11 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   box-shadow: 0 4px 14px rgba(20, 34, 70, .07);
   margin-bottom: 12px;
 }
-.aha-visual-slot .vtitle { color: var(--aha-navy); font-size: 17px; font-weight: 800; margin: 0; }
+.aha-visual-slot .vtitle { color: var(--aha-navy); font-size: 15.5px; font-weight: 800; margin: 0; }
 .aha-visual-slot .vratio {
   display: inline-block;
   margin: 7px 0 0;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: .3px;
   color: var(--aha-orange-dk);
@@ -1000,14 +1000,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 .aha-visual-slot .vdesc {
   color: var(--aha-grey);
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.55;
   margin: 11px auto 0;
   max-width: 500px;
 }
 .aha-visual-slot .vfile {
   margin-top: 11px;
-  font-size: 13px;
+  font-size: 11px;
   color: #7A8499;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   background: #fff;
@@ -1043,11 +1043,11 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 /* COMPACT variant */
 .aha-visual-slot.compact { min-height: 120px; padding: 18px; border-radius: 16px; }
 .aha-visual-slot.compact .vicon { width: 40px; height: 40px; border-radius: 11px; margin-bottom: 9px; }
-.aha-visual-slot.compact .vtitle { font-size: 15.5px; }
+.aha-visual-slot.compact .vtitle { font-size: 13.5px; }
 .aha-visual-slot.compact::before { inset: 9px; border-radius: 11px; }
 
 .aha-image-brief {
-  font-size: 13px;
+  font-size: 11px;
   color: #7A8499;
   line-height: 1.5;
   margin: 7px 2px 16px;
@@ -1068,13 +1068,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-mock .dot { width: 8px; height: 8px; border-radius: 50%; background: #E2E8F2; }
 .aha-mock .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
 .aha-mock .mc { border: 1px solid var(--aha-line); border-radius: 10px; padding: 11px; background: #FCFDFF; }
-.aha-mock .mc .lbl { font-size: 12.5px; color: var(--aha-grey); font-weight: 600; margin: 0 0 7px; }
-.aha-mock .mc .val { font-size: 16px; color: var(--aha-navy); font-weight: 800; margin: 0; }
+.aha-mock .mc .lbl { font-size: 10.5px; color: var(--aha-grey); font-weight: 600; margin: 0 0 7px; }
+.aha-mock .mc .val { font-size: 14.5px; color: var(--aha-navy); font-weight: 800; margin: 0; }
 .aha-mock .prog { height: 6px; border-radius: 6px; background: #EEF2F8; overflow: hidden; margin-top: 7px; }
 .aha-mock .prog i { display: block; height: 100%; border-radius: 6px; background: var(--aha-grad-brand); }
 .aha-mock .pill {
   display: inline-block;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--aha-orange-dk);
   background: var(--aha-cream);
@@ -1104,14 +1104,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   flex-shrink: 0;
 }
 .aha-resource-section-header h3 {
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--aha-navy);
   margin: 0;
 }
 .aha-resource-section-header h3::before { display: none !important; }
 .aha-resource-section-header p {
-  font-size: 14.5px;
+  font-size: 12.5px;
   color: var(--aha-grey);
   margin: 1px 0 0;
   line-height: 1.4;
@@ -1150,13 +1150,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   place-items: center;
 }
 .aha-resource-card h5 {
-  font-size: 15.5px;
+  font-size: 13.5px;
   font-weight: 700;
   color: var(--aha-navy);
   margin: 0 0 2px;
 }
 .aha-resource-card p {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--aha-grey);
   margin: 0;
   line-height: 1.4;
@@ -1202,7 +1202,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   background: var(--aha-grad-brand);
   color: #fff;
   font-weight: 800;
-  font-size: 15.5px;
+  font-size: 14px;
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -1210,7 +1210,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 .aha-workshop-head .wmeta { flex: 1; min-width: 0; }
 .aha-workshop-head h4 {
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--aha-navy);
   margin: 0 0 4px;
@@ -1220,15 +1220,15 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 14.5px;
+  font-size: 12.5px;
   color: var(--aha-grey);
   font-weight: 500;
 }
 .aha-workshop-head .whost b { color: var(--aha-navy); font-weight: 700; }
 .aha-workshop-body { padding: 16px 20px; }
-.aha-workshop-body p { font-size: 15.5px; color: var(--aha-grey); line-height: 1.6; margin: 0 0 12px; }
+.aha-workshop-body p { font-size: 13.5px; color: var(--aha-grey); line-height: 1.6; margin: 0 0 12px; }
 .aha-workshop-body h5 {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .6px;
   text-transform: uppercase;
@@ -1246,7 +1246,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 15.5px;
+  font-size: 13.5px;
   color: var(--aha-navy);
   padding: 5px 0;
   border-bottom: 1px solid var(--aha-line-soft);
@@ -1273,7 +1273,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   align-items: center;
   gap: 5px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--aha-navy);
   background: var(--aha-soft);
@@ -1333,20 +1333,20 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-help-panel.it .hp-icon { background: #EAF0F8; border-color: #D0DFEF; }
 .aha-help-panel.ai .hp-icon { background: #0E4174; border-color: #1A2F5A; }
 .aha-help-panel h4 {
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--aha-navy);
   margin: 0 0 5px;
 }
 .aha-help-panel p {
-  font-size: 14.5px;
+  font-size: 12.5px;
   color: var(--aha-grey);
   margin: 0 0 14px;
   line-height: 1.5;
   flex: 1;
 }
 .aha-help-panel .hp-cta {
-  font-size: 14.5px;
+  font-size: 12.5px;
   font-weight: 700;
   color: var(--aha-orange-dk);
   margin-top: auto;
@@ -1368,19 +1368,19 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   border-radius: 50%;
   background: var(--aha-grad-brand);
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   display: grid;
   place-items: center;
   margin-top: 1px;
 }
 .aha-process-row h5 {
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--aha-navy);
   margin: 0 0 3px;
 }
-.aha-process-row p { font-size: 15px; color: var(--aha-grey); margin: 0; line-height: 1.5; }
+.aha-process-row p { font-size: 13px; color: var(--aha-grey); margin: 0; line-height: 1.5; }
 
 /* ---------- 26 · PROOF BAND ---------- */
 .aha-proofband {
@@ -1412,7 +1412,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 .aha-proofband .stat span {
   display: block;
-  font-size: 14.5px;
+  font-size: 12.5px;
   color: var(--aha-grey);
   margin-top: 6px;
 }
@@ -1449,7 +1449,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 .aha-company-history .aha-history-intro .eyebrow {
   color: var(--aha-orange-dk);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1466,7 +1466,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 
 .aha-company-history .aha-history-intro .sp-sub {
   color: var(--aha-grey);
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0 0 24px;
 }
@@ -1475,7 +1475,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   color: var(--aha-orange);
   font-weight: 700;
   text-decoration: none;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-bottom: 16px;
   display: inline-block;
 }
@@ -1485,7 +1485,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 
 .aha-company-history .aha-history-hint {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--aha-grey-lt);
   margin-top: auto;
   font-weight: 600;
@@ -1569,7 +1569,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 
 .aha-company-history .aha-history-year {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--aha-navy);
   background: #FFFBF8; /* Hides the horizontal line behind the text */
@@ -1588,14 +1588,14 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 }
 
 .aha-company-history .aha-history-content h4 {
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--aha-navy);
   margin: 0 0 8px;
 }
 
 .aha-company-history .aha-history-content p {
-  font-size: 15.5px;
+  font-size: 14px;
   color: var(--aha-grey);
   line-height: 1.6;
   margin: 0;
@@ -1686,13 +1686,13 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   color: #fff;
 }
 .aha-home .aha-welcome-text .welcome-slogan {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.9);
   margin: 0 0 16px;
 }
 .aha-home .aha-welcome-text .welcome-sub {
-  font-size: 15.5px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
   margin: 0 auto;
   max-width: 480px;
@@ -1761,7 +1761,7 @@ html.dark .aha-home .aha-stat-content .sp-sub {
 /* ---------- 29 · ONBOARDING ACTION LIST ---------- */
 .aha-onboarding-map-label {
   margin: 48px 0 16px !important;
-  font-size: 15px !important;
+  font-size: 13px !important;
   font-weight: 700 !important;
   color: #64748B !important;
   text-transform: uppercase !important;
@@ -1797,14 +1797,14 @@ html.dark .aha-home .aha-stat-content .sp-sub {
 
 .aha-onboarding-card-content h4 {
   margin: 0 0 4px !important;
-  font-size: 16.5px !important;
+  font-size: 15px !important;
   font-weight: 700 !important;
   color: var(--aha-navy);
 }
 
 .aha-onboarding-card-content p {
   margin: 0 !important;
-  font-size: 15.5px !important;
+  font-size: 14px !important;
   color: var(--aha-grey);
   line-height: 1.4 !important;
 }
@@ -1856,14 +1856,14 @@ html.dark .aha-home .aha-stat-content .sp-sub {
 
 .aha-guide .aha-onboarding-route-copy h4 {
   margin: 0 0 4px;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--aha-navy);
 }
 
 .aha-guide .aha-onboarding-route-copy p {
   margin: 0;
-  font-size: 15.5px;
+  font-size: 13.5px;
   color: var(--aha-grey);
   line-height: 1.4;
   white-space: nowrap;
@@ -1875,7 +1875,7 @@ html.dark .aha-home .aha-stat-content .sp-sub {
   flex-shrink: 0;
   margin-left: 16px;
   color: var(--aha-orange);
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
   transition: transform 0.15s ease;
 }
@@ -1951,7 +1951,7 @@ html.dark .aha-guide .aha-onboarding-route-copy p {
 }
 .aha-home .aha-people-label {
   display: block;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--aha-navy);
   text-transform: uppercase;
@@ -1959,7 +1959,7 @@ html.dark .aha-guide .aha-onboarding-route-copy p {
   margin-bottom: 12px;
 }
 .aha-home .aha-people-stat p {
-  font-size: 15.5px;
+  font-size: 14px;
   color: var(--aha-grey);
   line-height: 1.5;
   margin: 0;
@@ -2007,7 +2007,7 @@ html.dark .aha-home .aha-people-stat p {
 }
 .aha-home .aha-office-labels label {
   padding: 10px 24px;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--aha-grey);
   cursor: pointer;
@@ -2069,7 +2069,7 @@ html.dark .aha-home .aha-people-stat p {
   color: var(--aha-orange);
   font-weight: 700;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
   padding: 8px 16px;
   background: var(--aha-white);
   border-radius: 20px;
@@ -2087,7 +2087,7 @@ html.dark .aha-home .aha-people-stat p {
   justify-content: center;
 }
 .aha-home .aha-office-info h4 {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--aha-navy);
   margin: 0 0 16px;
@@ -2098,7 +2098,7 @@ html.dark .aha-home .aha-people-stat p {
   gap: 12px;
 }
 .aha-home .aha-office-detail span {
-  font-size: 15.5px;
+  font-size: 14px;
   color: var(--aha-grey);
   line-height: 1.6;
 }
@@ -2110,7 +2110,7 @@ html.dark .aha-home .aha-people-stat p {
   color: var(--aha-orange);
   font-weight: 700;
   text-decoration: none;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-top: 8px;
 }
 .aha-home .aha-office-cta:hover {
@@ -2118,7 +2118,7 @@ html.dark .aha-home .aha-people-stat p {
 }
 .aha-home .aha-office-note {
   margin-top: 16px;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--aha-grey);
   font-style: italic;
 }
@@ -2186,7 +2186,7 @@ html.dark .aha-home .aha-map-cta {
   color: #fff;
 }
 .aha-home .aha-home-footbar > p {
-  font-size: 17.5px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
   margin: 0 0 40px;
 }
@@ -2222,14 +2222,14 @@ html.dark .aha-home .aha-map-cta {
 }
 
 .aha-culture-block h3 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   color: #0E4174;
   margin: 0 0 12px 0;
 }
 
 .aha-culture-block p {
-  font-size: 16.5px;
+  font-size: 15px;
   color: #475569;
   line-height: 1.6;
   margin: 0;
@@ -2273,20 +2273,20 @@ html.dark .aha-home .aha-map-cta {
   transform: translateY(-2px);
 }
 .aha-home .aha-footbar-action h4 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 800;
   color: #fff;
   margin: 0 0 8px;
 }
 .aha-home .aha-footbar-action p {
-  font-size: 15.5px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
   margin: 0 0 24px;
   line-height: 1.5;
   flex: 1;
 }
 .aha-home .aha-footbar-action .cta {
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--aha-orange);
 }
@@ -2335,14 +2335,14 @@ html.dark .aha-home .aha-footer-logo.dark-mode { display: block; }
   flex: 1;
 }
 .aha-home .aha-footer-col h4 {
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--aha-navy);
   margin: 0 0 16px;
 }
 .aha-home .aha-footer-col a {
   display: block;
-  font-size: 15.5px;
+  font-size: 14px;
   color: var(--aha-grey);
   margin-bottom: 12px;
   text-decoration: none;
@@ -2395,7 +2395,7 @@ html.dark .aha-home .aha-footer-social a:hover {
   padding: 16px !important;
 }
 .aha-guide .aha-compact-cards h2 {
-  font-size: 17.5px !important;
+  font-size: 16px !important;
   margin-bottom: 4px !important;
 }
 .aha-guide .aha-compact-cards svg {
@@ -2404,7 +2404,7 @@ html.dark .aha-home .aha-footer-social a:hover {
   margin-bottom: 8px !important;
 }
 .aha-guide .aha-compact-cards p {
-  font-size: 15.5px !important;
+  font-size: 13.5px !important;
   line-height: 1.5 !important;
   margin: 0 !important;
 }
@@ -2480,7 +2480,7 @@ div[data-testid="table-of-contents"],
 
 .aha-company-service-title {
   color: #0E4174;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
   margin: 0 0 12px !important;
   text-align: center !important;
@@ -2488,7 +2488,7 @@ div[data-testid="table-of-contents"],
 
 .aha-company-service-desc {
   color: #475569;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0 !important;
   text-align: center !important;
@@ -2520,7 +2520,7 @@ div[data-testid="table-of-contents"],
 
 .aha-culture-card-title {
   color: #0E4174;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 800;
   margin: 0 0 12px !important;
   text-align: center !important;
@@ -2528,7 +2528,7 @@ div[data-testid="table-of-contents"],
 
 .aha-culture-card-desc {
   color: #475569;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0 !important;
   text-align: center !important;
@@ -2651,14 +2651,14 @@ div[data-testid="table-of-contents"],
 
 .aha-is-text h4 {
   margin: 0 0 4px !important;
-  font-size: 16.5px !important;
+  font-size: 15px !important;
   font-weight: 700 !important;
   color: var(--aha-navy);
 }
 
 .aha-is-text p {
   margin: 0 !important;
-  font-size: 15.5px !important;
+  font-size: 14px !important;
   color: var(--aha-grey);
   line-height: 1.4 !important;
 }
@@ -2748,7 +2748,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 
 .aha-ceo-quote-text {
   color: #FFFFFF !important;
-  font-size: 21px !important;
+  font-size: 20px !important;
   font-weight: 700 !important;
   line-height: 1.6 !important;
   margin: 0 0 24px !important;
@@ -2758,7 +2758,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 
 .aha-ceo-quote-author {
   color: #FFFFFF !important;
-  font-size: 15.5px !important;
+  font-size: 14px !important;
   font-weight: 600 !important;
   margin: 0 !important;
   position: relative;
@@ -2829,7 +2829,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     font-size: 72px;
   }
   .aha-ceo-quote-text {
-    font-size: 19px !important;
+    font-size: 18px !important;
   }
   .aha-ceo-quote-right {
     min-height: 280px;
@@ -2852,7 +2852,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-partners-title {
   color: #94A3B8;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -2928,7 +2928,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-ai-hero .eyebrow {
   color: #FF7A21;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   text-transform: uppercase;
   margin: 0 0 12px;
   letter-spacing: 1.5px;
@@ -2941,14 +2941,14 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-hero p {
   color: #E2E8F0;
-  font-size: 17.5px;
+  font-size: 16px;
   margin: 0 0 8px;
   line-height: 1.6;
   max-width: 600px;
 }
 .aha-ai-hero .sub-line {
   color: #94A3B8;
-  font-size: 15.5px;
+  font-size: 14px;
   font-style: italic;
 }
 
@@ -3007,20 +3007,20 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 19px;
+  font-size: 18px;
   box-shadow: 0 0 0 8px #FFFFFF;
 }
 
 .aha-ai-journey-card h3 {
   color: #0E4174;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0 0 12px;
   line-height: 1.4;
 }
 .aha-ai-journey-card p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0 0 20px;
   line-height: 1.5;
   flex: 1;
@@ -3028,7 +3028,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-ai-journey-card a {
   color: #FF7A21;
   font-weight: 600;
-  font-size: 15.5px;
+  font-size: 14px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -3053,19 +3053,19 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-quick-card h4 {
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 4px;
 }
 .aha-ai-quick-card p {
   color: #64748B;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0 0 12px;
   flex: 1;
 }
 .aha-ai-quick-card a {
   color: #FF7A21;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -3084,7 +3084,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-principle-card h4 {
   color: #C2410C;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
   display: flex;
@@ -3093,7 +3093,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-principle-card p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3133,7 +3133,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   .aha-ai-stage-number {
     width: 40px;
     height: 40px;
-    font-size: 17.5px;
+    font-size: 16px;
     box-shadow: 0 0 0 4px #FFFFFF;
   }
 }
@@ -3186,7 +3186,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-claude-step h4 {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0 0 8px;
   display: flex;
@@ -3195,7 +3195,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-claude-step p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3208,7 +3208,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-claude-alert p {
   color: #C2410C;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
 }
 .aha-claude-alert strong {
@@ -3235,13 +3235,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-day-one-welcome p {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0 0 8px;
 }
 .aha-day-one-welcome .sub-intro {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 
@@ -3254,7 +3254,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   background: #FFFFFF;
   color: #FF7A21;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   padding: 6px 16px;
   border-radius: 20px;
   border: 1px solid #FFEDD5;
@@ -3280,7 +3280,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-day-one-schedule-card .time {
   color: #FF7A21;
   font-weight: 700;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -3288,13 +3288,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-day-one-schedule-card h4 {
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 6px;
 }
 .aha-day-one-schedule-card p {
   color: #475569;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3313,7 +3313,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-day-one-info-card h3 {
   color: #0E4174;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0 0 16px;
   display: flex;
@@ -3323,7 +3323,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-day-one-info-card table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .aha-day-one-info-card th, .aha-day-one-info-card td {
   padding: 10px 12px;
@@ -3338,7 +3338,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #0E4174;
 }
 .aha-day-one-info-card .wifi-note {
-  font-size: 15px;
+  font-size: 13px;
   color: #64748B;
   margin-top: 16px;
   background: #FFFFFF;
@@ -3362,7 +3362,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-day-one-checklist-card h3 {
   color: #0E4174;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0 0 20px;
 }
@@ -3380,13 +3380,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-day-one-checklist-text h4 {
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 600;
   margin: 0 0 4px;
 }
 .aha-day-one-checklist-text p {
   color: #475569;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3407,10 +3407,10 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   gap: 12px;
   color: #0E4174;
   font-weight: 600;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .aha-day-one-doc-note {
-  font-size: 15px;
+  font-size: 13px;
   color: #64748B;
   background: #FFFBEB;
   border: 1px solid #FEF3C7;
@@ -3427,7 +3427,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   text-align: center;
 }
 .aha-day-one-closing p {
-  font-size: 19px;
+  font-size: 18px;
   margin: 0 0 20px;
   font-weight: 600;
 }
@@ -3476,13 +3476,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-welcome p {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
 }
 .aha-week-one-welcome p.sub-intro {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-top: 8px;
 }
 
@@ -3501,7 +3501,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-goal-card h3 {
   color: #FF7A21;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0 0 8px;
   display: flex;
@@ -3510,7 +3510,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-goal-card p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.5;
   margin: 0;
 }
@@ -3529,7 +3529,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-check-group h3 {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0 0 20px;
   padding-bottom: 12px;
@@ -3549,13 +3549,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-check-text h4 {
   color: #0E4174;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   margin: 0 0 4px;
 }
 .aha-week-one-check-text p {
   color: #475569;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3579,7 +3579,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-tip p {
   color: #0369A1;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3618,7 +3618,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-nav-card span {
   color: #64748B;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -3626,7 +3626,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-nav-card strong {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -3682,7 +3682,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   align-items: center;
   gap: 8px;
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
 }
 .aha-resource-table td ul {
   margin: 0;
@@ -3717,7 +3717,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-ai-showcase-hero .tagline {
   color: #FF7A21;
   font-weight: 700;
-  font-size: 19px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 8px;
@@ -3729,7 +3729,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #FFFFFF;
 }
 .aha-ai-showcase-hero p {
-  font-size: 17.5px;
+  font-size: 16px;
   color: #E2E8F0;
   margin: 0 0 32px;
 }
@@ -3776,20 +3776,20 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-info-item .label {
   color: #64748B;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 .aha-ai-showcase-info-item .value {
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
 }
 
 .aha-ai-showcase-section-intro {
   color: #475569;
-  font-size: 17.5px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 24px;
 }
@@ -3809,13 +3809,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-card h3 {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0 0 12px;
 }
 .aha-ai-showcase-card p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3844,14 +3844,14 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-participation li {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
 }
 .aha-ai-showcase-participation p {
   color: #475569;
   margin: 0;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -3881,13 +3881,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-award-card h3 {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0 0 12px;
 }
 .aha-ai-showcase-award-card p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
@@ -3901,7 +3901,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-judges p {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 600;
   margin: 0 0 20px;
 }
@@ -3915,7 +3915,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #475569;
   padding: 8px 16px;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -3934,18 +3934,18 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-ai-showcase-timeline-step .date {
   color: #FF7A21;
   font-weight: 700;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-bottom: 12px;
 }
 .aha-ai-showcase-timeline-step h3 {
   color: #0E4174;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 800;
   margin: 0 0 12px;
 }
 .aha-ai-showcase-timeline-step p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0 0 16px;
   line-height: 1.5;
 }
@@ -3955,7 +3955,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #FFFFFF;
   padding: 10px 20px;
   border-radius: 8px;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -4007,7 +4007,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-help-card h3 {
   color: #0E4174;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0 0 12px;
   display: flex;
@@ -4016,7 +4016,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-help-card p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.5;
   margin: 0 0 20px;
   flex: 1;
@@ -4024,7 +4024,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-help-card span.cta {
   color: #FF7A21;
   font-weight: 600;
-  font-size: 15.5px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -4046,7 +4046,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-help-note p {
   margin: 0;
   color: #9A3412;
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .aha-help-note strong {
@@ -4095,7 +4095,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-hero-tech .eyebrow {
   color: #64748B;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -4118,13 +4118,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-hero-tech .tagline {
   color: #FF7A21;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
   text-shadow: 0 0 20px rgba(255,122,33,0.4);
 }
 .aha-ai-showcase-hero-tech p {
-  font-size: 17.5px;
+  font-size: 16px;
   color: #CBD5E1;
   max-width: 600px;
   margin: 0 auto 32px;
@@ -4193,7 +4193,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-info-strip-tech .label {
   color: #64748B;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -4201,13 +4201,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-info-strip-tech .value {
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 800;
 }
 
 .aha-ai-showcase-intro {
   color: #475569;
-  font-size: 17.5px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 24px;
 }
@@ -4235,7 +4235,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-card-tech h3 {
   color: #0E4174;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 800;
   margin: 0 0 12px;
   display: flex;
@@ -4244,7 +4244,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-card-tech p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.6;
 }
@@ -4291,7 +4291,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   border: 1px solid #E2E8F0;
   padding: 10px 20px;
   border-radius: 30px;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 700;
   color: #0E4174;
   display: flex;
@@ -4302,7 +4302,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-ai-showcase-participation-tech p {
   color: #475569;
   margin: 0;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -4323,7 +4323,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-judges-tech p {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0 0 20px;
 }
@@ -4338,7 +4338,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   padding: 8px 16px;
   border-radius: 8px;
   border: 1px solid #E2E8F0;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   box-shadow: 0 1px 3px rgba(0,0,0,0.02);
 }
@@ -4375,19 +4375,19 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   padding: 6px 12px;
   border-radius: 20px;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 16px;
   border: 1px solid #FFEDD5;
 }
 .aha-ai-showcase-timeline-tech .timeline-step h3 {
   color: #0E4174;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
   margin: 0 0 12px;
 }
 .aha-ai-showcase-timeline-tech .timeline-step p {
   color: #475569;
-  font-size: 16.5px;
+  font-size: 15px;
   margin: 0 0 24px;
   line-height: 1.6;
 }
@@ -4397,7 +4397,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #FFFFFF;
   padding: 12px 24px;
   border-radius: 8px;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   transition: background 0.2s;
@@ -4418,7 +4418,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-ai-showcase-note-tech p {
   margin: 0;
   color: #64748B;
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -4447,7 +4447,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-final-cta p {
   color: #CBD5E1;
-  font-size: 17.5px;
+  font-size: 16px;
   margin: 0 auto 32px;
   max-width: 500px;
 }
@@ -4457,7 +4457,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #FFFFFF;
   padding: 16px 40px;
   border-radius: 8px;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 800;
   text-decoration: none;
   margin-bottom: 32px;
@@ -4479,7 +4479,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-ai-showcase-final-cta .related-links a {
   color: #94A3B8;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s;
@@ -4522,7 +4522,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-yes-ai-do { font-family: inherit; }
 
 .aha-yes-intro {
-  font-size: 19px;
+  font-size: 18px;
   color: #0E4174;
   font-weight: 600;
   line-height: 1.6;
@@ -4549,7 +4549,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-yes-meaning-card p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
@@ -4585,7 +4585,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   display: block;
   margin-top: 12px;
   font-weight: 700;
-  font-size: 17.5px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
@@ -4595,7 +4595,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 
 .aha-workshop-content .aha-workshop-host {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-bottom: 16px;
 }
 .aha-workshop-content .aha-badge.host {
@@ -4604,12 +4604,12 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   padding: 4px 8px;
   border-radius: 4px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   margin-right: 8px;
 }
 .aha-workshop-content .aha-workshop-desc {
   color: #334155;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -4619,7 +4619,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-workshop-list li {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin-bottom: 8px;
 }
 .aha-workshop-tags {
@@ -4629,7 +4629,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   flex-wrap: wrap;
 }
 .aha-workshop-tags .tag {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   padding: 4px 12px;
   border-radius: 20px;
@@ -4644,7 +4644,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-workshop-audience {
   color: #64748B;
-  font-size: 15px;
+  font-size: 13px;
   font-style: italic;
   margin-bottom: 24px;
 }
@@ -4659,7 +4659,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #FFFFFF;
   padding: 8px 16px;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none !important;
   transition: opacity 0.2s;
@@ -4669,7 +4669,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-workshop-links .resource-note {
   color: #94A3B8;
-  font-size: 15px;
+  font-size: 13px;
   font-style: italic;
   background: #F8FAFC;
   padding: 8px 16px;
@@ -4686,13 +4686,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-yes-about h3 {
   color: #0E4174;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
   margin: 0 0 12px;
 }
 .aha-yes-about p {
   color: #475569;
-  font-size: 16.5px;
+  font-size: 15px;
   margin: 0 auto 24px;
   max-width: 600px;
   line-height: 1.6;
@@ -4706,7 +4706,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #FF7A21;
   font-weight: 700;
   text-decoration: none;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -4735,7 +4735,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   margin-bottom: 12px;
   border: 1px solid #E2E8F0;
   color: #334155;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .aha-checklist li strong {
@@ -4758,7 +4758,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-feature h4 {
   color: #0E4174;
   margin: 12px 0 0;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -4790,13 +4790,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-award-item h4 {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0 0 8px;
 }
 .aha-award-item p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
@@ -4820,7 +4820,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   margin-bottom: 24px;
 }
 .hc-search-banner h2 { margin: 0 0 8px; color: white; font-weight: 700; }
-.hc-search-banner p { margin: 0; opacity: 0.8; font-size: 16.5px; }
+.hc-search-banner p { margin: 0; opacity: 0.8; font-size: 15px; }
 
 .hc-quick-actions {
   display: flex;
@@ -4838,7 +4838,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   border: 1px solid #E2E8F0;
   border-radius: 20px;
   color: #334155;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none !important;
   transition: all 0.2s;
@@ -4886,13 +4886,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .hc-dir-row h3 {
   margin: 0 0 4px;
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 600;
 }
 .hc-dir-row p {
   margin: 0;
   color: #64748B;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .hc-dir-row .arrow {
   color: #CBD5E1;
@@ -4924,7 +4924,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .hc-contact-block .block-header h3 {
   margin: 0;
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
 }
 .hc-contact-block .block-body {
@@ -4936,11 +4936,11 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   background: #FFF7ED;
   color: #EA580C;
   border-radius: 8px;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .hc-contact-block h4 {
   color: #334155;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 700;
   margin: 20px 0 8px;
   border-bottom: 1px dashed #E2E8F0;
@@ -4953,7 +4953,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   margin: 0;
 }
 .hc-contact-block li {
-  font-size: 15.5px;
+  font-size: 14px;
   color: #475569;
   margin-bottom: 8px;
   padding-left: 12px;
@@ -4982,7 +4982,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-welcome .welcome-text {
   color: #0E4174;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.6;
   margin: 0 0 16px;
@@ -4992,7 +4992,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   align-items: center;
   gap: 8px;
   color: #EA580C;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -5021,13 +5021,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-goals h4 {
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
 }
 .aha-week-one-goals p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.5;
   margin: 0;
 }
@@ -5049,7 +5049,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   align-items: center;
   gap: 8px;
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 16px;
   border-bottom: 1px solid #E2E8F0;
@@ -5076,7 +5076,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-week-one-check-group .task-content strong {
   display: block;
   color: #334155;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -5084,7 +5084,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-week-one-check-group .task-content a {
   display: block;
   color: #64748B;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
 }
 .aha-week-one-check-group .task-content a {
@@ -5107,13 +5107,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-week-one-tip h4 {
   color: #9A3412;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
 }
 .aha-week-one-tip p {
   color: #C2410C;
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.5;
   margin: 0;
 }
@@ -5151,12 +5151,12 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-page-nav .nav-label {
   color: #64748B;
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 4px;
 }
 .aha-page-nav .nav-cta {
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -5184,13 +5184,13 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-glossary { font-family: inherit; }
 
 .aha-glossary-intro {
-  font-size: 17.5px;
+  font-size: 16px;
   color: #334155;
   margin-bottom: 24px;
 }
 .aha-glossary-intro p { margin: 0 0 8px; }
 .aha-glossary-intro .support-line {
-  font-size: 15.5px;
+  font-size: 14px;
   color: #64748B;
 }
 
@@ -5205,7 +5205,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #0E4174;
   padding: 8px 16px;
   border-radius: 20px;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none !important;
   transition: background 0.2s, color 0.2s;
@@ -5222,7 +5222,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   color: #0E4174;
   margin-top: 0;
   margin-bottom: 16px;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
   scroll-margin-top: 100px;
 }
@@ -5247,7 +5247,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   flex: 0 0 200px;
   font-weight: 700;
   color: #0E4174;
-  font-size: 16.5px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -5263,7 +5263,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-glossary-meaning {
   flex: 1;
   color: #475569;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.5;
   margin: 0;
 }
@@ -5285,7 +5285,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-glossary-note p {
   margin: 0;
   color: #334155;
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -5309,7 +5309,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   margin-bottom: 0 !important;
   transition: all 0.2s !important;
   font-weight: 700 !important;
-  font-size: 15.5px !important;
+  font-size: 14px !important;
   box-shadow: none !important;
   width: auto !important;
   height: max-content !important;
@@ -5374,7 +5374,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 }
 .aha-insurance-intro {
   color: #334155;
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
   margin-bottom: 24px;
 }
@@ -5388,19 +5388,19 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-insurance-benefits h4 {
   color: #0E4174;
   margin: 0 0 12px;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
 }
 .aha-insurance-benefits p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0 0 12px;
 }
 .aha-insurance-benefits ul {
   margin: 0;
   padding-left: 20px;
   color: #334155;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .aha-insurance-benefits li {
   margin-bottom: 8px;
@@ -5415,19 +5415,19 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-insurance-steps h4 {
   color: #0E4174;
   margin: 0 0 12px;
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
 }
 .aha-insurance-steps p {
   color: #475569;
-  font-size: 15.5px;
+  font-size: 14px;
   margin: 0 0 16px;
 }
 .aha-insurance-steps ol {
   margin: 0 0 16px;
   padding-left: 20px;
   color: #334155;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .aha-insurance-steps li {
   margin-bottom: 8px;
@@ -5467,14 +5467,14 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   margin-bottom: 12px;
 }
 .aha-insurance-guide-image .placeholder-text {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   margin-top: 8px;
 }
 .aha-insurance-guide-image p {
   margin: 0;
   color: #334155;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -5490,7 +5490,7 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 .aha-insurance-support-note p {
   margin: 0;
   color: #9A3412;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .aha-insurance-support-note .contact {
   font-weight: 700;
