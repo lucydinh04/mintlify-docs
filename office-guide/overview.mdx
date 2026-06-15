@@ -1,44 +1,83 @@
 ---
-title: "Văn phòng"
-description: "Văn phòng & tiện ích Ahamove — địa điểm, gửi xe, pantry, phòng họp, khẩn cấp."
+title: "Tổng quan Văn phòng"
+sidebarTitle: "Tổng quan"
+description: "Hướng dẫn nhanh về địa điểm, gửi xe, phòng họp và tiện ích."
 icon: "building"
 mode: "wide"
 ---
 
 <div className="aha-strip warm">
-  <p className="eyebrow">Văn phòng & Tiện ích</p>
-  <h2>Thoải mái mỗi ngày tại văn phòng</h2>
-  <p>Mọi thứ về địa điểm, gửi xe, pantry và phòng họp — để bạn tập trung vào công việc.</p>
-</div>
-
-<div className="aha-tilegrid">
-  <a className="aha-tile2" href="/office-guide/office-locations"><span className="ic"><Icon icon="location-dot" size={20} color="#FF7A21" /></span><div><h4>Địa điểm văn phòng</h4><p>HCM · Hà Nội · Đà Nẵng.</p></div></a>
-  <a className="aha-tile2" href="/office-guide/parking"><span className="ic"><Icon icon="square-parking" size={20} color="#FF7A21" /></span><div><h4>Gửi xe</h4><p>Thẻ xe, giờ gửi & cấp lại khi mất.</p></div></a>
-  <a className="aha-tile2" href="/office-guide/pantry"><span className="ic"><Icon icon="mug-hot" size={20} color="#FF7A21" /></span><div><h4>Khu pantry</h4><p>Máy bán hàng tự động & tiện ích.</p></div></a>
-  <a className="aha-tile2" href="/office-guide/meeting-rooms"><span className="ic"><Icon icon="users" size={20} color="#FF7A21" /></span><div><h4>Phòng họp</h4><p>Đặt phòng, màn hình & máy scan.</p></div></a>
+  <h2>Thoải mái mỗi ngày làm việc</h2>
+  <p>Tất cả thông tin cơ bản về chỗ ngồi, gửi xe, tiện ích ăn uống và đặt phòng họp để bạn có thể bắt nhịp công việc ngay lập tức.</p>
 </div>
 
 <div className="aha-visual-slot">
   <span className="vbadge">Visual placeholder</span>
   <span className="vicon"><Icon icon="map" size={24} color="#FF7A21" /></span>
-  <p className="vtitle">Office Guide Map</p>
+  <p className="vtitle">Sơ đồ Văn phòng (Office Map)</p>
   <span className="vratio">16:9 · suggested</span>
-  <p className="vdesc">Sơ đồ/card layout văn phòng: địa điểm, phòng họp, pantry, gửi xe & hỗ trợ tiện ích. Style: modern workplace map, icon tiện ích sạch, nền sáng, accent thương hiệu Ahamove.</p>
+  <p className="vdesc">Bản đồ vị trí các phòng ban, khu vực pantry, phòng họp, và lối ra vào.</p>
   <span className="vfile">images/office-guide-map.png</span>
 </div>
 
-## Cần nhớ nhanh
+## Không gian làm việc
+
+<div className="aha-tilegrid">
+  <a className="aha-tile2" href="/office-guide/office-locations">
+    <span className="ic"><Icon icon="location-dot" size={20} color="#FF7A21" /></span>
+    <div>
+      <h4>Địa điểm</h4>
+      <p>HCM · Hà Nội · Đà Nẵng</p>
+    </div>
+  </a>
+  <a className="aha-tile2" href="/office-guide/meeting-rooms">
+    <span className="ic"><Icon icon="users" size={20} color="#FF7A21" /></span>
+    <div>
+      <h4>Phòng họp</h4>
+      <p>Hướng dẫn đặt lịch & thiết bị</p>
+    </div>
+  </a>
+</div>
+
+## Di chuyển & Tiện ích
+
+<div className="aha-tilegrid">
+  <a className="aha-tile2" href="/office-guide/parking">
+    <span className="ic"><Icon icon="square-parking" size={20} color="#FF7A21" /></span>
+    <div>
+      <h4>Gửi xe</h4>
+      <p>Quy định thẻ xe & giờ giấc</p>
+    </div>
+  </a>
+  <a className="aha-tile2" href="/office-guide/pantry">
+    <span className="ic"><Icon icon="mug-hot" size={20} color="#FF7A21" /></span>
+    <div>
+      <h4>Khu Pantry</h4>
+      <p>Máy bán hàng tự động & lò vi sóng</p>
+    </div>
+  </a>
+</div>
+
+## Điều cần biết
 
 <CardGroup cols={3}>
-  <Card title="Thẻ định danh" icon="id-card">Quẹt qua hệ thống cửa ra vào.</Card>
-  <Card title="Thẻ xe" icon="motorcycle">Gửi xe tháng, dùng đến **22:30**; mất thẻ → Admin cấp lại (có phí).</Card>
-  <Card title="Máy bán hàng" icon="mug-hot">Đồ uống/bánh/mì — **giảm 50%** cho nhân viên (HCM & HN).</Card>
+  <Card title="Thẻ định danh" icon="id-card">
+    Luôn mang thẻ để quẹt cửa ra vào. Cần cấp lại? Báo ngay cho Admin.
+  </Card>
+  <Card title="Giờ gửi xe" icon="clock">
+    Gửi xe tháng qua đêm tối đa đến **22:30**. Quá giờ sẽ tính phí ngoài.
+  </Card>
+  <Card title="Ưu đãi ăn uống" icon="tag">
+    Được giảm **50%** khi mua đồ tại máy bán hàng tự động (HCM & HN).
+  </Card>
 </CardGroup>
+
+## Cần hỗ trợ
 
 <div className="aha-support">
   <span className="ic"><Icon icon="headset" size={20} color="#FF7A21" /></span>
   <div>
-    <h4>Liên hệ về văn phòng?</h4>
-    <p>Chỗ ngồi · thẻ · tiện ích văn phòng → <b>Admin (OM)</b> · Telegram <b>@thucthuc1</b>.</p>
+    <h4>Admin Văn phòng (OM)</h4>
+    <p>Chỗ ngồi, cấp thẻ, sự cố cơ sở vật chất → Liên hệ Telegram <b>@thucthuc1</b>.</p>
   </div>
 </div>
