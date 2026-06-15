@@ -5123,14 +5123,14 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   text-decoration: underline;
 }
 
-.aha-week-one-nav {
+.aha-page-nav {
   display: flex;
   gap: 16px;
   margin-top: 32px;
   border-top: 1px solid #E2E8F0;
   padding-top: 32px;
 }
-.aha-week-one-nav .nav-card {
+.aha-page-nav .nav-card {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -5141,20 +5141,20 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
   text-decoration: none !important;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.aha-week-one-nav .nav-card:hover {
+.aha-page-nav .nav-card:hover {
   border-color: #CBD5E1;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-.aha-week-one-nav .nav-card.next {
+.aha-page-nav .nav-card.next {
   align-items: flex-end;
   text-align: right;
 }
-.aha-week-one-nav .nav-label {
+.aha-page-nav .nav-label {
   color: #64748B;
   font-size: 13px;
   margin-bottom: 4px;
 }
-.aha-week-one-nav .nav-cta {
+.aha-page-nav .nav-cta {
   color: #0E4174;
   font-size: 15px;
   font-weight: 700;
@@ -5169,11 +5169,11 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
 @media (max-width: 768px) {
   .aha-week-one-goals,
   .aha-week-one-checklist,
-  .aha-week-one-nav {
+  .aha-page-nav {
     grid-template-columns: 1fr;
     flex-direction: column;
   }
-  .aha-week-one-nav .nav-card.next {
+  .aha-page-nav .nav-card.next {
     align-items: flex-start;
     text-align: left;
   }

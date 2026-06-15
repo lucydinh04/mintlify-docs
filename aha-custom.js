@@ -68,3 +68,96 @@
     window.requestAnimationFrame(step);
   }
 })();
+
+(function initGlobalPagination() {
+  const init = () => {
+    if (document.querySelector('.aha-page-nav-injected')) return;
+    
+    // Find the native pagination wrapper
+    // Mintlify typically uses this specific set of classes for the bottom pagination
+    const wrappers = document.querySelectorAll('div.flex.justify-between.border-t');
+    let paginationWrapper = null;
+    
+    for (const w of wrappers) {
+      const links = w.querySelectorAll('a');
+      if (links.length > 0 && links.length <= 2) {
+        paginationWrapper = w;
+        break; // Found it
+      }
+    }
+    
+    if (!paginationWrapper) return;
+    
+    const links = paginationWrapper.querySelectorAll('a');
+    
+    // Hide native wrapper
+    paginationWrapper.style.display = 'none';
+    
+    // Build custom wrapper
+    const customNav = document.createElement('div');
+    customNav.className = 'aha-page-nav aha-page-nav-injected';
+    
+    let prevLink = null;
+    let nextLink = null;
+    
+    if (links.length === 2) {
+      prevLink = links[0];
+      nextLink = links[1];
+    } else if (links.length === 1) {
+      if (links[0].className.includes('justify-end') || links[0].className.includes('text-right')) {
+        nextLink = links[0];
+      } else {
+        prevLink = links[0];
+      }
+    }
+    
+    if (prevLink) {
+      const href = prevLink.getAttribute('href');
+      let title = prevLink.textContent.replace(/Previous|Quay lại|Next|Tiếp tục/gi, '').trim();
+      title = title.replace(/^[<←\s]+|[>→\s]+$/g, '');
+      
+      const card = document.createElement('a');
+      card.className = 'nav-card prev';
+      card.href = href;
+      card.innerHTML = `
+        <span class="nav-label">Quay lại</span>
+        <span class="nav-cta">← ${title}</span>
+      `;
+      customNav.appendChild(card);
+    } else {
+      const empty = document.createElement('div');
+      empty.className = 'nav-card prev empty';
+      empty.style.visibility = 'hidden';
+      customNav.appendChild(empty);
+    }
+    
+    if (nextLink) {
+      const href = nextLink.getAttribute('href');
+      let title = nextLink.textContent.replace(/Previous|Quay lại|Next|Tiếp tục/gi, '').trim();
+      title = title.replace(/^[<←\s]+|[>→\s]+$/g, '');
+      
+      const card = document.createElement('a');
+      card.className = 'nav-card next';
+      card.href = href;
+      card.innerHTML = `
+        <span class="nav-label">Tiếp tục</span>
+        <span class="nav-cta">${title} →</span>
+      `;
+      customNav.appendChild(card);
+    } else {
+      const empty = document.createElement('div');
+      empty.className = 'nav-card next empty';
+      empty.style.visibility = 'hidden';
+      customNav.appendChild(empty);
+    }
+    
+    paginationWrapper.parentNode.insertBefore(customNav, paginationWrapper);
+  };
+  
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+  setInterval(init, 500);
+})();
