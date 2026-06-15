@@ -7,58 +7,101 @@ mode: "wide"
 ---
 
 <div className="aha-strip">
-  <p className="eyebrow">Sổ tay nhân sự</p>
-  <h2>Quy trình nhân sự</h2>
-  <p>Tự xử lý việc hành chính cơ bản và biết hỏi đúng nơi. Hầu hết quy trình thực hiện trên 1Office.</p>
+  <p className="eyebrow">SỔ TAY NHÂN SỰ</p>
+  <h2>Quy trình Vận hành & Nhân sự</h2>
+  <p>Tự xử lý việc hành chính cơ bản và biết hỏi đúng nơi. Hầu hết các quy trình nội bộ tại Ahamove đều được thực hiện trên hệ thống 1Office.</p>
 </div>
 
-## Chấm công & Nghỉ phép
+## Thao tác nhanh
 
-Thực hiện trên **1Office** theo khung giờ làm việc của team. Quy trình nghỉ phép có các bước hướng dẫn cụ thể ngay trên 1Office.
+<div className="aha-dashboard-grid cols-3">
+  <a href="/handbook/internal-systems" className="aha-dashboard-stat-card" style={{ textDecoration: 'none' }}>
+    <div className="stat-icon"><Icon icon="laptop" /></div>
+    <div className="stat-info">
+      <h4>Hệ thống 1Office</h4>
+      <p>Mở ứng dụng</p>
+    </div>
+  </a>
+  <a href="/policies/leave-policy" className="aha-dashboard-stat-card" style={{ textDecoration: 'none' }}>
+    <div className="stat-icon"><Icon icon="umbrella-beach" /></div>
+    <div className="stat-info">
+      <h4>Nghỉ phép</h4>
+      <p>Xem chính sách</p>
+    </div>
+  </a>
+  <a href="#danh-gia-thu-viec" className="aha-dashboard-stat-card" style={{ textDecoration: 'none' }}>
+    <div className="stat-icon"><Icon icon="star" /></div>
+    <div className="stat-info">
+      <h4>Thử việc</h4>
+      <p>Đánh giá năng lực</p>
+    </div>
+  </a>
+</div>
 
-<Card title="Cách xin nghỉ phép & quy định phép năm" icon="umbrella-beach" href="/policies/leave-policy">
-  Xem trang Nghỉ phép để biết quy định, hạn dùng phép & cách tạo đơn.
-</Card>
+## Danh mục quy trình hành chính
 
-<div id="probation-review" />
+<div className="aha-dashboard-feature">
+  <div className="feat-icon"><Icon icon="clock" color="#ffffff" /></div>
+  <div className="feat-content">
+    <h3>Chấm công & Nghỉ phép</h3>
+    <p>Thực hiện tạo đơn từ trên 1Office theo khung giờ làm việc của bộ phận. Quy định số ngày phép, cách tạo đơn và hạn sử dụng phép năm được quy định rõ tại trang chính sách.</p>
+    <a href="/policies/leave-policy" className="feat-link">
+      <Icon icon="arrow-right" /> Đọc chính sách Nghỉ phép
+    </a>
+  </div>
+</div>
 
-## Đánh giá thử việc
+<div className="aha-dashboard-feature">
+  <div className="feat-icon"><Icon icon="building" color="#ffffff" /></div>
+  <div className="feat-content">
+    <h3>Quy trình Văn phòng & IT (OM)</h3>
+    <p>Áp dụng cho các yêu cầu: Đề nghị đi công tác, Cấp mới thiết bị/tài sản, Bảo trì sửa chữa máy móc. Tất cả đều phải được tạo lệnh (ticket) trên 1Office để theo dõi tiến độ.</p>
+    <a href="/help-center/overview" className="feat-link">
+      <Icon icon="address-book" /> Xem ma trận người hỗ trợ OM
+    </a>
+  </div>
+</div>
+
+<h2 id="danh-gia-thu-viec">Đánh giá thử việc</h2>
+
+<div style={{ background: '#F8FAFC', padding: '24px', borderRadius: '12px', border: '1px solid #E2E8F0', marginBottom: '32px' }}>
+  <div style={{ display: 'flex', gap: '24px', marginBottom: '16px' }}>
+    <div style={{ flex: 1 }}>
+      <h4 style={{ color: '#0E4174', margin: '0 0 8px', fontSize: '15px' }}>Thời điểm áp dụng</h4>
+      <p style={{ margin: 0, fontSize: '14px', color: '#475569' }}>Vào 2 tuần cuối cùng của kỳ thử việc 2 tháng.</p>
+    </div>
+    <div style={{ flex: 1 }}>
+      <h4 style={{ color: '#0E4174', margin: '0 0 8px', fontSize: '15px' }}>Tài liệu chuẩn bị</h4>
+      <p style={{ margin: 0, fontSize: '14px', color: '#475569' }}>
+        <a href="https://docs.google.com/spreadsheets/d/1v1g58i16mMFuYgH5fjvDPX2ocD0PLeNwQPr1dmaeIXA/edit" target="_blank" style={{ fontWeight: 600, color: '#FF7A21' }}>Biểu mẫu đánh giá</a> (Yêu cầu email công ty).
+      </p>
+    </div>
+  </div>
+  <div style={{ flex: 1 }}>
+    <h4 style={{ color: '#0E4174', margin: '0 0 8px', fontSize: '15px' }}>Đầu mối hỗ trợ</h4>
+    <p style={{ margin: 0, fontSize: '14px', color: '#475569' }}>Nhân viên HRBP phụ trách khối ban của bạn.</p>
+  </div>
+</div>
 
 <Steps>
-  <Step title="Điền biểu mẫu phản hồi nhanh" icon="pen-to-square">
-    Cuối kỳ thử việc, bạn tự đánh giá qua biểu mẫu.
+  <Step title="Điền biểu mẫu phản hồi nhanh">
+    Nhân viên tự đánh giá hiệu suất công việc và sự hòa nhập văn hóa thông qua biểu mẫu Excel được gửi. Cần điền trung thực và cung cấp dẫn chứng cụ thể (nếu có).
   </Step>
-  <Step title="Trao đổi trực tiếp với quản lý" icon="comments">
-    Quản lý trực tiếp phản hồi & thống nhất kết quả.
+  <Step title="Trao đổi trực tiếp với quản lý (1-on-1)">
+    Quản lý trực tiếp (Line Manager) sẽ sắp xếp một buổi họp ngắn để đưa ra phản hồi (feedback), nhận xét ưu khuyết điểm và thống nhất kết quả đạt/không đạt.
   </Step>
-  <Step title="Tổng hợp gửi HRBP" icon="paper-plane">
-    Kết quả được tổng hợp và gửi về HRBP.
+  <Step title="Tổng hợp gửi Phòng Nhân sự">
+    Quản lý ký duyệt vào biểu mẫu và gửi trả kết quả cuối cùng về cho bộ phận HRBP của **Phòng Nhân sự** để tiến hành thủ tục ký hợp đồng chính thức (nếu đạt).
   </Step>
 </Steps>
 
-<Card title="Biểu mẫu đánh giá thử việc" icon="table" href="https://docs.google.com/spreadsheets/d/1v1g58i16mMFuYgH5fjvDPX2ocD0PLeNwQPr1dmaeIXA/edit">
-  Biểu mẫu đánh giá (cần quyền truy cập nội bộ).
-</Card>
+## Liên hệ Hỗ trợ
 
-<div id="om-workflows" />
-
-## Quy trình Văn phòng & IT (OM)
-
-Các quy trình OM thực hiện trên **1Office**:
-
-- **Đề nghị đi công tác**
-- **Cấp mới thiết bị / tài sản / CCDC**
-- **Bảo trì – sửa chữa**
-
-<Note>
-  Chi tiết tài sản IT, cấp đồng phục & kết nối thiết bị xem tại [Hỗ trợ IT](/handbook/it-support) và
-  [Văn phòng](/office-guide/overview).
-</Note>
-
-## Hỏi ai khi cần?
-
-Để biết chính xác đầu mối hỗ trợ cho từng vấn đề (Nhân sự, Văn phòng, IT), vui lòng xem tại Trung tâm hỗ trợ.
-
-<Card title="Xem ma trận liên hệ & hỗ trợ" icon="address-book" href="/help-center/overview">
-  Tìm đúng người để giải quyết đúng việc (Contact Hub).
-</Card>
+<div className="aha-dashboard-support" style={{ width: '100%', maxWidth: '600px' }}>
+  <div className="sup-icon"><Icon icon="headset" /></div>
+  <div className="sup-content">
+    <h4>Phòng Nhân sự & Vận hành</h4>
+    <p className="sup-contact">nhansu@ahamove.com</p>
+    <p className="sup-desc">Chịu trách nhiệm giải đáp thắc mắc về các quy trình chấm công, tính lương, và thủ tục nhân sự. Khuyến khích kiểm tra quy định trước khi gửi email.</p>
+  </div>
+</div>
