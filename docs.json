@@ -14,8 +14,9 @@
     "dark": "/logo/ahamove-dark.svg",
     "href": "/"
   },
-  "appearance": {
-    "default": "light"
+  "modeToggle": {
+    "default": "light",
+    "isHidden": true
   },
   "banner": {
     "content": "Chào mừng đến với Ahamove Employee Hub — một nơi cho mọi thông tin Ahamovers cần. Mới vào? [Bắt đầu tại đây](/ahamazing-guide/overview).",
@@ -54,9 +55,7 @@
               { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] },
               "handbook/internal-systems",
               { "group": "Quy trình & Lương", "icon": "clipboard-list", "expanded": false, "pages": ["handbook/hr-processes", "handbook/payroll", "handbook/offboarding"] },
-              "ahamazing-guide/day-1",
-              "ahamazing-guide/week-1",
-              "ahamazing-guide/first-month"
+              "ahamazing-guide/day-1"
             ]
           }
         ]
@@ -144,8 +143,7 @@
         "header": "Bắt đầu",
         "items": [
           { "label": "Hành trình hội nhập", "href": "/ahamazing-guide/overview" },
-          { "label": "Ngày đầu tiên", "href": "/ahamazing-guide/day-1" },
-          { "label": "Tháng đầu tiên", "href": "/ahamazing-guide/first-month" }
+          { "label": "Ngày đầu tiên", "href": "/ahamazing-guide/day-1" }
         ]
       },
       {
