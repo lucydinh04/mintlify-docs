@@ -1,62 +1,309 @@
 ---
 title: "Hệ thống 1Office"
 sidebarTitle: "Hệ thống 1Office"
-description: "Tất cả về 1Office — công cụ làm việc, đăng nhập, thao tác nghỉ phép, ký số & trợ lý AI."
+description: "Tất cả về 1Office — công cụ làm việc, đăng nhập, thao tác chấm công/nghỉ phép, ký số & trợ lý AI."
 icon: "building-user"
 mode: "wide"
 ---
 
-# Hệ thống 1Office
-
-Hệ thống nhân sự & vận hành trung tâm của Ahamove: nghỉ phép, đề xuất, ký số hợp đồng và xem phiếu lương. Trang này gom tất cả những gì bạn cần để dùng 1Office mỗi ngày.
+<div className="aha-strip">
+  <p className="eyebrow">Hệ thống nội bộ</p>
+  <h2>Hệ thống 1Office</h2>
+  <p>Hệ thống nhân sự & vận hành trung tâm của Ahamove: nghỉ phép, đề xuất, ký số hợp đồng và xem phiếu lương. Trang này gom tất cả những gì bạn cần để dùng 1Office mỗi ngày.</p>
+</div>
 
 <img src="/images/1Off-map.png" alt="1Office System Map" style={{ width: '100%', borderRadius: '12px', margin: '24px 0' }} />
 
+## Khi nào bạn cần dùng 1Office?
+
+Các thao tác phổ biến:
+<<<<<<< HEAD
+Tạo đơn nghỉ phép/công tác, kiểm tra quỹ phép, xem phiếu lương và thực hiện các thủ tục nhân sự trên hệ thống.
+=======
+Tạo đơn nghỉ phép/công tác, kiểm tra quỹ phép, xem bảng công và phiếu lương.
+>>>>>>> c8aa6bb0d695664e1f45fd0f4436b0161d3345dc
+
+## Hướng dẫn thiết lập ban đầu
+
+<Tabs>
+  <Tab title="Đăng nhập">
+    <div className="aha-is">
+      {/* Cấu trúc Data: Các radio inputs điều khiển (ẩn) */}
+      <input type="radio" name="dn-tab" value="1" id="dn-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="dn-tab" value="2" id="dn-2" className="aha-is-input" />
+      <input type="radio" name="dn-tab" value="3" id="dn-3" className="aha-is-input" />
+
+      <div className="aha-is-layout">
+        {/* Cột trái: Hình ảnh */}
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <img src="/images/b1.1.png" alt="Truy cập 1Office" />
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <img src="/images/b1.2.png" alt="Tên đăng nhập" />
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <img src="/images/b1.3.png" alt="Mật khẩu" />
+          </div>
+        </div>
+
+        {/* Cột phải: Các bước thao tác */}
+        <div className="aha-is-right">
+          <label htmlFor="dn-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="globe" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Truy cập</h4>
+              <p>Vào <a href="https://ahamove.1office.vn" target="_blank">https://ahamove.1office.vn</a>.</p>
+            </div>
+          </label>
+          <label htmlFor="dn-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="user" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Tên đăng nhập</h4>
+              <p>Dùng <strong>Domain</strong> của bạn (<strong>không</strong> kèm <code>@ahamove.com</code>).</p>
+            </div>
+          </label>
+          <label htmlFor="dn-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="key" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Mật khẩu</h4>
+              <p>Mật khẩu gửi qua <strong>mail công ty</strong>. <strong>Đổi mật khẩu ngay</strong> sau lần đầu đăng nhập.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Số tài khoản ngân hàng">
+    <div className="aha-is">
+      <input type="radio" name="stk-tab" value="1" id="stk-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="stk-tab" value="2" id="stk-2" className="aha-is-input" />
+      <input type="radio" name="stk-tab" value="3" id="stk-3" className="aha-is-input" />
+      <input type="radio" name="stk-tab" value="4" id="stk-4" className="aha-is-input" />
+
+      <div className="aha-is-layout">
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <img src="/images/b2.1.png" alt="Bước 1" />
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <img src="/images/b2.2.png" alt="Bước 2" />
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <img src="/images/b2.3.png" alt="Bước 3" />
+          </div>
+          <div className="aha-is-img" data-step="4">
+            <img src="/images/b2.4.png" alt="Bước 4" />
+          </div>
+        </div>
+
+        <div className="aha-is-right">
+          <label htmlFor="stk-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="circle-user" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 1</h4>
+              <p>Chọn <strong>biểu tượng tài khoản</strong> ở góc phải trên cùng trang chủ.</p>
+            </div>
+          </label>
+          <label htmlFor="stk-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="arrow-pointer" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 2</h4>
+              <p>Nhấp vào <strong>USERNAME</strong> của bạn.</p>
+            </div>
+          </label>
+          <label htmlFor="stk-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="address-card" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 3</h4>
+              <p>Chọn <strong>Hồ sơ</strong> → <strong>Sơ yếu lí lịch</strong> → <strong>Cập nhật</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="stk-4" className="aha-is-label" data-step="4">
+            <div className="aha-is-icon"><Icon icon="building-columns" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 4</h4>
+              <p>Điền <strong>số tài khoản chính chủ</strong> → bấm <strong>Cập nhật</strong>.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Chữ ký số">
+    <div className="aha-is">
+      <input type="radio" name="cks-tab" value="1" id="cks-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="cks-tab" value="2" id="cks-2" className="aha-is-input" />
+      <input type="radio" name="cks-tab" value="3" id="cks-3" className="aha-is-input" />
+      <input type="radio" name="cks-tab" value="4" id="cks-4" className="aha-is-input" />
+
+      <div className="aha-is-layout">
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <img src="/images/b3.1.png" alt="Bước 1" />
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <img src="/images/b3.2.png" alt="Bước 2" />
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <img src="/images/b3.3.png" alt="Bước 3" />
+          </div>
+          <div className="aha-is-img" data-step="4">
+            <img src="/images/b3.4.png" alt="Bước 4" />
+          </div>
+        </div>
+
+        <div className="aha-is-right">
+          <label htmlFor="cks-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="envelope" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 1</h4>
+              <p>Thông báo kích hoạt gửi về <strong>mail công ty</strong> → <strong>click vào link</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="cks-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="signature" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 2</h4>
+              <p>Chọn <strong>Mẫu chữ ký</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="cks-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="pen" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 3</h4>
+              <p>Tạo mẫu chữ ký: <strong>tải ảnh chữ ký</strong> lên, hoặc <strong>dùng chuột ký trực tiếp</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="cks-4" className="aha-is-label" data-step="4">
+            <div className="aha-is-icon"><Icon icon="circle-check" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Bước 4</h4>
+              <p>Chọn vị trí hiển thị thông tin chứng thực → <strong>Cập nhật</strong>.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Ký hợp đồng">
+    <div className="aha-is">
+      <input type="radio" name="khd-tab" value="1" id="khd-1" className="aha-is-input" defaultChecked />
+      <input type="radio" name="khd-tab" value="2" id="khd-2" className="aha-is-input" />
+      <input type="radio" name="khd-tab" value="3" id="khd-3" className="aha-is-input" />
+
+      <div className="aha-is-layout">
+        <div className="aha-is-left">
+          <div className="aha-is-img" data-step="1">
+            <img src="/images/b4.1.png" alt="Cách 1" />
+          </div>
+          <div className="aha-is-img" data-step="2">
+            <img src="/images/b4.2.png" alt="Cách 2" />
+          </div>
+          <div className="aha-is-img" data-step="3">
+            <img src="/images/b4.3.png" alt="Kiểm tra" />
+          </div>
+        </div>
+
+        <div className="aha-is-right">
+          <label htmlFor="khd-1" className="aha-is-label" data-step="1">
+            <div className="aha-is-icon"><Icon icon="folder-open" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Cách 1: Qua menu Ký số</h4>
+              <p>Vào <strong>Workplace</strong> → <strong>Ký số</strong> → <strong>Hồ sơ</strong> → <strong>Hợp đồng lao động</strong> → chọn <strong>KÝ</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="khd-2" className="aha-is-label" data-step="2">
+            <div className="aha-is-icon"><Icon icon="bell" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Cách 2: Qua Thông báo</h4>
+              <p>Vào <strong>Thông báo</strong> → mở thông báo yêu cầu ký hồ sơ → bấm <strong>Chọn KÝ</strong>.</p>
+            </div>
+          </label>
+          <label htmlFor="khd-3" className="aha-is-label" data-step="3">
+            <div className="aha-is-icon"><Icon icon="magnifying-glass" size={16} /></div>
+            <div className="aha-is-text">
+              <h4>Kiểm tra chữ ký</h4>
+              <p>Sau khi hệ thống báo <strong>ký thành công</strong>, hãy mở lại hợp đồng để kiểm tra chữ ký đã đúng vị trí chưa.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </Tab>
+</Tabs>
+
 ## Các thao tác phổ biến
 
-### Hướng dẫn thiết lập ban đầu (Dành cho người mới)
-
-- **Đăng nhập:** Truy cập [ahamove.1office.vn](https://ahamove.1office.vn). Tên đăng nhập là Domain của bạn (không kèm `@ahamove.com`). Mật khẩu được gửi qua mail công ty (đổi mật khẩu ngay sau lần đăng nhập đầu tiên).
-- **Cập nhật số tài khoản ngân hàng:** Nhấp vào tên hiển thị (góc phải) → Hồ sơ → Sơ yếu lí lịch → Cập nhật → Điền số tài khoản chính chủ.
-- **Tạo chữ ký số:** Nhấp vào link kích hoạt trong mail công ty → Mẫu chữ ký → Tải ảnh hoặc ký trực tiếp → Chọn vị trí hiển thị chứng thực → Cập nhật.
-- **Ký hợp đồng:** Workplace → Ký số → Hồ sơ → Hợp đồng lao động → KÝ (hoặc mở trực tiếp từ mục Thông báo). Sau khi hệ thống báo ký thành công, hãy mở lại hợp đồng để kiểm tra chữ ký.
-
-### Thao tác hằng ngày
-
+<<<<<<< HEAD
 - Tạo đơn nghỉ phép
 - Tạo đơn công tác
 - Kiểm tra quỹ phép
+=======
+- Tạo đơn nghỉ phép/công tác
+- Kiểm tra quỹ phép
+- Xem bảng công
+>>>>>>> c8aa6bb0d695664e1f45fd0f4436b0161d3345dc
 - Xem phiếu lương
 
 ## Trợ lý AI trong 1Office
 
-Trợ lý AI hỗ trợ thao tác & tra cứu ngay trong hệ thống 1Office — thay cho việc dò ảnh hướng dẫn thủ công.
+<div className="aha-aispot">
+  <p className="eyebrow">Trợ lý thao tác · 1Office</p>
+  <h3>Chatbot 1Office</h3>
+  <p>Trợ lý AI hỗ trợ <b style={{ color: "#fff" }}>thao tác & tra cứu ngay trong hệ thống 1Office</b> — thay cho việc dò ảnh hướng dẫn thủ công.</p>
+</div>
 
 <Note>
-  Đây **không phải** AI Academy, cũng **không phải** [Hỏi Ahamove AI](/help-center/ask-ahamove-ai) (trợ lý hỏi đáp về cổng thông tin). Chatbot 1Office chỉ phục vụ các tác vụ bên trong hệ thống 1Office.
+  Đây **không phải** AI Academy, cũng **không phải** [Hỏi Ahamove AI](/help-center/ask-ahamove-ai) (trợ lý hỏi đáp về cổng thông tin). Chatbot 1Office chỉ phục vụ các tác vụ bên trong 1Office.
 </Note>
 
 Trợ lý AI có thể giúp bạn:
+<<<<<<< HEAD
 - Hướng dẫn sử dụng tính năng trong 1Office
+- Hỗ trợ tạo đơn nghỉ phép/công tác
 - Trả lời các câu hỏi thường gặp về quy trình nhân sự
 - Kết nối với HRBP phụ trách phòng ban khi cần
+=======
+- Tạo đơn nghỉ phép/công tác/OT
+>>>>>>> c8aa6bb0d695664e1f45fd0f4436b0161d3345dc
 
 <Card title="Mở Chatbot 1Office" icon="robot" href="https://ahamove.1office.vn/chat/-1000">
   Hỗ trợ thao tác 1Office hằng ngày.
 </Card>
 
-## Ví dụ câu hỏi dành cho Chatbot
-
-Bạn có thể nhờ Chatbot xử lý nhanh bằng các mẫu câu hỏi sau:
-
-- **Nghỉ phép:** "Tôi muốn tạo đơn xin nghỉ phép ngày mai."
-- **Quỹ phép:** "Tôi còn bao nhiêu ngày phép năm?"
-- **Trạng thái đơn:** "Kiểm tra giúp tôi trạng thái các đơn nghỉ gần nhất."
-- **Phiếu lương:** "Tôi muốn xem phiếu lương tháng gần nhất."
-- **Công tác:** "Tôi muốn đi công tác thì cần tạo loại đơn nào?"
-- **Liên hệ:** "Ai là HRBP phụ trách phòng ban của tôi?"
+<Accordion title="Các câu hỏi mẫu dành cho Chatbot 1Office">
+  | Chủ đề | Câu hỏi mẫu |
+  | --- | --- |
+  | Nghỉ phép | "Tôi muốn tạo đơn xin nghỉ phép ngày mai." |
+  | Quỹ phép | "Tôi còn bao nhiêu ngày phép năm?" |
+  | Trạng thái đơn | "Kiểm tra giúp tôi trạng thái các đơn nghỉ gần nhất." |
+  | Phiếu lương | "Tôi muốn xem phiếu lương tháng gần nhất." |
+<<<<<<< HEAD
+=======
+  | OT | "Hướng dẫn tôi tạo đơn làm thêm giờ." |
+>>>>>>> c8aa6bb0d695664e1f45fd0f4436b0161d3345dc
+  | Công tác | "Tôi muốn đi công tác thì cần tạo loại đơn nào?" |
+  | Liên hệ | "Ai là HRBP phụ trách phòng ban của tôi?" |
+</Accordion>
 
 ## Lỗi thường gặp & hỗ trợ
 
-- **Không đăng nhập được 1Office:** (Quên mật khẩu, lỗi tài khoản, không truy cập được) → Xem đầu mối hỗ trợ IT tại [Help Center](/help-center/overview).
-- **Thắc mắc số liệu cá nhân:** (Quỹ phép, lương, hợp đồng) → Liên hệ HRBP phụ trách phòng ban của bạn.
+<div className="aha-support">
+  <span className="ic"><Icon icon="laptop" size={20} color="#FF7A21" /></span>
+  <div>
+    <h4>Không đăng nhập được 1Office?</h4>
+    <p>Quên mật khẩu · lỗi tài khoản · không truy cập được → xem đầu mối hỗ trợ IT tại <a href="/help-center/overview">Help Center</a>.</p>
+  </div>
+</div>
+
+<div className="aha-support">
+  <span className="ic"><Icon icon="user-shield" size={20} color="#FF7A21" /></span>
+  <div>
+    <h4>Thắc mắc số liệu cá nhân?</h4>
+    <p>Quỹ phép · lương · hợp đồng → Liên hệ HRBP phụ trách phòng ban của bạn.</p>
+  </div>
+</div>
