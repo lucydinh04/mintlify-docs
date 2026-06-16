@@ -231,28 +231,43 @@ Tạo đơn nghỉ phép/công tác, kiểm tra quỹ phép, xem phiếu lương
   </Tab>
 </Tabs>
 
-<div style={{ marginTop: '64px', marginBottom: '32px' }}>
-  <p style={{ color: '#FF7A21', fontSize: '14px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 8px' }}>AI Assistant</p>
-  <h2 style={{ fontSize: '36px', fontWeight: 800, color: '#0F172A', margin: '0 0 12px', letterSpacing: '-1px', border: 'none', padding: 0 }}>Chatbot 1Office</h2>
-  <p style={{ fontSize: '18px', color: '#475569', lineHeight: 1.6, margin: 0 }}>Hỗ trợ thao tác & tra cứu trực tiếp trong hệ thống 1Office.</p>
+<div style={{ marginTop: '48px', marginBottom: '24px' }}>
+  <p style={{ color: '#FF7A21', fontSize: '13px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', margin: '0 0 6px' }}>AI Assistant</p>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap', marginBottom: '8px' }}>
+    <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#0F172A', margin: 0, letterSpacing: '-0.5px', border: 'none', padding: 0 }}>Chatbot 1Office</h2>
+    <a href="https://ahamove.1office.vn/chat/-1000" target="_blank" style={{ background: '#FF7A21', color: '#fff', padding: '6px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', boxShadow: '0 2px 4px rgba(255,122,33,0.2)' }}>
+      Mở Chatbot 1Office ↗
+    </a>
+  </div>
+  <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.5, margin: 0 }}>Hỗ trợ thao tác & tra cứu trực tiếp trong hệ thống. <span style={{ color: '#64748B', fontStyle: 'italic', fontSize: '14px' }}>Lưu ý: Chỉ hỗ trợ các tác vụ bên trong 1Office.</span></p>
 </div>
 
-<Card title="Mở Chatbot 1Office" icon="robot" href="https://ahamove.1office.vn/chat/-1000">
-  Hỗ trợ thao tác 1Office hằng ngày.
-</Card>
-
-<br />
-
-<Note>
-  Đây **không phải** AI Academy, cũng **không phải** [Hỏi Ahamove AI](/help-center/ask-ahamove-ai) (trợ lý hỏi đáp về cổng thông tin). Chatbot 1Office chỉ phục vụ các tác vụ bên trong 1Office.
-</Note>
-
-| AI có thể hỗ trợ | Ví dụ bạn có thể hỏi |
-|------------------|----------------------|
-| Hướng dẫn sử dụng tính năng trong 1Office | Làm thế nào để tạo đơn công tác? |
-| Giải đáp các quy trình nhân sự phổ biến | Quy trình nghỉ việc gồm những bước nào? |
-| Tìm kiếm thông tin liên quan đến nghỉ phép, công tác, phiếu lương | Tôi còn bao nhiêu ngày phép? / Tôi có thể xem phiếu lương ở đâu? |
-| Kết nối HRBP phụ trách phòng ban | HRBP phụ trách phòng ban của tôi là ai? |
+<table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '48px' }}>
+  <thead>
+    <tr>
+      <th style={{ color: '#FF7A21', fontWeight: 800, fontSize: '13px', letterSpacing: '0.5px', textTransform: 'uppercase', padding: '0 0 12px 0', borderBottom: '2px solid #FF7A21', textAlign: 'left', width: '45%' }}>AI CÓ THỂ HỖ TRỢ</th>
+      <th style={{ color: '#0E4174', fontWeight: 800, fontSize: '13px', letterSpacing: '0.5px', textTransform: 'uppercase', padding: '0 0 12px 24px', borderBottom: '2px solid #0E4174', textAlign: 'left', width: '55%' }}>VÍ DỤ BẠN CÓ THỂ HỎI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ padding: '16px 0', borderBottom: '1px solid #E2E8F0', color: '#334155', fontSize: '15px' }}>Hướng dẫn sử dụng tính năng trong 1Office</td>
+      <td style={{ padding: '16px 0 16px 24px', borderBottom: '1px solid #E2E8F0', color: '#0F172A', fontSize: '15px', fontWeight: 500 }}>Làm thế nào để tạo đơn công tác?</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '16px 0', borderBottom: '1px solid #E2E8F0', color: '#334155', fontSize: '15px' }}>Giải đáp các quy trình nhân sự phổ biến</td>
+      <td style={{ padding: '16px 0 16px 24px', borderBottom: '1px solid #E2E8F0', color: '#0F172A', fontSize: '15px', fontWeight: 500 }}>Quy trình nghỉ việc gồm những bước nào?</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '16px 0', borderBottom: '1px solid #E2E8F0', color: '#334155', fontSize: '15px' }}>Tìm kiếm thông tin nghỉ phép, công tác, phiếu lương</td>
+      <td style={{ padding: '16px 0 16px 24px', borderBottom: '1px solid #E2E8F0', color: '#0F172A', fontSize: '15px', fontWeight: 500 }}>Tôi còn bao nhiêu ngày phép? <br/><span style={{ color: '#94A3B8', fontSize: '13px', fontWeight: 400 }}>hoặc</span> Tôi có thể xem phiếu lương ở đâu?</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '16px 0', borderBottom: '1px solid #E2E8F0', color: '#334155', fontSize: '15px' }}>Kết nối HRBP phụ trách phòng ban</td>
+      <td style={{ padding: '16px 0 16px 24px', borderBottom: '1px solid #E2E8F0', color: '#0F172A', fontSize: '15px', fontWeight: 500 }}>HRBP phụ trách phòng ban của tôi là ai?</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Lỗi thường gặp & hỗ trợ
 
