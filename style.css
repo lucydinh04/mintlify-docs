@@ -5,6 +5,20 @@
    Intercom (self-service) · Webflow U (journey) · Stripe (polish)
    ===================================================================== */
 
+/* ---------- 0 · DARK MODE KILLER (ANTI-FLASH) ---------- */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #ffffff !important;
+    color: #0F172A !important;
+  }
+}
+
+html.dark, body.dark, [data-theme="dark"], [theme="dark"] {
+  color-scheme: light !important;
+  background-color: #ffffff !important;
+  color: #0F172A !important;
+}
+
 /* ---------- 1 · TOKENS ---------- */
 :root {
   /* Brand */
