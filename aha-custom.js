@@ -164,9 +164,18 @@
 
 // Force Light Mode across the entire site without flashing
 (function interceptDarkMode() {
-  // Clear any existing dark mode preference
-  localStorage.setItem('theme', 'light');
-  localStorage.setItem('mintlify-theme', 'light');
+  // Clear any existing dark mode preference in LocalStorage
+  try {
+    localStorage.setItem('theme', 'light');
+    localStorage.setItem('mintlify-theme', 'light');
+  } catch(e) {}
+
+  // Override cookies to prevent SSR sending dark HTML on hard refresh
+  const cookieOptions = "path=/; max-age=31536000";
+  document.cookie = "theme=light; " + cookieOptions;
+  document.cookie = "mintlify-theme=light; " + cookieOptions;
+  document.cookie = "color-theme=light; " + cookieOptions;
+  document.cookie = "next-theme=light; " + cookieOptions;
 
   // 1. Intercept classList.add
   const originalAdd = DOMTokenList.prototype.add;

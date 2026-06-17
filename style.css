@@ -5546,3 +5546,22 @@ html.dark .aha-is-input[value="6"]:checked ~ .aha-is-layout .aha-is-label[data-s
     gap: 32px;
   }
 }
+
+/* ==========================================================================
+   THE ULTIMATE DARK MODE KILLER (PREVENT FOUC FLASH)
+   ========================================================================== */
+html, body, html.dark, body.dark, [data-theme="dark"], [theme="dark"] {
+  color-scheme: light !important;
+  background-color: #ffffff !important;
+  color: #0F172A !important;
+}
+
+html.dark *, [data-theme="dark"] * {
+  /* Prevent dark backgrounds on child elements from flashing */
+  color-scheme: light !important;
+}
+
+/* Fix sidebar which should be slate-50 (#F8FAFC) instead of white */
+html.dark nav, html.dark aside {
+  background-color: #F8FAFC !important;
+}
