@@ -5565,3 +5565,31 @@ html.dark *, [data-theme="dark"] * {
 html.dark nav, html.dark aside {
   background-color: #F8FAFC !important;
 }
+
+/* ==========================================================================
+   NAVIGATION CHIP COMPONENTS
+   ========================================================================== */
+.aha-nav-chip {
+  background: #ffffff;
+  color: #0E4174 !important;
+  border: 1px solid #FF7A21;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.aha-nav-chip:hover,
+.aha-nav-chip.active {
+  background: #FFF4EC;
+}
+
+.aha-nav-chip-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
