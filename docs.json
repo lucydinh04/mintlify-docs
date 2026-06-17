@@ -55,8 +55,7 @@
               { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] },
               "handbook/internal-systems",
               { "group": "Quy trình & Lương", "icon": "clipboard-list", "expanded": false, "pages": ["handbook/hr-processes", "handbook/payroll", "handbook/offboarding"] },
-              "ahamazing-guide/day-1",
-              { "group": "Chính sách cơ bản", "icon": "scale-balanced", "expanded": false, "pages": ["policies/leave-policy", "policies/expense-policy"] }
+              "ahamazing-guide/day-1"
             ]
           }
         ]
@@ -135,7 +134,7 @@
       {
         "header": "Phổ biến",
         "items": [
-          { "label": "Nghỉ phép", "href": "/policies/leave-policy" },
+          { "label": "Quy trình nhân sự", "href": "/handbook/hr-processes" },
           { "label": "Hệ thống 1Office", "href": "/handbook/internal-systems" },
           { "label": "Bảo hiểm", "href": "/benefits/insurance" }
         ]
