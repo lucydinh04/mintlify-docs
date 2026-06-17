@@ -30,7 +30,7 @@ Chương trình áp dụng cho:
   Chi tiết chương trình, danh sách cơ sở y tế và các hướng dẫn mới nhất được cập nhật tại [website chương trình](https://scommerce-health-checking.vercel.app/).
 </Info>
 
-## Timeline & Quy trình
+## Hành trình Khám sức khỏe 2026
 
 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '24px' }}>
   
@@ -139,40 +139,60 @@ Chương trình áp dụng cho:
 
 ## Lưu ý trước khi lấy mẫu
 
-<Warning>
-  <h3 style={{ margin: '0 0 12px 0', fontSize: '16px' }}>Một vài lưu ý trước khi lấy mẫu</h3>
-  <ul style={{ margin: 0 }}>
-    <li>Nhịn ăn từ 8–12 tiếng trước khi lấy mẫu</li>
-    <li>Không sử dụng rượu bia, cà phê hoặc nước ngọt trong vòng 12–24 tiếng</li>
-    <li>Ngủ đủ giấc, không thức khuya</li>
-    <li>Mặc áo ngắn tay để thuận tiện lấy mẫu</li>
-    <li>Uống nhiều nước trước khi lấy mẫu</li>
-    <li>Sau khi lấy mẫu, công ty sẽ chuẩn bị bữa sáng nhẹ để mọi người nạp năng lượng</li>
-  </ul>
-</Warning>
-
-## Checklist cần hoàn tất
-
-Bạn hãy theo dõi danh sách dưới đây để chắc chắn mình không bỏ lỡ bước nào nhé:
-
-- [ ] Kiểm tra email đăng ký khám sức khỏe
-- [ ] Kiểm tra lịch Calendar
-- [ ] Bấm **ACCEPT / YES** xác nhận lịch
-- [ ] Chọn khung giờ khám
-- [ ] Thanh toán cho người thân *(nếu có)*
-- [ ] Tham gia khám theo lịch đã đăng ký
-
-## Hỗ trợ
-
-<div style={{ display: 'flex', gap: '16px', alignItems: 'center', background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '20px', borderRadius: '12px', marginTop: '16px' }}>
-  <div style={{ flexShrink: 0, width: '48px', height: '48px', background: '#ffffff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
-    <Icon icon="headset" size={20} color="#0E4174" />
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px', marginTop: '24px' }}>
+  
+  {/* Card 1 */}
+  <div style={{ background: '#ffffff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ color: '#FF7A21', marginBottom: '12px' }}>
+      <Icon icon="utensils" size={24} />
+    </div>
+    <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#0E4174', fontWeight: 700 }}>Nhịn ăn</h3>
+    <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>8–12 tiếng trước khi lấy mẫu</p>
   </div>
-  <div>
-    <h3 style={{ margin: '0 0 4px 0', fontSize: '16px', color: '#0F172A', fontWeight: 600 }}>Có thắc mắc về chương trình?</h3>
-    <p style={{ margin: 0, color: '#475569', fontSize: '14px' }}>
-      Liên hệ <strong>Phòng Nhân sự</strong> hoặc <strong>Ban SHE</strong>.<br/>
-      Hoặc truy cập: <a href="https://scommerce-health-checking.vercel.app/" target="_blank" style={{ color: '#FF7A21', textDecoration: 'none', fontWeight: 500 }}>Website chương trình khám sức khỏe</a>
-    </p>
+
+  {/* Card 2 */}
+  <div style={{ background: '#ffffff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ color: '#FF7A21', marginBottom: '12px' }}>
+      <Icon icon="ban" size={24} />
+    </div>
+    <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#0E4174', fontWeight: 700 }}>Không dùng rượu bia</h3>
+    <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>Không sử dụng rượu bia, cà phê hoặc nước ngọt</p>
   </div>
+
+  {/* Card 3 */}
+  <div style={{ background: '#ffffff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ color: '#FF7A21', marginBottom: '12px' }}>
+      <Icon icon="moon" size={24} />
+    </div>
+    <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#0E4174', fontWeight: 700 }}>Ngủ đủ giấc</h3>
+    <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>Không thức khuya trước ngày lấy mẫu</p>
+  </div>
+
+  {/* Card 4 */}
+  <div style={{ background: '#ffffff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ color: '#FF7A21', marginBottom: '12px' }}>
+      <Icon icon="shirt" size={24} />
+    </div>
+    <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#0E4174', fontWeight: 700 }}>Mặc áo ngắn tay</h3>
+    <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>Thuận tiện cho việc lấy mẫu</p>
+  </div>
+
+  {/* Card 5 */}
+  <div style={{ background: '#ffffff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ color: '#FF7A21', marginBottom: '12px' }}>
+      <Icon icon="glass-water" size={24} />
+    </div>
+    <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#0E4174', fontWeight: 700 }}>Uống nhiều nước</h3>
+    <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>Hỗ trợ quá trình lấy mẫu</p>
+  </div>
+
+  {/* Card 6 */}
+  <div style={{ background: '#ffffff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ color: '#FF7A21', marginBottom: '12px' }}>
+      <Icon icon="bread-slice" size={24} />
+    </div>
+    <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#0E4174', fontWeight: 700 }}>Bữa sáng nhẹ</h3>
+    <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>Được chuẩn bị sau khi lấy mẫu</p>
+  </div>
+
 </div>
