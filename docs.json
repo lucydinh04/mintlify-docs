@@ -45,36 +45,42 @@
         "icon": "compass",
         "groups": [
           {
-            "group": "Hành trình hội nhập",
+            "group": "Khám phá Ahamove",
             "root": "ahamazing-guide/overview",
             "pages": [
               "ahamazing-guide/company-overview",
               "ahamazing-guide/culture",
               { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] },
-              "ahamazing-guide/day-1",
-              "handbook/internal-systems",
-              { "group": "Quy trình & Lương", "icon": "clipboard-list", "expanded": false, "pages": ["handbook/hr-processes", "handbook/payroll", "handbook/offboarding"] }
+              "ahamazing-guide/day-1"
+            ]
+          },
+          {
+            "group": "Life at Ahamove",
+            "root": "benefits/overview",
+            "pages": [
+              "benefits/health-check",
+              "benefits/insurance",
+              "office-guide/overview"
             ]
           }
         ]
       },
       {
-        "tab": "Life at Ahamove",
-        "icon": "heart",
+        "tab": "Hệ thống & Quy trình",
+        "icon": "clipboard-list",
         "groups": [
           {
-            "group": "Phúc lợi",
-            "root": "benefits/overview",
-            "expanded": false,
+            "group": "Công cụ & Hệ thống",
             "pages": [
-              "benefits/health-check",
-              "benefits/insurance"
+              "handbook/internal-systems"
             ]
           },
           {
-            "group": "Văn phòng & Tiện ích",
+            "group": "Quy trình hành chính",
             "pages": [
-              "office-guide/overview"
+              "handbook/hr-processes",
+              "handbook/payroll",
+              "handbook/offboarding"
             ]
           }
         ]
