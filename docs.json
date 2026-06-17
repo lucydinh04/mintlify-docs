@@ -10,6 +10,7 @@
   "favicon": "/favicon.svg",
   "logo": {
     "light": "/logo/ahamove-light.svg",
+    "dark": "/logo/ahamove-light.svg",
     "href": "/"
   },
   "modeToggle": {
