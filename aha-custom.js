@@ -162,30 +162,34 @@
   setInterval(init, 500);
 })();
 
-// Force Light Mode across the entire site, overriding OS/Browser/LocalStorage
-(function forceLightMode() {
-  const applyLightMode = () => {
-    localStorage.setItem('theme', 'light');
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
+// Force Light Mode across the entire site without flashing
+(function interceptDarkMode() {
+  // Clear any existing dark mode preference
+  localStorage.setItem('theme', 'light');
+  localStorage.setItem('mintlify-theme', 'light');
+
+  // 1. Intercept classList.add
+  const originalAdd = DOMTokenList.prototype.add;
+  DOMTokenList.prototype.add = function(...args) {
+    if (this === document.documentElement.classList && args.includes('dark')) {
+      const filtered = args.filter(c => c !== 'dark');
+      if (filtered.length > 0) originalAdd.apply(this, filtered);
+      return;
     }
+    originalAdd.apply(this, args);
   };
 
-  // Run immediately
-  applyLightMode();
+  // 2. Intercept setAttribute('class', ...)
+  const originalSetAttribute = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function(name, value) {
+    if (this === document.documentElement && name === 'class' && typeof value === 'string') {
+      value = value.replace(/\bdark\b/g, '').replace(/\s+/g, ' ').trim();
+    }
+    originalSetAttribute.call(this, name, value);
+  };
 
-  // Watch for Mintlify/React applying the dark class dynamically
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.attributeName === 'class') {
-        if (document.documentElement.classList.contains('dark')) {
-          applyLightMode();
-        }
-      }
-    });
-  });
-  
-  if (document.documentElement) {
-    observer.observe(document.documentElement, { attributes: true });
+  // 3. Remove immediately if already present
+  if (document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.remove('dark');
   }
 })();
