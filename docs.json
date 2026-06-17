@@ -5,7 +5,12 @@
   "description": "Cổng thông tin nội bộ Ahamove — hội nhập, sổ tay nhân sự, chính sách, đời sống & AI. Ngôi nhà chung của mọi Ahamover.",
   "colors": {
     "primary": "#FF7A21",
-    "light": "#FF9A52"
+    "light": "#FF9A52",
+    "dark": "#FF7A21",
+    "background": {
+      "light": "#ffffff",
+      "dark": "#ffffff"
+    }
   },
   "favicon": "/favicon.svg",
   "logo": {
