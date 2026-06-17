@@ -997,20 +997,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   padding: 4px 10px;
   display: inline-block;
 }
-
-/* DARK variant */
-.aha-visual-slot.dark {
-  border-color: #1E3360;
-  background-color: #0E1F3D;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .055) 1px, transparent 0);
-  background-size: 18px 18px;
-}
-.aha-visual-slot.dark::before { border-color: rgba(255, 255, 255, .16); }
-.aha-visual-slot.dark .vbadge { background: rgba(255, 255, 255, .09); color: #FFB57E; border-color: rgba(255, 255, 255, .20); }
 .aha-visual-slot.dark .vicon { background: rgba(255, 255, 255, .07); border-color: rgba(255, 255, 255, .16); }
-.aha-visual-slot.dark .vtitle { color: #fff; }
-.aha-visual-slot.dark .vdesc { color: rgba(255, 255, 255, .72); }
-.aha-visual-slot.dark .vfile { background: rgba(255, 255, 255, .06); color: #98AACC; border-color: rgba(255, 255, 255, .18); }
 
 /* WARM variant */
 .aha-visual-slot.warm {
@@ -1721,24 +1708,6 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
   .aha-workshop-head { flex-direction: column; gap: 10px; }
 }
 
-/* ---------- 28 · DARK THEME REFINEMENT ---------- */
-html.dark .aha-home .aha-home-stat-editorial,
-html.dark .aha-home .aha-rm-step .rm-content {
-  background: #111827; /* Deep Navy/Charcoal instead of pure black */
-  border-color: #1F2937;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-html.dark .aha-home .aha-stat-content h2,
-html.dark .aha-home .aha-stat-main b,
-html.dark .aha-home .aha-stat-secondary .s b,
-html.dark .aha-home .aha-h2 {
-  color: #F9FAFB;
-}
-html.dark .aha-home .aha-intro,
-html.dark .aha-home .aha-stat-content .sp-sub {
-  color: #D1D5DB;
-}
-
 /* ---------- 29 · ONBOARDING ACTION LIST ---------- */
 .aha-onboarding-map-label {
   margin: 48px 0 16px !important;
@@ -1870,27 +1839,8 @@ html.dark .aha-home .aha-stat-content .sp-sub {
     white-space: normal;
   }
 }
-
-/* Dark theme overrides for guide action list */
-html.dark .aha-guide .aha-onboarding-route-list {
-  background: #111827;
-  border-color: #1F2937;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-html.dark .aha-guide .aha-onboarding-route-row {
-  border-color: #1F2937;
-}
-html.dark .aha-guide .aha-onboarding-route-row:hover {
-  background-color: #1F2937;
-}
 html.dark .aha-guide .aha-onboarding-route-icon {
   background: rgba(255, 122, 33, 0.1);
-}
-html.dark .aha-guide .aha-onboarding-route-copy h4 {
-  color: #F9FAFB;
-}
-html.dark .aha-guide .aha-onboarding-route-copy p {
-  color: #D1D5DB;
 }
 
 /* ---------- 30 · PEOPLE & OFFICE SNAPSHOT ---------- */
@@ -1950,18 +1900,6 @@ html.dark .aha-guide .aha-onboarding-route-copy p {
   .aha-home .aha-people-stats {
     flex-direction: column;
   }
-}
-
-/* Dark mode for People section */
-html.dark .aha-home .aha-people-stat {
-  background: #111827;
-  border-color: #1F2937;
-}
-html.dark .aha-home .aha-people-value {
-  color: var(--aha-orange);
-}
-html.dark .aha-home .aha-people-label {
-  color: #F9FAFB;
 }
 html.dark .aha-home .aha-people-stat p {
   color: #D1D5DB;
@@ -2112,42 +2050,14 @@ html.dark .aha-home .aha-people-stat p {
     padding: 24px;
   }
 }
-
-/* Dark mode for Offices */
-html.dark .aha-home .aha-office-labels {
-  border-bottom-color: #1F2937;
-}
-html.dark .aha-home .aha-office-labels label {
-  color: #9CA3AF;
-}
-html.dark .aha-home .aha-office-labels label:hover {
-  color: #F9FAFB;
-}
 #off-hcm:checked ~ .aha-office-labels label[for="off-hcm"],
 #off-hn:checked ~ .aha-office-labels label[for="off-hn"],
 #off-dn:checked ~ .aha-office-labels label[for="off-dn"] {
   color: #F9FAFB;
   background-color: var(--aha-orange);
 }
-html.dark .aha-home .aha-office-panel {
-  background: #111827;
-  border-color: #1F2937;
-}
-html.dark .aha-home .aha-office-map {
-  background: #1F2937;
-}
-html.dark .aha-home .aha-map-placeholder {
-  color: #D1D5DB;
-}
 html.dark .aha-home .aha-office-info h4 {
   color: #F9FAFB;
-}
-html.dark .aha-home .aha-office-detail span {
-  color: #D1D5DB;
-}
-html.dark .aha-home .aha-map-cta {
-  background: #111827;
-  color: var(--aha-orange);
 }
 
 /* ---------- 32 · FOOTBAR PRE-FOOTER ---------- */
@@ -2278,12 +2188,6 @@ html.dark .aha-home .aha-map-cta {
   }
 }
 
-/* Dark mode for Footbar */
-html.dark .aha-home .aha-home-footbar {
-  background: #111827;
-  border: 1px solid #1F2937;
-}
-
 /* ---------- 33 · CUSTOM FOOTER ---------- */
 .aha-home .aha-home-footer {
   margin-top: 64px;
@@ -2296,9 +2200,6 @@ html.dark .aha-home .aha-home-footbar {
   padding-bottom: 48px;
   border-bottom: 1px solid #F3F4F6;
 }
-html.dark .aha-home .aha-home-footer {
-  border-bottom-color: #374151;
-}
 
 .aha-home .aha-footer-brand {
   width: 200px;
@@ -2306,9 +2207,6 @@ html.dark .aha-home .aha-home-footer {
 .aha-home .aha-footer-logo {
   height: 32px;
 }
-.aha-home .aha-footer-logo.dark-mode { display: none; }
-html.dark .aha-home .aha-footer-logo.light-mode { display: none; }
-html.dark .aha-home .aha-footer-logo.dark-mode { display: block; }
 
 .aha-home .aha-footer-links {
   display: flex;
@@ -2354,21 +2252,8 @@ html.dark .aha-home .aha-footer-logo.dark-mode { display: block; }
     gap: 32px;
   }
 }
-
-html.dark .aha-home .aha-footer-col h4 {
-  color: #F9FAFB;
-}
-html.dark .aha-home .aha-footer-col a {
-  color: #9CA3AF;
-}
-html.dark .aha-home .aha-footer-col a:hover {
-  color: var(--aha-orange);
-}
 html.dark .aha-home .aha-footer-social a {
   color: #9CA3AF;
-}
-html.dark .aha-home .aha-footer-social a:hover {
-  color: #F9FAFB;
 }
 
 /* ---------- 34 · COMPACT CARDS ---------- */
@@ -2674,15 +2559,7 @@ div[data-testid="table-of-contents"],
   background: #FF7A21;
   color: #fff;
 }
-
-/* Dark mode overrides */
-html.dark .aha-is-left { background: #111827; border-color: #1F2937; }
-html.dark .aha-is-label { background: #111827; border-color: #1F2937; }
-html.dark .aha-is-label:hover { background: #1F2937; }
 html.dark .aha-is-icon { background: rgba(255, 122, 33, 0.1); color: #9CA3AF; }
-html.dark .aha-is-text h4 { color: #F9FAFB; }
-html.dark .aha-is-text p { color: #D1D5DB; }
-html.dark .aha-is-img-placeholder { color: #4B5563; }
 html.dark .aha-is-input[value="1"]:checked ~ .aha-is-layout .aha-is-label[data-step="1"],
 html.dark .aha-is-input[value="2"]:checked ~ .aha-is-layout .aha-is-label[data-step="2"],
 html.dark .aha-is-input[value="3"]:checked ~ .aha-is-layout .aha-is-label[data-step="3"],

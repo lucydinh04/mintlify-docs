@@ -161,3 +161,31 @@
   }
   setInterval(init, 500);
 })();
+
+// Force Light Mode across the entire site, overriding OS/Browser/LocalStorage
+(function forceLightMode() {
+  const applyLightMode = () => {
+    localStorage.setItem('theme', 'light');
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+    }
+  };
+
+  // Run immediately
+  applyLightMode();
+
+  // Watch for Mintlify/React applying the dark class dynamically
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'class') {
+        if (document.documentElement.classList.contains('dark')) {
+          applyLightMode();
+        }
+      }
+    });
+  });
+  
+  if (document.documentElement) {
+    observer.observe(document.documentElement, { attributes: true });
+  }
+})();
