@@ -108,8 +108,7 @@
             "root": "help-center/overview",
             "pages": [
               "help-center/faq",
-              "help-center/ask-ahamove-ai",
-              "handbook/it-support"
+              "help-center/ask-ahamove-ai"
             ]
           }
         ]
