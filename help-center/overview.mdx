@@ -69,7 +69,7 @@ Tìm đúng người để giải quyết đúng việc.
       <h3>HR Team (Nhân sự)</h3>
     </div>
     <div className="block-body">
-      <p className="team-note">Hỗ trợ chung: <strong>nhansu@ahamove.com</strong></p>
+      <p className="team-note">Hỗ trợ chung: <strong><a href="mailto:nhansu@ahamove.com">nhansu@ahamove.com</a></strong></p>
       
       <h4>HR Business Partner (HRBP)</h4>
       <p style={{ color: '#475569', fontSize: '14px', marginBottom: '20px' }}>
@@ -78,15 +78,18 @@ Tìm đúng người để giải quyết đúng việc.
 
       <style>
         {`
-          .hc-hrbp-email {
-            color: inherit !important;
+          a[href^="mailto:"] {
+            color: #FF7A21 !important;
+            font-weight: 600 !important;
             text-decoration: none !important;
             border-bottom: none !important;
             box-shadow: none !important;
-            font-weight: 400 !important;
+            transition: opacity 0.2s ease !important;
           }
-          .hc-hrbp-email:hover {
-            text-decoration: underline !important;
+          a[href^="mailto:"]:hover {
+            text-decoration: none !important;
+            opacity: 0.7 !important;
+            border-bottom: none !important;
           }
         `}
       </style>
@@ -163,8 +166,8 @@ Tìm đúng người để giải quyết đúng việc.
 
       <h4>Learning & Organization Development (L&OD)</h4>
       <ul>
-        <li><strong>Đinh Vị Mẫn Nhi</strong> (Truyền thông & Event) · @nhidvm · nhidvm@ahamove.com</li>
-        <li><strong>Nguyễn Trí Thiện Toàn</strong> (Đào tạo & Phát triển) · @Trithientoan · toanntt@ahamove.com</li>
+        <li><strong>Đinh Vị Mẫn Nhi</strong> (Truyền thông & Event) · @nhidvm · <a href="mailto:nhidvm@ahamove.com">nhidvm@ahamove.com</a></li>
+        <li><strong>Nguyễn Trí Thiện Toàn</strong> (Đào tạo & Phát triển) · @Trithientoan · <a href="mailto:toanntt@ahamove.com">toanntt@ahamove.com</a></li>
       </ul>
     </div>
   </div>
@@ -176,7 +179,7 @@ Tìm đúng người để giải quyết đúng việc.
     </div>
     <div className="block-body">
       <ul>
-        <li><strong>Huỳnh Nhật Tuấn</strong> (Hệ thống CNTT) · @tuanhn_hcm · tuanhn@ahamove.com</li>
+        <li><strong>Huỳnh Nhật Tuấn</strong> (Hệ thống CNTT) · @tuanhn_hcm · <a href="mailto:tuanhn@ahamove.com">tuanhn@ahamove.com</a></li>
       </ul>
     </div>
   </div>
@@ -188,7 +191,7 @@ Tìm đúng người để giải quyết đúng việc.
     </div>
     <div className="block-body">
       <ul>
-        <li><strong>Lê Thị Trí Thức</strong> (Quản lý văn phòng, công tác) · @thucthuc1 · thucltt@ahamove.com</li>
+        <li><strong>Lê Thị Trí Thức</strong> (Quản lý văn phòng, công tác) · @thucthuc1 · <a href="mailto:thucltt@ahamove.com">thucltt@ahamove.com</a></li>
       </ul>
     </div>
   </div>
