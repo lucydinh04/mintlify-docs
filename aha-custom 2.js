@@ -161,3 +161,57 @@
   }
   setInterval(init, 500);
 })();
+
+(function initContactHubStyles() {
+  const init = () => {
+    if (document.getElementById('aha-hc-email-styles')) return;
+    const style = document.createElement('style');
+    style.id = 'aha-hc-email-styles';
+    style.innerHTML = `
+      .hc-contact-hub a[href^="mailto:"],
+      .prose .hc-contact-hub a[href^="mailto:"] {
+        color: #FF7A21 !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        border: none !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        background-image: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transition: opacity 0.2s ease !important;
+      }
+      .hc-contact-hub a[href^="mailto:"]:hover,
+      .prose .hc-contact-hub a[href^="mailto:"]:hover {
+        opacity: 0.7 !important;
+        text-decoration: none !important;
+        border: none !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        background-image: none !important;
+      }
+      .hc-contact-hub a[href^="mailto:"]::before,
+      .hc-contact-hub a[href^="mailto:"]::after,
+      .prose .hc-contact-hub a[href^="mailto:"]::before,
+      .prose .hc-contact-hub a[href^="mailto:"]::after {
+        display: none !important;
+        content: none !important;
+        background: transparent !important;
+        background-image: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 0 !important;
+        width: 0 !important;
+      }
+    `;
+    document.head.appendChild(style);
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+  setInterval(init, 500);
+})();
