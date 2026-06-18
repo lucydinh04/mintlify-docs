@@ -80,8 +80,7 @@
             "group": "Quy trình hành chính",
             "pages": [
               "handbook/hr-processes",
-              "handbook/payroll",
-              "handbook/offboarding"
+              "handbook/payroll"
             ]
           }
         ]
