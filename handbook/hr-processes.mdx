@@ -11,6 +11,58 @@ mode: "wide"
   <p>Hướng dẫn tạo đơn, xin duyệt và xử lý các quy trình hành chính cơ bản. Hầu hết các thủ tục tại Ahamove đều được thực hiện trên hệ thống 1Office.</p>
 </div>
 
+## Thời gian làm việc
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '24px' }}>
+  
+  {/* Khung 1 */}
+  <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+      <h3 style={{ margin: 0, fontSize: '18px', color: '#0E4174', fontWeight: 700 }}>Khung 1</h3>
+      <span style={{ background: '#FFF4EC', color: '#FF7A21', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700 }}>08:30 – 18:00</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <Icon icon="clock" size={16} color="#64748B" />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px' }}><strong>Nghỉ trưa:</strong> 12:00 – 13:30</p>
+      </div>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+        <Icon icon="users" size={16} color="#64748B" style={{ marginTop: '2px' }} />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>
+          <strong>Áp dụng cho:</strong><br/>
+          Central Ops, Supply Ops, VP Hà Nội
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Khung 2 */}
+  <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+      <h3 style={{ margin: 0, fontSize: '18px', color: '#0E4174', fontWeight: 700 }}>Khung 2</h3>
+      <span style={{ background: '#FFF4EC', color: '#FF7A21', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700 }}>09:00 – 18:00</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <Icon icon="clock" size={16} color="#64748B" />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px' }}><strong>Nghỉ trưa:</strong> 12:00 – 13:00</p>
+      </div>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+        <Icon icon="users" size={16} color="#64748B" style={{ marginTop: '2px' }} />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>
+          <strong>Áp dụng cho:</strong><br/>
+          Tech, BD, Service Center, AhaFast
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p style={{ color: '#64748B', fontSize: '13px', fontStyle: 'italic', margin: '0 0 40px 0' }}>
+  Lịch làm việc cụ thể có thể được điều chỉnh theo tính chất công việc của từng bộ phận. Vui lòng liên hệ quản lý trực tiếp hoặc HRBP phụ trách phòng ban nếu cần hỗ trợ.
+</p>
+
 ## Nghỉ phép
 
 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
@@ -50,11 +102,24 @@ mode: "wide"
 
 ## Đánh giá thử việc
 
-<div style={{ padding: '20px', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '12px', marginBottom: '40px' }}>
-  <h3 style={{ margin: '0 0 12px', fontSize: '18px', color: '#0F172A', display: 'flex', alignItems: 'center', gap: '8px' }}><Icon icon="star" color="#FF7A21" /> Nhận biểu mẫu đánh giá</h3>
-  <p style={{ margin: '0 0 12px', color: '#475569', fontSize: '15px' }}>Biểu mẫu đánh giá thử việc được HRBP gửi trực tiếp trong giai đoạn đánh giá.</p>
-  <p style={{ margin: 0, color: '#0E4174', fontSize: '14px', fontWeight: 500 }}>Nếu chưa nhận được biểu mẫu hoặc cần hỗ trợ, vui lòng liên hệ HRBP phụ trách phòng ban.</p>
-</div>
+<p style={{ color: '#475569', fontSize: '15px', marginBottom: '24px' }}>
+  Quy trình đánh giá thử việc được thực hiện cùng HRBP phụ trách phòng ban theo các bước:
+</p>
+
+<Steps>
+  <Step title="Nhận form đánh giá thử việc từ HRBP">
+    Biểu mẫu đánh giá sẽ được HRBP gửi trực tiếp cho bạn. Nếu chưa nhận được, vui lòng liên hệ HRBP phụ trách.
+  </Step>
+  <Step title="Thiết lập OKRs Probation">
+    **Sau 1 tuần** làm việc, bạn sẽ cùng quản lý trực tiếp thiết lập mục tiêu (OKRs) cho giai đoạn thử việc.
+  </Step>
+  <Step title="Review sau 1 tháng (1 month probation)">
+    Đánh giá nhanh tiến độ công việc và mức độ hòa nhập văn hóa sau tháng đầu tiên.
+  </Step>
+  <Step title="Thực hiện đánh giá Probation">
+    Tổng kết lại toàn bộ kết quả thực hiện OKRs ở cuối giai đoạn thử việc.
+  </Step>
+</Steps>
 
 ## Liên hệ Hỗ trợ
 
