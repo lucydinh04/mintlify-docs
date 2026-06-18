@@ -46,23 +46,74 @@ mode: "wide"
 
 ## Hành trình học tập tiêu chuẩn
 
-<Steps>
-  <Step title="Ngày 1" icon="plane-departure">
-    **Khởi động chương trình & Xác định câu hỏi học tập**
-  </Step>
-  <Step title="Ngày 2" icon="magnifying-glass">
-    **Trải nghiệm thực tế & Sự kiện ngành**
-  </Step>
-  <Step title="Ngày 3" icon="layer-group">
-    **Làm việc chuyên sâu**
-  </Step>
-  <Step title="Ngày 4" icon="building">
-    **Tham quan doanh nghiệp & Workshop**
-  </Step>
-  <Step title="Ngày 5" icon="lightbulb">
-    **Tổng hợp bài học & Kế hoạch hành động**
-  </Step>
-</Steps>
+<div style={{ display: 'flex', overflowX: 'auto', gap: '12px', paddingBottom: '24px', alignItems: 'stretch', scrollSnapType: 'x mandatory' }}>
+  {/* Day 1 */}
+  <div style={{ flex: '1 0 160px', scrollSnapAlign: 'start', position: 'relative' }}>
+    <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '12px', border: '1px solid #E2E8F0', height: '100%', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+        <div style={{ background: '#FFF7F0', padding: '8px', borderRadius: '8px', color: '#FF7A21', display: 'flex' }}><Icon icon="plane-departure" size={16} /></div>
+        <div style={{ color: '#FF7A21', fontWeight: 800, fontSize: '13px', textTransform: 'uppercase' }}>Ngày 1</div>
+      </div>
+      <div style={{ color: '#0E4174', fontWeight: 600, fontSize: '15px', lineHeight: 1.4 }}>Khởi động chương trình</div>
+      <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Xác định câu hỏi học tập</div>
+    </div>
+  </div>
+
+  <div style={{ display: 'flex', alignItems: 'center', color: '#CBD5E1', padding: '0 4px' }}><Icon icon="chevron-right" /></div>
+
+  {/* Day 2 */}
+  <div style={{ flex: '1 0 160px', scrollSnapAlign: 'start', position: 'relative' }}>
+    <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '12px', border: '1px solid #E2E8F0', height: '100%', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+        <div style={{ background: '#FFF7F0', padding: '8px', borderRadius: '8px', color: '#FF7A21', display: 'flex' }}><Icon icon="magnifying-glass" size={16} /></div>
+        <div style={{ color: '#FF7A21', fontWeight: 800, fontSize: '13px', textTransform: 'uppercase' }}>Ngày 2</div>
+      </div>
+      <div style={{ color: '#0E4174', fontWeight: 600, fontSize: '15px', lineHeight: 1.4 }}>Trải nghiệm thực tế</div>
+      <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Sự kiện ngành</div>
+    </div>
+  </div>
+
+  <div style={{ display: 'flex', alignItems: 'center', color: '#CBD5E1', padding: '0 4px' }}><Icon icon="chevron-right" /></div>
+
+  {/* Day 3 */}
+  <div style={{ flex: '1 0 160px', scrollSnapAlign: 'start', position: 'relative' }}>
+    <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '12px', border: '1px solid #E2E8F0', height: '100%', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+        <div style={{ background: '#FFF7F0', padding: '8px', borderRadius: '8px', color: '#FF7A21', display: 'flex' }}><Icon icon="layer-group" size={16} /></div>
+        <div style={{ color: '#FF7A21', fontWeight: 800, fontSize: '13px', textTransform: 'uppercase' }}>Ngày 3</div>
+      </div>
+      <div style={{ color: '#0E4174', fontWeight: 600, fontSize: '15px', lineHeight: 1.4 }}>Làm việc chuyên sâu</div>
+    </div>
+  </div>
+
+  <div style={{ display: 'flex', alignItems: 'center', color: '#CBD5E1', padding: '0 4px' }}><Icon icon="chevron-right" /></div>
+
+  {/* Day 4 */}
+  <div style={{ flex: '1 0 160px', scrollSnapAlign: 'start', position: 'relative' }}>
+    <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '12px', border: '1px solid #E2E8F0', height: '100%', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+        <div style={{ background: '#FFF7F0', padding: '8px', borderRadius: '8px', color: '#FF7A21', display: 'flex' }}><Icon icon="building" size={16} /></div>
+        <div style={{ color: '#FF7A21', fontWeight: 800, fontSize: '13px', textTransform: 'uppercase' }}>Ngày 4</div>
+      </div>
+      <div style={{ color: '#0E4174', fontWeight: 600, fontSize: '15px', lineHeight: 1.4 }}>Tham quan doanh nghiệp</div>
+      <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Workshop</div>
+    </div>
+  </div>
+
+  <div style={{ display: 'flex', alignItems: 'center', color: '#CBD5E1', padding: '0 4px' }}><Icon icon="chevron-right" /></div>
+
+  {/* Day 5 */}
+  <div style={{ flex: '1 0 160px', scrollSnapAlign: 'start', position: 'relative' }}>
+    <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '12px', border: '1px solid #E2E8F0', height: '100%', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+        <div style={{ background: '#FFF7F0', padding: '8px', borderRadius: '8px', color: '#FF7A21', display: 'flex' }}><Icon icon="lightbulb" size={16} /></div>
+        <div style={{ color: '#FF7A21', fontWeight: 800, fontSize: '13px', textTransform: 'uppercase' }}>Ngày 5</div>
+      </div>
+      <div style={{ color: '#0E4174', fontWeight: 600, fontSize: '15px', lineHeight: 1.4 }}>Tổng hợp bài học</div>
+      <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Kế hoạch hành động</div>
+    </div>
+  </div>
+</div>
 
 ## Kết quả kỳ vọng
 
