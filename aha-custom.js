@@ -201,4 +201,22 @@
   if (document.documentElement.classList.contains('dark')) {
     document.documentElement.classList.remove('dark');
   }
+
+  // 4. Inject CSS to completely hide theme toggle buttons (footer and navbar)
+  const style = document.createElement('style');
+  style.innerHTML = `
+    /* Hide the theme toggle group in Mintlify */
+    .flex.items-center.space-x-1.rounded-full { display: none !important; }
+    /* Fallback for buttons with specific icons */
+    button:has(svg.lucide-moon), 
+    button:has(svg.lucide-sun), 
+    button:has(svg.lucide-monitor) { display: none !important; }
+    /* Hide the parent wrapper of the toggle if possible */
+    div:has(> button:has(svg.lucide-moon)) { display: none !important; }
+  `;
+  if (document.head) {
+    document.head.appendChild(style);
+  } else {
+    document.addEventListener("DOMContentLoaded", () => document.head.appendChild(style));
+  }
 })();
