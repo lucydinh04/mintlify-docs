@@ -18,7 +18,8 @@
     "isHidden": true
   },
   "banner": {
-    "content": "Chào mừng đến với Ahamove Employee Hub — một nơi cho mọi thông tin Ahamovers cần. Mới vào? [Bắt đầu tại đây](/ahamazing-guide/overview).",
+    "color": "#FF7A21",
+    "content": "Chào mừng đến với Sổ tay nhân sự Ahamove — một nơi cho mọi thông tin Ahamovers cần. Mới vào? [Bắt đầu tại đây](/ahamazing-guide/overview).",
     "dismissible": true
   },
   "fonts": {
