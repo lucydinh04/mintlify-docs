@@ -72,14 +72,9 @@
         "icon": "clipboard-list",
         "groups": [
           {
-            "group": "Công cụ & Hệ thống",
+            "group": "Hệ thống 1Office & Quy trình nhân sự",
             "pages": [
-              "handbook/internal-systems"
-            ]
-          },
-          {
-            "group": "Quy trình hành chính",
-            "pages": [
+              "handbook/internal-systems",
               "handbook/hr-processes",
               "handbook/payroll"
             ]
