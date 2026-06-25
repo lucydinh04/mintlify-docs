@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Playbook · Use Case #02 — HR tự build website Sổ tay nhân sự bằng AI</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:Arial,Helvetica,sans-serif; background:#06090F; color:#E6EAF2; line-height:1.6; }
+  .page { max-width:960px; margin:0 auto; padding:32px 20px 48px; }
+
+  /* Header */
+  .badge { display:inline-block; background:#FF6B00; color:#fff; font-size:12px; font-weight:bold; letter-spacing:2px; padding:5px 14px; border-radius:20px; margin-bottom:14px; }
+  .header { background:linear-gradient(100deg,#FF4D00,#FFA200); border-radius:10px; padding:28px 28px 24px; margin-bottom:10px; }
+  .header h1 { color:#fff; font-size:27px; line-height:1.3; }
+  .header .sub { color:#FFF3E6; font-size:14px; font-weight:bold; margin-top:6px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 28px; }
+  .meta span { background:#131C30; border:1px solid #243353; border-radius:20px; padding:6px 14px; font-size:12.5px; color:#B9C2D4; }
+  .meta b { color:#FFA200; }
+
+  /* STAR blocks */
+  .star-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:28px; }
+  @media (max-width:700px){ .star-grid { grid-template-columns:1fr; } }
+  .star { background:#131C30; border-radius:10px; padding:20px 22px; border-top:4px solid #FF7A00; }
+  .star .tag { font-size:12px; font-weight:bold; letter-spacing:2px; color:#FFA200; margin-bottom:8px; }
+  .star h3 { color:#fff; font-size:16px; margin-bottom:8px; }
+  .star p, .star li { font-size:14px; color:#C9D1E0; }
+  .star ul { padding-left:18px; margin-top:6px; }
+  .star li { margin-bottom:5px; }
+
+  /* Section */
+  h2.section { color:#fff; font-size:19px; margin:30px 0 14px; padding-left:12px; border-left:4px solid #FF6B00; }
+
+  /* Steps */
+  .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  @media (max-width:760px){ .steps { grid-template-columns:1fr 1fr; } }
+  @media (max-width:420px){ .steps { grid-template-columns:1fr; } }
+  .step { background:#131C30; border-radius:10px; padding:16px; text-align:center; }
+  .step .num { width:34px; height:34px; line-height:34px; border-radius:50%; background:#FF6B00; color:#fff; font-weight:bold; font-size:16px; margin:0 auto 10px; }
+  .step h4 { color:#fff; font-size:14px; margin-bottom:6px; }
+  .step p { font-size:12.5px; color:#A8B2C6; }
+
+  /* Prompt */
+  .prompt { background:#0D1422; border:1px solid #243353; border-radius:10px; padding:18px 20px; font-family:Consolas,Menlo,monospace; font-size:13px; color:#D7E0F0; white-space:pre-wrap; }
+  .prompt em { color:#FFA200; font-style:normal; }
+
+  /* Metrics */
+  .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  @media (max-width:640px){ .metrics { grid-template-columns:1fr; } }
+  .metric { background:#131C30; border-radius:10px; padding:18px; text-align:center; border-bottom:4px solid #22C55E; }
+  .metric .val { font-size:26px; font-weight:bold; color:#22C55E; }
+  .metric .lbl { font-size:13px; color:#B9C2D4; margin-top:4px; }
+  .note { font-size:12.5px; color:#8A93A6; margin-top:10px; }
+
+  /* Tips */
+  .tips { background:#131C30; border-radius:10px; padding:18px 22px; }
+  .tips li { font-size:14px; color:#C9D1E0; margin:6px 0 6px 18px; }
+  .warn { color:#F59E0B; font-weight:bold; }
+
+  /* File references */
+  .file-refs { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .file-ref { display:inline-flex; align-items:center; gap:5px; background:#0D1422; border:1px solid #2E3E5C; border-radius:6px; padding:5px 10px; font-size:12px; color:#88A4C8; text-decoration:none; font-family:Consolas,monospace; transition:border-color .2s; }
+  .file-ref:hover { border-color:#FF6B00; color:#FFA200; }
+  .file-ref-label { font-family:Arial,sans-serif; font-size:11px; font-weight:bold; letter-spacing:1px; color:#FF6B00; text-transform:uppercase; margin-bottom:6px; }
+  .alt-tool { display:inline-block; background:#1A2B45; border:1px solid #2E4A6B; border-radius:6px; padding:6px 12px; font-size:13px; color:#7EC8E3; margin-top:8px; }
+
+  /* Detailed Steps */
+  .detail-steps { display:flex; flex-direction:column; gap:16px; margin-bottom: 24px; }
+  .detail-step { background:#131C30; border-left:4px solid #FF6B00; padding:18px 22px; border-radius:4px 10px 10px 4px; display:flex; gap: 20px; align-items: flex-start;}
+  @media (max-width:700px){ .detail-step { flex-direction:column; } }
+  .detail-content { flex: 1; }
+  .detail-step h4 { color:#FFA200; font-size:16px; margin-bottom:10px; }
+  .detail-step ul { padding-left:18px; margin-top:6px; color:#C9D1E0; font-size:14px; }
+  .detail-step li { margin-bottom:6px; }
+  .img-placeholder { flex-shrink: 0; width: 200px; background: #0D1422; border: 1px dashed #4F5A73; border-radius: 6px; padding: 20px; text-align: center; color: #8A93A6; font-size: 12px; }
+  .img-placeholder span { display: block; font-size: 20px; margin-bottom: 5px; }
+
+  /* Prompt Grid */
+  .prompt-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+  @media (max-width:700px){ .prompt-grid { grid-template-columns:1fr; } }
+  .prompt-card { background:#0D1422; border:1px solid #243353; border-radius:10px; padding:18px; font-family:Consolas,Menlo,monospace; font-size:12.5px; color:#D7E0F0; white-space:pre-wrap; overflow-x:auto; }
+  .prompt-title { color:#FFA200; font-family:Arial,sans-serif; font-size:14px; font-weight:bold; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #243353; }
+
+  /* Sitemap table */
+  .sitemap { width:100%; border-collapse:collapse; margin-top:14px; font-size:13px; }
+  .sitemap th { background:#1A2845; color:#FFA200; text-align:left; padding:8px 12px; font-size:11px; letter-spacing:1px; text-transform:uppercase; }
+  .sitemap td { padding:8px 12px; border-bottom:1px solid #1E2A44; color:#C9D1E0; vertical-align:top; }
+  .sitemap tr:last-child td { border-bottom:none; }
+  .sitemap .hub { color:#fff; font-weight:bold; }
+  .sitemap .pages { color:#8A93A6; font-size:12px; }
+  .sitemap .icon { color:#FF6B00; margin-right:4px; }
+
+  /* AI Prompt Guide */
+  .ai-guide { background:#131C30; border-radius:10px; padding:20px 24px; margin-bottom:20px; }
+  .ai-guide p { font-size:14px; color:#C9D1E0; margin-bottom:14px; line-height:1.7; }
+  .starter-prompts { display:flex; flex-direction:column; gap:12px; }
+  .starter-prompt { background:#0D1422; border:1px solid #2E3E5C; border-left:3px solid #FF6B00; border-radius:0 8px 8px 0; padding:14px 18px; }
+  .starter-prompt .prompt-label { font-size:11px; font-weight:bold; letter-spacing:1px; color:#FF6B00; text-transform:uppercase; margin-bottom:8px; }
+  .starter-prompt pre { font-family:Consolas,Menlo,monospace; font-size:12.5px; color:#D7E0F0; white-space:pre-wrap; margin:0; line-height:1.6; }
+  .starter-prompt em { color:#FFA200; font-style:normal; }
+
+  .footer { margin-top:34px; padding-top:16px; border-top:1px solid #1E2A44; font-size:12.5px; color:#5C6574; text-align:center; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <span class="badge">AI PLAYBOOK · USE CASE #02</span>
+  <div class="header">
+    <h1>🌐 HR tự build website Sổ tay nhân sự bằng AI</h1>
+    <p class="sub">Biến tài liệu rời rạc thành cổng thông tin dễ đọc, dễ tìm — HR non-tech có thể tự làm và duy trì</p>
+  </div>
+
+  <div class="meta">
+    <span>Owner: <b>HR Team</b></span>
+    <span>Trạng thái: <b>Validated ✅</b></span>
+    <span>Công cụ: <b>Mintlify / Claude / Antigravity / GitHub</b></span>
+    <span>Cập nhật: <b>06/2026</b></span>
+    <span>Độ khó: <b>Trung bình — cần theo đúng quy trình</b></span>
+  </div>
+
+  <!-- ===== STAR ===== -->
+  <div class="star-grid">
+    <div class="star">
+      <div class="tag">S — SITUATION (BỐI CẢNH)</div>
+      <h3>Tài liệu nhân sự rời rạc, khó tra cứu</h3>
+      <ul>
+        <li>Quy trình, chính sách, phúc lợi, hội nhập phân tán trên Drive, Slack, file nội bộ.</li>
+        <li>Nhân viên khó tìm kiếm thông tin nhanh chóng, thường xuyên phải hỏi lại HR.</li>
+        <li>Các văn bản mang tính chất "document-like", dài dòng, khó đọc lướt.</li>
+      </ul>
+    </div>
+    <div class="star">
+      <div class="tag">T — TASK (NHIỆM VỤ)</div>
+      <h3>Tạo cổng thông tin (Employee Portal)</h3>
+      <ul>
+        <li>Xây dựng một website Sổ tay nhân sự duy nhất, dễ đọc, dễ tìm, dễ cập nhật.</li>
+        <li>Mục tiêu không phải làm website phức tạp, mà là hệ thống hóa tài liệu.</li>
+        <li>Nhân sự không chuyên về tech (non-tech) cũng có thể tự build và duy trì bằng AI.</li>
+      </ul>
+    </div>
+    <div class="star">
+      <div class="tag">A — ACTION (CÁCH LÀM)</div>
+      <h3>Quy trình kết hợp nhiều AI Tools</h3>
+      <ul>
+        <li>Chốt cấu trúc (sitemap) và gom nội dung thô theo từng trang.</li>
+        <li>Dùng <b>ChatGPT / Claude</b> chuẩn hóa văn phong employee-friendly, chia section hợp lý.</li>
+        <li>Dùng <b>Antigravity / Cursor</b> để build layout từng trang trên nền tảng Mintlify.</li>
+        <li>Review, preview local, sau đó commit & push lên GitHub để tự động deploy.</li>
+      </ul>
+    </div>
+    <div class="star">
+      <div class="tag">R — RESULT (KẾT QUẢ)</div>
+      <h3>Hệ thống tài liệu hiện đại, tự động</h3>
+      <ul>
+        <li>1 portal duy nhất cho mọi thông tin HR với giao diện clean, chuẩn nhận diện.</li>
+        <li>Giảm thời gian support lặp lại của HR, tăng tỷ lệ self-serve của nhân viên.</li>
+        <li>[Điền số liệu validate: giảm % câu hỏi lặp / tăng lượt truy cập trang / điểm CSAT]</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== METRICS ===== -->
+  <h2 class="section">📊 Chỉ số validate</h2>
+  <div class="metrics">
+    <div class="metric"><div class="val">[x%]</div><div class="lbl">Tỷ lệ tự giải đáp<br>(nhân viên tự tìm được thông tin)</div></div>
+    <div class="metric"><div class="val">[-x%]</div><div class="lbl">Thời gian HR support<br>(cho các câu hỏi cơ bản)</div></div>
+    <div class="metric"><div class="val">[x/5]</div><div class="lbl">Điểm trải nghiệm<br>(đánh giá từ nhân viên)</div></div>
+  </div>
+  <p class="note">⚠️ Use case được tính là <b>validated</b> khi có tối thiểu 1 chỉ số định lượng thực tế + 1 minh chứng (link website / feedback). Điền số liệu vào ô [..] trước khi đưa vào Playbook.</p>
+
+  <!-- ===== SETUP ===== -->
+  <h2 class="section">⚙️ Chuẩn bị trước khi bắt đầu</h2>
+  <div class="detail-steps">
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 0.1 — Tạo tài khoản Mintlify</h4>
+        <ul>
+          <li><b>Truy cập:</b> <a href="https://mintlify.com" target="_blank" style="color:#FFA200;">mintlify.com</a> → Nhấn <b>Get Started</b> → Đăng ký bằng tài khoản GitHub (khuyên dùng) hoặc email.</li>
+          <li><b>Tạo project:</b> Sau khi đăng nhập, Mintlify sẽ hỏi tên project và màu sắc. Điền thông tin, nhấn <b>Create</b>.</li>
+          <li><b>Mintlify sẽ tự tạo:</b> Một GitHub repo mẫu chứa file <code>docs.json</code>, <code>index.mdx</code>, và <code>introduction.mdx</code> — đây là điểm xuất phát của bạn.</li>
+          <li><b>Lưu ý:</b> Gói Free của Mintlify cho phép 1 site public và không giới hạn số trang. Đủ dùng cho sổ tay nội bộ.</li>
+        </ul>
+        <div class="file-ref-label">🔗 Link tham khảo</div>
+        <div class="file-refs">
+          <a class="file-ref" href="https://mintlify.com/docs/quickstart" target="_blank">Mintlify Quickstart</a>
+          <a class="file-ref" href="https://mintlify.com/docs/settings/global" target="_blank">docs.json Reference</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 0.2 — Cài đặt GitHub Desktop</h4>
+        <ul>
+          <li><b>Tải về:</b> <a href="https://desktop.github.com" target="_blank" style="color:#FFA200;">desktop.github.com</a> → Nhấn <b>Download for Mac / Windows</b> → Cài như app bình thường.</li>
+          <li><b>Đăng nhập:</b> Mở GitHub Desktop → Sign in to GitHub.com → Điền email/mật khẩu tài khoản GitHub của bạn.</li>
+          <li><b>Clone repo về máy:</b>
+            <ul style="margin-top:6px;">
+              <li>Vào <b>File → Clone Repository</b> → Chọn repo Mintlify vừa tạo ở bước 0.1.</li>
+              <li>Chọn thư mục lưu trên máy (ví dụ: <code>Documents/HR-Handbook</code>).</li>
+              <li>Nhấn <b>Clone</b> — GitHub Desktop sẽ tải toàn bộ file về máy.</li>
+            </ul>
+          </li>
+          <li><b>Kết quả:</b> Bạn có thể mở thư mục đó và thấy các file <code>.mdx</code>, <code>docs.json</code> — đây là nội dung website của bạn.</li>
+        </ul>
+        <div class="file-ref-label">🔗 Link tham khảo</div>
+        <div class="file-refs">
+          <a class="file-ref" href="https://desktop.github.com" target="_blank">GitHub Desktop Download</a>
+          <a class="file-ref" href="https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop" target="_blank">GitHub Desktop – Getting Started</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 0.3 — Cài đặt Mintlify CLI (để preview local)</h4>
+        <ul>
+          <li><b>Yêu cầu trước:</b> Cần cài <b>Node.js</b> trước. Tải tại <a href="https://nodejs.org" target="_blank" style="color:#FFA200;">nodejs.org</a> → Chọn phiên bản LTS → Cài như app bình thường.</li>
+          <li><b>Cài Mintlify CLI:</b> Mở Terminal (Mac) hoặc Command Prompt (Windows) → Dán lệnh sau và nhấn Enter:
+            <br><code style="display:block;margin-top:8px;background:#0D1422;padding:8px 12px;border-radius:4px;font-size:13px;">npm i -g mintlify</code>
+          </li>
+          <li><b>Chạy preview:</b> Mở Terminal → điều hướng đến thư mục repo → gõ <code>mintlify dev</code> → Mở trình duyệt tại <code>localhost:3000</code> để xem trước.</li>
+          <li><b>Nếu không muốn cài CLI:</b> Bỏ qua bước này — push code lên GitHub là Mintlify sẽ tự deploy và bạn xem link live sau khoảng 1–2 phút.</li>
+          <li><b>Mẹo:</b> Nhờ Antigravity hoặc Claude chạy lệnh này giúp nếu chưa quen với Terminal.</li>
+        </ul>
+        <div class="file-ref-label">🔗 Link tham khảo</div>
+        <div class="file-refs">
+          <a class="file-ref" href="https://nodejs.org" target="_blank">Node.js Download</a>
+          <a class="file-ref" href="https://mintlify.com/docs/development" target="_blank">Mintlify CLI Development</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 0.4 — Kết nối Mintlify với GitHub (Auto Deploy)</h4>
+        <ul>
+          <li><b>Mintlify tự kết nối:</b> Nếu bạn đăng ký Mintlify bằng tài khoản GitHub (bước 0.1), repo Mintlify tạo sẽ được kết nối tự động — mỗi lần bạn push code lên nhánh <code>main</code>, Mintlify sẽ tự deploy.</li>
+          <li><b>Kiểm tra kết nối:</b> Vào <a href="https://dashboard.mintlify.com" target="_blank" style="color:#FFA200;">dashboard.mintlify.com</a> → Chọn project → Tab <b>Settings</b> → Mục <b>GitHub</b> → Xem repo đã connect chưa.</li>
+          <li><b>Nếu chưa kết nối:</b> Nhấn <b>Connect GitHub</b> → Chọn đúng repo → Authorize. Sau đó mọi lần push lên <code>main</code> sẽ tự deploy.</li>
+          <li><b>Xem link live:</b> Vào Dashboard → Tab <b>Overview</b> → Copy link dạng <code>ten-project.mintlify.app</code> — đây là link public của website.</li>
+        </ul>
+        <div class="file-ref-label">🔗 Link tham khảo</div>
+        <div class="file-refs">
+          <a class="file-ref" href="https://dashboard.mintlify.com" target="_blank">Mintlify Dashboard</a>
+          <a class="file-ref" href="https://mintlify.com/docs/settings/github" target="_blank">Kết nối GitHub – Mintlify Docs</a>
+          <a class="file-ref" href="https://ahamove.mintlify.app" target="_blank">🌐 Ví dụ thực tế: ahamove.mintlify.app</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== CHI TIẾT QUY TRÌNH ===== -->
+  <h2 class="section">🛠️ Chi tiết quy trình 7 bước (The Workflow)</h2>
+
+  <div class="detail-steps">
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 1 — Chốt cấu trúc website (Sitemap)</h4>
+        <ul>
+          <li><b>Làm gì:</b> Liệt kê tất cả các trang/chủ đề cần có vào 1 file Google Doc. Ví dụ: Trang chủ, Hành trình hội nhập, Chính sách, Phúc lợi, AI Academy, Danh bạ hỗ trợ.</li>
+          <li><b>Cách làm:</b> Nhóm các trang thành 3–5 hub lớn (mỗi hub = 1 nhóm chủ đề). Không cần nhiều hơn 5 hub nếu chưa cần thiết.</li>
+          <li><b>⚠️ Quan trọng:</b> Chốt sitemap <u>trước</u> khi bắt tay build. Sửa navigation sau khi đã build rất tốn thời gian và dễ bị rối.</li>
+        </ul>
+        <div class="file-ref-label">📂 File thực tế — Ahamove Handbook</div>
+        <div class="file-refs">
+          <a class="file-ref" href="https://ahamove.mintlify.app" target="_blank">🌐 ahamove.mintlify.app</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/docs.json" target="_blank">docs.json (Sitemap)</a>
+        </div>
+        <div style="margin-top:14px;">
+          <div class="file-ref-label">🗺️ Sitemap thực tế — ahamove.mintlify.app</div>
+          <table class="sitemap">
+            <tr>
+              <th>Hub (Tab)</th>
+              <th>Trang con</th>
+              <th>Mục đích</th>
+            </tr>
+            <tr>
+              <td class="hub"><span class="icon">🏠</span>Trang chủ</td>
+              <td class="pages">index.mdx</td>
+              <td>Landing page — giới thiệu toàn bộ portal</td>
+            </tr>
+            <tr>
+              <td class="hub"><span class="icon">🧭</span>Hành trình hội nhập</td>
+              <td class="pages">overview · company-overview · culture · org-structure · day-1 · health-check · insurance · office-guide</td>
+              <td>Chào mừng người mới, giới thiệu công ty, cách sống tại Ahamove</td>
+            </tr>
+            <tr>
+              <td class="hub"><span class="icon">📋</span>Hệ thống & Quy trình</td>
+              <td class="pages">internal-systems · hr-processes · payroll</td>
+              <td>Công cụ, hệ thống, quy trình hành chính</td>
+            </tr>
+            <tr>
+              <td class="hub"><span class="icon">✨</span>AI Academy</td>
+              <td class="pages">overview · claude-guide · ai-playbook · yes-ai-do · ai-showcase-2026 · study-tour-china</td>
+              <td>Học AI, công cụ, chương trình thực hành</td>
+            </tr>
+            <tr>
+              <td class="hub"><span class="icon">🪂</span>Trung tâm hỗ trợ</td>
+              <td class="pages">overview · faq · ask-ahamove-ai</td>
+              <td>Danh bạ liên hệ, FAQ, AI hỗ trợ</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 2 — Gom nội dung thô theo từng trang</h4>
+        <ul>
+          <li><b>Làm gì:</b> Với mỗi trang trong sitemap, copy toàn bộ nội dung thô (từ Drive, Confluence, Slack, email...) vào 1 chỗ. Chưa cần viết lại, chỉ cần gom đủ.</li>
+          <li><b>Format gom nội dung cho mỗi trang gồm:</b> Tên trang + mục tiêu · Đối tượng đọc · Nội dung chính · Link / hình ảnh / biểu mẫu · Người phụ trách cập nhật.</li>
+          <li><b>Mẹo:</b> Đừng lo nội dung chưa đẹp hay chưa gọn — AI sẽ giúp xử lý ở bước tiếp theo.</li>
+        </ul>
+        <div class="file-ref-label">📂 Ví dụ nội dung thô đã gom — Ahamove Handbook</div>
+        <div class="file-refs">
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ahamazing-guide/overview.mdx" target="_blank">ahamazing-guide/overview.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/handbook/hr-processes.mdx" target="_blank">handbook/hr-processes.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/benefits/overview.mdx" target="_blank">benefits/overview.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ai-hub/overview.mdx" target="_blank">ai-hub/overview.mdx</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 3 — Dùng Claude / ChatGPT chuẩn hóa nội dung</h4>
+        <ul>
+          <li><b>Làm gì:</b> Paste nội dung thô của từng trang vào Claude hoặc ChatGPT, nhờ AI rút gọn, bỏ trùng lặp và viết lại theo văn phong employee-friendly.</li>
+          <li><b>Prompt mẫu:</b> <i>"Đây là nội dung thô cho trang [tên trang]. Hãy rút gọn, bỏ phần trùng lặp, chia thành các section ngắn, và viết lại theo văn phong thân thiện, dễ đọc cho nhân viên. Giữ nguyên tất cả thông tin quan trọng."</i></li>
+          <li><b>Output cần có:</b> Nội dung đã gọn, đủ ý, sẵn sàng để đưa vào AI build ở bước tiếp theo.</li>
+        </ul>
+        <div class="file-ref-label">📂 Ví dụ trang đã được chuẩn hóa</div>
+        <div class="file-refs">
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ahamazing-guide/company-overview.mdx" target="_blank">company-overview.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ahamazing-guide/culture.mdx" target="_blank">culture.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/handbook/glossary.mdx" target="_blank">glossary.mdx</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 4 — Build layout bằng AI</h4>
+        <ul>
+          <li><b>Có thể dùng tool nào?</b> Có 2 lựa chọn — cả hai đều được:</li>
+        </ul>
+        <div class="file-refs" style="margin-bottom:10px;">
+          <span class="alt-tool">🤖 Antigravity (IDE) — kết nối trực tiếp với file repo, build & chỉnh sửa file MDX tại chỗ, phù hợp khi cần kiểm soát chi tiết từng file.</span>
+          <span class="alt-tool">💬 Claude Projects (claude.ai) — không cần IDE, chat trên web, upload file MDX → Claude viết lại → copy paste lại. Phù hợp khi không cài app hoặc mới bắt đầu.</span>
+        </div>
+        <ul>
+          <li><b>Thứ tự build khuyên dùng:</b> <code>docs.json</code> (sitemap) → Trang chủ → Hành trình hội nhập → Các trang policy → AI Academy → Review layout toàn bộ &amp; Fix links → Deploy.</li>
+          <li><b>Nguyên tắc prompt (cho cả 2 tool):</b> Gửi từng cụm nhỏ (1–2 trang/lần). Mỗi prompt ghi rõ 4 phần: (1) Trang cần build, (2) Nội dung đã chuẩn bị, (3) Yêu cầu layout, (4) Những gì không được thay đổi.</li>
+          <li><b>Mẹo:</b> Sau mỗi cụm, yêu cầu AI trả lại danh sách file đã thay đổi để dễ kiểm soát tiến độ.</li>
+        </ul>
+        <div class="file-ref-label">📂 Ví dụ các trang đã được build — Ahamove Handbook</div>
+        <div class="file-refs">
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/index.mdx" target="_blank">index.mdx (Trang chủ)</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ahamazing-guide/day-1.mdx" target="_blank">day-1.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ahamazing-guide/week-1.mdx" target="_blank">week-1.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ahamazing-guide/first-month.mdx" target="_blank">first-month.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/handbook/internal-systems.mdx" target="_blank">internal-systems.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/handbook/payroll.mdx" target="_blank">payroll.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/benefits/health-check.mdx" target="_blank">health-check.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/ai-hub/ai-playbook.mdx" target="_blank">ai-playbook.mdx</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 5 — Preview local trước khi đưa lên</h4>
+        <ul>
+          <li><b>Làm gì:</b> Chạy lệnh <code>mintlify dev</code> trong Terminal để xem trước website trên máy tính tại <code>localhost:3000</code>. (Nhờ Antigravity / Claude chạy giúp nếu chưa quen với Terminal.)</li>
+          <li><b>Nếu dùng Claude Projects:</b> Bước này bỏ qua được — upload file lên Claude, nhờ Claude preview bằng cách mô tả layout, hoặc dùng thẳng link live sau khi push.</li>
+          <li><b>Checklist review — kiểm tra 5 điều này:</b>
+            <ul style="margin-top:6px;">
+              <li>✅ Menu điều hướng đúng thứ tự, đúng tên trang chưa?</li>
+              <li>✅ Có trang nào bị lỗi (trang trắng / link hỏng) không?</li>
+              <li>✅ Nội dung có quá nhiều bullet list / card lặp lại không?</li>
+              <li>✅ Xem thử trên điện thoại có đọc được không?</li>
+              <li>✅ Gõ từ khóa vào ô Search có ra kết quả đúng không?</li>
+            </ul>
+          </li>
+          <li><b>Nếu cần sửa:</b> Mô tả vấn đề cụ thể cho AI (Antigravity hoặc Claude) và yêu cầu fix. Không tự sửa file code tay nếu chưa quen.</li>
+        </ul>
+        <div class="file-ref-label">🔗 Link live thực tế để tham chiếu</div>
+        <div class="file-refs">
+          <a class="file-ref" href="https://ahamove.mintlify.app" target="_blank">🌐 ahamove.mintlify.app (Homepage)</a>
+          <a class="file-ref" href="https://ahamove.mintlify.app/ahamazing-guide/overview" target="_blank">Hành trình hội nhập</a>
+          <a class="file-ref" href="https://ahamove.mintlify.app/benefits/overview" target="_blank">Phúc lợi</a>
+          <a class="file-ref" href="https://ahamove.mintlify.app/ai-hub/overview" target="_blank">AI Academy</a>
+          <a class="file-ref" href="https://ahamove.mintlify.app/help-center/overview" target="_blank">Danh bạ hỗ trợ</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 6 — Commit & Push lên GitHub</h4>
+        <ul>
+          <li><b>Làm gì:</b> Dùng <b>GitHub Desktop</b> (ứng dụng có giao diện đồ họa, không cần gõ lệnh) để lưu lại thay đổi và đẩy code lên GitHub.</li>
+          <li><b>Nếu dùng Claude Projects:</b> Sau khi Claude viết xong file MDX → Copy nội dung → Paste vào đúng file trong VS Code hoặc trình soạn thảo bất kỳ → Lưu lại → Tiếp tục dùng GitHub Desktop như bình thường.</li>
+          <li><b>Các bước thực hiện trong GitHub Desktop:</b>
+            <ul style="margin-top:6px;">
+              <li>Mở GitHub Desktop → Danh sách file đã thay đổi hiển thị bên trái.</li>
+              <li>Điền tên commit ngắn gọn vào ô "Summary", ví dụ: <i>Update HR handbook structure</i>.</li>
+              <li>Nhấn <b>Commit to main</b> → Tiếp theo nhấn <b>Push origin</b>.</li>
+            </ul>
+          </li>
+          <li><b>Lưu ý:</b> Luôn push lên nhánh <code>main</code>. Mintlify sẽ tự động bắt đầu deploy ngay sau khi push thành công.</li>
+        </ul>
+        <div class="file-ref-label">📂 Ví dụ các file trong cùng 1 commit</div>
+        <div class="file-refs">
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/docs.json" target="_blank">docs.json</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/style.css" target="_blank">style.css</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/handbook/offboarding.mdx" target="_blank">offboarding.mdx</a>
+          <a class="file-ref" href="file:///Users/dvmnhi/Handbook/V2/handbook/org-structure.mdx" target="_blank">org-structure.mdx</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-step">
+      <div class="detail-content">
+        <h4>Bước 7 — Kiểm tra link live & Thông báo nội bộ</h4>
+        <ul>
+          <li><b>Làm gì:</b> Sau 1–3 phút, mở link website thật (Mintlify cung cấp link public) để kiểm tra kết quả deploy.</li>
+          <li><b>Checklist cuối:</b>
+            <ul style="margin-top:6px;">
+              <li>✅ Mở link trên trình duyệt thường (không phải localhost) — xem đã lên chưa.</li>
+              <li>✅ Nhấn Ctrl+Shift+R (hard refresh) nếu thấy nội dung cũ.</li>
+              <li>✅ Kiểm tra nhanh 2–3 trang quan trọng nhất.</li>
+              <li>✅ Forward link cho team hoặc đăng Slack thông báo.</li>
+            </ul>
+          </li>
+          <li><b>Cập nhật sau này:</b> Muốn cập nhật nội dung → Sửa bằng Antigravity → Preview (bước 5) → Commit & Push (bước 6) → Xong. Không cần làm lại từ đầu.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== TIPS ===== -->
+  <h2 class="section">💡 Tips & Nguyên tắc thiết kế</h2>
+  <div class="tips">
+    <ul>
+      <li><span class="warn">Không nói chung chung với AI:</span> Thay vì "làm trang này đẹp hơn", hãy yêu cầu cụ thể "chuyển phần lưu ý thành card grid, giảm danh sách".</li>
+      <li><span class="warn">Luôn ghi rõ 4 điều trong prompt:</span> 1. Trang cần sửa; 2. Vấn đề hiện tại; 3. Yêu cầu chỉnh sửa; 4. Những gì không được đổi. (Luôn yêu cầu AI trả lại summary).</li>
+      <li><span class="warn">Cấu trúc rõ ràng:</span> Một trang = một mục đích rõ ràng. Một section = một nhóm thông tin. Không lặp lại cùng một ý ở nhiều hub.</li>
+      <li><b>Nên dùng:</b> Hero card ngắn gọn, timeline (nếu có quy trình), contact card (danh bạ hỗ trợ), table (khi so sánh).</li>
+      <li><b>Không nên dùng:</b> Paragraph dài, bullet list quá nhiều, card lặp liên tục, nhiều section nhỏ lắt nhắt.</li>
+      <li><b>Deploy Checklist:</b> Kiểm tra Navigation, không broken link, không nội dung trùng, email format đồng bộ, search hoạt động. Tắt Dark Mode bằng cách Force Light Theme.</li>
+    </ul>
+  </div>
+
+  <!-- ===== AI PROMPT GUIDE ===== -->
+  <h2 class="section">🤖 Dùng AI để tạo prompt cho chính mình</h2>
+  <div class="ai-guide">
+    <p>Không cần tự nghĩ ra prompt từ đầu. Hãy nhờ chính AI viết prompt cho bạn. Cách đơn giản nhất: <b>mô tả bạn đang làm gì và bạn muốn gì</b>, sau đó thêm câu „Hãy viết cho tôi một prompt tốt để yêu cầu AI khác làm việc này.‟ Claude sẽ trả ra prompt chuẩn hơn bất kỳ thứ bạn tự nghĩ.</p>
+    <p><b>Nhưng nếu bạn muốn bắt đầu ngay</b>, dưới đây là các prompt mẫu theo từng giai đoạn — copy và điền vào phần in nghiêng là dùng được ngay:</p>
+  </div>
+  <div class="starter-prompts">
+
+    <div class="starter-prompt">
+      <div class="prompt-label">🟠 Khởi đầu — Nhờ AI tạo Prompt cho bạn</div>
+      <pre>Tôi đang chuẩn bị build một website sổ tay nhân sự bằng Mintlify cho công ty <em>[tên công ty]</em>.
+Các nội dung cần có: <em>[liệt kê các hub chính: hội nhập / chính sách / phúc lợi / hỗ trợ...]</em>.
+Target audience: nhân viên nội bộ, không phải kỹ thuật.
+
+Hãy giúp tôi:
+1. Lên sitemap (tổng hợp các hub và trang con)
+2. Gợi ý thứ tự build hợp lý
+3. Viết cho tôi prompt mẫu để dùng với Antigravity / Cursor khi build từng trang</pre>
+    </div>
+
+    <div class="starter-prompt">
+      <div class="prompt-label">🟡 Bước 1 — Build <code>docs.json</code> (Sitemap)</div>
+      <pre>Tôi cần tạo file docs.json cho một website Mintlify.
+
+Cấu trúc dự kiến gồm các tab chính:
+- Tab 1: Trang chủ (1 trang duy nhất)
+- Tab 2: Hành trình hội nhập (giới thiệu công ty, ngày đầu tiên, phúc lợi)
+- Tab 3: Quy trình hành chính (nghỉ phép, lương, hệ thống)
+- Tab 4: Hỗ trợ (liên hệ, FAQ)
+
+Màu theme của tôi: primary <em>[mã màu]</em>. Tên website: <em>[tên]</em>.
+Hãy tạo file docs.json hoàn chỉnh theo cấu trúc này, với các field: theme, name, colors, navigation, footer.</pre>
+    </div>
+
+    <div class="starter-prompt">
+      <div class="prompt-label">🟢 Bước 2 — Build trang Homepage</div>
+      <pre>Tạo file index.mdx cho trang chủ của website nhân sự <em>[tên công ty]</em>.
+
+Nhiệm vụ của trang này: giới thiệu portal và định hướng người dùng đến đúng hub mình cần.
+Layout cần có:
+- Hero section ngắn gọn (tiêu đề + mô tả 1 dòng)
+- Grid 4–5 card trỏ đến các hub chính (mỗi card: icon, tên hub, 1 dòng mô tả)
+- Banner thông báo hoặc What’s New (tùy chọn)
+
+Dùng Mintlify MDX component. Không dùng HTML thuần.</pre>
+    </div>
+
+    <div class="starter-prompt">
+      <div class="prompt-label">🟣 Bước 3 — Build trang nội dung từ tài liệu thô</div>
+      <pre>Tạo file <em>[tên-trang.mdx]</em> cho trang „<em>[tên trang]</em>‟.
+
+Mục đích trang: <em>[mô tả ngắn]</em>
+Đối tượng đọc: <em>[đối tượng]</em>
+Nội dung thô cần transform:
+———
+<em>[paste nội dung thô vào đây]</em>
+———
+Yêu cầu:
+- Layout: hero card ngắn, section rõ ràng, ít bullet list
+- Tối đa 1 table nếu có so sánh
+- Cuối trang: 1 contact card hoặc link đến trang liên quan
+- Không đặt thêm nội dung mới, chỉ transform nội dung thô đã cho</pre>
+    </div>
+
+    <div class="starter-prompt">
+      <div class="prompt-label">🔵 Review — QA trước khi Deploy</div>
+      <pre>Hãy review toàn bộ các file trong folder này trước khi deploy.
+
+Kiểm tra:
+1. Navigation: các link trong docs.json có trỏ đúng file không?
+2. Nội dung trùng: có trang nào lặp lại cùng một ý không?
+3. Layout: có trang nào quá nhiều bullet list / card không?
+4. Broken links: link internal có hoạt động không?
+5. Mobile: có thành phần nào bị vỡ layout trên màn hình nhỏ không?
+
+Trả lại:
+- Danh sách lỗi cụ thể
+- Gợi ý sửa
+- Các file cần cập nhật</pre>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    AI Playbook Ahamove · HR OKR Q2/2026 — OD: ≥10 use cases validated · Đóng góp use case mới: dùng file template kèm theo &amp; gửi về L&amp;OD
+  </div>
+
+</div>
+</body>
+</html>

@@ -113,7 +113,7 @@
   },
   "navbar": {
     "links": [
-      { "label": "Mới cập nhật", "href": "/whats-new" }
+      { "label": "Cập nhật gần đây", "href": "/whats-new" }
     ]
   },
   "footer": {

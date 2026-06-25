@@ -220,3 +220,17 @@
     document.addEventListener("DOMContentLoaded", () => document.head.appendChild(style));
   }
 })();
+
+(function manageWelcomeBanner() {
+  if (typeof sessionStorage !== "undefined" && typeof localStorage !== "undefined") {
+    if (!sessionStorage.getItem("aha-banner-handled")) {
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.includes("banner")) {
+          localStorage.removeItem(key);
+        }
+      }
+      sessionStorage.setItem("aha-banner-handled", "true");
+    }
+  }
+})();

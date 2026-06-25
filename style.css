@@ -2158,7 +2158,7 @@ html.dark .aha-home .aha-office-info h4 {
 }
 .aha-home .aha-footbar-actions {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 .aha-home .aha-footbar-action {
@@ -5607,3 +5607,77 @@ html.dark nav, html.dark aside {
   gap: 12px;
   flex-wrap: wrap;
 }
+
+/* ---------- HOMEPAGE REDESIGN ADDITIONS ---------- */
+
+.aha-floating-assistant {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--aha-orange);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(255, 122, 33, 0.3);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.aha-floating-assistant:hover {
+  transform: translateY(-3px);
+  background: var(--aha-orange-dk);
+  color: #fff !important;
+}
+.aha-floating-assistant svg {
+  width: 20px;
+  height: 20px;
+}
+
+.aha-cta.secondary {
+  background: transparent;
+  border: 1px solid var(--aha-navy);
+  color: var(--aha-navy);
+}
+.aha-home .aha-hero.promo .aha-cta.secondary {
+  background: transparent;
+  border: 1px solid var(--aha-navy);
+  color: var(--aha-navy);
+}
+.aha-home .aha-hero.promo .aha-cta.secondary:hover {
+  background: rgba(14, 65, 116, 0.05);
+}
+.aha-cta.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Update "Cập nhật gần đây" link in Mintlify navbar */
+nav a[href="/whats-new"],
+header a[href="/whats-new"] {
+  background: var(--aha-cream) !important;
+  color: var(--aha-orange-dk) !important;
+  padding: 6px 14px !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  border: 1px solid var(--aha-cream-line) !important;
+  transition: all 0.2s ease !important;
+}
+nav a[href="/whats-new"]::before,
+header a[href="/whats-new"]::before {
+  content: "✨" !important;
+  margin-right: 6px !important;
+  font-size: 14px !important;
+}
+nav a[href="/whats-new"]:hover,
+header a[href="/whats-new"]:hover {
+  background: #FFE8D6 !important;
+  border-color: #F0D8C4 !important;
+  transform: translateY(-1px) !important;
+}
+
