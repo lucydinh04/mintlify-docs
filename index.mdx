@@ -58,39 +58,33 @@ mode: "custom"
       <div className="aha-section aha-newcomer-checklist">
         <p className="aha-h2">Checklist cho người mới</p>
         <p className="aha-intro">Những việc quan trọng cần làm ngay trong những ngày đầu tiên.</p>
-        <div className="aha-rowlist">
-          <a href="/ahamazing-guide/overview" className="aha-link-row">
-            <div className="ic"><Icon icon="flag-checkered" size={14} color="#FF7A21" /></div>
-            <div className="tx">
-              <h5>Bắt đầu hành trình hội nhập</h5>
-              <p>Khám phá văn hóa, con người và chính sách cốt lõi.</p>
-            </div>
-            <div className="go">→</div>
-          </a>
-          <a href="/handbook/internal-systems" className="aha-link-row">
-            <div className="ic"><Icon icon="desktop" size={14} color="#FF7A21" /></div>
-            <div className="tx">
-              <h5>Kích hoạt công cụ làm việc</h5>
-              <p>Đăng nhập 1Office, Email và các hệ thống nội bộ.</p>
-            </div>
-            <div className="go">→</div>
-          </a>
-          <a href="/handbook/hr-processes" className="aha-link-row">
-            <div className="ic"><Icon icon="clock" size={14} color="#FF7A21" /></div>
-            <div className="tx">
-              <h5>Kiểm tra khung giờ làm việc</h5>
-              <p>Xem quy định thời gian làm việc.</p>
-            </div>
-            <div className="go">→</div>
-          </a>
-          <a href="/help-center/overview" className="aha-link-row">
-            <div className="ic"><Icon icon="address-book" size={14} color="#FF7A21" /></div>
-            <div className="tx">
-              <h5>Tìm HRBP phụ trách phòng ban</h5>
-              <p>Tìm HRBP hoặc người hỗ trợ trực tiếp.</p>
-            </div>
-            <div className="go">→</div>
-          </a>
+        
+        <div className="aha-activity-feed">
+          <div className="aha-feed-group">
+            <div className="aha-feed-date">Bắt đầu hội nhập</div>
+            <ul className="aha-feed-list">
+              <li className="aha-feed-item">
+                <h4>Khám phá văn hóa, con người và chính sách cốt lõi</h4>
+                <p>Hiểu về Ahamove trước khi bắt đầu công việc.</p>
+                <a href="/ahamazing-guide/overview" className="aha-feed-link">Mở nội dung →</a>
+              </li>
+              <li className="aha-feed-item">
+                <h4>Đăng nhập 1Office, Email và các hệ thống nội bộ</h4>
+                <p>Thiết lập đầy đủ các tài khoản làm việc.</p>
+                <a href="/handbook/internal-systems" className="aha-feed-link">Mở hướng dẫn →</a>
+              </li>
+              <li className="aha-feed-item">
+                <h4>Xem quy định thời gian làm việc</h4>
+                <p>Nắm rõ khung giờ làm việc và quy định chấm công.</p>
+                <a href="/handbook/hr-processes" className="aha-feed-link">Xem chi tiết →</a>
+              </li>
+              <li className="aha-feed-item">
+                <h4>Biết người hỗ trợ trực tiếp</h4>
+                <p>Tìm HRBP và các đầu mối hỗ trợ của phòng ban.</p>
+                <a href="/help-center/overview" className="aha-feed-link">Mở Trung tâm hỗ trợ →</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -235,48 +229,7 @@ mode: "custom"
         </div>
       </div>
 
-      {/* 7 · CẬP NHẬT GẦN ĐÂY */}
-      <div className="aha-section aha-home-updates">
-        <p className="aha-h2">Cập nhật gần đây</p>
-        <p className="aha-intro">Những nội dung mới hoặc vừa được điều chỉnh trong Sổ tay nhân sự.</p>
-        
-        <div className="aha-update-list" style={{ marginTop: '20px' }}>
-          <a href="/whats-new" className="aha-update-row">
-            <div className="ur-meta"><span className="aha-badge solid">Trang chủ</span> <span className="ur-date">25/06/2026</span></div>
-            <h4>Cập nhật trang chủ Employee Portal</h4>
-            <p>Tối ưu thứ tự nội dung, ưu tiên checklist cho người mới và loại bỏ phần điều hướng trùng lặp.</p>
-            <span className="ur-go">Xem chi tiết →</span>
-          </a>
-          <a href="/ai-hub/study-tour-china" className="aha-update-row">
-            <div className="ur-meta"><span className="aha-badge solid">AI Academy</span> <span className="ur-date">25/06/2026</span></div>
-            <h4>Cập nhật Project Ahamove Through Global Lens</h4>
-            <p>Tái định vị Study Tour Trung Quốc thành một phần của chương trình học hỏi quốc tế dành cho nhân tài chủ chốt.</p>
-            <span className="ur-go">Xem chi tiết →</span>
-          </a>
-          <a href="/help-center/overview" className="aha-update-row">
-            <div className="ur-meta"><span className="aha-badge solid">Trung tâm hỗ trợ</span> <span className="ur-date">25/06/2026</span></div>
-            <h4>Hoàn thiện Trung tâm hỗ trợ</h4>
-            <p>Chuẩn hóa danh sách HRBP, L&OD, IT Team và Office Support để nhân viên dễ tìm đúng người hỗ trợ.</p>
-            <span className="ur-go">Xem chi tiết →</span>
-          </a>
-          <a href="/benefits/insurance" className="aha-update-row">
-            <div className="ur-meta"><span className="aha-badge solid">Phúc lợi</span> <span className="ur-date">25/06/2026</span></div>
-            <h4>Cập nhật Bảo hiểm sức khỏe 2026</h4>
-            <p>Bổ sung điều kiện chương trình theo G-Grade, link tra cứu BHSK và hướng dẫn nhanh GenVita.</p>
-            <span className="ur-go">Xem chi tiết →</span>
-          </a>
-          <a href="/benefits/health-check" className="aha-update-row">
-            <div className="ur-meta"><span className="aha-badge solid">Phúc lợi</span> <span className="ur-date">25/06/2026</span></div>
-            <h4>Cập nhật trang Khám sức khỏe 2026</h4>
-            <p>Bổ sung timeline chương trình, đối tượng áp dụng, lưu ý trước khi lấy mẫu và link tra cứu chương trình.</p>
-            <span className="ur-go">Xem chi tiết →</span>
-          </a>
-        </div>
-        
-        <div style={{ marginTop: '16px', textAlign: 'center' }}>
-          <a href="/whats-new" className="aha-section-link">Xem tất cả lịch sử cập nhật →</a>
-        </div>
-      </div>
+
 
       {/* 8 · CUSTOM FOOTER */}
       <div className="aha-home-footer" style={{ marginTop: '48px' }}>
