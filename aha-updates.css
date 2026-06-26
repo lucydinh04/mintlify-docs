@@ -164,3 +164,68 @@
 .aha-feed-link:hover {
   text-decoration: underline;
 }
+
+/* Onboarding Roadmap */
+.aha-roadmap-feed {
+  margin: 32px 0;
+}
+.aha-roadmap-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.aha-roadmap-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7px;
+  width: 2px;
+  background: var(--aha-line);
+}
+.aha-roadmap-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 24px;
+}
+.aha-roadmap-item:last-child {
+  margin-bottom: 0;
+}
+.aha-roadmap-item::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--aha-orange);
+  border: 3px solid var(--aha-white);
+  box-shadow: 0 0 0 1px var(--aha-orange);
+  z-index: 1;
+}
+.aha-roadmap-item h4 {
+  color: var(--aha-navy);
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+}
+.aha-roadmap-item p {
+  color: var(--aha-grey);
+  font-size: 15px;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+.aha-roadmap-link {
+  color: var(--aha-orange);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.aha-roadmap-link:hover {
+  text-decoration: underline;
+}
