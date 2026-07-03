@@ -5610,32 +5610,101 @@ html.dark nav, html.dark aside {
 
 /* ---------- HOMEPAGE REDESIGN ADDITIONS ---------- */
 
+/* -------- Floating AI Assistant FAB -------- */
 .aha-floating-assistant {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 28px;
+  right: 28px;
   background: var(--aha-orange);
   color: #fff;
-  padding: 12px 20px;
+  padding: 13px 22px;
   border-radius: 9999px;
+  font-family: inherit;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 8px 24px rgba(255, 122, 33, 0.3);
-  text-decoration: none;
-  z-index: 1000;
-  transition: transform 0.2s ease, background 0.2s ease;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(255, 122, 33, 0.35), 0 2px 6px rgba(0,0,0,0.08);
+  text-decoration: none !important;
+  z-index: 9999;
+  transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s ease, background 0.2s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
 }
 .aha-floating-assistant:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(255, 122, 33, 0.45);
   background: var(--aha-orange-dk);
   color: #fff !important;
 }
+.aha-floating-assistant:active {
+  transform: translateY(-1px) scale(0.98);
+}
 .aha-floating-assistant svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.aha-fab-label {
+  letter-spacing: 0.1px;
+}
+
+/* Collapse to icon-only on mobile */
+@media (max-width: 640px) {
+  .aha-floating-assistant {
+    padding: 14px;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+  }
+  .aha-fab-label {
+    display: none;
+  }
+}
+
+/* -------- FHD (1920px) Layout Optimization -------- */
+/* Widen the Mintlify inner-page content area on large screens */
+@media (min-width: 1400px) {
+  /* Mintlify's main prose/article area */
+  main [class*="content"],
+  main [class*="ContentArea"],
+  main .prose,
+  main article {
+    max-width: none !important;
+  }
+
+  /* Extend the homepage container */
+  .aha-home {
+    max-width: 1400px;
+  }
+  .aha-home-main {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .aha-home {
+    max-width: 1600px;
+  }
+  .aha-home-main {
+    max-width: 1400px;
+  }
+}
+
+/* -------- Hide Mintlify in-page Ask bar -------- */
+/* The built-in Mintlify search/ask floating pill that appears on scroll */
+[class*="AskAI"],
+[class*="ask-ai"],
+[class*="AskBar"],
+[class*="ask-bar"],
+[class*="ChatBar"],
+[class*="chat-bar"],
+[class*="FloatingSearch"],
+[data-component="ask"],
+[data-testid*="ask"] {
+  display: none !important;
 }
 
 .aha-cta.secondary {

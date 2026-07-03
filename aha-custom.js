@@ -321,3 +321,34 @@
   }
   setInterval(init, 500);
 })();
+
+(function injectFloatingAssistant() {
+  const BUTTON_ID = 'aha-ai-fab';
+  const HREF = '/help-center/ask-ahamove-ai';
+
+  const inject = () => {
+    if (document.getElementById(BUTTON_ID)) return;
+
+    const fab = document.createElement('a');
+    fab.id = BUTTON_ID;
+    fab.href = HREF;
+    fab.className = 'aha-floating-assistant';
+    fab.setAttribute('aria-label', 'Ask AI Ahassistant');
+    fab.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 12-8 12S4 15.25 4 10a8 8 0 0 1 8-8z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <span class="aha-fab-label">Ask AI Ahassistant</span>
+    `;
+    document.body.appendChild(fab);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inject);
+  } else {
+    inject();
+  }
+  // Re-inject after SPA navigation
+  setInterval(inject, 800);
+})();
