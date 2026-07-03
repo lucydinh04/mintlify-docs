@@ -5684,6 +5684,115 @@ header a[href="/whats-new"]:hover {
 /* -----------------------------
  * Vertical Timeline Redesign 
  * ----------------------------- */
+
+/* ---------- Section wrapper: two-column split ---------- */
+.aha-timeline-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 56px;
+  align-items: start;
+  background: #FFFBF8;
+  border: 1px solid #F6E2D4;
+  border-radius: 24px;
+  padding: 56px 48px;
+  margin: 32px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Left panel ---------- */
+.aha-timeline-left {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 2;
+}
+
+.aha-timeline-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--aha-orange);
+}
+
+.aha-timeline-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--aha-navy);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.aha-timeline-desc {
+  font-size: 15px;
+  color: var(--aha-grey);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.aha-timeline-nav-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Large decorative "A" watermark */
+.aha-timeline-watermark {
+  position: absolute;
+  bottom: -40px;
+  left: -20px;
+  font-size: 280px;
+  font-weight: 900;
+  color: rgba(255, 122, 33, 0.055);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* ---------- Right panel ---------- */
+.aha-timeline-right {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .aha-timeline-section {
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+    gap: 40px;
+  }
+  .aha-timeline-left {
+    position: static;
+  }
+  .aha-timeline-nav-wrap {
+    flex-direction: row;
+  }
+  .aha-timeline-watermark {
+    font-size: 160px;
+  }
+}
+
+/* ---------- Old horizontal container: neutralize completely ---------- */
+.aha-company-history {
+  display: block !important;
+  overflow: visible !important;
+}
+.aha-company-history .aha-history-scroll {
+  overflow-x: visible !important;
+  scroll-snap-type: none !important;
+}
+.aha-company-history .aha-history-track {
+  display: block !important;
+  width: auto !important;
+}
+
+/* ---------- Vertical track (re-used inside new layout) ---------- */
 .aha-company-history-vertical {
   position: relative;
   display: flex;
