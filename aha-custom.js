@@ -241,3 +241,83 @@
   // Keep clearing so next reload always shows it
   setInterval(clearBanner, 1500);
 })();
+
+(function initTimelineObserver() {
+  const init = () => {
+    const track = document.querySelector('.aha-history-track-vertical');
+    if (!track) return;
+    
+    // Prevent multiple initializations
+    if (track.dataset.initialized) return;
+    track.dataset.initialized = 'true';
+
+    const items = document.querySelectorAll('.aha-history-item-vertical');
+    const btnPrev = document.querySelector('.aha-nav-btn.prev');
+    const btnNext = document.querySelector('.aha-nav-btn.next');
+    
+    let activeIndex = -1;
+
+    const observer = new IntersectionObserver((entries) => {
+      let maxRatio = 0;
+      let targetItem = null;
+      
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio;
+          targetItem = entry.target;
+        }
+      });
+      
+      if (targetItem) {
+        items.forEach(el => el.classList.remove('active'));
+        targetItem.classList.add('active');
+        activeIndex = Array.from(items).indexOf(targetItem);
+        updateButtons();
+      }
+    }, { rootMargin: '-20% 0px -40% 0px', threshold: [0.1, 0.5, 0.9] });
+
+    items.forEach(item => observer.observe(item));
+
+    const updateButtons = () => {
+      if (!btnPrev || !btnNext) return;
+      btnPrev.disabled = activeIndex <= 0;
+      btnNext.disabled = activeIndex >= items.length - 1 || activeIndex === -1;
+    };
+    
+    // Fallback if observer is slow
+    if (items.length > 0 && activeIndex === -1) {
+      items[0].classList.add('active');
+      activeIndex = 0;
+      updateButtons();
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener('click', () => {
+        if (activeIndex > 0) {
+          const target = items[activeIndex - 1];
+          const offset = 120; // Scroll offset for sticky headers
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    }
+
+    if (btnNext) {
+      btnNext.addEventListener('click', () => {
+        if (activeIndex < items.length - 1) {
+          const target = items[activeIndex + 1];
+          const offset = 120; // Scroll offset for sticky headers
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+  setInterval(init, 500);
+})();
