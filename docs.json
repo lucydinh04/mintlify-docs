@@ -47,40 +47,22 @@
         "icon": "compass",
         "groups": [
           {
-            "group": "1. Hiểu Ahamove",
+            "group": "Khám phá Ahamove",
             "root": "ahamazing-guide/overview",
             "pages": [
               "ahamazing-guide/company-overview",
               "ahamazing-guide/culture",
-              { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] }
-            ]
-          },
-          {
-            "group": "2. Các bước cần thiết",
-            "pages": [
+              { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] },
               "ahamazing-guide/day-1"
             ]
           },
           {
-            "group": "3. Phúc lợi & Chăm sóc",
+            "group": "Life at Ahamove",
+            "root": "benefits/overview",
             "pages": [
-              "benefits/overview",
               "benefits/health-check",
-              "benefits/insurance"
-            ]
-          },
-          {
-            "group": "4. Môi trường làm việc",
-            "pages": [
+              "benefits/insurance",
               "office-guide/overview"
-            ]
-          },
-          {
-            "group": "5. Life at Ahamove",
-            "expanded": true,
-            "pages": [
-              "ai-hub/overview",
-              "ai-hub/study-tour-china"
             ]
           }
         ]
@@ -166,7 +148,7 @@
     ]
   },
   "contextual": {
-    "options": ["view"]
+    "options": []
   },
   "scripts": [
     "/aha-custom.js"
