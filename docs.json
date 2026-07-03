@@ -48,6 +48,7 @@
         "groups": [
           {
             "group": "Khám phá Ahamove",
+            "expanded": true,
             "root": "ahamazing-guide/overview",
             "pages": [
               "ahamazing-guide/company-overview",
@@ -58,6 +59,7 @@
           },
           {
             "group": "Life at Ahamove",
+            "expanded": true,
             "root": "benefits/overview",
             "pages": [
               "benefits/health-check",
@@ -127,7 +129,7 @@
         "header": "Bắt đầu",
         "items": [
           { "label": "Hành trình hội nhập", "href": "/ahamazing-guide/overview" },
-          { "label": "Ngày đầu tiên", "href": "/ahamazing-guide/day-1" }
+          { "label": "Bắt đầu tại Ahamove", "href": "/ahamazing-guide/day-1" }
         ]
       },
       {
