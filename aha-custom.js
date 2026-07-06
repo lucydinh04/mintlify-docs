@@ -322,6 +322,43 @@
   setInterval(init, 500);
 })();
 
+(function initGlossaryFilter() {
+  const init = () => {
+    const input = document.getElementById('aha-glossary-search');
+    if (!input || input.dataset.initialized) return;
+    input.dataset.initialized = 'true';
+
+    const normalize = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+
+    input.addEventListener('input', () => {
+      const q = normalize(input.value.trim());
+      const tables = document.querySelectorAll('table');
+      tables.forEach(table => {
+        let visibleRows = 0;
+        table.querySelectorAll('tbody tr').forEach(row => {
+          const match = !q || normalize(row.textContent).includes(q);
+          row.style.display = match ? '' : 'none';
+          if (match) visibleRows++;
+        });
+        // Hide entire table + its preceding heading if empty
+        const heading = table.previousElementSibling;
+        const hide = q && visibleRows === 0;
+        table.style.display = hide ? 'none' : '';
+        if (heading && /^H[2-4]$/.test(heading.tagName)) {
+          heading.style.display = hide ? 'none' : '';
+        }
+      });
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  setInterval(init, 800);
+})();
+
 (function injectFloatingAssistant() {
   const BUTTON_ID = 'aha-ai-fab';
   const HREF = '/help-center/ask-ahamove-ai';

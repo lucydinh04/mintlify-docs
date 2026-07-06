@@ -54,7 +54,9 @@
               "ahamazing-guide/company-overview",
               "ahamazing-guide/culture",
               { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] },
-              "ahamazing-guide/day-1"
+              "ahamazing-guide/day-1",
+              "ahamazing-guide/week-1",
+              "ahamazing-guide/first-month"
             ]
           },
           {
@@ -74,7 +76,7 @@
         "icon": "clipboard-list",
         "groups": [
           {
-            "group": "Hệ thống 1Office & Quy trình nhân sự",
+            "group": "Tài khoản, Hệ thống & Quy trình",
             "pages": [
               "handbook/internal-systems",
               "handbook/hr-processes",
@@ -114,9 +116,11 @@
     ]
   },
   "navbar": {
-    "links": [
-      { "label": "Cập nhật gần đây", "href": "/whats-new" }
-    ]
+    "primary": {
+      "type": "button",
+      "label": "Cập nhật gần đây",
+      "href": "/whats-new"
+    }
   },
   "footer": {
     "socials": {
