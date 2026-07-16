@@ -59,42 +59,67 @@ mode: "custom"
         <p className="aha-h2">Checklist cho người mới</p>
         <p className="aha-intro">Những bước giúp bạn sẵn sàng bắt đầu tại Ahamove.</p>
         
-        <div className="aha-onboarding-stepper">
-          <a href="/ahamazing-guide/overview" className="aha-step-row">
-            <div className="aha-step-number">01</div>
-            <div className="aha-step-content">
-              <h4>Khám phá Ahamove</h4>
-              <p>Tìm hiểu văn hóa, con người và chính sách cốt lõi.</p>
+        <div className="aha-checklist-grid">
+          <div className="aha-checklist-left">
+            <div className="aha-onboarding-stepper">
+              <a href="/ahamazing-guide/overview" className="aha-step-row">
+                <div className="aha-step-number">01</div>
+                <div className="aha-step-content">
+                  <h4>Khám phá Ahamove</h4>
+                  <p>Tìm hiểu văn hóa, con người và chính sách cốt lõi.</p>
+                </div>
+                <div className="aha-step-cta">Mở nội dung →</div>
+              </a>
+              
+              <a href="/handbook/internal-systems" className="aha-step-row">
+                <div className="aha-step-number">02</div>
+                <div className="aha-step-content">
+                  <h4>Thiết lập công cụ làm việc</h4>
+                  <p>Đăng nhập 1Office, Email và các hệ thống nội bộ.</p>
+                </div>
+                <div className="aha-step-cta">Mở hướng dẫn →</div>
+              </a>
+              
+              <a href="/handbook/hr-processes" className="aha-step-row">
+                <div className="aha-step-number">03</div>
+                <div className="aha-step-content">
+                  <h4>Nắm thông tin làm việc</h4>
+                  <p>Kiểm tra khung giờ và những quy định cần biết.</p>
+                </div>
+                <div className="aha-step-cta">Xem chi tiết →</div>
+              </a>
+              
+              <a href="/help-center/overview" className="aha-step-row">
+                <div className="aha-step-number">04</div>
+                <div className="aha-step-content">
+                  <h4>Biết nơi cần hỗ trợ</h4>
+                  <p>Tìm HRBP và các đầu mối hỗ trợ của phòng ban.</p>
+                </div>
+                <div className="aha-step-cta">Tìm hỗ trợ →</div>
+              </a>
             </div>
-            <div className="aha-step-cta">Mở nội dung →</div>
-          </a>
+          </div>
           
-          <a href="/handbook/internal-systems" className="aha-step-row">
-            <div className="aha-step-number">02</div>
-            <div className="aha-step-content">
-              <h4>Thiết lập công cụ làm việc</h4>
-              <p>Đăng nhập 1Office, Email và các hệ thống nội bộ.</p>
+          <div className="aha-checklist-right">
+            <div className="aha-checklist-summary">
+              <h5>🎯 Hoàn thành checklist để:</h5>
+              <ul className="aha-summary-list">
+                <li><Icon icon="circle-check" size={16} color="#FF7A21" /> Làm quen với Ahamove</li>
+                <li><Icon icon="circle-check" size={16} color="#FF7A21" /> Thiết lập đầy đủ công cụ làm việc</li>
+                <li><Icon icon="circle-check" size={16} color="#FF7A21" /> Hiểu các quy định quan trọng</li>
+                <li><Icon icon="circle-check" size={16} color="#FF7A21" /> Biết nơi cần hỗ trợ khi cần</li>
+              </ul>
+              <div className="aha-summary-footer">
+                <div className="aha-summary-time-icon">
+                  <Icon icon="clock" size={18} color="#94a3b8" />
+                </div>
+                <div className="aha-summary-time-text">
+                  <span className="time-lbl">Estimated completion time</span>
+                  <span className="time-val">≈ 10–15 phút</span>
+                </div>
+              </div>
             </div>
-            <div className="aha-step-cta">Mở hướng dẫn →</div>
-          </a>
-          
-          <a href="/handbook/hr-processes" className="aha-step-row">
-            <div className="aha-step-number">03</div>
-            <div className="aha-step-content">
-              <h4>Nắm thông tin làm việc</h4>
-              <p>Kiểm tra khung giờ và những quy định cần biết.</p>
-            </div>
-            <div className="aha-step-cta">Xem chi tiết →</div>
-          </a>
-          
-          <a href="/help-center/overview" className="aha-step-row">
-            <div className="aha-step-number">04</div>
-            <div className="aha-step-content">
-              <h4>Biết nơi cần hỗ trợ</h4>
-              <p>Tìm HRBP và các đầu mối hỗ trợ của phòng ban.</p>
-            </div>
-            <div className="aha-step-cta">Tìm hỗ trợ →</div>
-          </a>
+          </div>
         </div>
       </div>
 

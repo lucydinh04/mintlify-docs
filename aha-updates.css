@@ -86,9 +86,21 @@
   font-weight: 700;
 }
 
+/* Checklist Grid Layout */
+.aha-checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+@media (min-width: 992px) {
+  .aha-checklist-grid {
+    grid-template-columns: 65% calc(35% - 32px);
+  }
+}
+
 /* Homepage Onboarding Stepper */
 .aha-onboarding-stepper {
-  margin-top: 24px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -113,15 +125,17 @@
   text-decoration: none;
   background: transparent;
   border-radius: 12px;
-  transition: background-color 0.2s ease, outline 0.2s ease;
+  transition: all 0.2s ease;
   gap: 20px;
   position: relative;
   z-index: 1;
 }
 
 .aha-step-row:hover {
-  background: #f8fafc;
+  background: #f1f5f9;
   text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
 .aha-step-row:focus-visible {
@@ -144,14 +158,21 @@
   border: 2px solid var(--aha-line, #e2e8f0);
   border-radius: 50%;
   flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.aha-step-row:hover .aha-step-number {
+  border-color: var(--aha-orange, #FF7A21);
+  color: var(--aha-orange, #FF7A21);
 }
 
 .aha-step-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   margin-top: 3px;
+  padding-right: 16px;
 }
 
 .aha-step-content h4 {
@@ -179,10 +200,92 @@
   font-weight: 700;
   white-space: nowrap;
   transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .aha-step-row:hover .aha-step-cta {
   transform: translateX(4px);
+}
+
+/* Checklist Summary Panel */
+.aha-checklist-summary {
+  background: var(--aha-white, #ffffff);
+  border: 1px solid var(--aha-line, #e2e8f0);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 24px;
+}
+
+.aha-checklist-summary h5 {
+  margin: 0 0 20px 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--aha-navy, #0f172a);
+}
+
+.aha-summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.aha-summary-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: var(--aha-grey, #64748b);
+  line-height: 1.5;
+}
+
+.aha-summary-list li:last-child {
+  margin-bottom: 0;
+}
+
+.aha-summary-list li svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.aha-summary-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--aha-line, #e2e8f0);
+}
+
+.aha-summary-time-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #f8fafc;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.aha-summary-time-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.time-lbl {
+  font-size: 13.5px;
+  color: var(--aha-grey-lt, #94a3b8);
+}
+
+.time-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--aha-navy, #0f172a);
 }
 
 @media (max-width: 768px) {
