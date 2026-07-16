@@ -47,26 +47,27 @@
         "icon": "compass",
         "groups": [
           {
-            "group": "Khám phá Ahamove",
+            "group": "Hành trình hội nhập",
             "expanded": true,
             "root": "ahamazing-guide/overview",
             "pages": [
+              "ahamazing-guide/day-1"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Khám phá Ahamove",
+        "icon": "earth-asia",
+        "groups": [
+          {
+            "group": "Khám phá Ahamove",
+            "expanded": true,
+            "pages": [
               "ahamazing-guide/company-overview",
               "ahamazing-guide/culture",
-              { "group": "Con người & Tổ chức", "icon": "users", "expanded": false, "pages": ["handbook/org-structure", "handbook/glossary"] },
-              "ahamazing-guide/day-1",
-              "ahamazing-guide/week-1",
-              "ahamazing-guide/first-month"
-            ]
-          },
-          {
-            "group": "Life at Ahamove",
-            "expanded": true,
-            "root": "benefits/overview",
-            "pages": [
-              "benefits/health-check",
-              "benefits/insurance",
-              "office-guide/overview"
+              "handbook/org-structure",
+              "handbook/glossary"
             ]
           }
         ]
@@ -80,7 +81,24 @@
             "pages": [
               "handbook/internal-systems",
               "handbook/hr-processes",
-              "handbook/payroll"
+              "handbook/payroll",
+              "handbook/offboarding"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Life at Ahamove",
+        "icon": "gift",
+        "groups": [
+          {
+            "group": "Life at Ahamove",
+            "expanded": true,
+            "root": "benefits/overview",
+            "pages": [
+              "benefits/health-check",
+              "benefits/insurance",
+              "office-guide/overview"
             ]
           }
         ]

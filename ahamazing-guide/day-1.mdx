@@ -1,6 +1,6 @@
 ---
-title: "Ngày đầu tiên"
-sidebarTitle: "Ngày đầu tiên"
+title: "Lộ trình hội nhập: Ngày 1 – Tháng 1"
+sidebarTitle: "Lộ trình 30 ngày đầu tiên"
 icon: "sun"
 mode: "wide"
 ---
@@ -8,13 +8,15 @@ mode: "wide"
 <div className="aha-day-one">
 
 <div style={{ background: '#FFF7F0', borderLeft: '4px solid #FF7A21', padding: '24px', borderRadius: '0 12px 12px 0', marginBottom: '32px', marginTop: '16px' }}>
-  <h2 style={{ margin: '0 0 8px', fontSize: '20px', color: '#0F172A', fontWeight: 700 }}>Chào mừng Ngày đầu tiên</h2>
-  <p style={{ margin: '0 0 16px', color: '#475569', fontSize: '15px', lineHeight: 1.5 }}>HRBP và team sẽ đồng hành cùng bạn để làm quen công ty, kết nối đội nhóm và hoàn tất các thiết lập cần thiết.</p>
+  <h2 style={{ margin: '0 0 8px', fontSize: '20px', color: '#0F172A', fontWeight: 700 }}>Chào mừng bạn đến với Ahamove</h2>
+  <p style={{ margin: '0 0 16px', color: '#475569', fontSize: '15px', lineHeight: 1.5 }}>Một checklist xuyên suốt Ngày đầu tiên → Tuần đầu tiên → Tháng đầu tiên. HRBP, quản lý trực tiếp và team sẽ đồng hành cùng bạn ở mọi chặng.</p>
   <div className="aha-nav-chip-container">
     <a href="#truoc-ngay-dau-tien" className="aha-nav-chip">Trước ngày đầu tiên</a>
     <a href="#hom-nay-se-dien-ra-the-nao" className="aha-nav-chip">Lịch trình hôm nay</a>
     <a href="#thong-tin-can-biet" className="aha-nav-chip">Thông tin cần biết</a>
-    <a href="#viec-can-hoan-tat-ngay-dau" className="aha-nav-chip">Checklist hoàn tất</a>
+    <a href="#viec-can-hoan-tat-ngay-dau" className="aha-nav-chip">Checklist ngày đầu</a>
+    <a href="#tuan-dau-tien" className="aha-nav-chip">Tuần đầu tiên</a>
+    <a href="#thang-dau-tien" className="aha-nav-chip">Tháng đầu tiên</a>
   </div>
 </div>
 
@@ -25,12 +27,7 @@ mode: "wide"
 <div className="aha-day-one-info">
   <div className="aha-day-one-info-card">
     <h3><Icon icon="folder-open" size={18} color="#FF7A21" /> Chuẩn bị hồ sơ</h3>
-    <p style={{ color: '#475569', fontSize: '15px', margin: '0 0 8px' }}>Chuẩn bị sẵn các giấy tờ dưới đây (xem chi tiết ở mục <a href="#viec-can-hoan-tat-ngay-dau" style={{ color: '#FF7A21', fontWeight: 600 }}>Hồ sơ cần chuẩn bị</a>):</p>
-    <ul style={{ color: '#475569', fontSize: '14.5px', margin: 0, paddingLeft: '20px' }}>
-      <li>Căn cước công dân (hai mặt, còn hiệu lực)</li>
-      <li>Xác nhận cư trú / VNeID cấp 2</li>
-      <li>Ảnh chân dung (rõ mặt, chính diện)</li>
-    </ul>
+    <p style={{ color: '#475569', fontSize: '15px', margin: 0 }}>Xem danh sách đầy đủ giấy tờ cần chuẩn bị (kèm giải thích) ở mục <a href="#viec-can-hoan-tat-ngay-dau" style={{ color: '#FF7A21', fontWeight: 600 }}>Hồ sơ cần chuẩn bị</a> bên dưới.</p>
   </div>
   <div className="aha-day-one-info-card">
     <h3><Icon icon="clock" size={18} color="#FF7A21" /> Giờ có mặt & địa điểm</h3>
@@ -163,7 +160,14 @@ mode: "wide"
       <div className="aha-day-one-checklist-icon"><Icon icon="circle-check" size={16} /></div>
       <div className="aha-day-one-checklist-text">
         <h4>Ký Cam kết bảo mật</h4>
-        <p><strong>Ở đâu:</strong> bản giấy, ký bằng bút xanh · <strong>Xong khi:</strong> đã nộp lại cả 2 bản cho HRBP · <strong>Hỗ trợ:</strong> HRBP.</p>
+        <p><strong>Ở đâu:</strong> ký số trên 1Office (đã gộp chung với Hợp đồng thử việc thành 1 file duy nhất) · <strong>Xong khi:</strong> đã ký số hoàn tất trên 1Office · <strong>Hỗ trợ:</strong> HRBP.</p>
+      </div>
+    </div>
+    <div className="aha-day-one-checklist-item">
+      <div className="aha-day-one-checklist-icon"><Icon icon="circle-check" size={16} /></div>
+      <div className="aha-day-one-checklist-text">
+        <h4>Kích hoạt tài khoản Claude</h4>
+        <p><strong>Ở đâu:</strong> chờ email cấp tài khoản, xem <a href="/ai-hub/claude-guide" style={{ color: '#FF7A21', fontWeight: 600 }}>hướng dẫn kích hoạt Claude</a> · <strong>Xong khi:</strong> đã kích hoạt trong 01 tuần kể từ khi nhận email · <strong>Hỗ trợ:</strong> Mr. TùngVD (DevOps).</p>
       </div>
     </div>
   </div>
@@ -175,23 +179,150 @@ mode: "wide"
         <Icon icon="id-card" size={16} color="#FF7A21" /> Căn cước công dân (hai mặt, còn hiệu lực)
       </div>
       <div className="aha-day-one-doc-chip">
-        <Icon icon="house" size={16} color="#FF7A21" /> Xác nhận cư trú / VNeID cấp 2
+        <Icon icon="file-lines" size={16} color="#FF7A21" /> Hoàn tất form điền thông tin đầu vào
       </div>
       <div className="aha-day-one-doc-chip">
         <Icon icon="camera" size={16} color="#FF7A21" /> Ảnh chân dung (rõ mặt, chính diện)
       </div>
     </div>
     <div className="aha-day-one-doc-note">
-      <strong>Lưu ý:</strong> Gửi dạng PNG/PDF, scan/chụp rõ nét, hiển thị đủ thông tin (chủ hộ, nhân viên & người thân). Giấy xác nhận cư trú cần có mộc/chữ ký số của cơ quan Nhà nước, thời hạn trong 01 năm kể từ ngày xác nhận.
+      <strong>Về xác nhận cư trú / VNeID cấp 2:</strong> không cần chuẩn bị ngay trong ngày đầu tiên — bạn chỉ cần hoàn tất form điền thông tin đầu vào, HRBP sẽ chủ động liên hệ để bổ sung giấy tờ này trong tháng onboard.
     </div>
   </div>
 </div>
 
-## Bị vướng thì hỏi ai?
+<div id="tuan-dau-tien"></div>
+
+## Tuần đầu tiên
+
+<div className="aha-week-one-welcome">
+  <p className="welcome-text">Tuần đầu tiên là lúc bạn bắt nhịp với team, hoàn tất các thiết lập nền tảng và hiểu rõ những ưu tiên quan trọng nhất cho vai trò của mình.</p>
+  <div className="support-line">
+    <Icon icon="heart" color="#FF7A21" size={16} />
+    <span>Bạn không cần làm mọi thứ một mình — quản lý trực tiếp, HRBP và team sẽ đồng hành cùng bạn trong từng bước.</span>
+  </div>
+</div>
+
+### Tuần đầu này, bạn cần tập trung vào 3 việc
+
+<div className="aha-week-one-goals">
+  <div className="goal-card">
+    <div className="goal-icon"><Icon icon="key" size={20} color="#FF7A21" /></div>
+    <h4>Kích hoạt công cụ</h4>
+    <p>Hoàn tất Telegram và các thiết lập còn lại cần dùng trong công việc.</p>
+  </div>
+  <div className="goal-card">
+    <div className="goal-icon"><Icon icon="users" size={20} color="#FF7A21" /></div>
+    <h4>Kết nối với team</h4>
+    <p>Làm quen với quản lý, đồng đội và các bên bạn sẽ phối hợp thường xuyên.</p>
+  </div>
+  <div className="goal-card">
+    <div className="goal-icon"><Icon icon="crosshairs" size={20} color="#FF7A21" /></div>
+    <h4>Nắm ưu tiên</h4>
+    <p>Hiểu 1–2 quy trình quan trọng nhất và thống nhất kỳ vọng trong giai đoạn thử việc.</p>
+  </div>
+</div>
+
+### Checklist tuần đầu
+
+<div className="aha-week-one-checklist">
+
+  <div className="aha-week-one-check-group">
+    <h3><Icon icon="wrench" color="#0E4174" /> Công cụ & thiết lập</h3>
+    <ul>
+      <li>
+        <Icon icon="circle-check" color="#22C55E" className="check-icon" />
+        <div className="task-content">
+          <strong>Kích hoạt Telegram</strong>
+          <span>Xem hướng dẫn tại [Hệ thống 1Office](/handbook/internal-systems).</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div className="aha-week-one-check-group">
+    <h3><Icon icon="handshake" color="#0E4174" /> Kết nối & làm quen</h3>
+    <ul>
+      <li>
+        <Icon icon="circle-check" color="#22C55E" className="check-icon" />
+        <div className="task-content">
+          <strong>Gặp đủ thành viên team & các bên phối hợp</strong>
+          <span>Làm quen những người bạn sẽ làm việc cùng.</span>
+        </div>
+      </li>
+      <li>
+        <Icon icon="circle-check" color="#22C55E" className="check-icon" />
+        <div className="task-content">
+          <strong>Có buổi 1:1 đầu tiên với quản lý trực tiếp</strong>
+          <span>Thống nhất kỳ vọng và mục tiêu thử việc.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div className="aha-week-one-check-group">
+    <h3><Icon icon="bullseye" color="#0E4174" /> Ưu tiên công việc</h3>
+    <ul>
+      <li>
+        <Icon icon="circle-check" color="#22C55E" className="check-icon" />
+        <div className="task-content">
+          <strong>Nắm 1–2 quy trình quan trọng nhất</strong>
+          <span>Hỏi quản lý trực tiếp đâu là quy trình ưu tiên cho vị trí của bạn.</span>
+        </div>
+      </li>
+      <li>
+        <Icon icon="circle-check" color="#22C55E" className="check-icon" />
+        <div className="task-content">
+          <strong>Trao đổi với HRBP để gỡ vướng</strong>
+          <span>Trao đổi các thắc mắc về nhân sự, chính sách hoặc phép.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div className="aha-week-one-tip">
+  <div className="tip-icon"><Icon icon="lightbulb" size={24} color="#EA580C" /></div>
+  <div className="tip-content">
+    <h4>Mẹo nhỏ cho tuần đầu</h4>
+    <p>Lập sẵn danh sách câu hỏi và hỏi hết trong tuần đầu. Hỏi nhiều là hoàn toàn bình thường ở Ahamove. Nếu chưa biết hỏi ai, <a href="/help-center/ask-ahamove-ai">AhaAssistant</a> hoặc HRBP sẽ giúp bạn tìm đúng người.</p>
+  </div>
+</div>
+
+<div id="thang-dau-tien"></div>
+
+## Tháng đầu tiên
+
+Tháng đầu tiên đi theo lộ trình **30-60-90 ngày**. Mục tiêu: hiểu việc → bắt nhịp → tạo kết quả đầu tiên.
+
+### Lộ trình 30-60-90
+
+<CardGroup cols={3}>
+  <Card title="30 — Hiểu & Hòa nhập" icon="lightbulb">
+    Nắm bối cảnh, quy trình, công cụ; hiểu rõ vai trò & kỳ vọng.
+  </Card>
+  <Card title="60 — Bắt nhịp & Đóng góp" icon="gears">
+    Tự xử lý đầu việc cơ bản; phối hợp trơn tru với các bên.
+  </Card>
+  <Card title="90 — Tạo kết quả" icon="trophy">
+    Hoàn thành mục tiêu thử việc & có "first-win" rõ ràng.
+  </Card>
+</CardGroup>
+
+<Tip>
+  **First-win** là kết quả cụ thể đầu tiên bạn tạo ra — dù nhỏ. Chia sẻ với quản lý trực tiếp để được ghi nhận!
+</Tip>
+
+<Note>
+  Cuối thử việc bạn sẽ qua quy trình **đánh giá thử việc** (OKR Probation). Xem chi tiết tại [Quy trình nhân sự](/handbook/hr-processes#probation-review).
+</Note>
+
+## Gặp vướng mắc, hỏi ai?
 
 <CardGroup cols={2}>
   <Card title="HRBP phụ trách phòng ban" icon="user-group" href="/help-center/overview">
-    Mọi thắc mắc về thủ tục, hợp đồng, chính sách trong ngày đầu — HRBP là đầu mối chính của bạn.
+    Mọi thắc mắc về thủ tục, hợp đồng, chính sách trong quá trình hội nhập — HRBP là đầu mối chính của bạn.
   </Card>
   <Card title="IT Support" icon="laptop" href="/help-center/overview">
     Không đăng nhập được email/1Office, lỗi thiết bị, wifi — liên hệ IT Support.
@@ -199,7 +330,7 @@ mode: "wide"
   <Card title="Office Management (OM)" icon="building-user" href="/office-guide/overview">
     Thẻ định danh, thẻ xe, chỗ ngồi, văn phòng phẩm — liên hệ Admin Văn phòng.
   </Card>
-  <Card title="Ahassistant" icon="robot" href="/help-center/ask-ahamove-ai">
+  <Card title="AhaAssistant" icon="robot" href="/help-center/ask-ahamove-ai">
     Chưa biết hỏi ai? Hỏi trợ lý AI của Sổ tay để được chỉ đúng người, đúng trang.
   </Card>
 </CardGroup>
