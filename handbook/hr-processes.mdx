@@ -13,11 +13,53 @@ mode: "wide"
 
 ## Thời gian làm việc
 
-<Card title="Xem khung giờ làm việc (Khung 1 / Khung 2)" icon="calendar-day" href="/ahamazing-guide/day-1#thong-tin-can-biet">
-  Chi tiết khung giờ làm việc theo từng bộ phận đã có tại mục **"Thông tin cần biết"** ở trang [Ngày đầu tiên](/ahamazing-guide/day-1#thong-tin-can-biet).
-</Card>
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '24px' }}>
+  
+  {/* Khung 1 */}
+  <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+      <h3 style={{ margin: 0, fontSize: '18px', color: '#0E4174', fontWeight: 700 }}>Khung 1</h3>
+      <span style={{ background: '#FFF4EC', color: '#FF7A21', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700 }}>08:30 – 18:00</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <Icon icon="clock" size={16} color="#64748B" />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px' }}><strong>Nghỉ trưa:</strong> 12:00 – 13:30</p>
+      </div>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+        <Icon icon="users" size={16} color="#64748B" style={{ marginTop: '2px' }} />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>
+          <strong>Áp dụng cho:</strong><br/>
+          Central Ops, Supply Ops, VP Hà Nội
+        </p>
+      </div>
+    </div>
+  </div>
 
-<p style={{ color: '#64748B', fontSize: '13px', fontStyle: 'italic', margin: '8px 0 40px 0' }}>
+  {/* Khung 2 */}
+  <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+      <h3 style={{ margin: 0, fontSize: '18px', color: '#0E4174', fontWeight: 700 }}>Khung 2</h3>
+      <span style={{ background: '#FFF4EC', color: '#FF7A21', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700 }}>09:00 – 18:00</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <Icon icon="clock" size={16} color="#64748B" />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px' }}><strong>Nghỉ trưa:</strong> 12:00 – 13:00</p>
+      </div>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+        <Icon icon="users" size={16} color="#64748B" style={{ marginTop: '2px' }} />
+        <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.5 }}>
+          <strong>Áp dụng cho:</strong><br/>
+          Tech, BD, Service Center, AhaFast
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p style={{ color: '#64748B', fontSize: '13px', fontStyle: 'italic', margin: '0 0 40px 0' }}>
   Lịch làm việc cụ thể có thể được điều chỉnh theo tính chất công việc của từng bộ phận. Vui lòng liên hệ quản lý trực tiếp hoặc HRBP phụ trách phòng ban nếu cần hỗ trợ.
 </p>
 
@@ -32,15 +74,7 @@ mode: "wide"
       <li>Làm việc dưới 12 tháng: số ngày phép tính theo tỷ lệ thời gian làm việc.</li>
       <li>Các chế độ nghỉ theo luật (thai sản, hiếu hỉ, ốm đau…) thực hiện theo quy định pháp luật hiện hành.</li>
     </ul>
-    <div style={{ background: '#FFF7F0', border: '1px solid #FFE0C2', borderRadius: '8px', padding: '12px 16px', margin: '0 0 12px' }}>
-      <p style={{ margin: '0 0 6px', color: '#0F172A', fontSize: '14px', fontWeight: 700 }}>Dễ nhầm nhất: 2 loại "phép ốm" khác nhau</p>
-      <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: 1.6 }}>
-        <strong>Phép ốm theo chính sách Ahamove</strong> — trừ vào quỹ phép/chế độ nội bộ, vẫn được công ty trả lương ngày nghỉ.<br/>
-        <strong>Phép ốm hưởng BHXH</strong> — nghỉ ốm dài ngày theo diện bảo hiểm xã hội chi trả; công ty <strong>không tính lương</strong> những ngày này, nhân viên nhận trợ cấp ốm đau trực tiếp từ BHXH theo quy định pháp luật.
-      </p>
-    </div>
-    {/* TODO (HRBP/C&B): bổ sung danh sách đầy đủ các loại phép cơ bản khác + điều kiện áp dụng cụ thể (xem FB-085) — đoạn trên chỉ giải thích khái niệm chung, số ngày/điều kiện chi tiết vẫn cần HRBP/C&B xác nhận trước khi launch. */}
-    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', fontStyle: 'italic' }}>Chi tiết các loại phép khác (việc riêng, hiếu hỉ...) và điều kiện áp dụng cụ thể vui lòng tra cứu trên 1Office hoặc hỏi HRBP.</p>
+    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', fontStyle: 'italic' }}>Chi tiết các loại phép khác (ốm, việc riêng, hiếu hỉ...) vui lòng tra cứu trên 1Office hoặc hỏi HRBP.</p>
   </div>
 
   <div style={{ padding: '20px', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '12px' }}>
@@ -87,13 +121,13 @@ mode: "wide"
     Biểu mẫu đánh giá sẽ được HRBP gửi trực tiếp cho bạn. Nếu chưa nhận được, vui lòng liên hệ HRBP phụ trách.
   </Step>
   <Step title="Thiết lập OKRs Probation">
-    **Trong tuần đầu tiên** làm việc, bạn cùng quản lý trực tiếp thiết lập mục tiêu (OKRs) cho giai đoạn thử việc — xem thêm [Tuần đầu tiên](/ahamazing-guide/day-1#tuan-dau-tien).
+    **Trong tuần đầu tiên** làm việc, bạn cùng quản lý trực tiếp thiết lập mục tiêu (OKRs) cho giai đoạn thử việc — xem thêm [Tuần đầu tiên](/ahamazing-guide/week-1).
   </Step>
-  <Step title="Catch up sau 1 tháng thử việc">
-    Trao đổi nhanh về tiến độ công việc và mức độ hòa nhập văn hóa trong tháng đầu tiên.
+  <Step title="Review sau 1 tháng (1 month probation)">
+    Đánh giá nhanh tiến độ công việc và mức độ hòa nhập văn hóa sau tháng đầu tiên.
   </Step>
-  <Step title="Đánh giá sau 2 tháng thử việc">
-    Tổng kết kết quả OKRs và hiệu quả công việc trong suốt giai đoạn probation.
+  <Step title="Thực hiện đánh giá Probation">
+    Tổng kết lại toàn bộ kết quả thực hiện OKRs ở cuối giai đoạn thử việc.
   </Step>
 </Steps>
 
