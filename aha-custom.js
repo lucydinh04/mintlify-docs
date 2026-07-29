@@ -221,6 +221,27 @@
   }
 })();
 
+(function manageWelcomeBanner() {
+  const clearBanner = () => {
+    try {
+      if (typeof localStorage !== "undefined") {
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.toLowerCase().includes("banner")) {
+            localStorage.removeItem(key);
+          }
+        }
+      }
+    } catch (e) {}
+  };
+
+  // Clear immediately on load
+  clearBanner();
+  
+  // Keep clearing so next reload always shows it
+  setInterval(clearBanner, 1500);
+})();
+
 (function initTimelineObserver() {
   const init = () => {
     const track = document.querySelector('.aha-history-track-vertical');
@@ -349,13 +370,13 @@
     fab.id = BUTTON_ID;
     fab.href = HREF;
     fab.className = 'aha-floating-assistant';
-    fab.setAttribute('aria-label', 'Ask AI AhaAssistant');
+    fab.setAttribute('aria-label', 'Ask AI Ahassistant');
     fab.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 2a8 8 0 0 1 8 8c0 5.25-8 12-8 12S4 15.25 4 10a8 8 0 0 1 8-8z"/>
         <circle cx="12" cy="10" r="3"/>
       </svg>
-      <span class="aha-fab-label">Ask AI AhaAssistant</span>
+      <span class="aha-fab-label">Ask AI Ahassistant</span>
     `;
     document.body.appendChild(fab);
   };

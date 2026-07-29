@@ -54,10 +54,10 @@ html.dark, [data-theme="dark"], [theme="dark"] {
 
   /* Spacing scale */
   --aha-space-xs: 8px;
-  --aha-space-sm: 14px;
-  --aha-space-md: 20px;
-  --aha-space-lg: 32px;
-  --aha-space-xl: 48px;
+  --aha-space-sm: 12px;
+  --aha-space-md: 16px;
+  --aha-space-lg: 26px;
+  --aha-space-xl: 40px;
 }
 
 /* ---------- 2 · BASE / TYPOGRAPHY ---------- */
@@ -94,7 +94,7 @@ img[src*="/logo/"], nav img, header img { border-radius: 0; }
 .aha-home {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 20px 16px 72px;
+  padding: 20px 16px 56px;
 }
 .aha-home-wrap {
   display: block;
@@ -5694,14 +5694,7 @@ html.dark nav, html.dark aside {
 }
 
 /* -------- Hide Mintlify in-page Ask bar -------- */
-/* The built-in Mintlify "Ask a question" quick bar sits in a sticky bottom-0
-   wrapper inside the article column, so it stays pinned near the bottom of the
-   viewport while scrolling and overlaps whatever heading/text is there. Its
-   real class is "chat-assistant-floating-input" (the guesses below never
-   matched). We already surface our own AhaAssistant FAB, so hide just this
-   floating quick-bar — NOT [class*="chat-assistant"] broadly, since the navbar
-   "Ask Assistant" button (#assistant-entry) reuses "chat-assistant-input" /
-   "chat-assistant-sheet-content" for its own expanded panel and must keep working. */
+/* The built-in Mintlify search/ask floating pill that appears on scroll */
 [class*="AskAI"],
 [class*="ask-ai"],
 [class*="AskBar"],
@@ -5709,7 +5702,6 @@ html.dark nav, html.dark aside {
 [class*="ChatBar"],
 [class*="chat-bar"],
 [class*="FloatingSearch"],
-[class*="chat-assistant-floating-input"],
 [data-component="ask"],
 [data-testid*="ask"] {
   display: none !important;
